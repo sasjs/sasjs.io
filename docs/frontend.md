@@ -18,7 +18,7 @@ To launch a web site, you need access to a server!  Your options are:
 [ explanation of CORS]
 
 
-| OS    | Browser | Options|
+| OS    | Browser | Launch Command|
 |:---:|:---:|:--:|
-| Mac   | Chrome  | run: `open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/chrome` |
-| Linux | Chrome  | run: `google-chrome --disable-web-security --user-data-dir="abc"`|
+| Mac   | Chrome  | `open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/chrome` |
+| Linux | Chrome  | `google-chrome --disable-web-security --user-data-dir="abc"`|
