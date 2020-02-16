@@ -1,0 +1,37 @@
+site_name: Building Web Applications using SAS®
+pages:
+- Home: index.md
+- Design: design.md
+- Build:
+  - Backend SAS: backend.md
+  - Frontend Web: frontend.md
+- Test: testing.md
+- Deploy: deploy.md
+- Document: documentation.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - codehilite
+  - fontawesome_markdown
+  - toc:
+      permalink: true
+
+extra_css: ['font-awesome.css']
+
+# Repository
+repo_name: 'macropeople/sasjs.github.io'
+repo_url: 'https://github.com/macropeople/sasjs.github.io'
+
+theme:
+  name: material
+  logo: 'img/logo.png'
+  palette:
+    primary: 'White'
+    accent: 'Amber'
+  font:
+    text: 'Open Sans'
+    code: 'Ubuntu Mono'
+  favicon: img/logo.png
+  custom_dir: 'theme'
+copyright: All rights reserved &copy;2020 Macro People Ltd.
