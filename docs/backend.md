@@ -18,14 +18,15 @@ In order to easily configure the security (authorisation) of your app, it is rec
 
 ```
     MyAmazingApp/
-    |-- Admin
+    |-- Admin/
     | |__ addUser
     | |__ remUser
-    |-- Common
-    |  |__ appInit
-    |  |__ getChartData
-    |-- Approvers
-       |__ approveStuff
+    |-- Approvers/
+    |  |__ approveStuff
+    |-- Common/
+       |__ appInit
+       |__ getChartData
+
 ```
 
 ### Code Injection
@@ -105,7 +106,10 @@ You should now see a URL in the log with a link to your service.
 
 ## SAS 9
 
-Building services on SAS 9 is more straightforward, as there is no app token to consider!  The below approach will work from 9.3 and upwards.
+Building services on SAS 9 is more straightforward, as there is no app token to consider!
+
+### Create SAS Service
+The below approach will work from 9.3 and upwards.
 
 ```
     * compile macros ;
