@@ -19,8 +19,8 @@ markdown_extensions:
 extra_css: ['font-awesome.css']
 
 # Repository
-repo_name: 'macropeople/sasjs.github.io'
-repo_url: 'https://github.com/macropeople/sasjs.github.io'
+repo_name: 'macropeople/sasjs'
+repo_url: 'https://github.com/macropeople/sasjs'
 
 theme:
   name: material
