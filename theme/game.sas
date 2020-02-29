@@ -1,6 +1,8 @@
+/* compile macros */
 filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
 %inc mc;
 
+/* create index.html */
 filename ft15f001 temp;
 parmcards4;
 options noquotelenmax;
@@ -93,4 +95,9 @@ put '</body>';
 put '</html>';
 run;
 ;;;;
-%mm_createwebservice(path=/Public/myapp/common, name=space, code=ft15f001,replace=YES)
+/* create STP web service */
+%mm_createwebservice(path=/User Folders/&sysuserid/My Folder
+  , name=spaceinvaders
+  , code=ft15f001
+  ,replace=YES
+)

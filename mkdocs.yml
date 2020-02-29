@@ -1,8 +1,12 @@
 site_name: Building Web Applications using SAS®
 pages:
 - Home: index.md
+- Quickstart: quickstart.md
 - Design: design.md
-- Backend SAS: backend.md
+- Backend SAS:
+    - Considerations: build/considerations.md
+    - SAS9: build/buildsas9.md
+    - VIYA: build/buildviya.md
 - Frontend Web: frontend.md
 - Test: testing.md
 - Deploy: deploy.md
