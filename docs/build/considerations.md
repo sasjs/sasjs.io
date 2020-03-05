@@ -11,6 +11,8 @@ When building on SAS you will be interfacing with either SAS 9 or SAS Viya.  The
 |Client / System Identities|Client Identity only|
 |Metadata Server|Postgres Database|
 
+Both server types stream content to the automatic _webout fileref and can make use of the _debug parameter.
+
 ## Project Folder Structure
 
 It's a good idea to keep all your source code in one repository, then you can build it all together for testing.  The following folder structure is supported by `sasjs`:

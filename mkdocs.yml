@@ -1,7 +1,9 @@
 site_name: Building Web Applications using SAS®
 pages:
 - Home: index.md
-- Quickstart: quickstart.md
+- Quickstart:
+    - Services: quickstart/services.md
+    - React: quickstart/react.md
 - Design: design.md
 - Backend SAS:
     - Considerations: build/considerations.md
@@ -11,6 +13,8 @@ pages:
 - Test: testing.md
 - Deploy: deploy.md
 - Document: documentation.md
+- Troubleshooing:
+    - windows.md
 
 markdown_extensions:
   - admonition

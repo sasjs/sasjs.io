@@ -2,7 +2,7 @@
 
 ## Services
 
-To create services on Viya you are firstly going to need to be an **Administator** (or have access to one) in order to register your consul token.  You also need write access to a location in the files service (eg `/public/somewhere`).
+To create services on Viya you are firstly going to need to be an **Administator** in order to access the consul token.  You also need write access to a location in the files service (eg `/public/somewhere`).
 
 ### Open SAS Studio and Compile Macros
 
