@@ -43,7 +43,7 @@ Creating the services in Viya can be done entirely in SAS Studio in three easy s
 /* Load macros and obtain app token. Admin Task. */
 filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
 %inc mc;
-%let client=new%sysfunc(ranuni(0));
+%let client=new%sysfunc(ranuni(0),hex16.);
 %let secret=MySecret;
 %mv_getapptoken(client_id=&client,client_secret=&secret)
 

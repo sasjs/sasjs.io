@@ -16,7 +16,7 @@ Therefore your services should be built in such a way that no damage would be ca
 Services should be built in such a way that they can be safely executed more than once.  This is because it's possible that it WILL be run more than once (eg if the user clicks twice in succession).
 
 ## Integrity Checking for Javascript files
-Whilst CORS provides some protection from cross site AJAX, it does not prevent man-in-the-middle attacks on your supposedly 'trusted' sources.
+Whilst CORS provides some protection from cross site AJAX, it does not prevent man-in-the-middle attacks on your supposedly 'trusted' javascript sources.
 
 An integrity hash provides a way for the browser to ensure that javascript file received is the one that was expected. An example of the syntax for including `SASjs` is shown below:
 
