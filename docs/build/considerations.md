@@ -11,7 +11,7 @@ When building on SAS you will be interfacing with either SAS 9 or SAS Viya.  The
 |Client / System Identities|Client Identity only|
 |Metadata Server|Postgres Database|
 
-Both server types stream content to the automatic _webout fileref and can make use of the _debug parameter.
+Both server types can stream arbitrary content to the automatic _webout fileref and can make use of the _debug parameter.
 
 ## Project Folder Structure
 
@@ -40,6 +40,12 @@ It's a good idea to keep all your source code in one repository, then you can bu
           |__ appInit
           |__ getChartData
 ```
+
+This is managed automatically when using `sasjs-cli`.  Simply run the following command to install:
+```
+npm i -g sasjs-cli
+```
+This will make the `sasjs` command available.  You can now run `sasjs create APPNAME` to create a project with sample folder structure like above.
 
 ## Code Injection
 

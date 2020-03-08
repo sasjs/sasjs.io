@@ -8,3 +8,4 @@ Useful tools:
 
 * lucidchart.com
 * Sketch (mac only)
+* [figma.com](https://www.figma.com) - browser based design tool

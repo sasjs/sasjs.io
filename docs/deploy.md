@@ -1,6 +1,12 @@
 # Deploy
 
-Is this your first deploy?  An incremental deploy?  SAS 9 or Viya?
+Deployment comes in three parts:
+
+* Frontend
+
+* Backend
+
+* Configuration
 
 
 ## Viya Deploy

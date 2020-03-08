@@ -5,6 +5,7 @@ pages:
     - Services: quickstart/services.md
     - React: quickstart/react.md
 - Design: design.md
+- Security: security.md
 - Backend SAS:
     - Considerations: build/considerations.md
     - SAS9: build/buildsas9.md
@@ -13,7 +14,7 @@ pages:
 - Test: testing.md
 - Deploy: deploy.md
 - Document: documentation.md
-- Troubleshooing:
+- Troubleshooting:
     - windows.md
 
 markdown_extensions:
