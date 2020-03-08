@@ -50,6 +50,7 @@ To speed up this demo we are going to use a little known fileref with the alias 
       set sashelp.class;
     run;
     * send data back;
+    %webout(OPEN)
     %webout(ARR,example1) * Array format, fast, good for large tables;
     %webout(OBJ,example2) * Object format, easier to work with in JS;
     %webout(CLOSE)

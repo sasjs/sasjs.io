@@ -20,6 +20,7 @@ parmcards4;
       set sashelp.class;
     run;
     * send data back;
+    %webout(OPEN)
     %webout(ARR,example1) * Array format, fast, suitable for large tables ;
     %webout(OBJ,example2) * Object format, easier to work with ;
     %webout(CLOSE)
