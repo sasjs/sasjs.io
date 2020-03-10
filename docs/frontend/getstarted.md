@@ -47,3 +47,6 @@ http://www.re.be/webdav_sync/index.xhtml
 By setting up a dedicated server and whitelisting it within SAS, you can isolate your frontend activities and enable frontend developers (and easier testing) without touching your SAS Web Server.
 
 Web devs can work locally and push to that server, or work on the server directly.  A great option to enable remote (cloud) development is the open-source server edition of vscode: [https://github.com/cdr/code-server](https://github.com/cdr/code-server).
+
+
+To whitelist the server in Viya, open `Environment Manager -> Configuration -> View -> Definitions` and select  `sas.commons.web.security`.  Make sure your domain (or `*`) is entered under `allowedHeaders`, `allowedMethods` and `AllowedOrigin`.

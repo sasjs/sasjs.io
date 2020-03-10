@@ -15,7 +15,7 @@ Training is available either remotely or on-site in the following durations:
 
 * Your own SAS Environment (SAS 9 or Viya).
 
-* A location in the SAS 9 Folder tree or the SAS Viya folders service in which to create servies (Stored Processes or Job Execution Services)
+* A location in the SAS 9 Folder tree or the SAS Viya folders service in which to create services (Stored Processes or Job Execution Services)
 
 * A laptop with a browser, GIT, NPM and VSCodium text editor (or equivalent)
 
