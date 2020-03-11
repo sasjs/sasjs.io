@@ -31,7 +31,19 @@ You will need an instance of SAS in order to build the backend!  If you are plan
 Open a command shell and type `git --version`.  If you do not see a git version returned, then install git from here:  [https://git-scm.com/](https://git-scm.com/).  If you do not have admin rights, try this [guide](/guides/windows#git).
 
 ### NPM
-Node Package Manager (NPM) is a JavaScript framework for managing project dependencies.  It also handles installations and a lot of other functionality.  It can be downloaded here:  [https://nodejs.org/en/download](https://nodejs.org/en/download).  If you do not have admin rights, try this [guide](/guides/windows/npm).
+Node Package Manager (NPM) is a JavaScript framework for managing project dependencies.  It also handles installations and a lot of other functionality.  It can be downloaded here:  [https://nodejs.org/en/download](https://nodejs.org/en/download).  If you do not have admin rights, try this [guide](/guides/windows#npm).
 
 ### VSCode
 You don't necessarily need VSCode but it's a great editor and includes an integrated terminal for running commands.  It can be downloaded (without telemetry) from here: [https://vscodium.com/](https://vscodium.com/), and a portable version can be obtained from this [guide](/guides/windows#vscode).
+
+
+### Final checks
+Open VScode, select Terminal -> New Terminal, and submit the following commands:
+
+```
+git -v
+npm -v
+node -v
+```
+
+If you get a version number for each of the above, and the version for `node` is above 10.3, you're good to go!
