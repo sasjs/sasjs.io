@@ -1,24 +1,25 @@
 site_name: Building Web Applications using SAS®
 pages:
-- Home: index.md
-- Quickstart:
-    - Services: quickstart/services.md
-    - React: quickstart/react.md
-- Design: design.md
-- Security: security.md
-- Backend SAS:
-    - Getting Started: backend/getstarted.md
-    - SAS9: backend/buildsas9.md
-    - VIYA: backend/buildviya.md
-- Frontend Web:
-    - frontend/getstarted.md
-    - frontend/deployment.md
-- Testing: testing.md
-- Documentation: documentation.md
-- Guides:
-    - guides/windows.md
-    - guides/state.md
-- Training: training.md
+  - Home: index.md
+  - Quickstart:
+      - Services: quickstart/services.md
+      - React: quickstart/react.md
+  - Design: design.md
+  - Security: security.md
+  - Backend SAS:
+      - Getting Started: backend/getstarted.md
+      - SAS9: backend/buildsas9.md
+      - VIYA: backend/buildviya.md
+  - Frontend Web:
+      - frontend/getstarted.md
+      - frontend/deployment.md
+  - Testing: testing.md
+  - Documentation: documentation.md
+  - Guides:
+      - guides/windows.md
+      - guides/state.md
+      - guides/viya.md
+  - Training: training.md
 
 markdown_extensions:
   - admonition
@@ -28,21 +29,21 @@ markdown_extensions:
   - toc:
       permalink: true
 
-extra_css: ['font-awesome.css']
+extra_css: ["font-awesome.css"]
 
 # Repository
-repo_name: 'macropeople/sasjs'
-repo_url: 'https://github.com/macropeople/sasjs'
+repo_name: "macropeople/sasjs"
+repo_url: "https://github.com/macropeople/sasjs"
 
 theme:
   name: material
-  logo: 'img/runningman.jpg'
+  logo: "img/runningman.jpg"
   palette:
-    primary: 'White'
-    accent: 'Amber'
+    primary: "White"
+    accent: "Amber"
   font:
-    text: 'Open Sans'
-    code: 'Ubuntu Mono'
+    text: "Open Sans"
+    code: "Ubuntu Mono"
   favicon: img/runningman.jpg
-  custom_dir: 'theme'
+  custom_dir: "theme"
 copyright: All rights reserved &copy;2020 Macro People Ltd.

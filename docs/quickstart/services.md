@@ -1,14 +1,17 @@
 # Services
 
-All of the quickstart apps use two backend services, both of which query the `sashelp.springs` dataset.  The first is used to fetch a list of areas (to populate the dropdown) and the other will fetch a list of springs for a chosen area (to populate the grid).
+All of the quickstart apps use two backend services, both of which query the `sashelp.springs` dataset. The first is used to fetch a list of areas (to populate the dropdown) and the other will fetch a list of springs for a chosen area (to populate the grid).
 
 The process for registering these services will depend on whether you are building on [SAS9](#sas9) or [Viya](#viya).
 
 ## SAS9
 
-Open SAS Studio and run the code below.  Note - this assumes the existence of a root folder named `Public`, that your SAS account has WM and WMM privileges against.  If you wish to deploy to a different location, simply update the `appLoc` macro variable.  One option (if just for personal use) is to put the services in your home directory, eg `/User Folders/&sysuserid/My Folder`.
+Open SAS Studio and run the code below. Note - this assumes the existence of a root folder named `Public`, that your SAS account has WM and WMM privileges against. If you wish to deploy to a different location, simply update the `appLoc` macro variable. One option (if just for personal use) is to put the services in your home directory, eg `/User Folders/&sysuserid/My Folder`.
 
 ```
+filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
+%inc mc;
+
 %let appLoc=/Public/myapp;
 
 filename ft15f001 temp;
