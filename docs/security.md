@@ -16,9 +16,9 @@ The recommended SASjs folder structure is to group services into app subfolders,
 
 Services should be built in such a way that they can be safely executed more than once. This is because it's possible that it WILL be run more than once (eg if the user clicks a button twice in succession).
 
-## Subresource Integrity Checking for Javascript files
+## SubResource Integrity
 
-An integrity hash is a checksum of a file - if just one character inside a file is changed, the checksum is totally different. This makes it a great tool for verifying that a file has not been modified since the checksum was generated. Content served over http (without SSL certificates) are extremely susceptible to Man in the Middle (MitM) [attacks](https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152). For this reason, it is best practice to either bundle all your dependencies inside your app, or apply SubResource Integrity (SRI) checking as per the [w3.org spec](https://www.w3.org/TR/SRI). The syntax looks like this:
+An integrity hash is a checksum of a file - if just one character inside a file is changed, the checksum is totally different. This makes it a great tool for verifying that a CSS or JS file has not been modified since the checksum was generated. Content served over http (without SSL certificates) are extremely susceptible to Man in the Middle (MitM) [attacks](https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152). For this reason, it is best practice to either bundle all your dependencies inside your app, or apply SubResource Integrity (SRI) checking as per the [w3.org spec](https://www.w3.org/TR/SRI). The syntax looks like this:
 
 ```
 <script src="https://cdn.jsdelivr.net/npm/sasjs@1.10.8/index.js"
@@ -26,7 +26,7 @@ An integrity hash is a checksum of a file - if just one character inside a file 
   crossorigin="anonymous"></script>
 ```
 
-If your JS files are released via github, then they are automatically available on [JSDelivr](https://www.jsdelivr.com/) - for instance, to get the latest script tag for [SASjs](https://github.com/macropeople/sasjs) you can just click [here](https://www.jsdelivr.com/package/npm/sasjs?tab=collection) and select "SRI".
+If your CSS or JS files are released via github, then they are automatically available with SRI checks using [JSDelivr](https://www.jsdelivr.com/) - for instance, to get the latest script tag for [SASjs](https://github.com/macropeople/sasjs) you can just click [here](https://www.jsdelivr.com/package/npm/sasjs?tab=collection) and select "SRI".
 
 If your files are elsewhere, or you'd like more control over the build, you can also generate the integrity hash yourself - here is the syntax:
 

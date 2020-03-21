@@ -37,13 +37,13 @@ repo_url: "https://github.com/macropeople/sasjs"
 
 theme:
   name: material
-  logo: "img/runningman.jpg"
+  logo: "img/logo/favicon/32.svg"
   palette:
     primary: "White"
     accent: "Amber"
   font:
     text: "Open Sans"
     code: "Ubuntu Mono"
-  favicon: img/runningman.jpg
+  favicon: img/logo/favicon/32.ico
   custom_dir: "theme"
 copyright: All rights reserved &copy;2020 Macro People Ltd.
