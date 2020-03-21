@@ -4,7 +4,7 @@ Deploying web apps is generally more secure than, say, Python or R, because the 
 
 ## SAS 9 - Shared Services account
 
-If you are using a Stored Process server to run your SAS 9 apps, it runs under shared OS credentials (`sassrv` per factory settings). Therefore you should be careful not to introduce any functionality that will allow end users to run arbitrary code (unless that STP context is locked down). For this reason, URL parameters are a bad idea, much better to send tables using an adapter such as [SASjs](https://sasjs.io).
+If you are using a Stored Process server to run your SAS 9 apps, it runs under shared OS credentials (`sassrv` per factory settings). Therefore you should be careful not to introduce any functionality that will allow end users to run arbitrary code (unless that STP context is locked down). For this reason, URL parameters are a bad idea, much better to send tables using an adapter such as [SASjs](https://github.com/macropeople/sasjs).
 
 It is also possible to run STPs under a Workspace Server context (where end user OS credentials match `&sysuserid`). This creates additional considerations in a Unix environment, as any files created will be owned by that user, which can prevent others from modifying or removing them.
 
