@@ -16,8 +16,9 @@ pages:
   - Testing: testing.md
   - Documentation: documentation.md
   - Guides:
-      - guides/windows.md
+      - guides/images.md
       - guides/state.md
+      - guides/windows.md
       - guides/viya.md
   - Training: training.md
 
