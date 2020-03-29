@@ -33,3 +33,12 @@ If your files are elsewhere, or you'd like more control over the build, you can 
 ```
 cat myfile.js | openssl dgst -sha384 -binary | openssl enc -base64
 ```
+
+## Third Party Server
+
+By setting up a dedicated web server and whitelisting it within SAS, you can isolate your frontend activities and enable frontend developers to deploy without having to enable access to the SAS Web Server directly.
+
+Web devs can then work locally and push to that server, or work on the server directly.  One option for enabling remote (cloud) development is the open-source server edition of vscode: [https://github.com/cdr/code-server](https://github.com/cdr/code-server) (note - this won't work with vscodium due to non open-source components.
+
+
+To whitelist the server in Viya, open `Environment Manager -> Configuration -> View -> Definitions` and select  `sas.commons.web.security`.  Make sure your domain (or `*`) is entered under `allowedHeaders`, `allowedMethods` and `AllowedOrigin`.
