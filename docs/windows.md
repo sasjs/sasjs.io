@@ -1,3 +1,4 @@
+<!-- this has to be in the root folder as it is linked from an sgf2020 paper -->
 # Windows
 
 The reality for many SAS developers is that they are working in locked down windows machines without admin rights.  This causes problems when trying to install basic tooling such as GIT or NPM.
@@ -26,3 +27,8 @@ Add both of these locations to the PATH environment variable for your windows ac
 ![adding path in windows](/img/windowspath.png)
 
 Be sure to hit OK twice for the change to be saved!  You can now open a **new** shell window and create your SSH key using the `ssh-keygen` command.
+
+
+## CMDer
+
+This comes prebundled with GIT, allows a number of unix commands, and enables a remote (cloud) config, worth checking out:  https://cmder.net/

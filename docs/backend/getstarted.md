@@ -8,7 +8,7 @@ When building on SAS you will be interfacing with either SAS 9 or SAS Viya.  The
 |---|---|
 |Stored Processes|Job Execution Service|
 |WKS / STP Servers|Compute Server only|
-|Client / System Identities|Client Identity only|
+|Client / System Identities|Client / System (3.5+) Identities|
 |Metadata Server|Postgres Database|
 
 Both server types can stream arbitrary content to the automatic _webout fileref and can make use of the _debug parameter.
@@ -19,29 +19,30 @@ It's a good idea to keep all your source code in one repository, then you can bu
 
 ```
     MyAmazingApp/
-    |-- /src /* web stuff */
+    |-- /src /* all web stuff */
     |-- /sas /* all SAS stuff */
+      |-- /build
+      | |__ serviceinit.sas /* included at start of every service */
+      | |__ serviceterm.sas /* included at end of every service */
       |-- /db
       | |-- /LIBREF1
       |   |__table1.ddl /* SQL only, without proc sql wrapper */
       |   |__table1.sas /* datalines */
-      |-- /init
-      |  |__ serviceinit.sas /* included in every service */
       |-- /macros
-      | |__ macro1.sas
+      | |__ macro1.sas /* each macro inserted into relevant services */
       | |__ macro2.sas
       |-- /services /* services go in subfolders for organisation & security */
         |-- /Admin
-        | |__ addUser
-        | |__ remUser
+        | |__ adduser.sas /* services always lowercase */
+        | |__ remuser.sas
         |-- /Approvers
-        |  |__ approveStuff
+        |  |__ approvestuff.sas
         |-- /Common
-          |__ appInit
-          |__ getChartData
+          |__ appinit.sas  /* always the first service to be called in an app */
+          |__ getchartdata.sas
 ```
 
-This is managed automatically when using `sasjs-cli`.  Simply run the following command to install:
+The above structure is managed automatically when using `sasjs-cli`.  Simply run the following command to install:
 ```
 npm i -g sasjs-cli
 ```

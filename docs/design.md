@@ -18,3 +18,10 @@ It's possible to build good looking apps quickly without having to specify every
 * [Semantic ui](https://semantic-ui.com/) - with a specific [version](https://react.semantic-ui.com/) for React
 * [Clarity Design](clarity.design) - Angular but will soon support React / Vue also
 * [Material Design](https://material.io/design/) - built by google
+
+## Image Editing
+https://svgtopng.com/
+https://www.photopea.com/    (adobe alike)
+https://onlinepngtools.com/convert-png-to-jpg (for adding background in png)
+https://www.calculatorsoup.com/calculators/math/ratios.php (maintaining ratio stuff) (edited) 
+

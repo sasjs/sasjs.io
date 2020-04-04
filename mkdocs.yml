@@ -6,6 +6,7 @@ pages:
       - React: quickstart/react.md
   - Design: design.md
   - Security: security.md
+  - SASjs: sasjs/sasjs-cli.md
   - Backend SAS:
       - Getting Started: backend/getstarted.md
       - SAS9: backend/buildsas9.md
@@ -18,7 +19,8 @@ pages:
   - Guides:
       - guides/images.md
       - guides/state.md
-      - guides/windows.md
+      - windows.md
+      - guides/sas9.md
       - guides/viya.md
   - Training: training.md
 
