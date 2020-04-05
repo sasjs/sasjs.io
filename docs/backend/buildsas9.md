@@ -25,5 +25,8 @@ parmcards4;
     %webout(OBJ,example2) * Object format, easier to work with ;
     %webout(CLOSE)
 ;;;;
-%mm_createwebservice(path=/metapath/myapp, name=testJob, code=ft15f001)
+%mm_createwebservice(path=/User Folders/&sysuserid/My Folder
+  , name=testJob
+  , code=ft15f001
+  , replace=yes)
 ```
