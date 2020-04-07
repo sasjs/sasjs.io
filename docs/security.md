@@ -2,11 +2,22 @@
 
 Deploying web apps is generally more secure than, say, Python or R, because the Javascript libraries that are included do not have access to the filesystem. The browser "sandbox" also prevents JS files loaded from a one domain from making calls to another domain (Cross Origin Resource Sharing / CORS). That said, there are still a few security considerations to keep in mind when building apps on SAS.
 
-## SAS 9 - Shared Services account
+## Shared Services account
 
-If you are using a Stored Process server to run your SAS 9 apps, it runs under shared OS credentials (`sassrv` per factory settings). Therefore you should be careful not to introduce any functionality that will allow end users to run arbitrary code (unless that STP context is locked down). For this reason, URL parameters are a bad idea, much better to send tables using an adapter such as [SASjs](https://github.com/macropeople/sasjs).
+A shared system account for running web services is preferred as it can enable functionality for users that they cannot (or should not) perform themselves, eg database modifications (and for that, you should seriously consider [Data Controlller for SAS®](https://datacontroller.io)).  It can also avoids unix permissions issues, as created files are owned by default under the end user identity.
 
-It is also possible to run STPs under a Workspace Server context (where end user OS credentials match `&sysuserid`). This creates additional considerations in a Unix environment, as any files created will be owned by that user, which can prevent others from modifying or removing them.
+However - as it is a shared account, the ability to run code under this identity should be appropriately governed.  In particular, code injection must be protected against - for this reason, URL parameters are a bad idea, much better to send tables using an adapter such as [SASjs](https://github.com/macropeople/sasjs). 
+
+It is also recommended to ensure you have a secure release process, which includes code review and automated testing, to ensure the safety of your production environment.
+
+### SAS 9
+By default your services will run on a Stored Process server under the shared credentials stored in the `SAS General Servers group` group (`sassrv` per factory settings). 
+
+It is also possible to run STPs under a Workspace Server context (where end user OS credentials match `&sysuserid`). 
+
+### SAS Viya
+By default, services will run on the SAS Compute server under the client identity.  Since Viya 3.5 it is also possible to run under a shared identity, and to pool the session - see [documentation](https://go.documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calcontexts&docsetTarget=n1hjn8eobk5pyhn1wg3ja0drdl6h.htm&locale=en).
+
 
 ## Folder Security
 
