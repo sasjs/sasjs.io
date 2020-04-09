@@ -23,6 +23,8 @@ By default, services will run on the SAS Compute server under the client identit
 
 The recommended SASjs folder structure is to group services into app subfolders, so that security can be applied at backend. The app itself can also be secured by setting permission on the parent folder. There is one more thing to consider - services can be viewed (and executed) by anyone who has the READ permission, either using the `SERVERURL/SASStoredProcess?_action=1063` url or by navigating in `SASJobExecution` on Viya. Therefore your services should be built in such a way that no damage would be caused if an end user were to accidentally 'click' on one of the services and run it.
 
+This folder structure is enforced when using the [sasjs-cli](https://github.com/macropeople/sasjs-cli) tool.
+
 ## Idempotence
 
 Services should be built in such a way that they can be safely executed more than once. This is because it's possible that it WILL be run more than once (eg if the user clicks a button twice in succession).

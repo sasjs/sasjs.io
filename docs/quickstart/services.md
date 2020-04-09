@@ -1,3 +1,6 @@
+<!-- do not move or rename - is linked from here:
+https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2020/4260-2020.pdf
+-->
 # Services
 
 All of the quickstart apps use two backend services, both of which query the `sashelp.springs` dataset. The first is used to fetch a list of areas (to populate the dropdown) and the other will fetch a list of springs for a chosen area (to populate the grid).

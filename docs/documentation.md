@@ -38,8 +38,20 @@ The Data Controller for SAS® [documentation](https://docs.datacontroller.io/>`_
 
 The MacroPeople [MacroCore](https://core.macropeople.com) library is documented this way.
 
-### Sphinx
+#### Details
+This section is for explaining the code, with examples.  Indent by 4 spaces to format content as code.  The following comment style will allow code to be copy pasted without ending the header comment:
 
+```
+/**
+  @details this is my detailed explanation.
+  This part is indented 2 spaces.
+
+      %* this is a SAS comment, note the style - avoids the header being closed;
+      %* it is indented 6 spaces (4 spaces from previous non code line);
+**/
+```
+
+### Sphinx
 
 Primarily used for writing in `rst` format, [sphinx](https://www.sphinx-doc.org/en/master/index.html) is a very powerful documentation builder, built in python and used for all the official python documentation.  The founder of this language went on to launch [readthedocs.org](readthedocs.org) a hosting platform for Sphinx-built sites.
 

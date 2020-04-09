@@ -21,11 +21,15 @@ To create a new project, run:  `sasjs create mynewproject`
 To install in an existing project, change into that directory and run: `sasjs create` (without arguments).  This will create a `sas` folder inside the directory.
 
 ## Compilation
-From the root of the project, run:  `sasjs build`.  This will take all of the macros in the `services` folder and create equivalents in the `sasbuild` folder.  Each service will contain all of the dependent macros as listed under `dependencies` in the header, as well as the `serviceinit.sas` and `serviceterm.sas` files.
-![sasjscliflow.png](/img/sasjscliflow.png)
+From the root of the project, run:  `sasjs compile`.  This will take all of the macros in the `services` folder and create equivalents in the `sasbuild` folder.  Each service will contain all of the dependent macros as listed under `dependencies` in the header, as well as the `serviceinit.sas` and `serviceterm.sas` files.
+![sasjscliflow.png](/img/sasjscompile.png)
 
-## Deployment script generation
-`sasjs build` also creates a deployment script that can be executed in SAS Studio to create the backend services.  The `appLoc` is configured in the `/sas/config.json` file, along with the `serverType` (SAS9 or SASVIYA).
+## Build
+From the root of the project, run: `sasjs build`.  This will create a deployment script that can be executed in SAS Studio to create the backend services.  The `appLoc` is configured in the `/sas/config.json` file, along with the `serverType` (SAS9 or SASVIYA).  A `buildinit.sas` program can be configured to run, along with specific macro variables, according to the settings in `sasjsconfig.json`.
+
+If the services folder does not exist in the `sasjsbuild` folder, then the `sasjs compile` step is also executed.  The alias to run both compile and build steps is `sasjs cb`.
+![sasjscliflow.png](/img/sasjsbuild.png)
+
 
 ### Viya Deployment Script
 The Viya deployment script requires a number of variables to be prepared by an administrator.  Execute the following:
