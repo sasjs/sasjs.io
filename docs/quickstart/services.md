@@ -30,6 +30,7 @@ parmcards4;
 
 filename ft15f001 temp;
 parmcards4;
+  %webout(FETCH) /* fetch areas table sent from frontend */
   proc sql;
   create table springs as select * from sashelp.springs
     where area in (select area from areas);
@@ -68,6 +69,7 @@ parmcards4;
 ;;;;
 %mv_createwebservice(path=/Public/app/common, name=appInit, code=ft15f001 ,replace=YES)
 parmcards4;
+  %webout(FETCH) /* fetch areas table sent from frontend */
   proc sql;
   create table springs as select * from sashelp.springs where area in (select area from areas);
   %webout(OPEN)
