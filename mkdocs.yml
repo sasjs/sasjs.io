@@ -22,7 +22,9 @@ pages:
       - windows.md
       - guides/sas9.md
       - guides/viya.md
-  - Training: training.md
+  - Training: 
+      - training/resources.md
+      - training/workshops.md
 
 markdown_extensions:
   - admonition
@@ -50,3 +52,5 @@ theme:
   favicon: img/logo/favicon/32.ico
   custom_dir: "theme"
 copyright: All rights reserved &copy;2020 Macro People Ltd.
+
+google_analytics: ['UA-109713029-8', 'sasjs.io']
