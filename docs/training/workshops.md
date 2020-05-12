@@ -30,21 +30,42 @@ To save time on the day it will help to ensure that you have the above prerequis
 
 ### SAS Access
 
-You will need an instance of SAS in order to build the backend! If you are planning to use Viya, you will also need **Admin** rights in order to get the API key. You also need the ability to create services (either Stored Processes on SAS 9 or Job Execution Services on SAS Viya) somewhere in the folder tree. You can check this using SAS Management Console, DI Studio, /SASDrive, or /SASJobExecution.
+You will need an instance of SAS in order to build the backend! 
 
-### GIT
+#### Viya
 
-Install git from here: [https://git-scm.com/](https://git-scm.com/). If you do not have admin rights, try this [guide](/guides/windows#git).
+If you are planning to use Viya, you will also need **Admin** rights in order to get the API key.  You should be able to execute this code without errors:
+```
+options noquotelenmax;
+filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/base/mf_loc.sas";
+%inc mc;
+data _null_;
+  infile "%mf_loc(VIYACONFIG)/etc/SASSecurityCertificateFramework/tokens/consul/default/client.token";
+  input token:$64.;
+  call symputx('consul_token',token);
+run;
+```
 
-### NPM
+You also need the ability to create Job Execution services somewhere in the folder tree. You can check this using /SASJobExecution (or programmatically using SAS Studio).
 
+#### SAS 9
+You need the ability to create stored processes somewhere in the folder tree. You can check this using SAS Management Console, or DI Studio, or Enterprise Guide (if enabled).  You can also try by creating programmatically using SAS Studio.
+
+### Local Tools
+Whilst you could develop on the server, typically builds and changes are made _locally_ and then deployed to a server. 
+
+So on your laptop or desktop you will need the following items of software:
+
+#### GIT
+This is used mainly to clone the seed apps. Install from here: [https://git-scm.com/](https://git-scm.com/). If you do not have admin rights, try this [guide](/guides/windows#git).
+
+#### NPM  
 Node Package Manager (NPM) is a JavaScript framework for managing project dependencies. It also handles installations and a lot of other functionality. It can be downloaded here: [https://nodejs.org/en/download](https://nodejs.org/en/download). If you do not have admin rights, try this [guide](/guides/windows#npm).
 
-### VSCode
-
+#### VSCode
 You don't necessarily need VSCode but it's a great editor and includes an integrated terminal for running commands. It can be downloaded (without telemetry) from here: [https://vscodium.com/](https://vscodium.com/), and a portable version can be obtained from this [guide](/guides/windows#vscode).
 
-### Final checks
+#### Final checks
 
 Open VScode, select Terminal -> New Terminal, and submit the following commands:
 
