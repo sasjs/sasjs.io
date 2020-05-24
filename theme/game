@@ -95,9 +95,28 @@ put '</body>';
 put '</html>';
 run;
 ;;;;
-/* create STP web service */
-%mm_createwebservice(path=/User Folders/&sysuserid/My Folder
-  , name=spaceinvaders
-  , code=ft15f001
-  ,replace=YES
-)
+/* create web service */
+%macro outyougo();
+  %if %substr(%mf_getplatform()XXX,4,1)=V %then %do;
+    filename _game temp;
+    data _null_;
+      file _game;
+      put 'filename _webout filesrvc parenturi="&SYS_JES_JOB_URI" ';
+      put '  name="_webout.html" lrecl=999999;';
+    run;
+    %mv_createwebservice(path=/Users/&sysuserid/My Folder
+      , name=spaceinvaders
+      , code=_game ft15f001
+      ,replace=YES
+    )
+  %end;
+  %else %do;
+    %mm_createwebservice(path=/User Folders/&sysuserid/My Folder
+      , name=spaceinvaders
+      , code=ft15f001
+      ,replace=YES
+    )
+  %end;
+%mend;
+
+%outyougo()
