@@ -10,21 +10,18 @@ The process for registering these services is almost identical between [SAS9](#s
 Simply open SAS Studio (must be StudioV in Viya) and run the code below.
 
 ```
-%let appLoc=/Public/myapp;  /* Configure Metadata or Viya Folder location here */
-
+%let appLoc=/Public/app;  /* Configure Metadata or Viya Folder location here */
 filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
 %inc mc; /* compile macros */
-
 filename ft15f001 temp;
 parmcards4;
   proc sql;
-  create table areas as select distinct area
-    from sashelp.springs;
+  create table areas as select distinct area from sashelp.springs;
   %webout(OPEN)
   %webout(OBJ,areas)
   %webout(CLOSE)
 ;;;;
-%mp_createwebservice(path=&appLoc/common, name=appInit, code=ft15f001 ,replace=YES)
+%mp_createwebservice(path=&appLoc/common,name=appinit,code=ft15f001,replace=YES)
 
 filename ft15f001 temp;
 parmcards4;
@@ -36,6 +33,6 @@ parmcards4;
   %webout(OBJ,springs)
   %webout(CLOSE)
 ;;;;
-%mp_createwebservice(path=&appLoc/common, name=getData, code=ft15f001 ,replace=YES)
+%mp_createwebservice(path=&appLoc/common,name=getdata,code=ft15f001,replace=YES)
 
 ```

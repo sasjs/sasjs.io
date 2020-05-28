@@ -18,13 +18,24 @@
 
 ### Build a HTML5 Web App Using SAS
 
+SGF2020 Virtual Presentation
+
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/ISsgu-F9NG0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>
 
+### Build a React Web App on SAS Viya in under 5 minutes
+Clone, install, configure, build, deploy frontend, generate backend!
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/vSNBea_M8yU" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
 ### Use the SASJS-CLI to create a backend repository
+The CLI tool enables your SAS backend to live alongside your frontend in a GIT repository - and for your SAS services to be compiled, built and deployed in a single command.
 
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/hUpBqExNec4" 
@@ -32,3 +43,31 @@
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>
 
+### Deploying and Using the Viya Token Generator
+On Viya you need a client, secret and access_token to autodeploy your backend. This app makes it easy.
+
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/mHP96rmyRoo" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
+### SAS Streamed SAS Rap
+
+Streaming an MP3 file from a SAS Web Service.  A to the mfn K!
+
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/-yR5hotyJaw" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
+### Compile/Build/Deploy a HTML5 Game on SAS 
+
+Use the Viya REST APIs or [sas9api](https://sas9api.io) to autodeploy your app to the backend
+
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/F0qKEz6McbU" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
