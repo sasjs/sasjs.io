@@ -44,7 +44,7 @@ The CLI tool enables your SAS backend to live alongside your frontend in a GIT r
     allowfullscreen></iframe>
 
 ### Deploying and Using the Viya Token Generator
-On Viya you need a client, secret and access_token to autodeploy your backend. This app makes it easy.
+On Viya you need a client, secret and access_token to autodeploy your backend. This [app](https://github.com/macropeople/viyatoken) makes it easy.
 
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/mHP96rmyRoo" 
@@ -64,7 +64,7 @@ Streaming an MP3 file from a SAS Web Service.  A to the mfn K!
 
 ### Compile/Build/Deploy a HTML5 Game on SAS 
 
-Use the Viya REST APIs or [sas9api](https://sas9api.io) to autodeploy your app to the backend
+Use the Viya REST APIs or [sas9api](https://sas9api.io) to autodeploy your app to the backend.  Github repo [here](https://github.com/macropeople/rockroller)
 
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/F0qKEz6McbU" 
