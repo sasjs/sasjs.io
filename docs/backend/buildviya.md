@@ -14,25 +14,23 @@ filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/
 
 If you are unable to run the above code, you may not have internet access on your server.  In this case, simply click this [link](https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas) and copy paste the content into your SAS session, and run it.
 
-### Get App Token (Admin Task)
-The following step can only be executed by a SAS Admin.  Here is where you set the client and secret and an access token is returned::
+### Register Client (Admin Task)
+The following step can only be executed by a SAS Admin.  Here is where you set the client and secret and output to a dataset:
 
 ```
-    %let client=MyClient;
-    %let secret=MySecret;
-    %mv_getapptoken(client_id=&client,client_secret=&secret)
+    %mv_registerclient(outds=client)
 ```
 
 After running the above, take a look in the log - it will contain a link which you can follow to get the access code.  Be sure to select 'openid' from the list of authorisations.
 
-### Get Refresh Token
+### Access & Refresh Tokens
 With the returned code, add it to the first macro below and execute both lines to get the refresh token.
 
 ```
-    %mv_getrefreshtoken(client_id=&client,client_secret=&secret
-      ,code=PUT_THE_ACCESS_CODE_HERE
-    )
-    %mv_getaccesstoken(client_id=&client,client_secret=&secret)
+    %mv_tokenauth(inds=client,code=PUT_THE_ACCESS_CODE_HERE)
+
+    /* if your access token expires, add refresh_token to INDS and resubmit */
+    %mv_tokenrefresh(inds=client)
 ```
 
 We are now ready to create our first service!
