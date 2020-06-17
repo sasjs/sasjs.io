@@ -6,11 +6,13 @@ Are you looking to build the capability to deploy fresh and inspiring new interf
 
 Training is available either remotely or on-site in the following durations:
 
-- 1 hour - overview of the tooling, available resources, best practices, etc. Configure and deploy a working seed app.
+- 1 hour - overview of the tooling, available resources, best practices, etc. Configure and deploy a working seed app.   FREE OF CHARGE (remote).
 
 - Half day - Build, deploy and release a functional app, including dependent macros, use of a database, and release notes
 
 - Full day - Design, build, deploy & release a complex multi-user app
+
+For more information, contact [Allan Bowe](https://www.linkedin.com/in/allanbowe/) via private message.
 
 ## Pre-requisites
 

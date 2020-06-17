@@ -21,7 +21,7 @@ parmcards4;
   %webout(OBJ,areas)
   %webout(CLOSE)
 ;;;;
-%mp_createwebservice(path=&appLoc/common,name=appinit,code=ft15f001,replace=YES)
+%mp_createwebservice(path=&appLoc/common,name=appinit)
 
 filename ft15f001 temp;
 parmcards4;
@@ -33,6 +33,6 @@ parmcards4;
   %webout(OBJ,springs)
   %webout(CLOSE)
 ;;;;
-%mp_createwebservice(path=&appLoc/common,name=getdata,code=ft15f001,replace=YES)
+%mp_createwebservice(path=&appLoc/common,name=getdata)
 
 ```

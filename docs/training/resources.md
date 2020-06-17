@@ -5,6 +5,7 @@
 * SASjs [adapter](https://github.com/macropeople/sasjs) (if you like it, star it!)
 * SASJS-CLI [commandline tool](https://github.com/macropeople/sasjs-cli)
 * Macro Core github [Library](https://github.com/macropeople/macrocore)
+* Macro Core [documentation](https://core.sasjs.io)
 * REACT [seed app](https://github.com/macropeople/react-seed-app)
 * Angular [seed app](https://github.com/macropeople/angular-seed-app)
 * Minimal [seed app](https://github.com/macropeople/minimal-seed-app)
