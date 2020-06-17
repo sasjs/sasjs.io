@@ -25,6 +25,7 @@ pages:
   - Training: 
       - training/resources.md
       - training/workshops.md
+  - FAQ: faq.md 
 
 markdown_extensions:
   - admonition

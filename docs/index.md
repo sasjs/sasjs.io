@@ -16,21 +16,14 @@ Below is a demo of building and deploying a React App on SAS Viya, with two serv
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vSNBea_M8yU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+# What is this?
 
-# Minimum Requirements
+SASjs is a framework - a collection of independent tools which, taken together, provide a serious accelerator to web development projects.
 
-To build apps on SAS you need SAS Viya, or SAS 9 with Stored Process Server.  
+It consists of three parts:
 
-**You cannot create web apps on SAS with University Edition.**
+1. Macro library ([macrocore](https://github.com/macropeople/macrocore)).  A collection of SAS macro based tools for app development, documented [here](https://core.sasjs.io)
 
-To check if you have SAS Viya, open SAS Studio, click your user profile and click "About".
+2. CLI tool ([sasjs-cli](https://github.com/macropeople/sasjs-cli)).  An NPM command line utility for automating the compilation, build and deployment of your SAS-Powered HTML5 Application.
 
-If you are using Enterprise Guide, then simply run:
-
-```
-data _null_;
-  length url $128;
-  rc=METADATA_GETURI("Stored Process Web App",url);
-  putlog 'Your SAS 9 url is: ' url;
-run;
-```
+3. Data Adapter ([sasjs](https://github.com/macropeople/sasjs)). A JS library to handle the communication between your HTML5 application and the SAS 9 or Viya backend.
