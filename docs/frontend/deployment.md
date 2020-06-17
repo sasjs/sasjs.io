@@ -8,6 +8,10 @@ Deployment comes in three parts:
 
 * Configuration
 
+## SAS9 Deploy
+
+The standard location of the static content area on the SAS9 web server is `!SASCONFIG/LevX/Web/WebServer/htdocs`.
+
 
 ## Viya Deploy
 
