@@ -2,11 +2,15 @@
 
 ## Services
 
-To create services on Viya you are firstly going to need to be an **Administator** in order to access the consul token.  You also need write access to a location in the files service (eg `/public/somewhere`).
+There are three main ways to create services in Viya:
 
-### Open SAS Studio and Compile Macros
+1) Manually through the `/SASJobExecution` interface
+2) As part of a build process using [sasjs-cli](https://sasjs.io/sasjs/sasjs-cli/)
+3) Using code in SAS Studio.  
 
-Simply run the following
+
+## SAS Studio
+To follow the below, you'll need to compile the MacroCore library into your session.  To do this, simply run the following
 ```
 filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
 %inc mc;
@@ -14,29 +18,8 @@ filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/
 
 If you are unable to run the above code, you may not have internet access on your server.  In this case, simply click this [link](https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas) and copy paste the content into your SAS session, and run it.
 
-### Register Client (Admin Task)
-The following step can only be executed by a SAS Admin.  Here is where you set the client and secret and output to a dataset:
 
-```
-    %mv_registerclient(outds=client)
-```
-
-After running the above, take a look in the log - it will contain a link which you can follow to get the access code.  Be sure to select 'openid' from the list of authorisations.
-
-### Access & Refresh Tokens
-With the returned code, add it to the first macro below and execute both lines to get the refresh token.
-
-```
-    %mv_tokenauth(inds=client,code=PUT_THE_ACCESS_CODE_HERE)
-
-    /* if your access token expires, add refresh_token to INDS and resubmit */
-    %mv_tokenrefresh(inds=client)
-```
-
-We are now ready to create our first service!
-
-### Create SAS Service
-We will create our service using the `%mv_createwebservice()` macro, which expects pointers to SAS code to be provided as one or more filerefs.  This will create the service and provide the necessary precode to retrieve any data that has been sent - and automatically create that data as tables in WORK.
+We will create our service using the `%mv_createwebservice()` macro, which expects SAS code to be passed in as filerefs.  This will create the service and provide the necessary precode to retrieve any data that has been sent - and automatically create that data as tables in WORK.
 
 To speed up this demo we are going to use a little known fileref with the alias `ft15f001` - when combined with `parmcards` this allows us to write file content directly in open code, in a similar fashion to `datalines` and table data.
 
