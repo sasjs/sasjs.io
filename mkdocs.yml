@@ -9,6 +9,7 @@ pages:
   - SASjs: 
       - Adapter: sasjs/sasjs-adapter.md
       - CLI Tool: sasjs/sasjs-cli.md
+      - MacroCore: sasjs/macrocore.md
   - Backend SAS:
       - Getting Started: backend/getstarted.md
       - SAS9: backend/buildsas9.md

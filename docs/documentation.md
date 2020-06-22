@@ -60,11 +60,13 @@ Some useful resources:
 
 * Getting started [video](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
 * Online RST renderer: [http://rst.ninjs.org](http://rst.ninjs.org/)
-* RST Table [generator](https://www.tablesgenerator.com/text_tables_
+* RST Table [generator](https://www.tablesgenerator.com/text_tables)
 * Cheatsheet: [https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html](https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html)
 
 
-### TSDoc
+### TypeDoc
 
+The good thing about using typescript to build your frontend is that it can auto-generate a lot of documentation as types etc can be inferred from the syntax.  The SASjs library is documented this way - [adapter.sasjs.io](https://adapter.sasjs.io).
 
-* [https://github.com/microsoft/tsdoc](https://github.com/microsoft/tsdoc)
+More info available [here](https://typedoc.org/).
+
