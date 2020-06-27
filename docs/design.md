@@ -17,7 +17,8 @@ It's possible to build good looking apps quickly without having to specify every
 
 * [Semantic ui](https://semantic-ui.com/) - with a specific [version](https://react.semantic-ui.com/) for React
 * [Clarity Design](clarity.design) - Angular but will soon support React / Vue also
-* [Material Design](https://material.io/design/) - built by google
+* [Material Design](https://material.io/design/) - built by Google
+* [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/controls/web) - built by Microsoft
 
 ## Image Editing
 https://svgtopng.com/
