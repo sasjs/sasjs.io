@@ -32,6 +32,7 @@ Scroll down and add the following attribute / value pairs:
 |--|---|---|
 |Mandatory|`runServerAs`|the user id we used in the `./sas-admin compute credentials create`  step above|
 |Mandatory|`reuseServerProcesses`|`true`|
+|Optional|`serverInactiveTimeout`|Time in seconds before the server times out.  Will otherwise time out when there are no active sessions.  Default is `600` (10 mins).  We recommend `1800` or longer.|
 |Optional|`allowXCMD`|`true` or `false`|
 |Optional|`unsafeJobCharacters`|Contains the characters that the compute session should remove from any variable that is provided to a job for execution. By default, the following characters are removed: & (ampersand), ” (double quotation mark), ; (semicolon), ’ (single quotation mark), and % (percent sign). If set to "" the feature is disabled.|
 

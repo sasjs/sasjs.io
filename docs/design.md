@@ -21,8 +21,8 @@ It's possible to build good looking apps quickly without having to specify every
 * [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/controls/web) - built by Microsoft
 
 ## Image Editing
-https://svgtopng.com/
-https://www.photopea.com/    (adobe alike)
-https://onlinepngtools.com/convert-png-to-jpg (for adding background in png)
-https://www.calculatorsoup.com/calculators/math/ratios.php (maintaining ratio stuff) (edited) 
 
+* [https://svgtopng.com](https://svgtopng.com/)
+* [https://www.photopea.com](https://www.photopea.com) - adobe like
+* [https://onlinepngtools.com/convert-png-to-jpg](https://onlinepngtools.com/convert-png-to-jpg) - for adding background in png
+* [https://www.calculatorsoup.com/calculators/math/ratios.php](https://www.calculatorsoup.com/calculators/math/ratios.php) - maintaining ratio stuff

@@ -48,6 +48,8 @@ data _null_;
 run;
 ```
 
+It is possible to build apps without admin rights, however you won't be able to auto-deploy using the CLI tool without a client and secret.
+
 You also need the ability to create Job Execution services somewhere in the folder tree. You can check this using /SASJobExecution (or programmatically using SAS Studio).
 
 #### SAS 9
@@ -59,13 +61,13 @@ Whilst you could develop on the server, typically builds and changes are made _l
 So on your laptop or desktop you will need the following items of software:
 
 #### GIT
-This is used mainly to clone the seed apps. Install from here: [https://git-scm.com/](https://git-scm.com/). If you do not have admin rights, try this [guide](/guides/windows#git).
+This is used mainly to clone the seed apps. Install from here: [https://git-scm.com/](https://git-scm.com/). If you do not have admin rights, try this [guide](/windows#git).
 
 #### NPM  
-Node Package Manager (NPM) is a JavaScript framework for managing project dependencies. It also handles installations and a lot of other functionality. It can be downloaded here: [https://nodejs.org/en/download](https://nodejs.org/en/download). If you do not have admin rights, try this [guide](/guides/windows#npm).
+Node Package Manager (NPM) is a JavaScript framework for managing project dependencies. It also handles installations and a lot of other functionality. It can be downloaded here: [https://nodejs.org/en/download](https://nodejs.org/en/download). If you do not have admin rights, try this [guide](/windows#npm).
 
 #### VSCode
-You don't necessarily need VSCode but it's a great editor and includes an integrated terminal for running commands. It can be downloaded (without telemetry) from here: [https://vscodium.com/](https://vscodium.com/), and a portable version can be obtained from this [guide](/guides/windows#vscode).
+You don't necessarily need VSCode but it's a great editor and includes an integrated terminal for running commands. It can be downloaded (without telemetry) from here: [https://vscodium.com/](https://vscodium.com/), and a portable version (installable without admin rights) can be obtained from this [guide](/windows#vscode).
 
 #### Final checks
 
