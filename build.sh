@@ -23,3 +23,4 @@ echo 'sasjs.io' > CNAME
 git add *
 git commit -m "build.sh build on $(date +%F:%H:%M:%S)"
 git push
+
