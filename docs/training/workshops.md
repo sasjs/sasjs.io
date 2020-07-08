@@ -39,7 +39,7 @@ You will need an instance of SAS in order to build the backend!
 If you are planning to use Viya, you will also need **Admin** rights in order to get the API key.  You should be able to execute this code without errors:
 ```
 options noquotelenmax;
-filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/base/mf_loc.sas";
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/base/mf_loc.sas";
 %inc mc;
 data _null_;
   infile "%mf_loc(VIYACONFIG)/etc/SASSecurityCertificateFramework/tokens/consul/default/client.token";

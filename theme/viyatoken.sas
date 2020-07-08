@@ -1093,7 +1093,7 @@ put 'put ''    <p class="secHide">Suitable for copy pasting into the <a href="ht
 put 'put ''    <p id="token-info" class="secHide"></p>'';';
 put 'put ''    <h4 class="secHide">SAS Format <span class="copy-icon" onclick="copyText(''''token-info-macro'''')"></span></h4>'';';
 put 'put ''    <p class="secHide">'';';
-put 'put ''    Suitable for including in SAS Programs that use the <a href="https://github.com/macropeople/macrocore">MacroCore</a> library'';';
+put 'put ''    Suitable for including in SAS Programs that use the <a href="https://github.com/sasjs/core">MacroCore</a> library'';';
 put 'put ''    </p>'';';
 put 'put ''    <p id="token-info-macro" class="secHide"></p>'';';
 put 'put ''    <button id="generate-token" onclick="generateToken()">Generate token</button>'';';

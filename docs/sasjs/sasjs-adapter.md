@@ -75,7 +75,7 @@ The adapter will also cache the logs (if debug enabled) and even the work tables
 
 ## SAS Inputs / Outputs
 
-The SAS side is handled by a number of macros in the [macrocore](https://github.com/macropeople/macrocore) library.
+The SAS side is handled by a number of macros in the [macro core](https://github.com/sasjs/core) library.
 
 The following snippet shows the process of SAS tables arriving / leaving:
 ```

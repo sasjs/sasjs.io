@@ -22,8 +22,8 @@ SASjs is a framework - a collection of independent tools which, taken together, 
 
 It consists of three parts:
 
-1. Macro library ([macrocore](https://github.com/macropeople/macrocore)).  A collection of SAS macro based tools for app development, documented [here](https://core.sasjs.io)
+1. Macro library ([macrocore](https://github.com/sasjs/core)).  A collection of SAS macro based tools for app development, documented [here](https://core.sasjs.io)
 
-2. CLI tool ([sasjs-cli](https://github.com/macropeople/sasjs-cli)).  An NPM command line utility for automating the compilation, build and deployment of your SAS-Powered HTML5 Application.
+2. CLI tool ([sasjs-cli](https://github.com/sasjs/cli)).  An NPM command line utility for automating the compilation, build and deployment of your SAS-Powered HTML5 Application.
 
-3. Data Adapter ([sasjs](https://github.com/macropeople/sasjs)). A JS library to handle the communication between your HTML5 application and the SAS 9 or Viya backend.
+3. Data Adapter ([sasjs](https://github.com/sasjs/adapter)). A JS library to handle the communication between your HTML5 application and the SAS 9 or Viya backend.

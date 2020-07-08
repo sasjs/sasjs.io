@@ -6,7 +6,7 @@ Deploying web apps is generally more secure than, say, Python or R, because the 
 
 A shared system account for running web services is preferred as it can enable functionality for users that they cannot (or should not) perform themselves, eg database modifications (and for that, you should seriously consider [Data Controlller for SAS®](https://datacontroller.io)).  It can also avoids unix permissions issues, as created files are owned by default under the end user identity.
 
-However - as it is a shared account, the ability to run code under this identity should be appropriately governed.  In particular, code injection must be protected against - for this reason, URL parameters are a bad idea, much better to send tables using an adapter such as [SASjs](https://github.com/macropeople/sasjs). 
+However - as it is a shared account, the ability to run code under this identity should be appropriately governed.  In particular, code injection must be protected against - for this reason, URL parameters are a bad idea, much better to send tables using an adapter such as [SASjs](https://github.com/sasjs/adapter). 
 
 It is also recommended to ensure you have a secure release process, which includes code review and automated testing, to ensure the safety of your production environment.
 
@@ -23,7 +23,7 @@ By default, services will run on the SAS Compute server under the client identit
 
 The recommended SASjs folder structure is to group services into app subfolders, so that security can be applied at backend. The app itself can also be secured by setting permission on the parent folder. There is one more thing to consider - services can be viewed (and executed) by anyone who has the READ permission, either using the `SERVERURL/SASStoredProcess?_action=1063` url or by navigating in `SASJobExecution` on Viya. Therefore your services should be built in such a way that no damage would be caused if an end user were to accidentally 'click' on one of the services and run it.
 
-This folder structure is enforced when using the [sasjs-cli](https://github.com/macropeople/sasjs-cli) tool.
+This folder structure is enforced when using the [sasjs-cli](https://github.com/sasjs/cli) tool.
 
 ## Idempotence
 
@@ -39,7 +39,7 @@ An integrity hash is a checksum of a file - if just one character inside a file 
   crossorigin="anonymous"></script>
 ```
 
-If your CSS or JS files are released via github, then they are automatically available with SRI checks using [JSDelivr](https://www.jsdelivr.com/) - for instance, to get the latest script tag for [SASjs](https://github.com/macropeople/sasjs) you can just click [here](https://www.jsdelivr.com/package/npm/sasjs?tab=collection) and select "SRI".
+If your CSS or JS files are released via github, then they are automatically available with SRI checks using [JSDelivr](https://www.jsdelivr.com/) - for instance, to get the latest script tag for [SASjs](https://github.com/sasjs/adapter) you can just click [here](https://www.jsdelivr.com/package/npm/sasjs?tab=collection) and select "SRI".
 
 If your files are elsewhere, or you'd like more control over the build, you can also generate the integrity hash yourself - here is the syntax:
 

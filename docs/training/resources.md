@@ -2,13 +2,13 @@
 
 ## Websites
 
-* SASjs [adapter](https://github.com/macropeople/sasjs) (if you like it, star it!)
-* SASJS-CLI [commandline tool](https://github.com/macropeople/sasjs-cli)
-* Macro Core github [Library](https://github.com/macropeople/macrocore)
+* SASjs [adapter](https://github.com/sasjs/adapter) (if you like it, star it!)
+* SASJS-CLI [commandline tool](https://github.com/sasjs/cli)
+* Macro Core github [Library](https://github.com/sasjs/core)
 * Macro Core [documentation](https://core.sasjs.io)
-* REACT [seed app](https://github.com/macropeople/react-seed-app)
-* Angular [seed app](https://github.com/macropeople/angular-seed-app)
-* Minimal [seed app](https://github.com/macropeople/minimal-seed-app)
+* REACT [seed app](https://github.com/sasjs/react-seed-app)
+* Angular [seed app](https://github.com/sasjs/angular-seed-app)
+* Minimal [seed app](https://github.com/sasjs/minimal-seed-app)
 * Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
 * [Sasensei SAS App Quiz](https://sasensei.com/questions/filter?tags_any=[13])
 

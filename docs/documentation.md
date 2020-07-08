@@ -36,7 +36,7 @@ The Data Controller for SAS® [documentation](https://docs.datacontroller.io/>`_
 
 [DoxyGen](http://www.doxygen.nl/) is a commandline tool that can generate a number of output formats, similar to Sphinx.  More suitable for documenting code, than generating standalone docs (although it can do that also).
 
-The MacroPeople [MacroCore](https://core.macropeople.com) library is documented this way.
+The [Macro Core](https://core.sasjs.io) library is documented this way.
 
 #### Details
 This section is for explaining the code, with examples.  Indent by 4 spaces to format content as code.  The following comment style will allow code to be copy pasted without ending the header comment:

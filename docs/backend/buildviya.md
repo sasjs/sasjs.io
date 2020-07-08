@@ -12,11 +12,11 @@ There are three main ways to create services in Viya:
 ## SAS Studio
 To follow the below, you'll need to compile the MacroCore library into your session.  To do this, simply run the following
 ```
-filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 ```
 
-If you are unable to run the above code, you may not have internet access on your server.  In this case, simply click this [link](https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas) and copy paste the content into your SAS session, and run it.
+If you are unable to run the above code, you may not have internet access on your server.  In this case, simply click this [link](https://raw.githubusercontent.com/sasjs/core/main/all.sas) and copy paste the content into your SAS session, and run it.
 
 
 We will create our service using the `%mv_createwebservice()` macro, which expects SAS code to be passed in as filerefs.  This will create the service and provide the necessary precode to retrieve any data that has been sent - and automatically create that data as tables in WORK.

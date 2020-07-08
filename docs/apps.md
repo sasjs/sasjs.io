@@ -21,6 +21,8 @@ Dodge trees to see how far you can roll this rock in this infinite game!  Works 
 
 Source: [https://github.com/macropeople/rockroller](https://github.com/macropeople/rockroller)
 
+This game was set up to demonstrate 
+
 
 ### SAS Streamed SAS Rap
 Run the code below (SAS9 or Viya), and open the link in a browser to hear a SAS streamed [SAS Rap](https://www.youtube.com/watch?v=FtTAoYV9HS8&feature=youtu.be) by [Thiago De Souza](https://www.linkedin.com/in/thiago-de-souza/) 

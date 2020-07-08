@@ -10,18 +10,18 @@ The MacroCore library provides routines and helpers for use in SAS side applicat
 
 * **VIYA** - Macros that interface with SAS Viya.  No XCMD assumed.
 
-Check out the [source code](https://github.com/macropeople/macrocore) and [documentation](https://core.sasjs.io).
+Check out the [source code](https://github.com/sasjs/core) and [documentation](https://core.sasjs.io).
 
 ## Installation
 
 The easest way to make these macros available is to just include them in your session as follows:
 
 ```
-filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 ```
 
-If you don't have internet access from your SAS session, you can download the macros directly from [here](https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas) and place them in your autoexec, or initialisation file.
+If you don't have internet access from your SAS session, you can download the macros directly from [here](https://raw.githubusercontent.com/sasjs/core/main/all.sas) and place them in your autoexec, or initialisation file.
 
 A further option might be to `git clone` the repository, and set up sasautos, eg:
 

@@ -11,7 +11,7 @@ Simply open SAS Studio (must be StudioV in Viya) and run the code below.
 
 ```
 %let appLoc=/Public/app;  /* Configure Metadata or Viya Folder location here */
-filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc; /* compile macros */
 filename ft15f001 temp;
 parmcards4;

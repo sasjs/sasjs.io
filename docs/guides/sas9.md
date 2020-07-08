@@ -19,7 +19,7 @@ run;
 
 ## mm_getwebappsrvprops
 
-This [macro](https://github.com/macropeople/macrocore/blob/master/meta/mm_getwebappsrvprops.sas) gets a bunch of properties relating to web servers, however it's possible that access may be restricted, depending on the metadata permissions at your site.
+This [macro](https://github.com/sasjs/core/blob/main/meta/mm_getwebappsrvprops.sas) gets a bunch of properties relating to web servers, however it's possible that access may be restricted, depending on the metadata permissions at your site.
 
 ```
 %mm_getwebappsrvprops(outds= some_ds)

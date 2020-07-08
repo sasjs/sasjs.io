@@ -42,7 +42,7 @@ If the services folder does not exist in the `sasjsbuild` folder, then the `sasj
 The Viya build script requires a number of variables to be prepared by an administrator.  Execute the following:
 
 ```
-filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 %let client=MyClient;
 %let secret=MySecret;
@@ -91,7 +91,7 @@ The build script (named as per `buildOutputFileName`) can be copy pasted into SA
 You can SSH (rsync or scp) your build script onto the SAS Server then `%inc` it from a web service - the web service could be created using the code below:
 
 ```
-filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 filename ft15f001 temp;
 parmcards4;

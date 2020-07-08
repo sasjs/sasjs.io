@@ -8,7 +8,7 @@ The below approach will work from 9.3 and upwards.
 
 ```
 * compile macros ;
-filename mc url "https://raw.githubusercontent.com/macropeople/macrocore/master/mc_all.sas";
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 * if the above fails, download and compile manually;
 
