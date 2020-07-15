@@ -15,8 +15,9 @@ pages:
       - SAS9: backend/buildsas9.md
       - VIYA: backend/buildviya.md
   - Frontend Web:
-      - frontend/getstarted.md
-      - frontend/deployment.md
+      - Getting Started: frontend/getstarted.md
+      - Deployment: frontend/deployment.md
+      - CORS: frontend/cors.md
   - Testing: testing.md
   - Documentation: documentation.md
   - Guides:

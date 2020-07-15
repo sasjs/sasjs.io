@@ -16,7 +16,6 @@ mkdir $BUILD_FOLDER
 
 cd $BUILD_FOLDER
 git clone git@github.com:sasjs/sasjs.github.io.git .
-git checkout gh-pages
 git rm -r *
 cp -r $CWD/site/* $BUILD_FOLDER
 echo 'sasjs.io' > CNAME

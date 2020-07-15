@@ -1,12 +1,6 @@
 # Deploy
 
-Deployment comes in three parts:
-
-* Frontend
-
-* Backend
-
-* Configuration
+Deployment is the process of taking the app you have built, and putting it somewhere that others can use it!  For Single Page Web Apps you are highly recommended to upload them to the static content area of the SAS web server.  This avoids the need to configure `serverUrl` and for administrators to whitelist any additional servers.
 
 ## SAS9 Deploy
 
