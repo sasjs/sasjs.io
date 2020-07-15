@@ -7,14 +7,14 @@
     "doc": "docs"
   },
   "scripts": {
-    "release": "standard-version"
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sasjs/sasjs.github.io.git"
   },
   "keywords": [
-    "SAS"
+    "SAS","Viya","SASjs"
   ],
   "author": "Allan Bowe",
   "license": "ISC",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://sasjs.io",
   "devDependencies": {
-    "standard-version": "^4.4.0"
+
   }
 }
