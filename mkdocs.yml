@@ -1,0 +1,61 @@
+site_name: Building Web Applications using SAS®
+pages:
+  - Home: index.md
+  - Quickstart:
+      - Services: quickstart/services.md
+      - React: quickstart/react.md
+  - Design: design.md
+  - Security: security.md
+  - SASjs: 
+      - Adapter: sasjs/sasjs-adapter.md
+      - CLI Tool: sasjs/sasjs-cli.md
+      - MacroCore: sasjs/macrocore.md
+  - Backend SAS:
+      - Getting Started: backend/getstarted.md
+      - SAS9: backend/buildsas9.md
+      - VIYA: backend/buildviya.md
+  - Frontend Web:
+      - Getting Started: frontend/getstarted.md
+      - Deployment: frontend/deployment.md
+      - CORS: frontend/cors.md
+  - Testing: testing.md
+  - Documentation: documentation.md
+  - Guides:
+      - guides/images.md
+      - guides/state.md
+      - windows.md
+      - guides/sas9.md
+      - guides/viya.md
+  - Training: 
+      - training/resources.md
+      - training/workshops.md
+  - FAQ: faq.md 
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - codehilite
+  - fontawesome_markdown
+  - toc:
+      permalink: true
+
+extra_css: ["font-awesome.css"]
+
+# Repository
+repo_name: "sasjs-docs"
+repo_url: "https://github.com/sasjs/sasjs.github.io"
+
+theme:
+  name: material
+  logo: "img/logo/favicon/32.svg"
+  palette:
+    primary: "White"
+    accent: "Amber"
+  font:
+    text: "Open Sans"
+    code: "Ubuntu Mono"
+  favicon: img/logo/favicon/32.ico
+  custom_dir: "theme"
+copyright: All rights reserved &copy;2020 Macro People Ltd.
+
+google_analytics: ['UA-109713029-8', 'sasjs.io']
