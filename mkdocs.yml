@@ -43,7 +43,7 @@ extra_css: ["font-awesome.css"]
 
 # Repository
 repo_name: "sasjs-docs"
-repo_url: "https://github.com/sasjs/sasjs.github.io"
+repo_url: "https://github.com/sasjs/sasjs.io"
 
 theme:
   name: material
