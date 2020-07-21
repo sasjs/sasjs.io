@@ -1,4 +1,5 @@
-# VSCodium
+VSCodium
+====================
 
 VSCodium is VSCode without the telemetry!  It's a great IDE and very usable for both SAS and Web development.  It also has many marketplace extensions - these are our favourites:
 

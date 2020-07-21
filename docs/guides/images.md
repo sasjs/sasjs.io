@@ -1,4 +1,5 @@
-# Images
+Images
+====================
 
 If you are hosting your web app on a web server (like you should) then there is really not much to consider regarding images, other than for you to minimise file sizes to improve app load times.  Images are often cached so subsequent loads are less of an issue.
 

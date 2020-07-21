@@ -1,4 +1,5 @@
-# SASjs Adapter
+SASjs Adapter
+====================
 
 The SASjs adapter is a JS library and a set of SAS Macros that handle the communication between the frontend app and backend SAS services.
 

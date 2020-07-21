@@ -1,4 +1,5 @@
-# SASJS-CLI
+SASJS-CLI
+====================
 
 The CLI tool fulfills 3 main purposes:
 
@@ -9,19 +10,23 @@ The CLI tool fulfills 3 main purposes:
 
 There is also a feature to let you deploy your frontend as a service, bypassing the need to access the SAS Web Server.
 
-## Installation
+Installation
+---------------------
+
 The tool must be installed globally in order to function as a command.  Simply run:
 
 ```
 npm i -g sasjs-cli
 ```
 
-## Project Creation
+Project Creation
+---------------------
 To create a new project, run:  `sasjs create mynewproject`
 
 To install in an existing project, change into that directory and run: `sasjs create` (without arguments).  This will create a `sas` folder inside the directory.
 
-## Compilation
+Compilation
+---------------------
 From the root of the project, run:  `sasjs compile`.  This will take all of the macros in the `services` folder and create equivalents in the `sasbuild` folder.  Each service will contain all of the dependent macros as listed under `dependencies` in the header, as well as the `serviceinit.sas` and `serviceterm.sas` files.
 ![sasjscliflow.png](/img/sasjscompile.png)
 
@@ -30,7 +35,8 @@ If `streamWeb` is `true` then the `index.html` file in your `webSourcePath` is s
 ### Base64 encoding
 If you don't have an `index.html` and you just want to compile arbitrary binary content (such as images, mp3, excel files etc) as base64 services, set the location of the content in `assetPaths`.  All files in the specified folder(s) will be turned into web services.
 
-## Build
+Build
+---------------------
 From the root of the project, run: `sasjs build`.  This will create a deployment script that can be executed in SAS to create the backend services.  The `appLoc` is configured in the `/sas/config.json` file, along with the `serverType` (SAS9 or SASVIYA).  A `buildinit.sas` program can be configured to run, along with specific macro variables (`tgtBuildVars`), according to the settings in `sasjsconfig.json`.
 
 If you have sensitive build variables (such as an `access_token`) you can set these in a `.env` file in your project root.  
@@ -70,7 +76,8 @@ The above can then be securely placed in a read-protected directory (such as a h
     Saving security tokens in project repositories, especially if they are committed to source control, is a security risk - as anyone with access can use them to make modifications on the Viya platform.  Be sure to use a secure mechanism such as the `%inc` approach described above, or another approved mechanism for securing these kinds of variables.
 
 
-## Deploy
+Deploy
+---------------------
 The build program generated in the previous step can be deployed in 3 ways:
 
 1 - MANUAL: copy paste the code into SAS Studio or Enterprise Guide and run it
@@ -146,7 +153,9 @@ Configuration as follows:
   "serverUrl": "http://SASSERVER:PORT",
 ```
 
-# Demo
+Demo
+---------------------
+
 A 2 minute video demonstrating how an app can be built and a deployment script created is shown below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hUpBqExNec4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

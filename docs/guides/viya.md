@@ -1,4 +1,5 @@
-# Viya
+Viya
+====================
 
 SAS Viya is the new kid on the block and the future for the SAS platform. It has a blazingly fast in-memory, scalable architecture and is built with developers in mind.
 

@@ -1,8 +1,10 @@
-# Security
+Security
+====================
 
 Deploying web apps is generally more secure than, say, Python or R, because the Javascript libraries that are included do not have access to the filesystem. The browser "sandbox" also prevents JS files loaded from a one domain from making calls to another domain (Cross Origin Resource Sharing / [CORS](/frontend/cors)). That said, there are still a few security considerations to keep in mind when building apps on SAS.
 
-## Shared Services account
+Shared Services account
+---------------------
 
 A shared system account for running web services is preferred as it can enable functionality for users that they cannot (or should not) perform themselves, eg database modifications (and for that, you should seriously consider [Data Controlller for SAS®](https://datacontroller.io)).  It can also avoids unix permissions issues, as created files are owned by default under the end user identity.
 
@@ -19,17 +21,20 @@ It is also possible to run STPs under a Workspace Server context (where end user
 By default, services will run on the SAS Compute server under the client identity.  Since Viya 3.5 it is also possible to run under a shared identity, and to pool the session - see [documentation](https://go.documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calcontexts&docsetTarget=n1hjn8eobk5pyhn1wg3ja0drdl6h.htm&locale=en).
 
 
-## Folder Security
+Folder Security
+---------------------
 
 The recommended SASjs folder structure is to group services into app subfolders, so that security can be applied at backend. The app itself can also be secured by setting permission on the parent folder. There is one more thing to consider - services can be viewed (and executed) by anyone who has the READ permission, either using the `SERVERURL/SASStoredProcess?_action=1063` url or by navigating in `SASJobExecution` on Viya. Therefore your services should be built in such a way that no damage would be caused if an end user were to accidentally 'click' on one of the services and run it.
 
 This folder structure is enforced when using the [sasjs-cli](https://github.com/sasjs/cli) tool.
 
-## Idempotence
+Idempotence
+---------------------
 
 Services should be built in such a way that they can be safely executed more than once. This is because it's possible that it WILL be run more than once (eg if the user clicks a button twice in succession).
 
-## SubResource Integrity
+SubResource Integrity
+---------------------
 
 An integrity hash is a checksum of a file - if just one character inside a file is changed, the checksum is totally different. This makes it a great tool for verifying that a CSS or JS file has not been modified since the checksum was generated. Content served over http (without SSL certificates) are extremely susceptible to Man in the Middle (MitM) [attacks](https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152). For this reason, it is best practice to either bundle all your dependencies inside your app, or apply SubResource Integrity (SRI) checking as per the [w3.org spec](https://www.w3.org/TR/SRI). The syntax looks like this:
 
@@ -47,7 +52,8 @@ If your files are elsewhere, or you'd like more control over the build, you can 
 cat myfile.js | openssl dgst -sha384 -binary | openssl enc -base64
 ```
 
-## Third Party Server
+Third Party Server
+---------------------
 
 By setting up a dedicated web server and whitelisting it within SAS, you can isolate your frontend activities and enable frontend developers to deploy without having to enable access to the SAS Web Server directly.
 
@@ -55,3 +61,9 @@ Web devs can then work locally and push to that server, or work on the server di
 
 
 To whitelist the server in Viya, open `Environment Manager -> Configuration -> View -> Definitions` and select  `sas.commons.web.security`.  Make sure your domain (or `*`) is entered under `allowedHeaders`, `allowedMethods` and `AllowedOrigin`.
+
+target=blank is unsafe
+---------------------
+Commonly used to open new tabs, be very careful opening external sites using a naked `_target=blank` attribute - this opens a [vulnerability](https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c#.oh7ggu8gn) for hijacking.
+
+To avoid this, simply add a `rel="noopener noreferrer"` attribute to the anchor tag.

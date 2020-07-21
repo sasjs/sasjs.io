@@ -1,4 +1,5 @@
-# MacroCore Library
+MacroCore Library
+====================
 
 The MacroCore library provides routines and helpers for use in SAS side application logic and deployments.  It is divided into 5 sections:
 

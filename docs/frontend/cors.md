@@ -1,6 +1,7 @@
-# CORS
+CORS
+====================
 
-Cross Origin Resource Sharing is a feature that is disabled by default in most browsers to present cross site scripting attacks.  In our case, as we are working locally, we need to enable it (disable the security policy that prevents it) in order to connect to SAS on a different domain.
+Cross Origin Resource Sharing (CORS) is a feature that is disabled by default in most browsers to present cross site scripting attacks.  In our case, as we are working locally, we need to enable it (disable the security policy that prevents it) in order to connect to SAS on a different domain.
 
 
 | OS    | Browser | Launch Command|

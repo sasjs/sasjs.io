@@ -1,7 +1,9 @@
-# Frequently Asked Questions
+Frequently Asked Questions
+====================
 
 
-# Minimum Requirements
+Minimum Requirements
+---------------------
 
 To build apps on SAS you need SAS Viya, or SAS 9 with Stored Process Server.  
 

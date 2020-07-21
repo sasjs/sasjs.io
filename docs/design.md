@@ -1,4 +1,5 @@
-# Design
+Design
+====================
 
 Save yourself a lot of rework by getting at least a rough idea of what you want to build, before you build it!
 

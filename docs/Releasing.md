@@ -1,4 +1,5 @@
-# Releasing
+Releasing
+====================
 
 If you have followed the conventional-commit standard you can now generate a version number according to sementic-versioning along with relevant release notes.
 

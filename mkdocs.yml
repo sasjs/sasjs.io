@@ -1,4 +1,5 @@
 site_name: Building Web Applications using SAS®
+site_description: Build awesome HTML5 web applications on SAS9 and Viya
 pages:
   - Home: index.md
   - Quickstart:

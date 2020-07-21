@@ -1,4 +1,5 @@
-# Documentation
+Documentation
+====================
 
 It's said that quality of software is measured by the quality of it's documentation!
 
