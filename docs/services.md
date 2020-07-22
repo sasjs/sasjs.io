@@ -6,7 +6,7 @@ Services
 
 All of the quickstart apps use two backend services, both of which query the `sashelp.springs` dataset. The first is used to fetch a list of areas (to populate the dropdown) and the other will fetch a list of springs for a chosen area (to populate the grid).
 
-The process for registering these services is almost identical between [SAS9](#sas9) and [Viya](#viya).
+The process for registering these services is almost identical between [SAS9](/guides/sas9) and [Viya](/guides/viya).
 
 Simply open SAS Studio (must be StudioV in Viya) and run the code below.
 

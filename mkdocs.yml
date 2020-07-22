@@ -3,14 +3,14 @@ site_url: https://sasjs.io
 nav:
   - Home: index.md
   - Quickstart:
-      - Services: quickstart/services.md
-      - React: quickstart/react.md
+      - Services: services.md
+      - React: react.md
   - Design: design.md
   - Security: security.md
   - SASjs: 
-      - Adapter: sasjs/sasjs-adapter.md
-      - CLI Tool: sasjs/sasjs-cli.md
-      - MacroCore: sasjs/macrocore.md
+      - Adapter: sasjs-adapter.md
+      - CLI Tool: sasjs-cli.md
+      - MacroCore: sasjs-core.md
   - Backend SAS:
       - Getting Started: backend/getstarted.md
       - SAS9: backend/buildsas9.md
@@ -18,7 +18,7 @@ nav:
   - Frontend Web:
       - Getting Started: frontend/getstarted.md
       - Deployment: frontend/deployment.md
-      - CORS: frontend/cors.md
+      - CORS: cors.md
   - Testing: testing.md
   - Documentation: documentation.md
   - Guides:

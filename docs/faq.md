@@ -21,4 +21,4 @@ data _null_;
 run;
 ```
 
-<meta name="description" content="Frequently Asked Questions on the SASjs Framework">
+<meta name="description" content="Frequently Asked Questions on the SASjs Framework.  Got more?  Raise an issue!">

@@ -1,7 +1,7 @@
 Security
 ====================
 
-Deploying web apps is generally more secure than, say, Python or R, because the Javascript libraries that are included do not have access to the filesystem. The browser "sandbox" also prevents JS files loaded from a one domain from making calls to another domain (Cross Origin Resource Sharing / [CORS](/frontend/cors)). That said, there are still a few security considerations to keep in mind when building apps on SAS.
+Deploying web apps is generally more secure than, say, Python or R, because the Javascript libraries that are included do not have access to the filesystem. The browser "sandbox" also prevents JS files loaded from a one domain from making calls to another domain (Cross Origin Resource Sharing / [CORS](/cors)). That said, there are still a few security considerations to keep in mind when building apps on SAS.
 
 Shared Services account
 ---------------------
@@ -12,7 +12,7 @@ However - as it is a shared account, the ability to run code under this identity
 
 It is also recommended to ensure you have a secure release process, which includes code review and automated testing, to ensure the safety of your production environment.
 
-### SAS 9
+### SAS 9
 By default your services will run on a Stored Process server under the shared credentials stored in the `SAS General Servers group` group (`sassrv` per factory settings). 
 
 It is also possible to run STPs under a Workspace Server context (where end user OS credentials match `&sysuserid`). 
@@ -68,4 +68,4 @@ Commonly used to open new tabs, be very careful opening external sites using a n
 
 To avoid this, simply add a `rel="noopener noreferrer"` attribute to the anchor tag.
 
-<meta name="description" content="Security Considerations when building Web Apps on SAS">
+<meta name="description" content="Security Considerations when building HTML5 Web Apps on SAS 9 or SAS Viya">
