@@ -16,7 +16,7 @@ Installation
 The tool must be installed globally in order to function as a command.  Simply run:
 
 ```
-npm i -g sasjs-cli
+npm i -g @sasjs/cli
 ```
 
 Project Creation

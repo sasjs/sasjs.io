@@ -58,6 +58,11 @@ theme:
     code: "Ubuntu Mono"
   favicon: img/logo/favicon/32.ico
   custom_dir: "theme"
+  extra:
+    social:
+      - icon: img/logo/favicon/32.svg
+        link: http://linkedin.com/company/sasjs
+        name: SASjs
 copyright: All rights reserved &copy;2020 Macro People Ltd.
 
 google_analytics: ['UA-109713029-8', 'sasjs.io']

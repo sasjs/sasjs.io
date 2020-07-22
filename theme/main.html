@@ -1,12 +1,16 @@
 {% extends "base.html" %}
-
 {% block extrahead %}
+
+<!-- add canonical url -->
+{% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+
 
 <!-- Open Graph / Facebook -->
 <meta property="og:locale" content="en_UK" />
 <meta property="og:type" content="website">
 <meta property='og:image' content='img/logo/favicon/32.svg'/>
 <meta property='og:image:alt' content='SASjs Logo'/>
+<meta property='og:image:title' content='SASjs Logo'/>
 <meta property="og:description" content="Build awesome HTML5 web applications on SAS9 and Viya">
 <meta property="og:url" content="https://sasjs.io">
 <meta property="og:title" content="The SASjs Framework">
@@ -19,6 +23,7 @@
 <meta property="twitter:description" content="Build awesome HTML5 web applications on SAS9 and Viya">
 <meta property="twitter:image" content='img/logo/favicon/32.svg'>
 <meta property="twitter:image:alt" content="SASjs logo">
+<meta property='twitter:image:title' content='SASjs Logo'/>
 <meta property="twitter:site" content='https://sasjs.io'>
 <!-- meta name="twitter:creator" content="@_sasensei_" -->
 
