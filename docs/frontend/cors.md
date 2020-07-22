@@ -13,3 +13,5 @@ Cross Origin Resource Sharing (CORS) is a feature that is disabled by default in
 It does not seem to be possible to enable CORS in modern Firefox browsers.
 
 You will know if you are successful if you see a `You are using an unsupported command-line flag: --disable-web-security. Stability and security will suffer.` message.
+
+<meta name="description" content="Cross Origin Resource Sharing (CORS) is a feature that is disabled by default in most browsers to present cross site scripting attacks.">

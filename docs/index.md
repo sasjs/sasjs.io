@@ -27,3 +27,6 @@ It consists of three parts:
 2. CLI tool ([sasjs-cli](https://github.com/sasjs/cli)).  An NPM command line utility for automating the compilation, build and deployment of your SAS-Powered HTML5 Application.
 
 3. Data Adapter ([sasjs](https://github.com/sasjs/adapter)). A JS library to handle the communication between your HTML5 application and the SAS 9 or Viya backend.  See [documentation](https://adapter.sasjs.io)
+
+
+<meta name="description" content="Build awesome HTML5 web applications on SAS9 and Viya with the SASjs framework">

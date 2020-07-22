@@ -20,3 +20,5 @@ data _null_;
   putlog 'Your SAS 9 url is: ' url;
 run;
 ```
+
+<meta name="description" content="Frequently Asked Questions on the SASjs Framework">

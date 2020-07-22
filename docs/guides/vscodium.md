@@ -9,3 +9,4 @@ When using SASjs and sharing the deploy script from one environment (eg UTF8) to
 
 This plugin will highlight all the rows containing such 'gremlins'.  A real time saver / problem avoider!
 
+<meta name="description" content="Tips & Tricks for building apps - using the VSCodium browser">

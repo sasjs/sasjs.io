@@ -3,9 +3,7 @@ SAS 9 Build
 
 ## Services
 
-Building services on SAS 9 is very straightforward, as there is no app token to consider!
-
-The below approach will work from 9.3 and upwards.
+Building services on SAS 9 is very straightforward.  The below approach will work from 9.3 and upwards.
 
 ```
 * compile macros ;
@@ -31,3 +29,5 @@ parmcards4;
   , code=ft15f001
   , replace=yes)
 ```
+
+<meta name="description" content="Building web services as Stored Processes on SAS 9 is very straightforward">

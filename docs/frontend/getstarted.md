@@ -26,3 +26,5 @@ Another option is webdav: http://www.re.be/webdav_sync/index.xhtml
 ### Third Party Server
 
 To work on a third party server, if on a different domain, it will normally need to be whitelisted from SAS.
+
+<meta name="description" content="To launch a web site, you need access to a server! With SAS there are a number of approaches you can take.">

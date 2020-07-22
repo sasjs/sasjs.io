@@ -1,6 +1,5 @@
 Deploy
 ====================
-
 Deployment is the process of taking the app you have built, and putting it somewhere that others can use it!  For Single Page Web Apps you are highly recommended to upload them to the static content area of the SAS web server.  This avoids the need to configure `serverUrl` and for administrators to whitelist any additional servers.
 
 ## SAS9 Deploy
@@ -19,3 +18,4 @@ Check if httpd uses a special config file (display the command line with ps -f).
 
 If not, simply search for httpd.conf. Within that, you find the location of DocumentRoot.
 ```
+<meta name="description" content="Deployment is the process of taking the app you have built, and putting it somewhere that others can use it! ">

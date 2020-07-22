@@ -29,7 +29,7 @@ Suitable for small projects, all four guides could be added to a single README f
 
 Suitable for medium / large projects, this is a great tool for generating a static HTML site where each page can be written in MarkDown.
 
-The Data Controller for SAS® [documentation](https://docs.datacontroller.io/>`_ (`source <https://github.com/macropeople/dcdocs.github.io>) is built in this way .
+The Data Controller for SAS® [documentation](https://docs.datacontroller.io) ([source](https://github.com/macropeople/dcdocs.github.io)) is built in this way .
 
 
 ### DoxyGen
@@ -54,7 +54,7 @@ This section is for explaining the code, with examples.  Indent by 4 spaces to f
 
 ### Sphinx
 
-Primarily used for writing in `rst` format, [sphinx](https://www.sphinx-doc.org/en/master/index.html) is a very powerful documentation builder, built in python and used for all the official python documentation.  The founder of this language went on to launch [readthedocs.org](readthedocs.org) a hosting platform for Sphinx-built sites.
+Primarily used for writing in `rst` format, [sphinx](https://www.sphinx-doc.org/en/master/index.html) is a very powerful documentation builder, built in python and used for all the official python documentation.  The founder of this language went on to launch [readthedocs.org](https://readthedocs.org) a hosting platform for Sphinx-built sites.
 
 
 Some useful resources:
@@ -71,3 +71,4 @@ The good thing about using typescript to build your frontend is that it can auto
 
 More info available [here](https://typedoc.org/).
 
+<meta name="description" content="It's said that quality of software is measured by the quality of it's documentation!">

@@ -73,3 +73,5 @@ Use the Viya REST APIs or [sas9api](https://sas9api.io) to autodeploy your app t
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>
+
+<meta name="description" content="Additional resources for learning about building HTML5 Web Applications on SAS">

@@ -67,3 +67,5 @@ target=blank is unsafe
 Commonly used to open new tabs, be very careful opening external sites using a naked `_target=blank` attribute - this opens a [vulnerability](https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c#.oh7ggu8gn) for hijacking.
 
 To avoid this, simply add a `rel="noopener noreferrer"` attribute to the anchor tag.
+
+<meta name="description" content="Security Considerations when building Web Apps on SAS">

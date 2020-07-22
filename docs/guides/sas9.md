@@ -34,3 +34,4 @@ run;
 
 The SAS Load Balancer comes with 3 parallel (multibridge) connections by default.  This must be increased!  A good minimum is 5-10 per CPU core.
 
+<meta name="description" content="Tips & Tricks for building apps using SAS 9">

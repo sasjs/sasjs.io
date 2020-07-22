@@ -37,3 +37,6 @@ parmcards4;
 %mp_createwebservice(path=&appLoc/common,name=getdata)
 
 ```
+
+
+<meta name="description" content="All of the quickstart SAS apps use two backend services, both of which query the `sashelp.springs` dataset">

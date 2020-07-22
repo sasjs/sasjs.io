@@ -34,3 +34,6 @@ filename playme url "https://sasjs.io/rap.sas";
 ```
 
 source: [https://github.com/allanbowe/sasrap](https://github.com/allanbowe/sasrap)
+
+
+<meta name="description" content="A collection of SASjs powered apps and tools that can be deployed on either / both SAS 9 and SAS Viya platforms">

@@ -16,3 +16,5 @@ Small amounts of data can be kept on the user browser in the form of cookies. Th
 proc sql noprint;
 select * from dictionary.macros where name=”_HTCOOK” ;
 ```
+
+<meta name="description" content="Tips & Tricks for building apps - dealing with browser state">

@@ -46,3 +46,5 @@ Note - a server restart is not required.
 As described in this [usage note](http://support.sas.com/kb/65/548.html), since the Google Chrome 80 update in February 2020, you may notice the following error in your log:
 
 ^ The request is invalid. This may indicate that the request was not originated by you, or the request time limit was reached. Please retry your action.
+
+<meta name="description" content="Tips & Tricks for building apps - working with SAS Viya">

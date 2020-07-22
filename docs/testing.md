@@ -15,3 +15,6 @@ For testing a wider set of browsers, the following tools are useful
 
 * Browserstack (paid)
 * https://ftp.mozilla.org/pub/firefox/releases/  (previous versions of FF)
+
+
+<meta name="description" content="Tips & tricks for testing SAS Powered Web Apps - such as Browserstack and Cypress">
