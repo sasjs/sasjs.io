@@ -13,11 +13,11 @@ nav:
       - CLI Tool: sasjs-cli.md
       - MacroCore: sasjs-core.md
   - Backend SAS:
-      - Getting Started: backend/getstarted.md
-      - SAS9: backend/buildsas9.md
-      - VIYA: backend/buildviya.md
+      - Getting Started: backend-getstarted.md
+      - SAS9: buildsas9.md
+      - VIYA: buildviya.md
   - Frontend Web:
-      - Getting Started: frontend-getstarted.md
+      - Get Started: frontend-getstarted.md
       - Deployment: frontend-deployment.md
       - CORS: cors.md
   - Testing: testing.md
@@ -31,8 +31,8 @@ nav:
       - releasing.md
       - ide.md
   - Training: 
-      - training/resources.md
-      - training/workshops.md
+      - resources.md
+      - workshops.md
   - Apps: apps.md
   - FAQ: faq.md 
 

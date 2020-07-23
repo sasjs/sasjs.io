@@ -1,7 +1,7 @@
 Frontend Web
 ====================
 
-## Hosting
+## Hosting
 To launch a web site, you need access to a server!  Your options are:
 
 1 - localhost (launch on your own PC)
@@ -18,7 +18,7 @@ The `sasjsConfig` will also need to be updated with the `serverUrl` so that SASj
 
 ### SAS Server
 
-See [deployment](/frontend/deployment).
+See [deployment](/frontend-deployment).
 
 Another option is webdav: https://www.re.be/webdav_sync/index.xhtml
 
