@@ -32,3 +32,5 @@ options insert=(sasautos="/your/path/macrocore/meta"));
 ```
 
 The finaly deployment option, if you are building web apps, is Node Package Manager - simply run `npm install macrocore` in your project repository.  Using [sasjs-cli](/sasjs-cli) you can compile these macros into your web services at build time, and lock them to a particular release.
+
+<meta name="description" content="The Macro Core library empowers SAS Application Developers with a range of macro functions, procedures, macros for metadata and macros for Viya">

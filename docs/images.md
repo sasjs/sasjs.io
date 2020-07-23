@@ -13,4 +13,4 @@ When streaming through _webout, be aware that you are likely to hit the line  le
 If you use the `sasjs-cli` tool, this part will be handled for you.
 
 
-<meta name="description" content="If you are hosting your web app on a web server (like you should) then there is really not much to consider regarding images, other than for you to minimise file sizes to improve app load times.">
+<meta name="description" content="Serving Images from SAS - the options and approaches such as base64 encoding.">

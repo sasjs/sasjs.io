@@ -83,4 +83,4 @@ node -v
 If you get a version number for each of the above, and the version for `node` is above 10.3, you're good to go!
 
 
-<meta name="description" content="Are you looking to build the capability to deploy fresh and inspiring new interfaces into the SAS Platform? Get yourself off on the right foot with a live training package.">
+<meta name="description" content="Build the capability to deploy fresh and inspiring new interfaces into the SAS Platform with a live training package.">

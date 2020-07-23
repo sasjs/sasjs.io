@@ -5,6 +5,7 @@ nav:
   - Quickstart:
       - Services: services.md
       - React: react.md
+      - Angular: angular.md
   - Design: design.md
   - Security: security.md
   - SASjs: 
@@ -16,21 +17,23 @@ nav:
       - SAS9: backend/buildsas9.md
       - VIYA: backend/buildviya.md
   - Frontend Web:
-      - Getting Started: frontend/getstarted.md
-      - Deployment: frontend/deployment.md
+      - Getting Started: frontend-getstarted.md
+      - Deployment: frontend-deployment.md
       - CORS: cors.md
   - Testing: testing.md
   - Documentation: documentation.md
   - Guides:
-      - guides/images.md
-      - guides/state.md
+      - images.md
+      - state-management.md
       - windows.md
-      - guides/sas9.md
-      - guides/viya.md
-      - guides/releasing.md
+      - guide-sas9.md
+      - guide-viya.md
+      - releasing.md
+      - ide.md
   - Training: 
       - training/resources.md
       - training/workshops.md
+  - Apps: apps.md
   - FAQ: faq.md 
 
 markdown_extensions:
@@ -61,7 +64,7 @@ theme:
   extra:
     social:
       - icon: img/logo/favicon/32.svg
-        link: http://linkedin.com/company/sasjs
+        link: https://linkedin.com/company/sasjs
         name: SASjs
 copyright: All rights reserved &copy;2020 Macro People Ltd.
 

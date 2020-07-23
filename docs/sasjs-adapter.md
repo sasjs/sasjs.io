@@ -104,3 +104,6 @@ Configuration on the client side involves passing an object on startup, which ca
 `appLoc` - this is the folder under which the SAS services will be created.
 `serverType` - either `SAS9` or `SASVIYA`
 `debug` - if `true` then SAS Logs and extra debug information is returned.
+
+
+<meta name="description" content="SASjs Adapter tips and user documentation for building SAS Applications on SAS 9 and Viya ">

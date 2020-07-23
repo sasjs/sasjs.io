@@ -1,4 +1,4 @@
-Considerations
+Building a Backend on SAS 9 or Viya
 ====================
 
 ## SAS 9 vs SAS Viya
@@ -60,4 +60,4 @@ To minimise the risk it is best to avoid url params entirely and deal purely wit
 SAS Datasets (.sas7bdat files) are suitable when your data is READONLY, or being used for for single user storage (eg in WORK or SASUSER directories).  Unless you have a SPDE server, or your datasets are created in batch and READONLY, they should not be used as the 'data layer' for your app.  If your app needs to write data, it is best to use a database that supports real-time concurrent access.
 
 
-<meta name="description" content="When building on SAS you will be interfacing with either SAS 9 or SAS Viya.  The process for building the app will be the same with either instance, however the functionality / performance / security situation will differ">
+<meta name="description" content="When building on SAS you will be interfacing with either SAS 9 or SAS Viya.  The good news is, the deployment is pretty similar.">

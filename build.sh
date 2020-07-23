@@ -15,7 +15,7 @@ rm -rf $BUILD_FOLDER
 mkdir $BUILD_FOLDER
 
 cd $BUILD_FOLDER
-git clone git@github.com:sasjs/sasjs.github.io.git .
+git clone git@github.com:sasjs/sasjs.io.git .
 git checkout gh-pages
 git rm -r *
 cp -r $CWD/site/* $BUILD_FOLDER

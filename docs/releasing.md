@@ -10,4 +10,4 @@ There are two great command-line tools for managing a release:
 2) `semantic-release` - will manage everything including the release.  A great guide is available [here](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/getting-started.md#getting-started)
 
 
-<meta name="description" content="Releasing SAS-Powered Apps with conventional commits">
+<meta name="description" content="Releasing SAS-Powered Apps with conventional commits ensures end users understand the impact of the change">

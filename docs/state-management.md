@@ -17,4 +17,4 @@ proc sql noprint;
 select * from dictionary.macros where name=”_HTCOOK” ;
 ```
 
-<meta name="description" content="Tips & Tricks for building apps - dealing with browser state">
+<meta name="description" content="Tips & Tricks for building apps - dealing with browser state for optimal performance and functionality">

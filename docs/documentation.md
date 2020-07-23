@@ -3,7 +3,7 @@ Documentation
 
 It's said that quality of software is measured by the quality of it's documentation!
 
-## Guides
+## Guides
 
 As a minimum, the following guides should be produced for each app:
 
@@ -13,7 +13,6 @@ As a minimum, the following guides should be produced for each app:
 * Developer Guide
 
 ## Building Documentation
-
 
 Whilst the concept of "word documents on sharepoint sites" is still etched into the skulls of many, there are alternatives available if your firewalls allow.  Whilst proprietary office formats and rich text editors are user friendly, they don't fit easily and transparently into source control and continuous integration workflows.
 
@@ -25,7 +24,7 @@ Suitable for small projects, all four guides could be added to a single README f
 
     markdown "$MYPROJECT/README.md" > "$BUILDLOC/deploy/README.html"
 
-### MkDocs
+### MkDocs
 
 Suitable for medium / large projects, this is a great tool for generating a static HTML site where each page can be written in MarkDown.
 
@@ -35,7 +34,7 @@ The Data Controller for SAS® [documentation](https://docs.datacontroller.io) ([
 ### DoxyGen
 
 
-[DoxyGen](http://www.doxygen.nl/) is a commandline tool that can generate a number of output formats, similar to Sphinx.  More suitable for documenting code, than generating standalone docs (although it can do that also).
+[DoxyGen](https://www.doxygen.nl/) is a commandline tool that can generate a number of output formats, similar to Sphinx.  More suitable for documenting code, than generating standalone docs (although it can do that also).
 
 The [Macro Core](https://core.sasjs.io) library is documented this way.
 
@@ -52,7 +51,7 @@ This section is for explaining the code, with examples.  Indent by 4 spaces to f
 **/
 ```
 
-### Sphinx
+### Sphinx
 
 Primarily used for writing in `rst` format, [sphinx](https://www.sphinx-doc.org/en/master/index.html) is a very powerful documentation builder, built in python and used for all the official python documentation.  The founder of this language went on to launch [readthedocs.org](https://readthedocs.org) a hosting platform for Sphinx-built sites.
 
@@ -60,7 +59,7 @@ Primarily used for writing in `rst` format, [sphinx](https://www.sphinx-doc.org/
 Some useful resources:
 
 * Getting started [video](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
-* Online RST renderer: [http://rst.ninjs.org](http://rst.ninjs.org/)
+* Online RST renderer: [https://rst.ninjs.org](https://rst.ninjs.org/)
 * RST Table [generator](https://www.tablesgenerator.com/text_tables)
 * Cheatsheet: [https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html](https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html)
 

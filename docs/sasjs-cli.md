@@ -150,7 +150,7 @@ Configuration as follows:
       "serverName": "SASApp",
       "repositoryName": "Foundation"
   },
-  "serverUrl": "http://SASSERVER:PORT",
+  "serverUrl": "https://SASSERVER:PORT",
 ```
 
 Demo
@@ -161,4 +161,4 @@ A 2 minute video demonstrating how an app can be built and a deployment script c
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hUpBqExNec4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<meta name="description" content="SASjs CLI tips">
+<meta name="description" content="SASjs CLI tips and documentation for building SAS Applications on SAS 9 and Viya ">

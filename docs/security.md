@@ -1,7 +1,7 @@
 Security
 ====================
 
-Deploying web apps is generally more secure than, say, Python or R, because the Javascript libraries that are included do not have access to the filesystem. The browser "sandbox" also prevents JS files loaded from a one domain from making calls to another domain (Cross Origin Resource Sharing / [CORS](/cors)). That said, there are still a few security considerations to keep in mind when building apps on SAS.
+Deploying web apps is generally more secure than, say, Python or R, because the Javascript libraries that are included do not have access to the filesystem. The browser "sandbox" also prevents JS files loaded from a one domain from making calls to another domain (Cross Origin Resource Sharing / [CORS](/cors/)). That said, there are still a few security considerations to keep in mind when building apps on SAS.
 
 Shared Services account
 ---------------------
