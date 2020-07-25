@@ -3,15 +3,34 @@ Design
 
 Save yourself a lot of rework by getting at least a rough idea of what you want to build, before you build it!
 
+## User Experience
+The frontend design process is split between UX (User Experience, the overall flow) and UI (the User Interface, the actual look and feel).  An example of a User Experience might be "A user can access any feature on the site in 4 clicks or less".
 
-The frontend design process is split between UX (User Experience, the overall flow) and UI (the User Interface, the actual look and feel).
+### Tools
+Here is a list of useful tools for quickly mocking up a potential user experience
 
-Useful tools:
-
+* [lucidchart.com](https://lucidchart.com) - great for diagrams
 * [mockplus](https://www.mockplus.com/)
 * [balsamiq](https://balsamiq.com/) - wireframes
-* [lucidchart.com](https://lucidchart.com) - great for diagrams
-* [figma.com](https://www.figma.com) - browser based design tool
+
+## User Interface
+You save a **lot** of rework when building frontend apps if you can clearly specify what the app should look like before you build it.  One way to build apps quickly is to follow consistent style [frameworks](##frameworks).  If you're looking to build something more bespoke, then it really makes sense to leverage a design tool.
+
+### Figma
+Figma is a web based tool (although there are desktop versions) which means you can access your work from any machine.  It comes highly recommended from us for a number of reasons:
+
+* Free to use
+* Send links to your designs
+* A developer can extract each object (eg as vectors), and exact CSS attributes
+* Design screens that respond to screen size changes
+
+It's a professional tool, and well worth spending an hour or so to learn about.
+
+Link:  [https://www.figma.com](https://www.figma.com)
+
+### Sketch
+[Sketch](https://www.sketch.com/) - a great desktop tool, used primarily on macs.  Very powerful for drawing images and standalone graphics.
+
 
 ## Frameworks
 It's possible to build good looking apps quickly without having to specify every detail if you can follow existing style guides / frameworks.  Choices include:
