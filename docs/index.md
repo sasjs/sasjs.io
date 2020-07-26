@@ -7,7 +7,7 @@ It's fast, it's easy, and it's fun!
 
 You can build an app on SAS9 in just 2 lines of code:
 
-```
+```sas
 filename playme url "https://sasjs.io/game";
 %inc playme;
 ```

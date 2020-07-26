@@ -10,7 +10,7 @@ The process for registering these services is almost identical between [SAS9](/g
 
 Simply open SAS Studio (must be StudioV in Viya) and run the code below.
 
-```
+```sas
 %let appLoc=/Public/app;  /* Configure Metadata or Viya Folder location here */
 filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc; /* compile macros */

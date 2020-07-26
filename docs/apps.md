@@ -5,17 +5,17 @@ Below are a collection of Apps and Tools that can be deployed on either / both S
 
 ## Fun and Games
 
-### Sonic the Hedgehog
+### Sonic the Hedgehog on SAS
 A SASjs wrapper for this remake of the sega classic!  Works on SAS 9 only (due to default CSP settings on Viya).  
 
 Source: [https://github.com/allanbowe/sonic](https://github.com/allanbowe/sonic)
 
 Deployment:
 
-```
+<pre><code class="SAS">
 filename playme url "https://raw.githubusercontent.com/allanbowe/sonic/master/sonic.sas";
 %inc playme;
-```
+</code></pre>
 
 ### RockRoller
 Dodge trees to see how far you can roll this rock in this infinite game!  Works on both SAS 9 and Viya.
@@ -28,7 +28,7 @@ This game was set up to demonstrate
 ### SAS Streamed SAS Rap
 Run the code below (SAS9 or Viya), and open the link in a browser to hear a SAS streamed [SAS Rap](https://www.youtube.com/watch?v=FtTAoYV9HS8&feature=youtu.be) by [Thiago De Souza](https://www.linkedin.com/in/thiago-de-souza/) 
 
-```
+```SAS
 filename playme url "https://sasjs.io/rap.sas";
 %inc playme;
 ```

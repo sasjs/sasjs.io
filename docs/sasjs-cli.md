@@ -15,7 +15,7 @@ Installation
 
 The tool must be installed globally in order to function as a command.  Simply run:
 
-```
+```Bash
 npm i -g @sasjs/cli
 ```
 
@@ -47,7 +47,7 @@ If the services folder does not exist in the `sasjsbuild` folder, then the `sasj
 ### Viya Build Script
 The Viya build script requires a number of variables to be prepared by an administrator.  Execute the following:
 
-```
+```sas
 filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 %let client=MyClient;
@@ -62,7 +62,7 @@ This will generate a URL in the log, which must be followed to generate a refres
 
 The ACCESS_TOKEN and REFRESH_TOKEN are now in the log.  In future, when running `sasjs build` for a Viya target, the following values must be provided:
 
-```
+```sas
 %let client=MyClient;
 %let secret=MySecret;
 /* these values are long - split over multiple lines with %trim()*/
@@ -97,7 +97,7 @@ The build script (named as per `buildOutputFileName`) can be copy pasted into SA
 ### SSH approach
 You can SSH (rsync or scp) your build script onto the SAS Server then `%inc` it from a web service - the web service could be created using the code below:
 
-```
+```sas
 filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 filename ft15f001 temp;
@@ -110,7 +110,7 @@ This creates the service in your HOME directory (SAS 9 or Viya).
 
 You can now create a local script (eg `mysas9deploy.sh`) and add it to the `tgtDeployScripts` array (the root is always the `sasjs` folder). 
 
-```
+```Bash
 echo "sasjs: uploading frontend"
 rsync -avz /home/me/myapp/dist/* me@sasserver:/var/www/html/myapp
 
@@ -145,7 +145,7 @@ For SAS 9 deployment we integrate with SAS9API by Analytium ([https://sas9api.io
 
 Configuration as follows:
 
-```
+```JSON
   "tgtDeployVars": {
       "serverName": "SASApp",
       "repositoryName": "Foundation"

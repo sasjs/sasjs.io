@@ -18,7 +18,7 @@ Full technical documentation is available [here](https://adapter.sasjs.io).  The
 ### Instantiation
 The following code will instantiate an instance of the adapter:
 
-```
+```javascript
 let sasJs = new SASjs.default(
   {
     appLoc: "/Your/SAS/Folder",
@@ -31,7 +31,7 @@ More on the config later.
 ### SAS Logon
 The login process can be handled directly, as below, or as a callback function to a SAS request.
 
-```
+```javascript
 sasJs.logIn('USERNAME','PASSWORD'
   ).then((response) => { 
   if (response.isLoggedIn === true) {
@@ -45,7 +45,7 @@ sasJs.logIn('USERNAME','PASSWORD'
 ###  Request / Response
 A simple request can be sent to SAS in the following fashion:
 
-```
+```javascript
 sasJs.request("/path/to/my/service", dataObject)
   .then((response) => {
     // all tables are in the response object, eg:
@@ -54,7 +54,7 @@ sasJs.request("/path/to/my/service", dataObject)
 ```
 We supply the path to the SAS service, and a data object.  The data object can be null (for services with no input), or can contain one or more tables in the following format:
 
-```
+```javascript
 let dataObject={
 	"tablewith2cols1row": [{
 		"col1": "val1",
@@ -79,7 +79,7 @@ The adapter will also cache the logs (if debug enabled) and even the work tables
 The SAS side is handled by a number of macros in the [macro core](https://github.com/sasjs/core) library.
 
 The following snippet shows the process of SAS tables arriving / leaving:
-```
+```sas
 /* fetch all input tables sent from frontend - they arrive as work tables */
 %webout(FETCH)
 

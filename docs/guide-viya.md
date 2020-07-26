@@ -10,7 +10,7 @@ Here are some relevant tips & tricks to help from an app-development perspective
 This is necessary after configuring settings such as whitelisting.
 Log onto the box as an admin and execute the following commands:
 
-```
+```Bash
 sudo /etc/init.d/sas-viya-all-services stop
 sudo /etc/init.d/sas-viya-all-services start
 ```

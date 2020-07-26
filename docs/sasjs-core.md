@@ -17,7 +17,7 @@ Check out the [source code](https://github.com/sasjs/core) and [documentation](h
 
 The easest way to make these macros available is to just include them in your session as follows:
 
-```
+```sas
 filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 ```
@@ -26,7 +26,7 @@ If you don't have internet access from your SAS session, you can download the ma
 
 A further option might be to `git clone` the repository, and set up sasautos, eg:
 
-```
+```sas
 options insert=(sasautos="/your/path/macrocore/base"));
 options insert=(sasautos="/your/path/macrocore/meta"));
 ```

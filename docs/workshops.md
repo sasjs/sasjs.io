@@ -38,7 +38,7 @@ You will need an instance of SAS in order to build the backend!
 #### Viya
 
 If you are planning to use Viya, you will also need **Admin** rights in order to get the API key.  You should be able to execute this code without errors:
-```
+```sas
 options noquotelenmax;
 filename mc url "https://raw.githubusercontent.com/sasjs/core/main/base/mf_loc.sas";
 %inc mc;
@@ -53,7 +53,7 @@ It is possible to build apps without admin rights, however you won't be able to 
 
 You also need the ability to create Job Execution services somewhere in the folder tree. You can check this using /SASJobExecution (or programmatically using SAS Studio).
 
-#### SAS 9
+#### SAS 9
 You need the ability to create stored processes somewhere in the folder tree. You can check this using SAS Management Console, or DI Studio, or Enterprise Guide (if enabled).  You can also try by creating programmatically using SAS Studio.
 
 ### Local Tools
@@ -74,7 +74,7 @@ You don't necessarily need VSCode but it's a great editor and includes an integr
 
 Open VScode, select Terminal -> New Terminal, and submit the following commands:
 
-```
+```Bash
 git --version
 npm -v
 node -v

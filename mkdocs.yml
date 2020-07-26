@@ -61,6 +61,11 @@ theme:
     code: "Ubuntu Mono"
   favicon: img/logo/favicon/32.ico
   custom_dir: "theme"
+  highlightjs: true
+  hljs_languages:
+      - SAS
+      - JavaScript
+      - Bash
   extra:
     social:
       - icon: img/logo/favicon/32.svg

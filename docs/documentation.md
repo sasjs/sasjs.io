@@ -22,26 +22,122 @@ The primary Text Based markup options are MarkDown (md) and reStructuredText (rs
 
 Suitable for small projects, all four guides could be added to a single README file in the root of your repo.  Using a tool such as [markdown-to-html](https://www.npmjs.com/package/markdown-to-html) you can even convert your README into a nicely formatted HTML page as part of your build process.
 
+```Bash
     markdown "$MYPROJECT/README.md" > "$BUILDLOC/deploy/README.html"
+```
 
 ### MkDocs
 
-Suitable for medium / large projects, this is a great tool for generating a static HTML site where each page can be written in MarkDown.
+Suitable for medium / large projects, this is a great tool for generating a static HTML site where each page can be written in MarkDown.  This very site is built with MkDocs, as well as the Data Controller for SAS® [documentation](https://docs.datacontroller.io). 
 
-The Data Controller for SAS® [documentation](https://docs.datacontroller.io) ([source](https://github.com/macropeople/dcdocs.github.io)) is built in this way .
+!!! note "Contributions Welcome"
+    With an MkDoks site like this, you can click on any section in the mkdocs site and make edits directly in github.  If you find any broken links or typos, or would like to add more sections this site - go right ahead!  Your change will be submitted as a PR.
 
+If you want to format your SAS code inside mkdocs, make sure you are using the most recent version (1+) and add the following to your mkdocs.yml file:
+
+```yaml
+theme:
+  name: canBeAnything-UseExistingOneIfThere
+  highlightjs: true
+  hljs_languages:
+      - SAS
+```
+
+
+Then when you are writing code, just put `sas` on the first line of the code block, eg:
+```
+  ```sas
+  data some sas;
+    set formatted nicely;
+  run;
+  ```
+```
+You can display in any one of [189 different languages](https://highlightjs.org/static/demo/) this way.
+
+
+!!! tip "Doc Tip"
+    You can even make tips like this!  Read on
+
+To create a "tip" like you see above, or the earlier "note", you first need to enable the extension in your `mkdocs.yml` like so:
+
+```yaml
+markdown_extensions:
+  - admonition
+```
+
+Then you can write syntax like follows:
+
+```plaintext
+!!! note "note title"
+   This is a note
+!!! warning "warning title"
+   This is a warning
+!!! error "error title"
+   This is an error
+!!! tip "tip title"
+   This is a tip
+```
+
+To make alerts 
 
 ### DoxyGen
 
 
 [DoxyGen](https://www.doxygen.nl/) is a commandline tool that can generate a number of output formats, similar to Sphinx.  More suitable for documenting code, than generating standalone docs (although it can do that also).
 
-The [Macro Core](https://core.sasjs.io) library is documented this way.
+The [Macro Core](https://core.sasjs.io) library is documented this way.  The following is an example from the [mv_webout()](https://core.sasjs.io/mv__webout_8sas.html) macro:
 
-#### Details
-This section is for explaining the code, with examples.  Indent by 4 spaces to format content as code.  The following comment style will allow code to be copy pasted without ending the header comment:
-
+```sas
+ /**
+   @file mv_webout.sas
+   @brief Send data to/from the SAS Viya Job Execution Service
+   @details This macro should be added to the start of each Job Execution
+   Service, **immediately** followed by a call to:
+ 
+         %mv_webout(FETCH)
+ 
+     This will read all the input data and create same-named SAS datasets in the
+     WORK library.  You can then insert your code, and send data back using the
+     following syntax:
+ 
+         data some datasets; * make some data ;
+         retain some columns;
+         run;
+ 
+         %mv_webout(OPEN)
+         %mv_webout(ARR,some)  * Array format, fast, suitable for large tables ;
+         %mv_webout(OBJ,datasets) * Object format, easier to work with ;
+         %mv_webout(CLOSE)
+ 
+ 
+   @param action Either OPEN, ARR, OBJ or CLOSE
+   @param ds The dataset to send back to the frontend
+   @param _webout= fileref for returning the json
+   @param fref= temp fref
+   @param dslabel= value to use instead of the real name for sending to JSON
+   @param fmt= change to N to strip formats from output
+ 
+   <h4> Dependencies </h4>
+   @li mp_jsonout.sas
+   @li mf_getuser.sas
+ 
+   @version Viya 3.3
+   @author Allan Bowe
+ 
+ **/
 ```
+
+ Notice the following:
+ 
+  * file - filename
+  * brief - a title for the file
+  * details - a long description, HTML can be embedded.  Indent by 4 spaces to format content as code.  
+  * param - a description of each parameter.  Keyword parameters have an `=` suffix.
+  * dependencies - not part of the doxygen spec but used by the [sasjs-cli](/sasjs-cli) to compile macro calls so that each service contains all relevant macros (and no extra macros)
+  * version - used in the [macrocore](/sasjs-core) library to denote the earliest known version in which the code will run
+
+
+```sas
 /**
   @details this is my detailed explanation.
   This part is indented 2 spaces.

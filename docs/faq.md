@@ -13,7 +13,7 @@ To check if you have SAS Viya, open SAS Studio, click your user profile and clic
 
 If you are using Enterprise Guide, then simply run:
 
-```
+```sas
 data _null_;
   length url $128;
   rc=METADATA_GETURI("Stored Process Web App",url);

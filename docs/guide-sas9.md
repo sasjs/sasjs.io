@@ -9,7 +9,7 @@ There are two options to find out programmatically:
 ### METADATA_GETURI
 Probably the quickest and easiest:
 
-```
+```sas
 data _null_;
   length url $128.;
   call missing(url);
@@ -22,7 +22,7 @@ run;
 
 This [macro](https://github.com/sasjs/core/blob/main/meta/mm_getwebappsrvprops.sas) gets a bunch of properties relating to web servers, however it's possible that access may be restricted, depending on the metadata permissions at your site.
 
-```
+```sas
 %mm_getwebappsrvprops(outds= some_ds)
 data _null_;
     set some_ds(where=(name='webappsrv.server.url'));

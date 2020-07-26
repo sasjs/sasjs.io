@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block extrahead %}
+{% block site_meta %}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:locale" content="en_UK" />
@@ -7,7 +7,7 @@
 <meta property='og:image' content='img/logo/favicon/32.svg'/>
 <meta property='og:image:alt' content='SASjs Logo'/>
 <meta property='og:image:title' content='SASjs Logo'/>
-<meta property="og:description" content="Build awesome HTML5 web applications on SAS9 and Viya">
+<meta property="og:description" content="Build Your Own SAS 9 and SAS Viya Web Apps">
 <meta property="og:url" content="https://sasjs.io">
 <meta property="og:title" content="The SASjs Framework">
 <meta property="og:author" content="https://www.linkedin.com/company/19117949">
@@ -16,17 +16,19 @@
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://sasjs.io">
 <meta property="twitter:title" content="The SASjs Framework">
-<meta property="twitter:description" content="Build awesome HTML5 web applications on SAS9 and Viya">
+<meta property="twitter:description" content="Build Your Own SAS 9 and SAS Viya Web Apps">
 <meta property="twitter:image" content='img/logo/favicon/32.svg'>
 <meta property="twitter:image:alt" content="SASjs logo">
 <meta property='twitter:image:title' content='SASjs Logo'/>
 <meta property="twitter:site" content='https://sasjs.io'>
 <!-- meta name="twitter:creator" content="@_sasensei_" -->
 
-<meta property='name:description' content='Build awesome HTML5 web applications on SAS 9 and Viya with the SASjs framework - comprised of a Javascript Adapter, SAS Macro Library, and CLI tool for automated build and deployment.'/>
+<meta property='name:description' content='Build Your Own HTML5 Web Apps on SAS 9 and SAS Viya with the SASjs framework - comprised of a Javascript Adapter, SAS Macro Library, and CLI tool for automated build and deployment.'/>
 <meta property="article:author" content="https://www.linkedin.com/company/19117949" />
 <meta property="article:publisher" content="https://www.linkedin.com/company/19117949" />
+{% endblock %}
 
+{% block scripts %}
 <!-- Hotjar Tracking Code for https://sasjs.io -->
 <script>
   (function(h,o,t,j,a,r){

@@ -5,7 +5,7 @@ SAS 9 Build
 
 Building services on SAS 9 is very straightforward.  The below approach will work from 9.3 and upwards.
 
-```
+```SAS
 * compile macros ;
 filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;

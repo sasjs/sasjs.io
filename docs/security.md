@@ -38,7 +38,7 @@ SubResource Integrity
 
 An integrity hash is a checksum of a file - if just one character inside a file is changed, the checksum is totally different. This makes it a great tool for verifying that a CSS or JS file has not been modified since the checksum was generated. Content served over http (without SSL certificates) are extremely susceptible to Man in the Middle (MitM) [attacks](https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152). For this reason, it is best practice to either bundle all your dependencies inside your app, or apply SubResource Integrity (SRI) checking as per the [w3.org spec](https://www.w3.org/TR/SRI). The syntax looks like this:
 
-```
+```JavaScript
 <script src="https://cdn.jsdelivr.net/npm/sasjs@1.10.8/index.js"
   integrity="sha256-651B1pxDxaKb9yhXQOUSohZ+Nq9Txfc3gXlX/GSw1RQ="
   crossorigin="anonymous"></script>
@@ -48,7 +48,7 @@ If your CSS or JS files are released via github, then they are automatically ava
 
 If your files are elsewhere, or you'd like more control over the build, you can also generate the integrity hash yourself - here is the syntax:
 
-```
+```Bash
 cat myfile.js | openssl dgst -sha384 -binary | openssl enc -base64
 ```
 

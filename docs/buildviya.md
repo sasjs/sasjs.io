@@ -12,7 +12,7 @@ There are three main ways to create services in Viya:
 
 ## SAS Studio
 To follow the below, you'll need to compile the MacroCore library into your session.  To do this, simply run the following
-```
+```sas
 filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
 %inc mc;
 ```
@@ -24,7 +24,7 @@ We will create our service using the `%mv_createwebservice()` macro, which expec
 
 To speed up this demo we are going to use a little known fileref with the alias `ft15f001` - when combined with `parmcards` this allows us to write file content directly in open code, in a similar fashion to `datalines` and table data.
 
-```
+```sas
   filename ft15f001 temp;
   parmcards4;
     * do some sas. All inputs are ALREADY tables in WORK;
