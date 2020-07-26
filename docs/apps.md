@@ -1,3 +1,8 @@
+---
+title: A collection of SAS Apps and tools built using the SASjs framework
+description: A collection of SASjs powered apps and tools that can be deployed on either / both SAS 9 and SAS Viya platforms
+---
+
 Apps
 ====================
 
@@ -12,10 +17,10 @@ Source: [https://github.com/allanbowe/sonic](https://github.com/allanbowe/sonic)
 
 Deployment:
 
-<pre><code class="SAS">
+```sas
 filename playme url "https://raw.githubusercontent.com/allanbowe/sonic/master/sonic.sas";
 %inc playme;
-</code></pre>
+```
 
 ### RockRoller
 Dodge trees to see how far you can roll this rock in this infinite game!  Works on both SAS 9 and Viya.
@@ -36,4 +41,3 @@ filename playme url "https://sasjs.io/rap.sas";
 source: [https://github.com/allanbowe/sasrap](https://github.com/allanbowe/sasrap)
 
 
-<meta name="description" content="A collection of SASjs powered apps and tools that can be deployed on either / both SAS 9 and SAS Viya platforms">

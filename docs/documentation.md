@@ -28,12 +28,9 @@ Suitable for small projects, all four guides could be added to a single README f
 
 ### MkDocs
 
-Suitable for medium / large projects, this is a great tool for generating a static HTML site where each page can be written in MarkDown.  This very site is built with MkDocs, as well as the Data Controller for SAS® [documentation](https://docs.datacontroller.io). 
+This is a great tool for generating a static HTML site where each page can be easily written using MarkDown.  This page you are reading was built with MkDocs, as well as the documentation site for [Data Controller](https://docs.datacontroller.io). 
 
-!!! note "Contributions Welcome"
-    With an MkDoks site like this, you can click on any section in the mkdocs site and make edits directly in github.  If you find any broken links or typos, or would like to add more sections this site - go right ahead!  Your change will be submitted as a PR.
-
-If you want to format your SAS code inside mkdocs, make sure you are using the most recent version (1+) and add the following to your mkdocs.yml file:
+If you want to format your SAS code inside MkDocs, make sure you are using the most recent version (1+) and add the following to your mkdocs.yml file:
 
 ```yaml
 theme:
@@ -54,11 +51,13 @@ Then when you are writing code, just put `sas` on the first line of the code blo
 ```
 You can display in any one of [189 different languages](https://highlightjs.org/static/demo/) this way.
 
+!!! note "Contributions Welcome"
+    With an MkDoks site like this, you can click on any section in the mkdocs site and make edits directly in github.  If you find any broken links or typos, or would like to add more sections this site - go right ahead!  Your change will be submitted as a PR.
 
 !!! tip "Doc Tip"
     You can even make tips like this!  Read on
 
-To create a "tip" like you see above, or the earlier "note", you first need to enable the extension in your `mkdocs.yml` like so:
+To create a "tip" like you see above, or the "note" above it, you first need to enable the extension in your `mkdocs.yml` like so:
 
 ```yaml
 markdown_extensions:
@@ -78,7 +77,6 @@ Then you can write syntax like follows:
    This is a tip
 ```
 
-To make alerts 
 
 ### DoxyGen
 
@@ -166,4 +164,4 @@ The good thing about using typescript to build your frontend is that it can auto
 
 More info available [here](https://typedoc.org/).
 
-<meta name="description" content="It's said that quality of software is measured by the quality of it's documentation!">
+<meta name="description" content="Be like SAS - write great documentation to keep users, administrators, and future SAS developers happy!">

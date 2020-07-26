@@ -41,6 +41,7 @@ markdown_extensions:
   - pymdownx.superfences
   - codehilite
   - fontawesome_markdown
+  - meta
   - toc:
       permalink: true
 

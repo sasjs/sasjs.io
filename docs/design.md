@@ -16,7 +16,9 @@ Here is a list of useful tools for quickly mocking up a potential user experienc
 ## User Interface
 You save a **lot** of rework when building frontend apps if you can clearly specify what the app should look like before you build it.  One way to build apps quickly is to follow consistent style [frameworks](##frameworks).  If you're looking to build something more bespoke, then it really makes sense to leverage a design tool.
 
-### Figma
+### Tools
+
+#### Figma
 Figma is a web based tool (although there are desktop versions) which means you can access your work from any machine.  It comes highly recommended from us for a number of reasons:
 
 * Free to use
@@ -28,9 +30,18 @@ It's a professional tool, and well worth spending an hour or so to learn about.
 
 Link:  [https://www.figma.com](https://www.figma.com)
 
-### Sketch
+#### Sketch
 [Sketch](https://www.sketch.com/) - a great desktop tool, used primarily on macs.  Very powerful for drawing images and standalone graphics.
 
+## Tips
+
+### HTML Character Codes
+
+You can spice (&#127798;) up your page(📃) with a series of icons (&#127752;) to make it more fun and readable!  You can do this by entering the UTF-8 characters directly in your code - however this can occasionally cause problems when copy pasting into different editors (eg WLATIN1, or SAS Enterprise Guide in some windows instances).
+
+An alternative is to use HTML escape codes.  So for instance, use `&#128424;` to represent &#128424;.
+
+A useful website for finding / searching for such codes is here: [https://html-css-js.com/html/character-codes/icons/](https://html-css-js.com/html/character-codes/icons/).
 
 ## Frameworks
 It's possible to build good looking apps quickly without having to specify every detail if you can follow existing style guides / frameworks.  Choices include:
