@@ -16,6 +16,8 @@ Here is a list of useful tools for quickly mocking up a potential user experienc
 ## User Interface
 You save a **lot** of rework when building frontend apps if you can clearly specify what the app should look like before you build it.  One way to build apps quickly is to follow consistent style [frameworks](##frameworks).  If you're looking to build something more bespoke, then it really makes sense to leverage a design tool.
 
+SAS provide some great guidance for building visually appealing interfaces - see: [https://communities.sas.com/html/assets/breports/index.html](https://communities.sas.com/html/assets/breports/index.html)
+
 ### Tools
 
 #### Figma

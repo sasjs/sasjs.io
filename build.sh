@@ -4,7 +4,7 @@
 ####################################################################
 
 BUILD_FOLDER="/tmp/sasjs_build"
-CWD="$(PWD)"
+CWD="$(pwd)"
 
 ## Create regular mkdocs docs
 echo 'building sasjs mkdocs'
