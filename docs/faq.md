@@ -45,10 +45,10 @@ run;
         }
       }, {
         "@type": "Question",
-        "name": "Do you have examples of SAS apps built with the SASjs framework?",
+        "name": "Which apps have been built with the SASjs framework?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>We have a list of public SAS apps in github repositories available <a href=https://sasjs.io/apps/>here</a></p> - using these you can see examples of the configuration used to build SASjs apps.<p>There is also a commercial app built with the framework that has been deployed to customers in several countries - it's called  <a href=https://datacontroller.io>Data Controller for SAS</a></p><p>The SASjs framework is also used exclusively for bespoke SAS app development by our sponsors at<a href=https://sasapps.io>Analytium</a>.</p>"
+          "text": "<p>A list of public SAS apps in github repositories is available <a href=https://sasjs.io/apps/>here</a></p> - using these you can see examples of the configuration used to build SASjs apps.<p>There is also a commercial app built with the framework that has been deployed to customers in several countries - it's called  <a href=https://datacontroller.io>Data Controller for SAS</a></p><p>The SASjs framework is also used exclusively for bespoke SAS app development by our sponsors at <a href=https://sasapps.io>Analytium</a>.</p>"
         }
       }]
     }

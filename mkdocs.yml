@@ -50,7 +50,7 @@ extra_css: ["font-awesome.css"]
 # Repository
 repo_name: "sasjs-docs"
 repo_url: "https://github.com/sasjs/sasjs.io"
-
+      
 theme:
   name: material
   logo: "img/logo/favicon/32.svg"
@@ -69,9 +69,9 @@ theme:
       - Bash
   extra:
     social:
-      - icon: img/logo/favicon/32.svg
+      - icon: fontawesome/brands/linkedin
         link: https://linkedin.com/company/sasjs
-        name: SASjs
+        name: SASjs on LinkedIn
 copyright: All rights reserved &copy;2020 Macro People Ltd.
 
 google_analytics: ['UA-109713029-8', 'sasjs.io']

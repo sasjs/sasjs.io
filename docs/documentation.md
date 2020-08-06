@@ -77,6 +77,8 @@ Then you can write syntax like follows:
    This is a tip
 ```
 
+For more info, see [docs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
+
 
 ### DoxyGen
 
@@ -165,3 +167,4 @@ The good thing about using typescript to build your frontend is that it can auto
 More info available [here](https://typedoc.org/).
 
 <meta name="description" content="Be like SAS - write great documentation to keep users, administrators, and future SAS developers happy!">
+<meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
