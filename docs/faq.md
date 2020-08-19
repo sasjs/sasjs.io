@@ -1,3 +1,9 @@
+---
+layout: article
+title: Frequently Asked Questions
+description: A collection of frequently asked questions from readers who are interested in building apps with SAS using the SASjs framework
+---
+
 Frequently Asked Questions
 ====================
 
@@ -28,9 +34,14 @@ data _null_;
 run;
 ```
 
-<meta property="og:title" content="Frequently Asked Questions on the SASjs Framework.">
-<meta property="og:description" content="A collection of frequently asked questions from readers who are interested in building apps with SAS using the SASjs framework">
-<meta name="description" content="A collection of frequently asked questions from readers who are interested in building apps with SAS using the SASjs framework">
+Which Browsers Does SASjs Support?
+---------------------
+
+With the right polyfills your SASjs app can support a very wide range of browsers, however the question is - do you really want to?  There can be a lot of edge cases to cover and support.  
+
+For guidance you might consider following SAS Institute's browser [support policy](https://support.sas.com/en/documentation/third-party-software-reference/9-4/support-for-9-4-web-browsers.html#:~:text=Microsoft%20Internet%20Explorer%20and%20Microsoft%20Edge&text=For%20most%20SAS%209.4%20applications,do%20not%20support%20Microsoft%20Edge).  Note the diminishing support for IE.
+
+
 
 <script type="application/ld+json">
     {
@@ -49,6 +60,13 @@ run;
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "<p>We have a list of public SAS apps in github repositories available <a href=https://sasjs.io/apps/>here</a></p> - using these you can see examples of the configuration used to build SASjs apps.<p>There is also a commercial app built with the framework that has been deployed to customers in several countries - it's called  <a href=https://datacontroller.io>Data Controller for SAS</a></p><p>The SASjs framework is also used exclusively for bespoke SAS app development by our sponsors at<a href=https://sasapps.io>Analytium</a>.</p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which browsers does SASjs support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>With the right polyfills your SASjs app can support a very wide range of browsers, however the question is - do you really want to?  There can be a lot of edge cases to cover and support.</p><p>For guidance you might consider following SAS Institute's browser <a href=https://support.sas.com/en/documentation/third-party-software-reference/9-4/support-for-9-4-web-browsers.html#:~:text=Microsoft%20Internet%20Explorer%20and%20Microsoft%20Edge&text=For%20most%20SAS%209.4%20applications,do%20not%20support%20Microsoft%20Edge>support policy</a>.  Note the diminishing support for IE. </p>"
         }
       }]
     }
