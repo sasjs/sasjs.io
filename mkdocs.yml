@@ -48,7 +48,8 @@ markdown_extensions:
 extra_css: ["font-awesome.css"]
 
 plugins:
-    - search
+  - search:
+      prebuild_index: true
     - redirects:
         redirect_maps:
             'training/resources.md': 'resources.md'

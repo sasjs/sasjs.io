@@ -27,7 +27,6 @@ Dodge trees to see how far you can roll this rock in this infinite game!  Works 
 
 Source: [https://github.com/macropeople/rockroller](https://github.com/macropeople/rockroller)
 
-This game was set up to demonstrate 
 
 
 ### SAS Streamed SAS Rap
@@ -41,3 +40,15 @@ filename playme url "https://sasjs.io/rap.sas";
 source: [https://github.com/allanbowe/sasrap](https://github.com/allanbowe/sasrap)
 
 
+## Tools
+
+### Viya Client Token Generator
+
+The following code (Viya only) will create an app for generating a Client ID + Secret with various configuration options.
+
+```sas
+filename vt url  "https://raw.githubusercontent.com/sasjs/viyatoken/master/runme.sas";
+%inc vt;
+```
+
+Run the above, then open YOURSERVER/SASJobExecution?_PROGRAM=/Public/app/viyatoken/clickme
