@@ -47,6 +47,13 @@ markdown_extensions:
 
 extra_css: ["font-awesome.css"]
 
+plugins:
+    - search
+    - redirects:
+        redirect_maps:
+            'training/resources.md': 'resources.md'
+            'training/workshops.md': 'workshops.md'
+
 # Repository
 repo_name: "sasjs-docs"
 repo_url: "https://github.com/sasjs/sasjs.io"
