@@ -50,10 +50,10 @@ extra_css: ["font-awesome.css"]
 plugins:
   - search:
       prebuild_index: true
-    - redirects:
-        redirect_maps:
-            'training/resources.md': 'resources.md'
-            'training/workshops.md': 'workshops.md'
+  - redirects:
+      redirect_maps:
+          'training/resources.md': 'resources.md'
+          'training/workshops.md': 'workshops.md'
 
 # Repository
 repo_name: "sasjs-docs"

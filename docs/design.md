@@ -39,11 +39,22 @@ Link:  [https://www.figma.com](https://www.figma.com)
 
 ### HTML Character Codes
 
-You can spice (&#127798;) up your page(📃) with a series of icons (&#127752;) to make it more fun and readable!  You can do this by entering the UTF-8 characters directly in your code - however this can occasionally cause problems when copy pasting into different editors (eg WLATIN1, or SAS Enterprise Guide in some windows instances).
+You can spice (&#127798;) up your page(📃) with a special character codes (&#127752;) to make it more fun and readable!  You can do this by entering the UTF-8 characters directly in your code - however this can occasionally cause problems when copy pasting into different editors (eg WLATIN1, or SAS Enterprise Guide in some windows instances).
 
 An alternative is to use HTML escape codes.  So for instance, use `&#128424;` to represent &#128424;.
 
 A useful website for finding / searching for such codes is here: [https://html-css-js.com/html/character-codes/icons/](https://html-css-js.com/html/character-codes/icons/).
+
+### Icons
+An alternative to special characters is to use dedicated icon sets.  This provides a broader range of images, without necessarily involving the load of an image (they are often embedded within CSS in Base64 or SVG format, or contain large numbers of images in a single PNG)
+
+The great thing is that they can be easily added to your page with a simple tag.
+
+Examples of icon sets:
+
+* Streamline: https://streamlineicons.com
+* Clarity:  https://clarity.design/icons
+* Linea:  https://linea.io/
 
 ## Frameworks
 It's possible to build good looking apps quickly without having to specify every detail if you can follow existing style guides / frameworks.  Choices include:
