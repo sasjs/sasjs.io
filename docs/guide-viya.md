@@ -41,10 +41,17 @@ With this feature enabled, your end user ID will be `SYS_COMPUTE_SESSION_OWNER` 
 
 Note - a server restart is not required.
 
+## REST APIs
 
-## Cookies
-As described in this [usage note](https://support.sas.com/kb/65/548.html), since the Google Chrome 80 update in February 2020, you may notice the following error in your log:
+The REST APIs are available here: [https://developer.sas.com/apis/rest/](https://developer.sas.com/apis/rest/).
 
-^ The request is invalid. This may indicate that the request was not originated by you, or the request time limit was reached. Please retry your action.
+When navigating the APIs, the returned JSON can be quite difficult to read:
+![compute before](/img/computebefore.png)
+
+Fortunately, plugins are available for **[chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)** and **[firefox](https://addons.mozilla.org/en-US/firefox/addon/basic-json-formatter/)** that can give you "prettified" JSON, like so:
+
+![compute after](/img/computeafter.png)
+
+
 
 <meta name="description" content="Tips & Tricks for building apps - working with the Job Execution Service on SAS Viya">
