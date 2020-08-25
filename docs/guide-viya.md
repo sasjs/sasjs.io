@@ -25,6 +25,10 @@ Log onto the box and navigate to `/opt/sas/viya/home/bin`.  To create your profi
 
 Then, `./sas-admin auth login` to authenticate.  Next, `./sas-admin compute credentials create` and use the credentials you would like the new compute context to use (the equivalent of the SAS 9 `sassrv` account).
 
+To validate, you should see these creds on the `/credentials/domains?start=10` endpoint.
+
+Now run the following command:  `sudo systemctl restart sas-viya-runlauncher-default`
+
 Next up, log onto SASEnvironment Manager (as admin user), Contexts, View Compute Contexts.  You can either create a new profile, or modify the existing "SAS Job Execution compute context".
 
 Scroll down and add the following attribute / value pairs:
