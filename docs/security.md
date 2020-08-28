@@ -71,9 +71,11 @@ To avoid this, simply add a `rel="noopener noreferrer"` attribute to the anchor 
 
 Content Security Policy
 ---------------------
-This is a server setting that restricts the types of content that pages served from your domain can fetch. This might be to specific urls, or types of content (such as inline styles, base64 images, or external JS files).
+This is a server setting that restricts the types of content that pages served from your domain can fetch. This might be to specific urls, or types of content (such as inline styles, base64 images, or external JS files).  If you are being restricted by CSP policy you will see a message like the one below in your console window:
 
-On SAS 9 the CSP can be found in the following location:  `!SASCONFIG/Lev1/Web/WebServer/conf/sas.conf`
+`Content Security Policy: The page's settings blocked the loading of a resource at https://cdn.jsdelivr.net/combine/npm/chart.js@2.9.3,npm/jquery@3.5.1,npm/@sasjs/adapter@1.0.6 ("default-src").`
+
+On SAS 9 the CSP configuration can be found in the following file location:  `!SASCONFIG/Lev1/Web/WebServer/conf/sas.conf`
 
 The line to be modified will look something like this:
 ```
