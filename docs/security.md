@@ -68,4 +68,20 @@ Commonly used to open new tabs, be very careful opening external sites using a n
 
 To avoid this, simply add a `rel="noopener noreferrer"` attribute to the anchor tag.
 
+
+Content Security Policy
+---------------------
+This is a server setting that restricts the types of content that pages served from your domain can fetch. This might be to specific urls, or types of content (such as inline styles, base64 images, or external JS files).
+
+On SAS 9 the CSP can be found in the following location:  `!SASCONFIG/Lev1/Web/WebServer/conf/sas.conf`
+
+The line to be modified will look something like this:
+```
+Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' jsdelivr.net bootstrapcdn.com;font-src 'self' data: fonts.gstatic.com;style-src 'self' 'unsafe-inline' fonts.googleapis.com"
+```
+
+After modifying the CSP the mid tier will need to be restarted (`./sas.servers.mid restart`)
+
+Whilst it is often impossible to implement maximally secure settings, the configuration goal should be to enable as few of the 'insecure' ones as possible.  More information is available [here](https://content-security-policy.com/).
+
 <meta name="description" content="Security Considerations when building HTML5 Web Apps on SAS 9 or SAS Viya">
