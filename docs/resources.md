@@ -8,7 +8,8 @@ Resources
 * Macro Core github [Library](https://github.com/sasjs/core)
 * Macro Core [documentation](https://core.sasjs.io)
 * REACT [seed app](https://github.com/sasjs/react-seed-app)
-* Angular [seed app](https://github.com/sasjs/angular-seed-app)
+* Angular [seed app](https://github.com/sasjs/angular-seed-app) 
+* [Guide](https://medium.com/@mihajlo.medjedovic/build-an-angular-web-app-on-sas-397419756981) to building and extending an Angular Web App on Viya
 * Minimal [seed app](https://github.com/sasjs/minimal-seed-app)
 * Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
 * [Sasensei SAS App Quiz](https://sasensei.com/questions/filter?tags_any=[13])
