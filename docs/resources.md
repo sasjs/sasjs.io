@@ -66,14 +66,25 @@ Streaming an MP3 file from a SAS Web Service.  A to the mfn K!
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>
 
-### Compile/Build/Deploy a HTML5 Game on SAS 
+### HTML5 Games 
 
-Use the Viya REST APIs or [sas9api](https://sas9api.io) to autodeploy your app to the backend.  Github repo [here](https://github.com/macropeople/rockroller)
+#### Rock Roller
+Github repo [here](https://github.com/macropeople/rockroller)
 
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/F0qKEz6McbU" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>
+
+#### Sonic the Hedgehog
+
+Github repo [here](https://github.com/allanbowe/sonic)
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/2HGbHw459yY" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
 
 <meta name="description" content="Additional resources for learning about building HTML5 Web Applications on SAS">
