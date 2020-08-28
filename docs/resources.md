@@ -4,6 +4,7 @@ Resources
 ## Websites
 
 * SASjs [adapter](https://github.com/sasjs/adapter) (if you like it, star it!)
+* Adapter Technical [documentation](https://adapter.sasjs.io)
 * SASJS-CLI [commandline tool](https://github.com/sasjs/cli)
 * Macro Core github [Library](https://github.com/sasjs/core)
 * Macro Core [documentation](https://core.sasjs.io)
