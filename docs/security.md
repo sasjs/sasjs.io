@@ -79,11 +79,19 @@ On SAS 9 the CSP configuration can be found in the following file location:  `!S
 
 The line to be modified will look something like this:
 ```
-Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' jsdelivr.net bootstrapcdn.com;font-src 'self' data: fonts.gstatic.com;style-src 'self' 'unsafe-inline' fonts.googleapis.com"
+Header set Content-Security-Policy "default-src 'self' ; script-src 'unsafe-inline'  https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com; font-src 'self' data: fonts.gstatic.com;style-src 'self' fonts.googleapis.com"
 ```
 
 After modifying the CSP the mid tier will need to be restarted (`./sas.servers.mid restart`)
 
 Whilst it is often impossible to implement maximally secure settings, the configuration goal should be to enable as few of the 'insecure' ones as possible.  More information is available [here](https://content-security-policy.com/).
+
+Note that the "default-src" provides a fallback where particular urls (eg font-src) are not specified.
+
+It's also possible to go a step further and set the CSP policy in the HTML (rather than the headers from the web server).  You may consider this for sensitive applications.  An example:
+
+```
+<meta http-equiv="Content-Security-Policy" content="default-src https://cdn.example.net; child-src 'none'; object-src 'none'">
+```
 
 <meta name="description" content="Security Considerations when building HTML5 Web Apps on SAS 9 or SAS Viya">
