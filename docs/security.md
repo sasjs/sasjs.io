@@ -33,6 +33,12 @@ Idempotence
 
 Services should be built in such a way that they can be safely executed more than once. This is because it's possible that it WILL be run more than once (eg if the user clicks a button twice in succession).
 
+URL Parameters
+---------------------
+The use of URL parameters (which are automatically converted to macro variables in a SAS session) should be avoided.  Apart from the risk of code injection, there are also a number of reserved variables that may cause unintentional naming conflicts.
+
+Note that Viya automatically escapes certain characters (eg `;`) to reduce this risk.
+
 SubResource Integrity
 ---------------------
 
