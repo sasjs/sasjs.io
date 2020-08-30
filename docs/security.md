@@ -35,7 +35,7 @@ Services should be built in such a way that they can be safely executed more tha
 
 URL Parameters
 ---------------------
-The use of URL parameters (which are automatically converted to macro variables in a SAS session) should be avoided.  Apart from the risk of code injection, there are also a number of reserved variables that may cause unintentional naming conflicts.
+The use of URL parameters (which are automatically converted to macro variables in a SAS session) should be avoided.  Apart from the risk of code injection, there are also a number of reserved variables that may cause unintentional naming conflicts. Use the SASjs [adapter](https://github.com/sasjs/adapter) instead!
 
 Note that Viya automatically escapes certain characters (eg `;`) to reduce this risk.
 
