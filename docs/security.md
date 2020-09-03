@@ -66,7 +66,7 @@ By setting up a dedicated web server and whitelisting it within SAS, you can iso
 Web devs can then work locally and push to that server, or work on the server directly.  One option for enabling remote (cloud) development is the open-source server edition of vscode: [https://github.com/cdr/code-server](https://github.com/cdr/code-server) (note - this won't work with vscodium due to non open-source components.
 
 
-To whitelist the server in Viya, open `Environment Manager -> Configuration -> View -> Definitions` and select  `sas.commons.web.security`.  Make sure your domain (or `*`) is entered under `allowedHeaders`, `allowedMethods` and `AllowedOrigin`.
+To whitelist the server in Viya, open `Environment Manager -> Configuration -> View -> Definitions` and select  `sas.commons.web.security.cors`.  Make sure your domain (or `*`) is entered under `allowedHeaders`, `allowedMethods` and `AllowedOrigin`.
 
 target=blank is unsafe
 ---------------------
