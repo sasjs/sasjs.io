@@ -12,7 +12,7 @@ When building on SAS you will be interfacing with either SAS 9 or SAS Viya.  The
 |Client / System Identities|Client / System (3.5+) Identities|
 |Metadata Server|Postgres Database|
 
-Both server types can stream arbitrary content to the automatic _webout fileref and can make use of the _debug parameter.
+Both server types can stream arbitrary content to the automatic _webout SAS fileref and can make use of the _debug parameter.
 
 ## Project Folder Structure
 
