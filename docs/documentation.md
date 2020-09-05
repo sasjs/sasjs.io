@@ -30,7 +30,10 @@ Suitable for small projects, all four guides could be added to a single README f
 
 This is a great tool for generating a static HTML site where each page can be easily written using MarkDown.  This page you are reading was built with MkDocs, as well as the documentation site for [Data Controller](https://docs.datacontroller.io). 
 
-If you want to format your SAS code inside MkDocs, make sure you are using the most recent version (1+) and add the following to your mkdocs.yml file:
+
+#### SAS Markdown
+
+If you want your code in SAS format inside MkDocs markdown, make sure you are using the most recent version (1+) and add the following to your mkdocs.yml file:
 
 ```yaml
 theme:

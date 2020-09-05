@@ -20,6 +20,8 @@ It is also possible to run STPs under a Workspace Server context (where end user
 ### SAS Viya
 By default, services will run on the SAS Compute server under the client identity.  Since Viya 3.5 it is also possible to run under a shared identity, and to pool the session - see [documentation](https://go.documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calcontexts&docsetTarget=n1hjn8eobk5pyhn1wg3ja0drdl6h.htm&locale=en).
 
+For enhanced sas viya security you can even determine which users can execute code on a particular context (all authenticated users, or a particular set of users.)
+
 
 Folder Security
 ---------------------
