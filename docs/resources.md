@@ -1,7 +1,7 @@
 Resources
 ====================
 
-## Websites
+## SASjs Websites
 
 * SASjs [adapter](https://github.com/sasjs/adapter) (if you like it, star it!)
 * Adapter Technical [documentation](https://adapter.sasjs.io)
@@ -17,6 +17,9 @@ Resources
 
 * Data Controller [documentation](https://docs.datacontroller.io/)
 
+## Other Useful Websites
+
+* Viya REST API [documentation](https://developer.sas.com/apis/rest/)
 
 ## Videos
 
