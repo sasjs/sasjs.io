@@ -12,9 +12,9 @@ filename playme url "https://sasjs.io/game";
 %inc playme;
 ```
 
-Below is a demo of building and deploying a React App on SAS Viya, with two services in just 5 minutes:
+Below is a demo of building and deploying a HTML5 App on SAS Viya in just one minute:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vSNBea_M8yU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WwGptgvSqSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 What is SAS JS?
 ---------------------

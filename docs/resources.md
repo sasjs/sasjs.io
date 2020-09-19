@@ -1,93 +1,35 @@
 Resources
 ====================
 
-## SASjs Websites
 
-* SASjs [adapter](https://github.com/sasjs/adapter) (if you like it, star it!)
-* Adapter Technical [documentation](https://adapter.sasjs.io)
-* SASJS-CLI [commandline tool](https://github.com/sasjs/cli)
+## Github Repos
+
+SASjs is MIT open source and free for commercial use.  If you like our code, feel free to fork / leave a star!
+
 * Macro Core github [Library](https://github.com/sasjs/core)
-* Macro Core [documentation](https://core.sasjs.io)
+* SASjs [adapter](https://github.com/sasjs/adapter) 
+* SASJS-CLI [commandline tool](https://github.com/sasjs/cli)
+* Minimal [seed app](https://github.com/sasjs/minimal-seed-app)
 * REACT [seed app](https://github.com/sasjs/react-seed-app)
 * Angular [seed app](https://github.com/sasjs/angular-seed-app) 
-* [Guide](https://medium.com/@mihajlo.medjedovic/build-an-angular-web-app-on-sas-397419756981) to building and extending an Angular Web App on Viya
-* Minimal [seed app](https://github.com/sasjs/minimal-seed-app)
-* Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
-* [Sasensei SAS App Quiz](https://sasensei.com/questions/filter?tags_any=[13])
 
+## Documentation sites
+Websites created as technical / user documentation:
+
+* Adapter Technical [documentation](https://adapter.sasjs.io)
+* Macro Core [documentation](https://core.sasjs.io)
 * Data Controller [documentation](https://docs.datacontroller.io/)
+
 
 ## Other Useful Websites
 
+* [Guide](https://medium.com/@mihajlo.medjedovic/build-an-angular-web-app-on-sas-397419756981) to building and extending an Angular Web App on Viya
+* Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
+* [Sasensei SAS App Quiz](https://sasensei.com/questions/filter?tags_any=[13])
 * Viya REST API [documentation](https://developer.sas.com/apis/rest/)
 
 ## Videos
 
-### Build a HTML5 Web App Using SAS
-
-SGF2020 Virtual Presentation
-
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/ISsgu-F9NG0" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-
-### Build a React Web App on SAS Viya in under 5 minutes
-Clone, install, configure, build, deploy frontend, generate backend!
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/vSNBea_M8yU" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-
-### Use the SASJS-CLI to create a backend repository
-The CLI tool enables your SAS backend to live alongside your frontend in a GIT repository - and for your SAS services to be compiled, built and deployed in a single command.
-
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/hUpBqExNec4" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-
-### Deploying and Using the Viya Token Generator
-On Viya you need a client, secret and access_token to autodeploy your backend. This [app](https://github.com/macropeople/viyatoken) makes it easy.
-
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/mHP96rmyRoo" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-
-### SAS Streamed SAS Rap
-
-Streaming an MP3 file from a SAS Web Service.  A to the mfn K!
-
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/-yR5hotyJaw" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-
-### HTML5 Games 
-
-#### Rock Roller
-Github repo [here](https://github.com/macropeople/rockroller)
-
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/F0qKEz6McbU" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-
-#### Sonic the Hedgehog
-
-Github repo [here](https://github.com/allanbowe/sonic)
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/2HGbHw459yY" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-
+A number of videos are available to explain the different parts of the framework - just visit [https://sasjs.io/videos](https://sasjs.io/videos)
 
 <meta name="description" content="Additional resources for learning about building HTML5 Web Applications on SAS">

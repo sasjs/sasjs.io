@@ -8,10 +8,9 @@ nav:
       - Angular: angular.md
   - Design: design.md
   - Security: security.md
-  - SASjs: 
-      - Adapter: sasjs-adapter.md
-      - CLI Tool: sasjs-cli.md
-      - MacroCore: sasjs-core.md
+  - SASjs Adapter: sasjs-adapter.md
+  - SASjs CLI: sasjs-cli.md
+  - SASjs (Macro) Core: sasjs-core.md
   - Backend SAS:
       - Getting Started: backend-getstarted.md
       - SAS9: buildsas9.md
@@ -31,8 +30,9 @@ nav:
       - releasing.md
       - ide.md
   - Training: 
-      - resources.md
-      - workshops.md
+      - Online Resources: resources.md
+      - Videos: videos.md
+      - Workshops: workshops.md
   - Apps: apps.md
   - FAQ: faq.md 
 
