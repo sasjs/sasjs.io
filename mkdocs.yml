@@ -9,7 +9,9 @@ nav:
   - Design: design.md
   - Security: security.md
   - SASjs Adapter: sasjs-adapter.md
-  - SASjs CLI: sasjs-cli.md
+  - SASjs CLI: 
+      - About: sasjs-cli.md
+      - sasjs add: sasjs-cli-add.md
   - SASjs (Macro) Core: sasjs-core.md
   - Backend SAS:
       - Getting Started: backend-getstarted.md
@@ -35,6 +37,7 @@ nav:
       - Workshops: workshops.md
   - Apps: apps.md
   - FAQ: faq.md 
+  - Glossary: glossary.md
 
 markdown_extensions:
   - admonition
