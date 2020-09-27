@@ -1,7 +1,8 @@
 ---
 layout: article
 title: Managing SAS Viya Compute Contexts with SASjs
-description: Using the SASjs CLI to create, edit, delete, export and list SAS Viya Compute Contexts
+description: Documentation on how to use the SASjs CLI to create, edit, delete, export and list SAS Viya Compute Contexts
+og_image: https://sasjs.io/img/sasjs-cli-context.png
 ---
 
 sasjs context
@@ -15,6 +16,8 @@ A compute context is used when firing up a new SAS session (it itself inherits f
 * Deleting a compute context as part of a tidy up
 * Discovering which compute contexts can actually be used
 * Modifying a compute context, eg to update the autoexec or system account used
+
+<script id="asciicast-FsXbbv87BFPpzVWkVpysftBnI" src="https://asciinema.org/a/FsXbbv87BFPpzVWkVpysftBnI.js" async></script>
 
 ## Prerequisites
 Before using this command, you will need to install the SASJS CLI and [add a deployment target](/sasjs-cli-add).
@@ -66,9 +69,9 @@ To explain the sections:
 * `launchtype` - a mandatory parameter, more details [here](https://support.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2083-2018.pdf)
 
 
-## sasjs context create 
+## sasjs context create
 
-Used to create a new compute context. 
+Used to create a new compute context.
 
 ### Syntax
 
@@ -91,7 +94,7 @@ EOL
 # create the context using the target defined in sasjs add
 sasjs context create -s ./myContext.json -t myTarget
 ```
-## sasjs context delete 
+## sasjs context delete
 
 Used to delete an existing context.  No source JSON needed, contextName is used instead.
 
@@ -106,7 +109,7 @@ sasjs context delete myUndesirableComputeContext -t myTarget
 ```
 
 
-## sasjs context edit 
+## sasjs context edit
 
 Used to edit an existing context
 
@@ -132,7 +135,7 @@ EOL
 sasjs context edit myComputeContext -s ./myContext.json -t myTarget
 ```
 
-## sasjs context export 
+## sasjs context export
 
 Exports specified compute context to contextName.json in the current folder  No soure JSON needed, contextName is used instead.
 
@@ -147,7 +150,7 @@ sasjs context delete myRenamedComputeContext -t myTarget
 ```
 
 
-## sasjs context list 
+## sasjs context list
 
 Outputs a list of all accessible and inaccessible contexts.  Accessible contexts are discovered by attempting to run `%put &=sysuserid;` on each context.
 

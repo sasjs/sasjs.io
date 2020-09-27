@@ -1,20 +1,33 @@
 {% extends "base.html" %}
-{% block site_meta %}
+{% block extrahead %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Allan Bowe">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:locale" content="en_UK" />
 <meta property="og:type" content="website">
-<meta property='og:image' content='/img/logo/favicon/32.svg'/>
+{% if page and page.meta and page.meta.og_image %}
+  {% set og_image = page.meta.og_image %}
+{% elif page %}
+  {% set og_image = '/img/appin1min.jpg' %}
+{% endif %}
+<meta property='og:image' content="{{og_image}}"/>
+<meta name="image" property="og:image" content="{{og_image}}">
 <meta property='og:image:alt' content='SASjs Logo'/>
 <meta property='og:image:title' content='SASjs Logo'/>
-<meta property="og:description" content="Build Your Own SAS 9 and SAS Viya Web Apps">
+{% if page and page.meta and page.meta.description %}
+  {% set og_desc = page.meta.description %}
+{% elif page %}
+  {% set og_desc = "Build Your Own SAS 9 and SAS Viya Web Apps" %}
+{% endif %}
+<meta property="og:description" content="{{og_desc}}"/>
+<meta name="description" property="og:description" content="{{og_desc}}">
 <meta property="og:url" content="https://sasjs.io">
 <meta property="og:title" content="The SASjs Framework">
 <meta property="og:author" content="https://www.linkedin.com/company/19117949">
 
-<!-- Twitter --> 
+<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://sasjs.io">
 <meta property="twitter:title" content="The SASjs Framework">
