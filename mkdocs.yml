@@ -12,6 +12,7 @@ nav:
   - SASjs CLI: 
       - About: sasjs-cli.md
       - sasjs add: sasjs-cli-add.md
+      - sasjs context: sasjs-cli-context.md
   - SASjs (Macro) Core: sasjs-core.md
   - Backend SAS:
       - Getting Started: backend-getstarted.md
