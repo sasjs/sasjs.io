@@ -6,7 +6,7 @@ The CLI tool fulfills 3 main purposes:
 * Creation of a project repository in an 'opinionated' way
 * Compilation each service, including all the dependent macros / macro variables and pre / post code
 * Build - creation of the master SAS deployment, including build macros, macro variables, and pre/post code
-* Deployment - execute an array of local scripts and remote SAS programs to create your app on the SAS Server 
+* Deployment - execute an array of local scripts and remote SAS programs to create your app on the SAS Server
 
 There is also a feature to let you deploy your frontend as a service, bypassing the need to access the SAS Web Server.
 
@@ -19,6 +19,22 @@ The tool must be installed globally in order to function as a command.  Simply r
 npm i -g @sasjs/cli
 ```
 
+### Upgrades
+
+Due to a bug in NPM, the following approaches for upgrades are not reliable:
+
+* `npm i -g @sasjs/cli@latest` (`sasjs v` will show latest version, but code isn't actually updated)
+* `npm update @sasjs/cli` (works but the first time you use the `sasjs` command there will be an error)
+
+These issues are resolved in NPM 7 (`npm i -g npm@next-7`).  If you prefer to use the current GA version, the workaround is to explicitly delete the SASjs files before installing, eg:
+
+```
+cd /Users/allan/.nvm/versions/node/v13.9.0/lib/node_modules
+rm -rf sasjs-cli
+npm i -g @sasjs/cli
+```
+
+
 Project Creation
 ---------------------
 To create a new project, run:  `sasjs create mynewproject`
@@ -30,7 +46,7 @@ Compilation
 From the root of the project, run:  `sasjs compile`.  This will take all of the macros in the `services` folder and create equivalents in the `sasbuild` folder.  Each service will contain all of the dependent macros as listed under `dependencies` in the header, as well as the `serviceinit.sas` and `serviceterm.sas` files.
 ![sasjscliflow.png](/img/sasjscompile.png)
 
-If `streamWeb` is `true` then the `index.html` file in your `webSourcePath` is scanned and any linked JS / CSS files are also compiled into the `streamWebFolder` folder.  The `index.html` becomes a `clickme` service in your `appLoc` SAS folder root. 
+If `streamWeb` is `true` then the `index.html` file in your `webSourcePath` is scanned and any linked JS / CSS files are also compiled into the `streamWebFolder` folder.  The `index.html` becomes a `clickme` service in your `appLoc` SAS folder root.
 
 ### Base64 encoding
 If you don't have an `index.html` and you just want to compile arbitrary binary content (such as images, mp3, excel files etc) as base64 services, set the location of the content in `assetPaths`.  All files in the specified folder(s) will be turned into web services.
@@ -39,7 +55,7 @@ Build
 ---------------------
 From the root of the project, run: `sasjs build`.  This will create a deployment script that can be executed in SAS to create the backend services.  The `appLoc` is configured in the `/sas/config.json` file, along with the `serverType` (SAS9 or SASVIYA).  A `buildinit.sas` program can be configured to run, along with specific macro variables (`tgtBuildVars`), according to the settings in `sasjsconfig.json`.
 
-If you have sensitive build variables (such as an `access_token`) you can set these in a `.env` file in your project root.  
+If you have sensitive build variables (such as an `access_token`) you can set these in a `.env` file in your project root.
 
 If the services folder does not exist in the `sasjsbuild` folder, then the `sasjs compile` step is also executed.  The alias to run both compile and build steps is `sasjs cb`.
 ![sasjscliflow.png](/img/sasjsbuild.png)
@@ -66,8 +82,8 @@ The ACCESS_TOKEN and REFRESH_TOKEN are now in the log.  In future, when running 
 %let client=MyClient;
 %let secret=MySecret;
 /* these values are long - split over multiple lines with %trim()*/
-%let ACCESS_TOKEN=MyGeneratedAccessToken; 
-%let REFRESH_TOKEN=MyGeneratedRefreshToken; 
+%let ACCESS_TOKEN=MyGeneratedAccessToken;
+%let REFRESH_TOKEN=MyGeneratedRefreshToken;
 ```
 
 The above can then be securely placed in a read-protected directory (such as a home directory on the SAS server) and `%inc`'d.
@@ -106,9 +122,9 @@ parmcards4;
 ;;;;
 %mp_createwebservice(name=Executor, code=ft15f001 ,replace=YES)
 ```
-This creates the service in your HOME directory (SAS 9 or Viya).  
+This creates the service in your HOME directory (SAS 9 or Viya).
 
-You can now create a local script (eg `mysas9deploy.sh`) and add it to the `tgtDeployScripts` array (the root is always the `sasjs` folder). 
+You can now create a local script (eg `mysas9deploy.sh`) and add it to the `tgtDeployScripts` array (the root is always the `sasjs` folder).
 
 ```Bash
 echo "sasjs: uploading frontend"
@@ -126,7 +142,7 @@ curl -v -L -k  -b cookiefile -c cookiefile "$URL&$CREDS"
 Any files in your `tgtDeployScripts` array that have a ".sas" extension will be sent to the relevant API (9 or Viya) for execution.
 
 #### Viya API deployment
-The Viya deploy requires 3 things:  
+The Viya deploy requires 3 things:
 
 * access_token
 * serverUrl
