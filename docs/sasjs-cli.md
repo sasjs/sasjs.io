@@ -17,7 +17,7 @@ The runtime environment for the CLI is Node.  We recommend using [NVM](https://g
 
 ```Bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
-# open a new shell
+source ~/.bashrc
 nvm install node
 ```
 

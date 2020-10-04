@@ -21,13 +21,20 @@
   {% set og_desc = "Build Your Own SAS 9 and SAS Viya Web Apps" %}
 {% endif %}
 <meta name="description" property="og:description" content="{{og_desc}}">
-<meta property="og:url" content="https://sasjs.io">
+
 <meta property="og:title" content="The SASjs Framework">
 <meta property="og:author" content="https://www.linkedin.com/company/19117949">
 
+{% if page and page.meta and page.meta.description %}
+  <meta property="og:url" content="{{page.canonical_url}}">
+  <meta property="twitter:url" content="{{page.canonical_url}}">
+{% elif page %}
+  <meta property="og:url" content="https://sasjs.io">
+  <meta property="twitter:url" content="https://sasjs.io">
+{% endif %}
+
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://sasjs.io">
 <meta property="twitter:title" content="The SASjs Framework">
 <meta property="twitter:description" content="Build Your Own SAS 9 and SAS Viya Web Apps">
 <meta property="twitter:image" content='/img/logo/favicon/32.svg'>

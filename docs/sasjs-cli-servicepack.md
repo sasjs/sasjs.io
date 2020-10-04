@@ -7,7 +7,7 @@ description: The SASjs Service Pack is a collection of services and folder objec
 sasjs servicepack
 ====================
 
-The `sasjs servicepack` command allows administrators to deploy the backend services for a SASjs app using a CI/CD framework of choice.  Currently only the `deploy` action is supported, in future the `export` and `create` options will be made available.  If you are waiting on these, please raise a github issue.
+The `sasjs servicepack` command allows administrators to deploy the backend services for a SASjs app using a CI/CD framework of choice.  Currently only the `deploy` action is supported, in future the `export` and `create` options will be made available.  If you are waiting on these, please raise a github [issue](https://github.com/sasjs/cli/issues).
 
 
 

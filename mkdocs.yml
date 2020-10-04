@@ -13,6 +13,8 @@ nav:
       - About: sasjs-cli.md
       - sasjs add: sasjs-cli-add.md
       - sasjs context: sasjs-cli-context.md
+      - sasjs run: sasjs-cli-run.md
+      - sasjs servicepack: sasjs-cli-servicepack.md
   - SASjs (Macro) Core: sasjs-core.md
   - Backend SAS:
       - Getting Started: backend-getstarted.md
@@ -44,7 +46,6 @@ markdown_extensions:
   - admonition
   - pymdownx.superfences
   - codehilite
-  - fontawesome_markdown
   - meta
   - toc:
       permalink: true
