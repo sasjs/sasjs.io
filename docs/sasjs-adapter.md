@@ -68,7 +68,7 @@ let dataObject={
 };
 ```
 
-There are optional parameters such as a config object and a callback login function as described [here](https://adapter.sasjs.io/classes/sasjs.sasjs-1.html#request).
+There are optional parameters such as a config object and a callback login function.
 
 The response object will contain returned tables and columns.  Table names are always lowercase, and column names uppercase.
 
@@ -99,14 +99,14 @@ run;
 
 ## Configuration
 
-Configuration on the client side involves passing an object on startup, which can also be passed with each request.  The main config items are:
+Configuration on the client side involves passing an object on startup, which can also be passed with each request.  Technical documentation on the SASjsConfig class is available [here](https://adapter.sasjs.io/classes/types.sasjsconfig.html).  The main config items are:
 
 * `appLoc` - this is the folder under which the SAS services will be created.
-* `serverType` - either `SAS9` or `SASVIYA`
+* `serverType` - either `SAS9` or `SASVIYA`.
+* `serverUrl` - the location (including http protocol and port) of the SAS Server. Can be omitted, eg if serving directly from the SAS Web Server, or in streaming mode.
 * `debug` - if `true` then SAS Logs and extra debug information is returned.
 * `useComputeApi` - if `true` and the serverType is `SASVIYA` then the REST APIs will be called directly (rather than using the JES web service).
 * `contextName` - if missing or blank, and `useComputeApi` is `true` and `serverType` is `SASVIYA` then the JES API will be used.
-
 
 The adapter supports a number of approaches for interfacing with Viya (`serverType` is `SASVIYA`).  For maximum performance, be sure to [configure your compute context](/guide-viya/#shared-account-and-server-re-use) with `reuseServerProcesses` as `true` and a system account in `runServerAs`.  This functionality is available since Viya 3.5.  This configuration is supported when [creating contexts using the CLI](/sasjs-cli-context/#sasjs-context-create).
 

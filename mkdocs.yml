@@ -8,14 +8,10 @@ nav:
       - Angular: angular.md
   - Design: design.md
   - Security: security.md
-  - SASjs Adapter: sasjs-adapter.md
-  - SASjs CLI: 
-      - About: sasjs-cli.md
-      - sasjs add: sasjs-cli-add.md
-      - sasjs context: sasjs-cli-context.md
-      - sasjs run: sasjs-cli-run.md
-      - sasjs servicepack: sasjs-cli-servicepack.md
-  - SASjs (Macro) Core: sasjs-core.md
+  - SASjs:
+      - Adapter: sasjs-adapter.md
+      - CLI: sasjs-cli.md
+      - (Macro) Core: sasjs-core.md
   - Backend SAS:
       - Getting Started: backend-getstarted.md
       - SAS9: buildsas9.md
@@ -34,12 +30,12 @@ nav:
       - guide-viya.md
       - releasing.md
       - ide.md
-  - Training: 
+  - Training:
       - Online Resources: resources.md
       - Videos: videos.md
       - Workshops: workshops.md
   - Apps: apps.md
-  - FAQ: faq.md 
+  - FAQ: faq.md
   - Glossary: glossary.md
 
 markdown_extensions:
@@ -59,11 +55,14 @@ plugins:
       redirect_maps:
           'training/resources.md': 'resources.md'
           'training/workshops.md': 'workshops.md'
-
+          'sasjs-cli-add.md': 'https://cli.sasjs.io/add/'
+          'sasjs-cli-context.md': 'https://cli.sasjs.io/context/'
+          'sasjs-cli-run.md': 'https://cli.sasjs.io/run/'
+          'sasjs-cli-servicepack.md': 'https://cli.sasjs.io/servicepack/'
 # Repository
 repo_name: "sasjs-docs"
 repo_url: "https://github.com/sasjs/sasjs.io"
-      
+
 theme:
   name: material
   logo: "img/logo/favicon/32.svg"
