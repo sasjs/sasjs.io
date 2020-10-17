@@ -33,7 +33,7 @@ The login process can be handled directly, as below, or as a callback function t
 
 ```javascript
 sasJs.logIn('USERNAME','PASSWORD'
-  ).then((response) => { 
+  ).then((response) => {
   if (response.isLoggedIn === true) {
     console.log('do stuff')
   } else {
@@ -101,9 +101,48 @@ run;
 
 Configuration on the client side involves passing an object on startup, which can also be passed with each request.  The main config items are:
 
-`appLoc` - this is the folder under which the SAS services will be created.
-`serverType` - either `SAS9` or `SASVIYA`
-`debug` - if `true` then SAS Logs and extra debug information is returned.
+* `appLoc` - this is the folder under which the SAS services will be created.
+* `serverType` - either `SAS9` or `SASVIYA`
+* `debug` - if `true` then SAS Logs and extra debug information is returned.
+* `useComputeApi` - if `true` and the serverType is `SASVIYA` then the REST APIs will be called directly (rather than using the JES web service).
+* `contextName` - if missing or blank, and `useComputeApi` is `true` and `serverType` is `SASVIYA` then the JES API will be used.
 
 
-<meta name="description" content="SASjs Adapter tips and user documentation for building SAS Applications on SAS 9 and Viya ">
+The adapter supports a number of approaches for interfacing with Viya (`serverType` is `SASVIYA`).  For maximum performance, be sure to [configure your compute context](/guide-viya/#shared-account-and-server-re-use) with `reuseServerProcesses` as `true` and a system account in `runServerAs`.  This functionality is available since Viya 3.5.  This configuration is supported when [creating contexts using the CLI](/sasjs-cli-context/#sasjs-context-create).
+
+### Using JES Web App
+
+In this setup, all requests are routed through the JES web app, at `YOURSERVER/SASJobExecution`.  This is the most reliable method, and also the slowest.  One request is made to the JES app, and remaining requests (getting job uri, session spawning, passing parameters, running the program, fetching the log) are made on the SAS server by the JES app.
+
+```
+{
+  appLoc:"/Your/Path",
+  serverType:"SASVIYA"
+}
+```
+
+### Using the JES API
+Here we are running Jobs using the Job Execution Service except this time we are making the requests directly using the REST API instead of through the JES Web App.  This is helpful when we need to call web services outside of a browser (eg with the SASjs CLI or other commandline tools).  To save one network request, the adapter prefetches the JOB URIs and passes them in the `__job` parameter.
+
+```
+{
+  appLoc:"/Your/Path",
+  serverType:"SASVIYA",
+  useComputeApi: true
+}
+```
+
+### Using the Compute API
+This approach is by far the fastest, as a result of the optimisations we have built into the adapter.  With this configuration, in the first sasjs request, we take a URI map of the services in the target folder, and create a session manager - which spawns an extra session.  The next time a request is made, the adapter will use the 'hot' session.  Sessions are deleted after every use, which actually makes this _less_ resource intensive than a typical JES web app, in which all sessions are kept alive by default for 15 minutes.
+
+```
+{
+  appLoc:"/Your/Path",
+  serverType:"SASVIYA",
+  useComputeApi: true,
+  contextName: 'yourComputeContext'
+}
+```
+
+
+<meta name="description" content="SASjs Adapter - tips and user documentation for building SAS Applications on SAS 9 and Viya ">
