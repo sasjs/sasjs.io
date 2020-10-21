@@ -21,6 +21,8 @@ rm -r *
 cp -r $CWD/site/* $BUILD_FOLDER
 echo 'sasjs.io' > CNAME
 
+npx @marp-team/marp-cli $CWD/slides6min.md -o ./slides/appdev.html
+
 git add .
 git commit -m "build.sh build on $(date +%F:%H:%M:%S)"
 git push
