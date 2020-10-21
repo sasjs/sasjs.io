@@ -33,4 +33,55 @@ options insert=(sasautos="/your/path/macrocore/meta"));
 
 The finaly deployment option, if you are building web apps, is Node Package Manager - simply run `npm install macrocore` in your project repository.  Using [sasjs-cli](/sasjs-cli) you can compile these macros into your web services at build time, and lock them to a particular release.
 
+## Useful Features
+
+### Generating Viya Client & Secret in SAS Studio
+
+The CORE library can be used by an administrator to register a Viya Client & Secret.  Execute the following:
+
+```sas
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
+%inc mc;
+
+/* create random client and secret */
+%mv_registerclient(outds=clientinfo)
+```
+
+This will generate a URL in the log, which must be followed to generate a refresh code (one time step).  Paste that code into the macro below:
+
+```
+/* paste the code below */
+%mv_tokenauth(inds=clientinfo,code=xET8ETs74z)
+```
+There is now a table in the WORK library containing the access token.  The `clientinfo` table contains the client & secret.
+
+A convenient (but insecure) way to extract these details to the log:
+
+```
+/* extract client, secret & token to the log */
+data _null_;
+  merge mv_tokenauth clientinfo(drop=error);
+  put access_token=;
+  put refresh_token=;
+  put client_id=;
+  put client_secret=;
+run;
+
+```
+
+!!! Warning
+    Security tokens are like passwords.  The above is provided for convenience, but you should avoid writing tokens to log files unless you are very sure of your environment.
+
+
+
+### Calling SAS Viya from SAS 9
+
+When calling SAS Viya from SAS 9, the `oauth_bearer=sas_services` option is not available.  However it is still possible to call the APIs using `proc http` in the [core](https://core.sasjs.io) library by putting the ACCESS_TOKEN in a macro variable and referring to that variable in the `access_token_var=` keyword parameter of each viya macro (starting `mv_`).
+
+
+!!! Warning
+    Saving security tokens in project repositories, especially if they are committed to source control, is a security risk - as anyone with access can use them to make modifications on the Viya platform.  Be sure to use a secure mechanism such as the `%inc` from a secure directory, or another approved mechanism for securing these kinds of variables.  Avoid writing Access Tokens to log files.
+
+
+
 <meta name="description" content="The Macro Core library empowers SAS Application Developers with a range of macro functions, procedures, macros for metadata and macros for Viya">
