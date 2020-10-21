@@ -59,6 +59,7 @@ plugins:
           'sasjs-cli-context.md': 'https://cli.sasjs.io/context/'
           'sasjs-cli-run.md': 'https://cli.sasjs.io/run/'
           'sasjs-cli-servicepack.md': 'https://cli.sasjs.io/servicepack/'
+          'quickstart/services.md': 'services.md'
 # Repository
 repo_name: "sasjs-docs"
 repo_url: "https://github.com/sasjs/sasjs.io"

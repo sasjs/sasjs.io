@@ -20,7 +20,7 @@ git checkout gh-pages
 rm -r *
 cp -r $CWD/site/* $BUILD_FOLDER
 echo 'sasjs.io' > CNAME
-git add *
+git add .
 git commit -m "build.sh build on $(date +%F:%H:%M:%S)"
 git push
 
