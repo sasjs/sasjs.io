@@ -3,6 +3,10 @@ marp: true
 theme: default
 paginate: true
 
+<!--
+npx @marp-team/marp-cli slides6min.md -o ./theme/slides/appdev.html
+-->
+
 ---
 <!-- header: ![h:6em](https://sasjs.io/img/js-logo700x389.png)-->
 
@@ -11,19 +15,35 @@ paginate: true
 
 ![bg right:33% height:250 ](https://datacontroller.io/wp-content/uploads/2020/10/abow.png)
 
----
-# Why Build Apps on SAS
+<!-- TRANSCRIPT
+My name is Allan Bowe and this is a very short overview of building and deploying HTML5 apps on SAS.
+-->
 
+---
+# Why Build Web Apps on SAS?
+
+- Self-Contained Environment
 - Data Management & Analytics
 - Enterprise Security & Scalability
-- Self-Contained Environment
+![bg right:50% height:700](https://algorithmia.com/blog/wp-content/uploads/2019/10/Jira_workflow_animation.gif)
+
 
 <!-- TRANSCRIPT
-* access engines to snowflake, redshift, hadoop etc
-* superfact in memory CAS with machine learning
-* SAS also ticks IT boxes, SSL, LDAP integration
-* Web apps can be deployed to any device.  Far better than VBA, R or python scripts on desktop devices.
- * Web Server, App Server, log capture, audit tracing all built in.
+Why SAS? Firstly it's completely self contained.  Everything
+you need is preconfigured, such as
+ - SAS Web Server
+ - Application Server
+ - Load Balancing
+and of course, dozens of access engines connecting to all kinds of
+databases such as snowflake, redshift and Google BigQuery.
+Beyond superfast in-memory cas, and machine learning viya actions, there's
+also formidable integration with Enterprise IT.  SAS provides LDAP
+integration, Single Signon, data encryption, SSL, full audit tracing,
+you name it..
+Beyond the scalability of SAS itself, web apps are inherently scalable.
+They can be deployed to any device with a browser, where they'll run
+safely inside that browser sandbox.  There also very easy to un-deploy -
+compared to say a VBA, R or Python based desktop app.
 -->
 
 ---
@@ -40,12 +60,33 @@ paginate: true
 - Centralised Deployment
 - Automated Deployment
 
+<!-- TRANSCRIPT
+In terms of deployment strategies, certainly the fastest way you can get your app into SAS is just write it there directly and make changes directly on the server.
+
+As soon as things get complex, and especially once you start adding more users and basing business critical reporting on the platform this approach breaks down very quickly.  You need to know what is changing in the environment, so you can troubleshoot and roll back should incidents occur.
+
+A centralised model might involve a spreadsheet and nominated individuals doing the promote.  This does introduce a bottleneck and reliance on key individuals, and doesn't necessarily make things any more transparent.
+
+Automated deployment is the only real strategy, especially in Viya where it's so easy to do.  A change might be reviewed as part of a pull request, and autodeployed following a merge to a nominated GIT branch, providing full transparency and the ability to run automated tests with every commit.
+-->
+
+
 ---
 # Benefits of Automated Deployment
 
 - Stable Operating Environment
 - Faster Feature Delivery
 - Happier, More Productive Teams
+
+<!-- TRANSCRIPT
+Benefits include a more stable environment, especially when deploying frequently as smaller changes are easier to roll back.
+
+Regular deployments also make for faster feature delivery, which not only
+delights business stakeholders but the development teams also - they get
+to spend more time building cool stuff and less time attending Release
+Meetings and filling out paperwork.
+-->
+
 
 ---
 # Release Management
@@ -54,6 +95,13 @@ paginate: true
 - Bitbucket / Gitlab Pipelines
 - Github Actions
 
+<!-- TRANSCRIPT
+Tools for running release processes include traditional ones such as Jenkins
+and Release Manager, however for mid-sized deployments you could
+also consider Pipelines (actions in github) which means you'd never
+have to leave your GIT repository.
+-->
+
 ---
 # Making it Happen
 
@@ -61,6 +109,14 @@ paginate: true
 - [PyViyaTools](https://github.com/sassoftware/pyviyatools)
 - [SASjs CLI](cli.sasjs.io)
 
+<!-- TRANSCRIPT
+Whichever tool you use, in order to connect to SAS there are three major
+options:
+* doing it yourself with your preferred language - most flexible, can also
+take the most time
+* If you like python, then the pyviya tools has a bunch of utilities
+* And because we're web developers, we built a CLI within SASjs
+-->
 ---
 # SASjs Framework
 
