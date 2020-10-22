@@ -20,6 +20,7 @@ jobs:
 
   slides:
     name: Generate and push slides
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Generate slides
