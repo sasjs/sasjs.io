@@ -23,6 +23,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+
       - name: Generate slides
         run: npx @marp-team/marp-cli ./slides6min.md -o ./slides/appdev.html
         env:
