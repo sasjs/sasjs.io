@@ -46,6 +46,30 @@ compared to say a VBA, R or Python based desktop app.
 -->
 
 ---
+# Problems with Desktop Apps
+
+* Security
+* Scalability
+* Governance
+
+![bg right:50% vertical height:200](https://i.imgur.com/n3BKKPb.gif)
+![bg right:50% height:200](https://media2.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif)
+![bg right:50% height:200](https://www.r-project.org/Rlogo.png)
+
+
+
+<!--
+Of course, both Python and R can run on a server, and VBA apps can deprecate themselves and force you to download the latest instance.  But given the fact that desktop apps, or End User Computing, is still so prominent - and this includes legacy SAS AF, SCL driven apps - it's worth reviewing the reasons to avoid this particular paradigm.
+
+Security is a big one, and this can be problems with embedded passwords, the amount of filesystem access the app has, or the fact that anyone on the filesystem can access, and potentially modify, the app.
+
+Scalability, as just mentioned, rolling out a desktop app to 1000 users is non-trivial and typically requires the engagement of a different team.
+
+Governance is probably the biggest reasons to avoid desktop apps as it can be really difficult to know who's using what, and which version.
+
+-->
+
+---
 
 
 # HTML5 App Architecture
@@ -60,7 +84,7 @@ compared to say a VBA, R or Python based desktop app.
 - Automated Deployment
 
 <!--
-In terms of deployment strategies, certainly the fastest way you can get your app into SAS is just write it there directly and make changes directly on the server.
+In terms of deployment strategies, certainly the fastest way you can get your app into SAS is just write it there directly and make changes directly on the production server.
 
 As soon as things get complex though, and especially once you start adding more users and basing business critical reporting on the platform this approach breaks down very quickly.  You need to know what is changing in the environment, so you can troubleshoot and roll back should incidents occur.
 
@@ -187,7 +211,7 @@ Here's one more video showing SAS 9 data lineage, extracted at column level, inc
 # SASjs Framework
 
 - [@sasjs/core](https://github.com/sasjs/core) - Macro Core library
-- [@sasjs/adapter](https://github.com/sasjs/adapter) - Connectivity
+- [@sasjs/adapter](https://github.com/sasjs/adapter) - SAS Server Connectivity
 - [@sasjs/cli](https://github.com/sasjs/cli) - CI/CD and Automated Deployment
 
 <!--
@@ -204,6 +228,8 @@ The key components are:
 - Make Services, Folders, Groups & more
 - Base SAS, Metadata, Viya
 - `npm install @sasjs/core`
+
+![bg right:50% height:700](https://i.imgur.com/K43rKHb.png)
 
 <!--
 
@@ -236,7 +262,6 @@ It's also worth noting that whilst you can use both the SAS Macro library, and t
 
 It is possible to install NodeJs on a locked down windows machine without admin rights, and I've provided an instructional link right there.
 
-
 -->
 
 ---
@@ -246,16 +271,26 @@ It is possible to install NodeJs on a locked down windows machine without admin 
 - Client / Secret
 - App Location (`appLoc`)
 
-[![bg right:60% width:770 ](https://i.imgur.com/MzwjqVN.png)](https://asciinema.org/a/361849.cast)
+![bg right:68% width:870 ](https://i.imgur.com/SaNVk0N.png)
 
+<!--
+To use the CLI the first thing we need to do is add a target.  A target is a configuration object that describes the SAS instance we are connecting to.  Running sasjs add gives a series of prompts - the first is whether the scope should be local or global.  A local scope makes sense when working in a GIT project.  A Global scope is saved to the users home directory, and allows the commands to be used anywhere.
 
----
-# `sasjs folder`
+Whenever calling the CLI, for a particular target, the local environment will be scanned first, and then the global.
 
-- `sasjs folder create /some/folder -t target`
-- `sasjs folder move /some/folder /new/folder`
-- `sasjs folder delete /new/folder`
+Next up is Server Type, SAS 9 or Viya.  The choice here determines the questions and defaults provided later.
 
+Target Name is the alias you will give for this particular configuration.
+
+App Location is the default Root location when deploying artefacts to SAS.  If you provide a SAS folder location to any of the SASjs commands without a leading slash, they are assumed to be relative to the appLoc of the target.  If you do provide a leading slash, the appLoc is ignored.
+
+target server URL is the server on which SAS is deployed.  This should include the protocol, the https part, and the port if it is not on the standard port.
+
+For Viya we also need to provide the client ID and the secret, which should be provided by an administrator, with the relevant attributes you have specified.  In order to make requests using this client id, the CLI needs to authenticate to get an authorisation code - to do that just click the link, and copy paste here.  The CLI can then obtain an ACCESS_TOKEN, which will be stored either in the home directory, or in a local .env file.  That file is .git ignored by default in a SASjs project, if you're using it in a different setup make sure your access token is protected.
+
+Finally, and this is off-screen, you can choose the default compute context in which to run any SAS code you need to run.
+
+-->
 
 ---
 
@@ -264,6 +299,123 @@ It is possible to install NodeJs on a locked down windows machine without admin 
 - `sasjs run code.sas`
 
 ![bg right:60% height:450](docs/img/sasjsrun1.png)
+
+<!--
+On the topic of running SAS code then, here's how you do that - just type sasjs run and the path to the sas program you'd like to run.  The log is returned and written to the current directory.
+
+I didn't provide a target in this command, and you can see it defaulted to the first target instead.
+
+-->
+
+---
+# `sasjs folder`
+
+- `sasjs folder create /some/folder -t target`
+- `sasjs folder move /some/folder /new/folder`
+- `sasjs folder delete /new/folder`
+
+<!--
+The sasjs folder command manages folders, currently we have create, move and delete.  The first command there is explicitly setting the target, as mentioned before, this is optional and by default the first target will be chosen.  For create, you can also add a force flag if you wish to create and replace.
+
+-->
+
+---
+# `sasjs context`
+
+- `list`
+- `export`
+- `create`
+- `edit`
+- `delete`
+
+![bg right:73% height:350](https://i.imgur.com/HSFhOt8.png)
+
+
+<!--
+A context, a compute context, provides the attributes under which a SAS session will start - such as the autoexec, SAS Options, whether it's a pooled server, the system credentials etc.  The screenshot here is taken from a video, which you can find in the documentation.  On the first line we are exporting an _existing_ context to a JSON file.  This is convenient, as it provides the structure for creating a new one.  We do this here by modifying the old one, and running the create command.
+
+After that we edit the context we just created, in this case to rename it.  After that we run the delete command to delete the context.  For list, export and delete there's no need to provide any input json.
+
+-->
+
+---
+# `sasjs create`
+
+- Prepare a SAS project with an opinionated structure
+- Structure is documented within `sasjsconfig.json`
+- Templates:
+    - `sasjs create myapp -t sasonly`
+    - `sasjs create myapp -t minimal`
+    - `sasjs create myapp -t react`
+    - `sasjs create myapp -t angular`
+
+
+<!--
+The commands we have discussed so far are helpful for any SAS viya project.  the ones we are about to discuss are specifically relevant for apps, and SAS Solutions.  What I found troublesome about most apps I worked with is that they were all built by individual developers, and structured in a slightly (and sometimes very) different way.  For instance, where are macros stored, how are they included into Services, where do the services go, how are they organised, where does the DDL go, etc etc.
+
+SASjs create provides a template setup, which you can modify, but those modifications are provided via the sasjsconfig JSON file.  That way, no matter who the developer is, they know exactly where to go in order to know what is or is not included within a build.
+
+When you create a new project, you provide a name, and an optional template. SASonly is just SAS, whereas minimal / react / angular provide templates for the frontend also.
+-->
+
+---
+# Project Structure
+
+![bg right:71% height:700](https://i.imgur.com/kpRTA1E.png)
+
+<!--
+Here we have the project structure for a sasonly template, and there are a few things to note.  Firstly, the sasjs folder.  This contains the sasjsconfig file and default folders for build scripts, database files, macros, and web services.  It's worth noting again that this is configurable - sasjsconfig works on relative paths, so you can store these folders elsewhere if needed.  You just need to run the compile, build & deploy steps, which we'll cover next, from the sasjs folder or it's immediate parent for the config file to be picked up.
+-->
+
+---
+# `sasjs compile`
+
+- One file per service
+- Service Init + Term
+- Relevant macros
+
+![bg right:65% ](https://cli.sasjs.io/img/sasjscompile.png)
+
+
+<!--
+After we've added some backend services in our app, we run sasjs compile - and this will create a temporary folder called sasjsbuild and create one file for each service to be deployed.  This contains all the relevant precode, including macros and any initialisation and termination code.
+
+At this point you're probably wondering how the CLI knows which macros need to be included.  For that, we take a look at the program headers.
+-->
+
+---
+# Doxygen Docs
+
+![bg right:72% ](https://i.imgur.com/mIlgZqh.png)
+
+<!--
+Doxygen is a tool that lets you create HTML documentation from comments within SAS programs.  We use it within the core library, as you see here, and it's also used within SAS for some risk products.
+
+-->
+
+
+---
+# Doxygen Headers
+
+![bg right:72% ](https://i.imgur.com/8ZYFtLl.png)
+
+<!--
+The source code looks like this.  The CLI identifies macros by scanning the headers, and finding the macros underneath the dependencies tag.
+
+The source files are extracted from the directories specified in the sasjsconfig file.
+-->
+
+---
+# Doxygen Headers
+
+![bg right:72% ](https://i.imgur.com/mIlgZqh.png)
+
+<!--
+The source code looks like this.  The CLI identifies macros by scanning the headers, and finding the macros underneath the dependencies tag.
+
+The source files are extracted from the directories specified in the sasjsconfig file.
+-->
+
 
 ---
 <!-- header: ![h:3em](https://sasjs.io/img/js-logo700x389.png)-->
@@ -299,90 +451,3 @@ We have a growing number of additional actions, and if there's any you'd like to
 The github link is right there, feel free to reach out if you'd like to know more, we'd be happy to arrange workshop or training session for you and your team.
 -->
 
----
-
-
-Business user comes along and asks for something in SAS, could be a report, new column in a table, a simple app, or a change to an existing app.
-
-They ask how long it will take to build, the developer says ooh, about - 5 minutes.
-
-https://i.makeagif.com/media/10-04-2016/EwmpZf.mp4
-
-
----
-# Why Build HTML5 Apps on SAS
-
-- Data Management & Analytics
-- Enterprise Security & Scalability
-- Self-Contained Environment
-<!--
-* access engines to snowflake, redshift, hadoop etc
-* CAS is very fast
-* Machine learning
-* ticks IT boxes, SSL, LDAP integration
-* Web apps can be deployed to any device.  Far better than VBA, R or python scripts on desktop devices.
- * Web Server, App Server, log capture, audit tracing all built in.
--->
-
----
-
-
-# Architecture
-
-![bg right:60% height:350 ](https://sasjs.io/img/architecture.png)
-
-
-
-
----
-# Problem Statement
-
-- Getting access to data
-
-![bg right:50% height:700](https://algorithmia.com/blog/wp-content/uploads/2019/10/Jira_workflow_animation.gif)
-
----
-# Problem Statement
-- Getting access to data
-- Hardware
-
-![bg right:50% height:700](https://algorithmia.com/blog/wp-content/uploads/2019/10/Jira_workflow_animation.gif)
-
----
-# Why Build Apps on SAS?
-
-* Unparalleled Data Access
-* Enterprise Security & Scalability
-* Self-Contained Environment
-
-
----
-# Problems with Desktop Apps
-
-* Security
-* Performance
-* Governance
-
-![bg right:50% vertical height:200](https://i.imgur.com/n3BKKPb.gif)
-![bg right:50% height:200](https://media2.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif)
-![bg right:50% height:200](https://www.r-project.org/Rlogo.png)
-
-
-
-<!--
-* Security
-* Performance
-* Governance
--->
-
----
-
-
-
-<!--
-* Finance analyst
-*
--->
-
-https://andrewgloag.com/annegloag/SoccerAnimationCrockettWalker.gif
----
