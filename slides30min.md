@@ -28,21 +28,15 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 
 
 <!-- TRANSCRIPT
-Why SAS? Firstly it's completely self contained.  Everything
-you need is preconfigured, such as
+Why build apps on SAS? Firstly it's completely self contained.  Everything you need is preconfigured, such as
  - SAS Web Server
  - Application Server
  - Load Balancing
-and of course, dozens of access engines connecting to all kinds of
-databases such as snowflake, redshift and Google BigQuery.
-Beyond superfast in-memory cas, and machine learning viya actions, there's
-also formidable integration with Enterprise IT.  SAS provides LDAP
-integration, Single Signon, data encryption, SSL, full audit tracing,
-you name it..
+and of course, dozens of access engines connecting to all kinds of databases such as snowflake, redshift and Google BigQuery.
+Beyond superfast in-memory cas, and machine learning viya actions, there's also formidable integration with Enterprise IT.  SAS provides LDAP integration, Single Signon, data encryption, SSL, full audit tracing, you name it..
 Beyond the scalability of SAS itself, web apps are inherently scalable.
-They can be deployed to any device with a browser, where they'll run
-safely inside that browser sandbox.  They're also very easy to un-deploy -
-compared to say a VBA, R or Python based desktop app.
+They can be deployed to any device with a browser, where they'll run safely inside that browser sandbox.
+They're also very easy to un-deploy - compared to say a VBA, R or Python based desktop app.
 -->
 
 
@@ -282,7 +276,7 @@ Finally, and this part is off-screen, you can choose the default compute context
 
 - `sasjs run code.sas`
 
-![bg right:60% height:450](docs/img/sasjsrun1.png)
+![bg right:60% height:450](https://sasjs.io/img/sasjsrun1.png)
 
 <!--
 On the topic of running SAS code then, here's how you can do that - just type sasjs run and the path to the sas program you'd like to run.  The log is returned and written to the current directory.
@@ -472,6 +466,8 @@ On the right is an example of a target configuration which shows how you can set
 <!-- TRANSCRIPT
 As you've seen there are quite a few commands, and we're still in the process of documenting them all.
 If there are any more commands that you know would be helpful, that you'd like to see, just head over to the repo and raise an issue.  If there's community support, we'd be happy to build it in.
+
+visit github, sasjs.io, cli.sasjs.io, core.sasjs.io, adapter.sasjs.io
 -->
 
 ---
