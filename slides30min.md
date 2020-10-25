@@ -117,20 +117,6 @@ take the most time
 * And because we're web developers, we built a node JS based CLI called SASjs
 -->
 
----
-# SASjs Framework
-
-- [@sasjs/core](https://github.com/sasjs/core) - Macro Core library
-- [@sasjs/adapter](https://github.com/sasjs/adapter) - Connectivity
-- [@sasjs/cli](https://github.com/sasjs/cli) - CI/CD and Automated Deployment
-
-<!--
-SASjs is a framework of parts.  Each part can be used individually, but when use together they provide a serious accelerator for SAS app development & deployment.
-The key components are:
-* Macro Core library, written in SAS
-* Adapter to provide the connectivity to SAS, written in Typescript
-* CLI in Javascript, which uses the adapter under the hood.
--->
 
 ---
 # Sonic the Hedgehog
@@ -139,11 +125,9 @@ https://github.com/allanbowe/sonic
 
 ![bg right:50%](https://j.gifs.com/q7vkm2.gif)
 <!--
-SASjs is a framework of parts.  Each part can be used individually, but when use together they provide a serious accelerator for SAS app development & deployment.
-The key components are:
-* Macro Core library, written in SAS
-* Adapter to provide the connectivity to SAS, written in Typescript
-* CLI in Javascript, which uses the adapter under the hood.
+To demonstrate the kind of apps you can build with SASjs, here's a Sonic game - this is really a very simple iframe streamed through a SAS 9 Stored Process, as you can see there in the URL.
+The interesting thing is that you can deploy this app with just 2 lines of code, as you will see if you go to github.com/allanbowe/sonic.
+
 -->
 
 ---
@@ -153,6 +137,12 @@ http://bit.ly/sasrockroller
 
 ![bg right:50%](https://j.gifs.com/1W8vNj.gif)
 
+<!--
+The Rock Roller game is deployed on Viya, you can see it here being streamed from the files service.  You can create it yourself using the SASjs CLI as described in the github repo behind bit.ly/sasrockroller.
+
+-->
+
+
 ---
 # Viya Token Generator
 
@@ -160,6 +150,53 @@ https://github.com/sasjs/viyatoken
 
 ![bg right:50%](https://j.gifs.com/p80jDr.gif)
 
+<!--
+The Viya Token generator is a bit more practical.  In order to consume the Viya REST APIs outside of SAS you need to register a client ID and a secret.  This is used by client applications, such as the CLI, to obtain an access token, that allows the app to make requests on behalf of the user.
+
+The client ID can be spawned with different properties, that determine the level of access to be granted to your application.
+
+-->
+
+---
+# Data Controller - Excel Capture
+
+https://datacontroller.io
+
+![bg right:50%](https://j.gifs.com/ROxExV.gif)
+
+<!--
+Data Controller is a SAS App that provides a zero code way to load data safely into SAS, it has 40 backend services, a database, and is completely built and deployed using SASjs.
+
+This demo shows how we use javascript to import an excel workbook, where the relevant data is found and extracted and sent to SAS for approval, along with a copy of the original workbook.
+
+-->
+
+---
+# Data Controller - Data Lineage
+
+https://datacontroller.io
+
+![bg right:50%](https://datacontroller.io/wp-content/uploads/2020/10/SAS_Data_Lineage_-_Column_Level.gif)
+
+<!--
+Here's one more video showing SAS 9 data lineage, extracted at column level, including any business logic applied, and displayed using a javascript library that even lets you export in PNG and SVG formats as well as CSV.
+
+-->
+
+---
+# SASjs Framework
+
+- [@sasjs/core](https://github.com/sasjs/core) - Macro Core library
+- [@sasjs/adapter](https://github.com/sasjs/adapter) - Connectivity
+- [@sasjs/cli](https://github.com/sasjs/cli) - CI/CD and Automated Deployment
+
+<!--
+Now I've given a flavour of what you can do with SASjs, lets break down what it actually is.  It's a fframework of parts.  Each part can be used individually, but when used together they provide a serious accelerator for SAS app development & deployment.
+The key components are:
+* Macro Core library, written in SAS
+* Adapter to provide the connectivity to SAS, written in Typescript
+* CLI in Javascript, which uses the adapter under the hood.
+-->
 
 ---
 # SASjs Core
@@ -168,8 +205,9 @@ https://github.com/sasjs/viyatoken
 - Base SAS, Metadata, Viya
 - `npm install @sasjs/core`
 
-<!-- TRANSCRIPT
-Over 100 utility macros to accelerate app development at the backend, whether that's standalone SAS, SAS 9 or Viya.
+<!--
+
+The core macro library contains over 100 utility macros to accelerate app development at the backend, whether that's standalone SAS, SAS 9 with metadata, or Viya.
 It can be installed locally in a GIT project and version locked with NPM, included directly from the git repo in a SAS session, or deployed in a more traditional way using SASAUTOs.
 -->
 
@@ -191,8 +229,14 @@ The adapter handles SAS Logon authentication and all the back and forth between 
 - Automated Deployments
 - `npm install --global @sasjs/cli`
 
-<!-- TRANSCRIPT
+<!--
 The CLI provides an opinionated project setup and a set of easy to use commands for handling common deployment tasks. It needs to be installed globally in order to be available in your preferred shell window.
+
+It's also worth noting that whilst you can use both the SAS Macro library, and the SAsjs adapter without installing nodeJs - that's not the case here.  Just like SAS needs a SAS session, and Python needs a Python runtime, the SASjs CLI needs a nodeJS instance in which to execute.
+
+It is possible to install NodeJs on a locked down windows machine without admin rights, and I've provided an instructional link right there.
+
+
 -->
 
 ---
@@ -201,6 +245,9 @@ The CLI provides an opinionated project setup and a set of easy to use commands 
 - Define a Target
 - Client / Secret
 - App Location (`appLoc`)
+
+[![bg right:60% width:770 ](https://i.imgur.com/MzwjqVN.png)](https://asciinema.org/a/361849.cast)
+
 
 ---
 # `sasjs folder`
