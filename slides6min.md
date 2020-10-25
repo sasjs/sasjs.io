@@ -47,6 +47,30 @@ compared to say a VBA, R or Python based desktop app.
 -->
 
 ---
+# Problems with Desktop Apps
+
+* Security
+* Scalability
+* Governance
+
+![bg right:50% vertical height:200](https://i.imgur.com/n3BKKPb.gif)
+![bg right:50% height:200](https://media2.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif)
+![bg right:50% height:200](https://www.r-project.org/Rlogo.png)
+
+
+
+<!--
+Of course, both Python and R can run on a server, and VBA apps can deprecate themselves and force you to download the latest instance.  But given the fact that desktop apps, or End User Computing, is still so prominent - and this includes legacy SAS AF, SCL driven apps - it's worth reviewing the reasons to avoid this particular paradigm.
+
+Security is a big one, and this can be problems with embedded passwords, the amount of filesystem access the app has, or the fact that anyone on the filesystem can access, and potentially modify, the app.
+
+Scalability, as just mentioned, rolling out a desktop app to 1000 users is non-trivial and typically requires the engagement of a different team.
+
+Governance is probably the biggest reasons to avoid desktop apps as it can be really difficult to know who's using what, and which version.
+
+-->
+
+---
 
 
 # HTML5 App Architecture

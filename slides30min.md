@@ -41,33 +41,10 @@ integration, Single Signon, data encryption, SSL, full audit tracing,
 you name it..
 Beyond the scalability of SAS itself, web apps are inherently scalable.
 They can be deployed to any device with a browser, where they'll run
-safely inside that browser sandbox.  There also very easy to un-deploy -
+safely inside that browser sandbox.  They're also very easy to un-deploy -
 compared to say a VBA, R or Python based desktop app.
 -->
 
----
-# Problems with Desktop Apps
-
-* Security
-* Scalability
-* Governance
-
-![bg right:50% vertical height:200](https://i.imgur.com/n3BKKPb.gif)
-![bg right:50% height:200](https://media2.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif)
-![bg right:50% height:200](https://www.r-project.org/Rlogo.png)
-
-
-
-<!--
-Of course, both Python and R can run on a server, and VBA apps can deprecate themselves and force you to download the latest instance.  But given the fact that desktop apps, or End User Computing, is still so prominent - and this includes legacy SAS AF, SCL driven apps - it's worth reviewing the reasons to avoid this particular paradigm.
-
-Security is a big one, and this can be problems with embedded passwords, the amount of filesystem access the app has, or the fact that anyone on the filesystem can access, and potentially modify, the app.
-
-Scalability, as just mentioned, rolling out a desktop app to 1000 users is non-trivial and typically requires the engagement of a different team.
-
-Governance is probably the biggest reasons to avoid desktop apps as it can be really difficult to know who's using what, and which version.
-
--->
 
 ---
 
@@ -105,7 +82,7 @@ Automated deployment is the only real strategy, especially in Viya where it's so
 Benefits include a more stable environment, especially when deploying frequently as smaller changes tend to be much easier to troubleshoot and roll back.
 
 Regular deployments also make for faster feature delivery, which not only
-delights business stakeholders but development teams also - they get
+delights business stakeholders but development teams too - they get
 to spend more time building cool stuff and less time attending Release
 Meetings and filling out paperwork.
 -->
@@ -119,10 +96,7 @@ Meetings and filling out paperwork.
 - Bitbucket / Gitlab Pipelines, Github Actions
 
 <!--
-Tools for running release processes include traditional ones such as Jenkins
-and Release Manager, however for mid-sized deployments you could
-also consider Pipelines (actions in github) which means you'd never
-have to leave your GIT repository.
+Traditional tools for managing releases include Jenkins and MS Release Manager.  Major source control vendors such as gitlab, bitbucket and github offer deployment pipelines, or actions in github, which has the benefit of keeping everything in one repository.
 -->
 
 ---
@@ -132,13 +106,15 @@ have to leave your GIT repository.
 - [PyViyaTools](https://github.com/sassoftware/pyviyatools)
 - [SASjs CLI](cli.sasjs.io)
 
+![bg right:50% height:550px](https://i.imgur.com/Asc4DqC.png)
+
+
 <!--
 Whichever tool you use, in order to connect to SAS there are three major
 options:
-* doing it yourself with your preferred language - most flexible, can also
-take the most time
-* If you like python, then the pyviya tools has a bunch of utilities
-* And because we're web developers, we built a node JS based CLI called SASjs
+* you can do it yourself using the REST APIs- which is the most flexible, but can also take a lot of time
+* If you like python, you can base yourself off the pyviya tools in the sassoftware repository
+* And because we're web developers, we actually built a _nodeJS_ based CLI for this called SASjs
 -->
 
 
@@ -203,9 +179,16 @@ https://datacontroller.io
 ![bg right:50%](https://datacontroller.io/wp-content/uploads/2020/10/SAS_Data_Lineage_-_Column_Level.gif)
 
 <!--
-Here's one more video showing SAS 9 data lineage, extracted at column level, including any business logic applied, and displayed using a javascript library that even lets you export in PNG and SVG formats as well as CSV.
+Here's one more video showing SAS 9 data lineage, extracted at column level, including business logic, and displayed using a javascript library that lets you export the linage in PNG, SVG and CSV format
 
 -->
+
+---
+# Build a Viya App in One Minute
+
+https://youtu.be/WwGptgvSqSw?t=15
+
+
 
 ---
 # SASjs Framework
@@ -215,11 +198,11 @@ Here's one more video showing SAS 9 data lineage, extracted at column level, inc
 - [@sasjs/cli](https://github.com/sasjs/cli) - CI/CD and Automated Deployment
 
 <!--
-Now I've given a flavour of what you can do with SASjs, lets break down what it actually is.  It's a fframework of parts.  Each part can be used individually, but when used together they provide a serious accelerator for SAS app development & deployment.
+Now I've given you a flavour of what can be done with SASjs, lets break down what it actually is.  It's a framework of parts.  Each part can be used individually, but when used together they provide a serious accelerator for SAS app development & deployment.
 The key components are:
 * Macro Core library, written in SAS
-* Adapter to provide the connectivity to SAS, written in Typescript
-* CLI in Javascript, which uses the adapter under the hood.
+* The Adapter which provide the connectivity to SAS, written in Typescript
+* CLI, written in Javascript, which uses the adapter under the hood.
 -->
 
 ---
@@ -233,7 +216,7 @@ The key components are:
 
 <!--
 
-The core macro library contains over 100 utility macros to accelerate app development at the backend, whether that's standalone SAS, SAS 9 with metadata, or Viya.
+The macro core library contains over 100 utility macros to accelerate app development at the backend, whether that's standalone SAS, SAS 9 with metadata, or Viya.
 It can be installed locally in a GIT project and version locked with NPM, included directly from the git repo in a SAS session, or deployed in a more traditional way using SASAUTOs.
 -->
 
@@ -245,7 +228,7 @@ It can be installed locally in a GIT project and version locked with NPM, includ
 - `npm install @sasjs/adapter`
 
 <!-- TRANSCRIPT
-The adapter handles SAS Logon authentication and all the back and forth between the frontend app and the backend SAS server.  It can be installed locally in an NPM project, or directly in any web app with a script tag.
+The adapter handles SAS Logon authentication and all the back and forth between the frontend app and the backend SAS server.  It can be installed locally in an NPM project, or directly in any web app using a script tag.
 -->
 
 ---
@@ -254,6 +237,7 @@ The adapter handles SAS Logon authentication and all the back and forth between 
 - Project Setup
 - Automated Deployments
 - `npm install --global @sasjs/cli`
+- https://sasjs.io/windows/#npm -> portable install of NPM
 
 <!--
 The CLI provides an opinionated project setup and a set of easy to use commands for handling common deployment tasks. It needs to be installed globally in order to be available in your preferred shell window.
@@ -288,7 +272,7 @@ target server URL is the server on which SAS is deployed.  This should include t
 
 For Viya we also need to provide the client ID and the secret, which should be provided by an administrator, with the relevant attributes you have specified.  In order to make requests using this client id, the CLI needs to authenticate to get an authorisation code - to do that just click the link, and copy paste here.  The CLI can then obtain an ACCESS_TOKEN, which will be stored either in the home directory, or in a local .env file.  That file is .git ignored by default in a SASjs project, if you're using it in a different setup make sure your access token is protected.
 
-Finally, and this is off-screen, you can choose the default compute context in which to run any SAS code you need to run.
+Finally, and this part is off-screen, you can choose the default compute context in which to run any SAS code you need to run.
 
 -->
 
@@ -301,9 +285,9 @@ Finally, and this is off-screen, you can choose the default compute context in w
 ![bg right:60% height:450](docs/img/sasjsrun1.png)
 
 <!--
-On the topic of running SAS code then, here's how you do that - just type sasjs run and the path to the sas program you'd like to run.  The log is returned and written to the current directory.
+On the topic of running SAS code then, here's how you can do that - just type sasjs run and the path to the sas program you'd like to run.  The log is returned and written to the current directory.
 
-I didn't provide a target in this command, and you can see it defaulted to the first target instead.
+I didn't provide a target in this command, and you can see that it defaulted to the first target instead.
 
 -->
 
@@ -315,7 +299,9 @@ I didn't provide a target in this command, and you can see it defaulted to the f
 - `sasjs folder delete /new/folder`
 
 <!--
-The sasjs folder command manages folders, currently we have create, move and delete.  The first command there is explicitly setting the target, as mentioned before, this is optional and by default the first target will be chosen.  For create, you can also add a force flag if you wish to create and replace.
+The sasjs folder command manages folders, currently we have create, move and delete.
+The FIRST command here, is explicitly setting the target, as mentioned before, this is optional as otherwise by default the first target will be chosen.
+For CREATE, you can also add a force flag if you wish to create AND replace.
 
 -->
 
@@ -334,7 +320,8 @@ The sasjs folder command manages folders, currently we have create, move and del
 <!--
 A context, a compute context, provides the attributes under which a SAS session will start - such as the autoexec, SAS Options, whether it's a pooled server, the system credentials etc.  The screenshot here is taken from a video, which you can find in the documentation.  On the first line we are exporting an _existing_ context to a JSON file.  This is convenient, as it provides the structure for creating a new one.  We do this here by modifying the old one, and running the create command.
 
-After that we edit the context we just created, in this case to rename it.  After that we run the delete command to delete the context.  For list, export and delete there's no need to provide any input json.
+After that we edit the context we just created, in this case to rename it.  After that we run the delete command to delete the context.
+The list, export and delete actions are standalone, without any input json.
 
 -->
 
@@ -351,11 +338,13 @@ After that we edit the context we just created, in this case to rename it.  Afte
 
 
 <!--
-The commands we have discussed so far are helpful for any SAS viya project.  the ones we are about to discuss are specifically relevant for apps, and SAS Solutions.  What I found troublesome about most apps I worked with is that they were all built by individual developers, and structured in a slightly (and sometimes very) different way.  For instance, where are macros stored, how are they included into Services, where do the services go, how are they organised, where does the DDL go, etc etc.
+The commands we have discussed so far are helpful for any SAS Viya project.
+The ones we are about to discuss are specifically relevant for apps, and SAS Solutions.
+What I have found troublesome about apps I've worked with in the past is that they were all structured in  different ways.  For instance, where the macros are stored, how they are included into Services, where the services go, how they are organised, where the DDL and datalines go, etc etc.
 
-SASjs create provides a template setup, which you can modify, but those modifications are provided via the sasjsconfig JSON file.  That way, no matter who the developer is, they know exactly where to go in order to know what is or is not included within a build.
+SASjs create provides a template setup, which you can modify, but those modifications are provided via the sasjsconfig JSON file.  That way every developer knows exactly where to go in order to see what is or is not included within a build.
 
-When you create a new project, you provide a name, and an optional template. SASonly is just SAS, whereas minimal / react / angular provide templates for the frontend also.
+When you create a new project, you provide a name, and an optional template. The SASonly template is just SAS, whereas minimal / react / angular provide templates for the frontend also.
 -->
 
 ---
@@ -364,7 +353,10 @@ When you create a new project, you provide a name, and an optional template. SAS
 ![bg right:71% height:700](https://i.imgur.com/kpRTA1E.png)
 
 <!--
-Here we have the project structure for a sasonly template, and there are a few things to note.  Firstly, the sasjs folder.  This contains the sasjsconfig file and default folders for build scripts, database files, macros, and web services.  It's worth noting again that this is configurable - sasjsconfig works on relative paths, so you can store these folders elsewhere if needed.  You just need to run the compile, build & deploy steps, which we'll cover next, from the sasjs folder or it's immediate parent for the config file to be picked up.
+Here we see the project structure for a sasonly template, and there are a few things to note.
+The Package JSON files provide details of the third party dependencies, which are physically downloaded and stored in the node_modules folder.  This is standard for NPM web apps.
+The SASJS folder contains the sasjsconfig file and folders for build scripts, database files, macros, and web services.  Everything SAS related sits in here, which means it fits nicely within the root of pretty much any standard web project.
+It's worth noting again that this is configurable - sasjsconfig works on relative paths, so you can store the SASjs subdirectories elsewhere if needed.  You just need to run the compile, build & deploy steps, which we'll cover next, from either the sasjs folder or it's immediate parent in order for the configuration to be picked up.
 -->
 
 ---
@@ -378,7 +370,7 @@ Here we have the project structure for a sasonly template, and there are a few t
 
 
 <!--
-After we've added some backend services in our app, we run sasjs compile - and this will create a temporary folder called sasjsbuild and create one file for each service to be deployed.  This contains all the relevant precode, including macros and any initialisation and termination code.
+After we've added some backend SAS services to our app, we run sasjs compile - this will create a temporary folder called sasjsbuild and create one file for each service to be deployed.  This contains all the relevant precode, including macros and any initialisation and termination code.
 
 At this point you're probably wondering how the CLI knows which macros need to be included.  For that, we take a look at the program headers.
 -->
@@ -389,7 +381,7 @@ At this point you're probably wondering how the CLI knows which macros need to b
 ![bg right:72% ](https://i.imgur.com/mIlgZqh.png)
 
 <!--
-Doxygen is a tool that lets you create HTML documentation from comments within SAS programs.  We use it within the core library, as you see here, it's also used within SAS for some risk products, and we mandate it's use within the CLI.  This means that program documentation can always be generated for a SASjs project.
+The headers are primarily used to generate HTML documentation using doxygen.  It's also used within the core library, as you see here, and it's also used within SAS for some risk products.
 
 -->
 
@@ -400,9 +392,11 @@ Doxygen is a tool that lets you create HTML documentation from comments within S
 ![bg right:72% ](https://i.imgur.com/8ZYFtLl.png)
 
 <!--
-The source code looks like this.  The CLI identifies macros by scanning the headers, and finding the macros underneath the dependencies tag.
+The source code looks like this.  You can provide brief and detailed descriptions, and use markdown for code formatting.  Each macro parameter can also be documented.
 
-The macros are then extracted from the directories specified in the sasjsconfig file.
+The CLI scans the headers, and finds the macros listed underneath the dependencies tag.
+
+The source code is then extracted from the directories specified within the sasjsconfig file.
 -->
 
 ---
@@ -411,7 +405,9 @@ The macros are then extracted from the directories specified in the sasjsconfig 
 ![bg right:40% height:700px](https://i.imgur.com/r73fl9W.png)
 
 <!--
-To summarise then, the compile step creates one file per service, each of which contains all the dependent macros.  And the big benefit of this approach is that every service is self contained.  There's no filesystem dependency, and each service can be tested fully in isolation.  For apps that depend on freeform SAS programs, eg those with datalines, or LUA programs, we've got you covered and will be building this feature in the coming weeks.
+To summarise then, the compile step creates one file per service, each of which contains all the dependent macros.  And the big benefit of this approach is that every service is self contained.  There's no filesystem dependency, and each service can be tested fully in isolation.
+
+For apps with dependencies on freeform SAS programs, such as those with datalines, or LUA programs, we've got you covered and will be releasing this feature in the coming weeks.
 
 There's still the problem of deployment though.  An app can have many services, how do we get these into SAS?
 -->
@@ -429,7 +425,8 @@ There's still the problem of deployment though.  An app can have many services, 
 
 
 <!--
-first we need a build pack, and that's what sasjs build gives us. There are two possible outputs - the first is a SAS program, that can run in either SAS 9 or Viya, that creates all of the SAS folders and web services.  It also contains any build initialisation logic, such as database or environment setup, and termination logic, such as exporting an SPK or running test scripts.
+first we need a build pack, and that's what sasjs build gives us. There are two possible outputs - the first is a SAS program, that can run in either SAS 9 or Viya, that creates all of the SAS folders and web services.
+It also contains any build initialisation logic, such as database or environment setup, and termination logic, such as exporting an SPK or running test scripts.
 
 The second possibility is a JSON file, that can be used to create the services directly using the Viya REST API.
 
@@ -448,9 +445,10 @@ The second possibility is a JSON file, that can be used to create the services d
 
 
 <!--
-Deploy then, will first deploy the folders and services using the REST APIs if the target is Viya and `deployServicePack` is true.  After that it executes everything within the `tgtDeployScripts` array- on the server if it's a SAS file, or locally if anything else.  This is where you can add logic such as npm run build, and rsync, for your frontend.
+Deploy then, will first deploy the folders and services using the REST APIs if the target is Viya and `deployServicePack` is true.
+ After that it executes everything within the `tgtDeployScripts` array- on the server if it's a SAS file, or locally if anything else.  This is where you can add logic for building & deploying your frontend, such as npm run build, and rsync.
 
-On the right is an example target configuration which shows how you can set this up.
+On the right is an example of a target configuration which shows how you can set this up.
 
 -->
 
@@ -472,7 +470,8 @@ On the right is an example target configuration which shows how you can set this
 |[servicepack](/servicepack)|The SASjs Service Pack is a collection of services and folder objects.  The servicepack command lets you deploy them easily|
 
 <!-- TRANSCRIPT
-As you've seen there are quite a few commands, and we haven't actually documented them all yet. Still, if there are any more commands that you know would be helpful, that you'd like to see, just head over to the repo and raise an issue.  If there's community support, we'd be happy to build it in.
+As you've seen there are quite a few commands, and we're still in the process of documenting them all.
+If there are any more commands that you know would be helpful, that you'd like to see, just head over to the repo and raise an issue.  If there's community support, we'd be happy to build it in.
 -->
 
 ---
