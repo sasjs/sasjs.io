@@ -17,13 +17,15 @@ sudo /etc/init.d/sas-viya-all-services start
 
 ## Shared Account and Server re-use
 
-Server pooling and the use of a shared OS account are both possible from Viya 3.5 - the documentation is [here](https://go.documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calcontexts&docsetTarget=n1hjn8eobk5pyhn1wg3ja0drdl6h.htm&locale=en) (and communities articles are available [here](https://communities.sas.com/t5/SAS-Communities-Library/SAS-Viya-3-5-Compute-Server-Service-Accounts/ta-p/620992) and [here](https://communities.sas.com/t5/SAS-Communities-Library/SAS-Viya-3-5-SAS-Studio-and-SAS-Compute-Server-non-functional/ta-p/616617)) 
+Server pooling and the use of a shared OS account are both possible from Viya 3.5 - the documentation is [here](https://go.documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calcontexts&docsetTarget=n1hjn8eobk5pyhn1wg3ja0drdl6h.htm&locale=en) (and communities articles are available [here](https://communities.sas.com/t5/SAS-Communities-Library/SAS-Viya-3-5-Compute-Server-Service-Accounts/ta-p/620992) and [here](https://communities.sas.com/t5/SAS-Communities-Library/SAS-Viya-3-5-SAS-Studio-and-SAS-Compute-Server-non-functional/ta-p/616617))
 
 ### Compute setup
 
-Log onto the box and navigate to `/opt/sas/viya/home/bin`.  To create your profile (if you haven't done this already) run `./sas-admin profile init`.
+If running on the SAS box, first `source /opt/sas/viya/config/consul.conf` to set the SSL_CERT_FILE. Next, navigate to `/opt/sas/viya/home/bin`.
 
-Then, `./sas-admin auth login` to authenticate.  Next, `./sas-admin compute credentials create` and use the credentials you would like the new compute context to use (the equivalent of the SAS 9 `sassrv` account).
+To create your profile (if you haven't done this already) run `./sas-admin profile init`.
+
+Then, `./sas-admin auth login` to authenticate (with your own credentials).  Next, `./sas-admin compute credentials create` and use the credentials you would like the new compute context to use (the equivalent of the SAS 9 `sassrv` account).
 
 To validate, you should see these creds on the `/credentials/domains?start=10` endpoint.
 

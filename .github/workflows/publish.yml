@@ -36,6 +36,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Generate slides for geeks
+        run: npx @marp-team/marp-cli ./slidesgeeks.md -o ./slides/geeks.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
       - name: Commit and push slides
         uses: EndBug/add-and-commit@v5
         with:
