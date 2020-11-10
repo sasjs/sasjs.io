@@ -2,21 +2,22 @@
 marp: true
 theme: default
 paginate: true
-description: "npx @marp-team/marp-cli slidesgeeks.md -o ./theme/slides/geeks.html"
+description: "npx @marp-team/marp-cli slidesgeeks.md -o /tmp/geeks.pptx"
 
 ---
-<!-- header: ![h:5em](https://upload.wikimedia.org/wikipedia/commons/9/97/%E0%A6%B8%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B8_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.png)-->
+<!-- header: ![h:5em](https://analytium.co.uk/wp-content/themes/analytium-app/assets/img/icons/header_logo.svg)-->
 
-# App Development & Automated Deployments
+# App Dev & Automated Deployments
 ## Allan Bowe
+Head of SAS Apps - Analytium Group
 
-![bg right:33% height:250 ](https://datacontroller.io/wp-content/uploads/2020/10/abow.png)
+![bg right:20% height:250 ](https://datacontroller.io/wp-content/uploads/2020/10/abow.png)
 
 - Superpower: TELEKINESIS
 - With just a few taps in the console, all the code in github can be packaged and flown over to  a remote SAS Server where it is distributed into all the right places
 
 <!-- TRANSCRIPT
-My name is Allan Bowe and this is a very short overview of building and deploying HTML5 apps on SAS.
+My name is Allan Bowe and this is a very short overview of App Development and Deployment on SAS.
 -->
 
 ---
@@ -51,7 +52,8 @@ safely inside that browser sandbox.
 ![bg right:65% height:370 ](https://sasjs.io/img/architecture.png)
 
 <!--
-here I discuss the different parts to be deployed
+A typical web app is displayed on a client such as a desktop or laptop.  Assets such as HTML, CSS, Javascript and Images are served from a dedicated web server.  This provides rapid response times and low latency.  Any data driven services are routed through the SAS Application server, being the Job Execution service on Viya or the Stored Process server on SAS 9.
+The backend also uses the access engines to connect to any relevant databases.
 -->
 
 ---
@@ -62,13 +64,13 @@ here I discuss the different parts to be deployed
 - Automated Deployment
 
 <!-- TRANSCRIPT
-In terms of deployment SAS does make it very easy to just open up a web application such as Environment Manager or SAS Studio and start writing code and making changes.
+In terms of deployment, SAS makes it very easy to just open up Environment Manager or SAS Studio and start making changes.
 
 This strategy might work well if there are just one or two users on the box, but it's a risky way of working as you have no real mechanism to roll back changes to to track the changes being made.
 
-A centralised model might involve the developer writing some release notes and preparing a package for an administrator to promote.  This provides some level of control, but does create a bottleneck on the administrators.
+A centralised model might involve the developer writing some release notes and preparing a package for an administrator to promote.  This provides some level of control, but creates a bottleneck on administrators.
 
-Automated deployment is really the best strategy, especially in Viya where everything can now performed using REST APIs and commandline tools.  A change might be reviewed as part of a pull request, and autodeployed following a merge to a nominated GIT branch, providing full transparency and the ability to run automated tests with every commit.
+Automated deployment is really the best strategy, especially in Viya where everything can be performed using REST APIs and commandline tools.  A change might be reviewed as part of a pull request, and autodeployed following a merge to a nominated GIT branch, providing full transparency and the ability to run automated tests with every commit.
 -->
 
 
@@ -82,106 +84,44 @@ Automated deployment is really the best strategy, especially in Viya where every
 <!-- TRANSCRIPT
 Benefits include a more stable environment, especially when deploying frequently as smaller changes are easier to roll back.
 
-Regular deployments also make for faster feature delivery, which not only
-delights business stakeholders but the development teams also - they get
-to spend more time building cool stuff and less time attending Release
-Meetings and filling out paperwork.
+Regular deployments also enable faster feature delivery, which
+delights business stakeholders, and the development teams also - they get
+to spend more time building cool stuff.
 -->
 
 
 ---
-# Release Management
+# Non SAS Tools
 
 - Liquibase
-- Jenkins / MS Release Manager
 - GIT Pipelines / Actions
+- Command Line tools (`rsync` / `mv` / `grep` etc)
 
 
 <!-- TRANSCRIPT
-Tools for running release processes include liquibase, for databases, deployment orchestrators such as Jenkins
+Third party tools for running release processes include liquibase, for databases, deployment orchestrators such as Jenkins
 and Release Manager, and integrated containers such as pipelines (bitbucket, gitlab) and github actions.
 -->
 
 ---
-# Configuration Management
+# SAS Tools
 
-- `sas-admin` - wide range of plugins
-- `sas-bootstrap-config` - key value pairs & certificates
-- Unix tools (`rsync` / `mv` / `grep` etc)
+- `sas-admin` CLI - wide range of plugins
+- `sas-bootstrap-config` CLI - key value pairs & certificates
+- [PyViyaTools](https://github.com/sassoftware/pyviyatools) - Python Based
+- [SASjs](https://cli.sasjs.io) CLI - Node JS based
 
 
 <!-- TRANSCRIPT
 The SAS Admin CLi has a range of plugins to handle authorization rules, backups, models, promotions etc.
 SAS Bootstrap Config can help you modify and even undo settings even whilst the services are down.
 
-
--->
-
----
-# Content Management
-
-- DIY with [REST API](https://developer.sas.com/guides/restapis/viya-rest.html)
-- [PyViyaTools](https://github.com/sassoftware/pyviyatools)
-- [SASjs](https://cli.sasjs.io)
-
-<!-- TRANSCRIPT
-Whichever tool you use, in order to connect to SAS there are three major
-options:
-* doing it yourself with your preferred language - most flexible, can also
-take the most time
-* If you like python, then the pyviya tools has a bunch of utilities
-* And because we're web developers, we built a deployment framework using Node, which we call SASjs
--->
----
-# SASjs Framework
-
-- [@sasjs/core](https://github.com/sasjs/core) - Macro Core library
-- [@sasjs/adapter](https://github.com/sasjs/adapter) - SAS Server Connectivity
-- [@sasjs/cli](https://github.com/sasjs/cli) - CI/CD and Automated Deployment
-
-<!--
-Now I've given you a flavour of what can be done with SASjs, lets break down what it actually is.  It's a framework of parts.  Each part can be used individually, but when used together they provide a serious accelerator for SAS app development & deployment.
-The key components are:
-* Macro Core library, written in SAS
-* The Adapter which provide the connectivity to SAS, written in Typescript
-* CLI, written in Javascript, which uses the adapter under the hood.
 -->
 
 
-
 ---
-# Build a Viya App in One Minute
+<!-- header: ![h:5em](https://sasjs.io/img/js-logo700x389.png)-->
 
-https://youtu.be/WwGptgvSqSw?t=15
-
-<!-- TRANSCRIPT
-Here I will walk through the video and explain the process as we go
--->
-
----
-# SASjs Core
-
-- Make Services, Folders, Groups & more
-- Base SAS, Metadata, Viya
-- `npm install @sasjs/core`
-
-<!-- TRANSCRIPT
-Over 100 utility macros to accelerate app development at the backend, whether that's standalone SAS, SAS 9 or Viya.
-It can be installed locally in a GIT project and version locked with NPM, included directly from the git repo in a SAS session, or deployed in a more traditional way using SASAUTOs.
--->
-
----
-# SASjs Adapter
-
-- Authentication
-- Bidirectional communication with SAS
-- `npm install @sasjs/adapter`
-
-<!-- TRANSCRIPT
-The adapter handles SAS Logon authentication and all the back and forth between the frontend app and the backend SAS server.  It can be installed locally in an NPM project, or directly in any web app with a script tag.
--->
-
----
 # SASjs CLI
 
 - Project Setup
@@ -190,6 +130,8 @@ The adapter handles SAS Logon authentication and all the back and forth between 
 
 <!-- TRANSCRIPT
 The CLI provides an opinionated project setup and a set of easy to use commands for handling common deployment tasks. It needs to be installed globally in order to be available in your preferred shell window.
+
+Prerequisite - Node JS
 -->
 
 ---
@@ -199,6 +141,10 @@ The CLI provides an opinionated project setup and a set of easy to use commands 
 - Client / Secret
 - App Location (`appLoc`)
 
+<!--
+sasjs add used to provide the connection details. Provides the defaults for the environment, such as the server, the credentials, and the default app location.
+-->
+
 ---
 # `sasjs folder`
 
@@ -206,6 +152,9 @@ The CLI provides an opinionated project setup and a set of easy to use commands 
 - `sasjs folder move /some/folder /new/folder`
 - `sasjs folder delete /new/folder`
 
+<!--
+manage folders in the SAS Drive
+-->
 
 ---
 
@@ -213,7 +162,34 @@ The CLI provides an opinionated project setup and a set of easy to use commands 
 
 - `sasjs run code.sas`
 
-![bg right:60% height:450](docs/img/sasjsrun1.png)
+![bg right:60% height:430](docs/img/sasjsrun1.png)
+
+---
+# `sasjs context`
+
+- `list`
+- `export`
+- `create`
+- `edit`
+- `delete`
+
+![bg right:73% height:350](https://i.imgur.com/HSFhOt8.png)
+
+
+<!--
+A context, a compute context, provides the attributes under which a SAS session will start - such as the autoexec, SAS Options, whether it's a pooled server, the system credentials etc.
+
+-->
+
+---
+# `sasjs job`
+
+- `execute`
+
+
+<!--
+SAS jobs are the building blocks behind every model and SAS data repository.  A job is essentially some SAS code stored on the server.  The SASjs Job command lets you run any SAS job, right from command line.
+-->
 
 ---
 <!-- header: ![h:3em](https://sasjs.io/img/js-logo700x389.png)-->
