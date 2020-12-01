@@ -18,7 +18,7 @@ The SASjs framework is also used exclusively for bespoke SAS app development by 
 What are the Minimum Requirements for building Apps on SAS?
 ---------------------
 
-To build apps on SAS you need SAS Viya, or SAS 9 with Stored Process Server.  
+To build apps on SAS you need SAS Viya 3.4 and above, or SAS 9.3 and above with Stored Process Server.
 
 **You cannot create web apps on SAS with University Edition.**
 
@@ -37,7 +37,7 @@ run;
 Which Browsers Does SASjs Support?
 ---------------------
 
-With the right polyfills your SASjs app can support a very wide range of browsers, however the question is - do you really want to?  There can be a lot of edge cases to cover and support.  
+With the right polyfills your SASjs app can support a very wide range of browsers, however the question is - do you really want to?  There can be a lot of edge cases to cover and support.
 
 For guidance you might consider following SAS Institute's browser [support policy](https://support.sas.com/en/documentation/third-party-software-reference/9-4/support-for-9-4-web-browsers.html#:~:text=Microsoft%20Internet%20Explorer%20and%20Microsoft%20Edge&text=For%20most%20SAS%209.4%20applications,do%20not%20support%20Microsoft%20Edge).  Note the diminishing support for IE.
 
@@ -52,7 +52,7 @@ For guidance you might consider following SAS Institute's browser [support polic
         "name": "What are the Minimum Requirements for building Apps on SAS?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>To build apps on SAS you need SAS Viya, or SAS 9 with Stored Process Server.</p><p><b>You cannot create web apps on SAS with University Edition.</b></p><p>To check if you have SAS Viya, open SAS Studio, click your user profile and click 'About'. </p><p><a href=https://sasjs.io/faq/#minimum-requirements> Click here </a> for more information</p>"
+          "text": "<p>To build apps on SAS you need SAS Viya 3.4 and above, or SAS 9.3 and above with Stored Process Server.</p><p><b>You cannot create web apps on SAS with University Edition.</b></p><p>To check if you have SAS Viya, open SAS Studio, click your user profile and click 'About'. </p><p><a href=https://sasjs.io/faq/#minimum-requirements> Click here </a> for more information</p>"
         }
       }, {
         "@type": "Question",
