@@ -64,8 +64,8 @@ This app will let you choose a local file and upload it to a directory on the Vi
 To deploy:
 
 ```
-filename sasjs url "https://raw.githubusercontent.com/sasjs/fileuploader/master/runme.sas";
-%inc sasjs;
+filename mc url "https://raw.githubusercontent.com/sasjs/fileuploader/master/runme.sas";
+%inc mc;
 ```
 
 Run the above, then open YOURSERVER/SASJobExecution?_PROGRAM=/Public/app/fileuploader/clickme
