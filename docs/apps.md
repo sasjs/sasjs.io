@@ -11,7 +11,7 @@ Below are a collection of Apps and Tools that can be deployed on either / both S
 ## Fun and Games
 
 ### Sonic the Hedgehog on SAS
-A SASjs wrapper for this remake of the sega classic!  Works on SAS 9 only (due to default CSP settings on Viya).  
+A SASjs wrapper for this remake of the sega classic!  Works on SAS 9 only (due to default CSP settings on Viya).
 
 Source: [https://github.com/allanbowe/sonic](https://github.com/allanbowe/sonic)
 
@@ -30,7 +30,7 @@ Source: [https://github.com/macropeople/rockroller](https://github.com/macropeop
 
 
 ### SAS Streamed SAS Rap
-Run the code below (SAS9 or Viya), and open the link in a browser to hear a SAS streamed [SAS Rap](https://www.youtube.com/watch?v=FtTAoYV9HS8&feature=youtu.be) by [Thiago De Souza](https://www.linkedin.com/in/thiago-de-souza/) 
+Run the code below (SAS9 or Viya), and open the link in a browser to hear a SAS streamed [SAS Rap](https://www.youtube.com/watch?v=FtTAoYV9HS8&feature=youtu.be) by [Thiago De Souza](https://www.linkedin.com/in/thiago-de-souza/)
 
 ```SAS
 filename playme url "https://sasjs.io/rap.sas";
@@ -52,5 +52,7 @@ filename vt url  "https://raw.githubusercontent.com/sasjs/viyatoken/master/runme
 ```
 
 Run the above, then open YOURSERVER/SASJobExecution?_PROGRAM=/Public/app/viyatoken/clickme
+
+Source: [https://github.com/sasjs/viyatoken](https://github.com/sasjs/viyatoken)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/L_ZtRSjTs_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
