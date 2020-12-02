@@ -72,4 +72,4 @@ Run the above, then open YOURSERVER/SASJobExecution?_PROGRAM=/Public/app/fileupl
 
 source: [https://github.com/sasjs/fileuploader](https://github.com/sasjs/fileuploader)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/https://youtu.be/ERLWmf4vXtk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ERLWmf4vXtk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
