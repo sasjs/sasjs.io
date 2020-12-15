@@ -37,7 +37,7 @@ nav:
   - Apps: apps.md
   - FAQ: faq.md
   - Glossary: glossary.md
-  - Log Parser: log-parser.md
+  - Viya Log Parser: log-parser.md
 
 markdown_extensions:
   - admonition
