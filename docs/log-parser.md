@@ -1,7 +1,7 @@
 Log parser
 ====================
 
-You can use this tool to parse the SAS log that is in JSON format. Result is plain text.
+You can use this tool to parse the SAS log which is in JSON format. Result is plain text.
 
 <link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
 
