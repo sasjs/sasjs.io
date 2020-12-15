@@ -6,15 +6,15 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
-
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sasjs/sasjs.io.git"
   },
   "keywords": [
-    "SAS","Viya","SASjs"
+    "SAS",
+    "Viya",
+    "SASjs"
   ],
   "author": "Allan Bowe",
   "license": "ISC",
@@ -22,7 +22,5 @@
     "url": "https://github.com/sasjs/sasjs.io/issues"
   },
   "homepage": "https://sasjs.io",
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
