@@ -3,7 +3,35 @@ Log parser
 
 You can use this tool to parse SAS Viya logs from JSON to plain text format.
 
-<link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
+<style>
+  button {
+    background: #eeeeee;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background: #e6e6e6;
+  }
+
+  button:focus {
+    outline: none
+  }
+
+  textarea {
+    padding: 5px;
+  }
+
+  pre {
+    padding: 5px;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+
+    overflow: auto;
+    max-height: 80vh;
+  }
+</style>
 
 <textarea id="log_text" style="width: 100%; height: 200px;" placeholder="Paste log in json format to parse plain text"></textarea>
 
@@ -25,6 +53,7 @@ You can use this tool to parse SAS Viya logs from JSON to plain text format.
       logLines += `${item.line}\n`
     }
 
-    let logResult = document.querySelector('#log_result').innerHTML = logLines
+    document.querySelector('#log_result').innerHTML = logLines
+    document.querySelector('#log_text').value = ''
   }
 </script>
