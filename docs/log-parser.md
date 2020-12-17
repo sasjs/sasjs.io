@@ -1,3 +1,10 @@
+---
+layout: article
+title: Log parser
+description: You can use this tool to parse SAS Viya logs from JSON to plain text format.
+og_image: https://sasjs.io/img/log-parser.png?_=1
+---
+
 Log parser
 ====================
 
@@ -30,6 +37,15 @@ You can use this tool to parse SAS Viya logs from JSON to plain text format.
 
     overflow: auto;
     max-height: 80vh;
+  }
+
+  .md-sidebar--secondary {
+    display: none;
+  }
+
+  .md-content {
+    width: 80% !important;
+    max-width: 80% !important;
   }
 </style>
 
