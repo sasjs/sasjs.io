@@ -27,20 +27,24 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate 6 min slides
-        run: npx @marp-team/marp-cli ./slides6min.md -o ./slides/appdev.html
+        run: npx @marp-team/marp-cli ./slides/slides6min.md -o ./slides/appdev.html
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Generate 30 min slides
-        run: npx @marp-team/marp-cli ./slides30min.md -o ./slides/rapidapps.html
+        run: npx @marp-team/marp-cli ./slides/slides30min.md -o ./slides/rapidapps.html
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Generate slides for geeks
-        run: npx @marp-team/marp-cli ./slidesgeeks.md -o ./slides/geeks.html
+        run: npx @marp-team/marp-cli ./slides/slidesgeeks.md -o ./slides/geeks.html
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Generate teaser slides for SASGF
+        run: npx @marp-team/marp-cli ./slides/sgf2021teaser.md -o ./slides/sgf2021teaser.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Commit and push slides
         uses: EndBug/add-and-commit@v5
