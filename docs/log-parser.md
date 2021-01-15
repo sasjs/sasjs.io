@@ -5,8 +5,7 @@ description: You can use this tool to parse SAS Viya logs from JSON to plain tex
 og_image: https://sasjs.io/img/log-parser.png?_=1
 ---
 
-Log parser
-====================
+# Log parser
 
 You can use this tool to parse SAS Viya logs from JSON to plain text format.
 
@@ -59,17 +58,35 @@ You can use this tool to parse SAS Viya logs from JSON to plain text format.
 </div>
 
 <script>
+  function htmlEncode(str) {
+    const el = document.createElement('div')
+    el.innerText = el.textContent = str
+    str = el.innerHTML
+
+    return str
+  }
+
   const parseLogLines = () => {
-    let logText = document.querySelector('#log_text').value
-    let logJson = JSON.parse(logText)
-    
+    const logText = document.querySelector('#log_text').value
     let logLines = ''
 
-    for (let item of logJson.items) {
-      logLines += `${item.line}\n`
+    if (logText) {
+      try {
+        const logJson = JSON.parse(logText)
+
+        for (let item of logJson.items) {
+          logLines += `${htmlEncode(item.line)}\n`
+        }
+      } catch (err) {
+        alert(`Error while parsing provided log.${err ? `\n${err}` : '' }`)
+      }
     }
 
-    document.querySelector('#log_result').innerHTML = logLines
-    document.querySelector('#log_text').value = ''
+    if (logLines) {
+      document.querySelector('#log_result').innerHTML = logLines
+      document.querySelector('#log_text').value = ''
+    } else if (logText) {
+      alert(`Error while parsing provided log.`)
+    }
   }
 </script>
