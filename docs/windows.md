@@ -67,4 +67,4 @@ CMDer
 
 This comes prebundled with GIT, allows a number of unix commands, and enables a remote (cloud) config, worth checking out:  https://cmder.net/
 
-<meta name="description" content="Windows specific tips when setting up an environment for building Web Apps on SAS">
+<meta name="description" content="Windows specific tips for deploying the supporting tools around the SASjs framework">
