@@ -11,12 +11,11 @@ The alternative is to use portable versions that do not require admin privileges
 VSCode
 ---------------------
 
-VSCode is a powerful editor that includes a commandline that will run both CMD and POWERSHELL.  The portable version is here:  [https://github.com/garethflowers/vscode-portable](https://github.com/garethflowers/vscode-portable)
+VSCode is a powerful editor that includes a commandline that will run both CMD and POWERSHELL.  You can download the full version [here](https://code.visualstudio.com/download) or use the portable version [here](https://github.com/garethflowers/vscode-portable).
 
 NPM
 ---------------------
-Node Package Manager is an essential piece of kit, as it allows the dependencies of your project to be installed in a reproduceable manner.
-To install npm without admin rights:
+Node Package Manager is an essential piece of kit, as it allows the dependencies of your project to be installed in a reproduceable manner.  You can download the full version [here](https://www.npmjs.com/get-npm), or - to install npm without admin rights:
 
 1. visit the official [download page](https://nodejs.org/en/download) and extract the Windows Binary (zip file - not the installer).
 2. Copy the contents to a filesystem location, eg `C:\Tools`.
@@ -28,9 +27,9 @@ An alternative (perhaps more straightforward) approach is described here: https:
 GIT
 ---------------------
 
-A portable version of GIT can be installed directly from github here: [https://github.com/git-for-windows/git/releases](https://github.com/git-for-windows/git/releases).
+The full version of git can be downloaded [here](https://git-scm.com/downloads) or use the portable version [here](https://github.com/git-for-windows/git/releases) with the following instructions:
 
-Download the portable `.exe` file from the releases page and unzip it to a location in your filesystem.
+Download the portable `.exe` file from the [releases](https://github.com/git-for-windows/git/releases) page and unzip it to a location in your filesystem.
 
 Inside the unzipped folder will be a folder called `cmd`. This contains the `git.exe` file.  There is also a `usr/bin` folder - which contains `ssh-keygen.exe`.
 
