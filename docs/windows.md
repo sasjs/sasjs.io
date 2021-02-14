@@ -14,6 +14,9 @@ The correct approach in such circumstances is to simply make a request for these
 
 The alternative is to use portable versions that do not require admin privileges to execute.
 
+!!! note
+    If you are using powershell, and you don't have access to change your environment variables, you can add these paths to `$PROFILE` script `$env:Path` (thanks [Christopher Mortimer](https://www.linkedin.com/in/christopher-mortimer-286b1538/) for the tip!)
+
 VSCode
 ---------------------
 
@@ -44,8 +47,6 @@ Add both of these locations to the PATH environment variable for your windows ac
 ![adding path in windows](img/windowspath.png)
 
 Be sure to hit OK twice for the change to be saved!  You can now open a **new** shell window and create your SSH key using the `ssh-keygen` command.
-
-If you are using powershell, and you don't have access to change your environment variables, you can add these paths to `$PROFILE` script `$env:Path` (thanks [Christopher Mortimer](https://www.linkedin.com/in/christopher-mortimer-286b1538/) for the tip!)
 
 ### rsync
 
