@@ -1,10 +1,10 @@
-<!-- this has to be in the root folder as it is linked from an sgf2020 paper -->
 ---
 layout: article
 title: Deploying to Locked Down Windows Machines
 description: Windows specific tips for deploying the supporting tools around the SASjs framework
 og_image: img/windowspath.png
 ---
+<!-- this has to be in the root folder as it is linked from an sgf2020 paper -->
 
 # Windows
 
