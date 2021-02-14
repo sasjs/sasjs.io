@@ -1,6 +1,7 @@
 ---
 layout: article
-title: Deploying to Locked Down Windows Machines
+title: Windows
+og_title: Deploying to Locked Down Windows Machines
 description: Windows specific tips for deploying the supporting tools around the SASjs framework into locked down Enterprise windows machines
 og_image: img/windowspath.png
 ---
