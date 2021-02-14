@@ -15,7 +15,7 @@ The correct approach in such circumstances is to simply make a request for these
 The alternative is to use portable versions that do not require admin privileges to execute.
 
 !!! note
-    If you are using powershell, and you don't have access to change your environment variables, you can add these paths to `$PROFILE` script `$env:Path` (thanks [Christopher Mortimer](https://www.linkedin.com/in/christopher-mortimer-286b1538/) for the tip!)
+    If you are using powershell, and you don't have access to change your environment variables, you can add your paths to `$PROFILE` script `$env:Path`.  Thanks [Christopher Mortimer](https://www.linkedin.com/in/christopher-mortimer-286b1538/) for the tip!
 
 VSCode
 ---------------------
