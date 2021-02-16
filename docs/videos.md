@@ -40,6 +40,16 @@ The CLI tool enables your SAS backend to live alongside your frontend in a GIT r
 
 ## Other Videos
 
+### Scaffolding a SAS Project in VSCode with SASjs
+How to compile, build, and deploy SAS projects from a local machine using your preferred IDE (eg VS Code). Includes an overview of `sasjs flow`, `sasjs job execute`, `sasjs compile`, `sasjs build`, `sasjs deploy` and `sasjs add` as well as `sasjs folder delete`.
+
+<iframe width="560" height="315"
+    src="https://www.youtube.com/embed/KKfUHTngSFo"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+
 ### Deploying and Using the Viya Token Generator
 On Viya you need a client, secret and access_token to autodeploy your backend. This [app](https://github.com/sasjs/viyatoken) makes it easy.
 
