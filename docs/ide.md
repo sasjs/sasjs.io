@@ -8,8 +8,17 @@ Our favourite is VSCodium - VSCode without the telemetry!  It's a great IDE and 
 
 ## Extensions
 
-### SAS-Syntax
-A syntax highligher for SAS code
+### Remove Tabs on Save
+
+The in built functionality does not apply to all tabs, eg if you are sent a file that contains tabs in a comment block.  This extension will ensure that all those nasty tabs are zapped whenever you hit SAVE!
+
+[https://marketplace.visualstudio.com/items?itemName=redlin.remove-tabs-on-save](https://marketplace.visualstudio.com/items?itemName=redlin.remove-tabs-on-save)
+
+### EditorConfig for VS Code
+Whilst we love VS Code we also recognise that other developers may have their own IDE preferences.  For this reason we recommend that - where possible - configuration is made using the universal '.editorconfig' file .
+
+The VS Code plugin is here: [https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+
 
 ### Gremlins Tracker
 
@@ -22,5 +31,8 @@ This plugin will highlight all the rows containing such 'gremlins'.  A real time
 It is now easier than ever to set up your own cloud instance of VSCodium and access it from any browser (even on ipad!).  This means you can run your builds in a powerful (or throwaway) cloud server instance without running down your battery, or being dependent on a single device.
 
 A guide to setting up an instance on digital ocean is available [here](https://github.com/cdr/code-server/blob/v3.8.0/doc/guide.md).
+
+### SAS-Syntax
+A syntax highligher for SAS code
 
 <meta name="description" content="Tips & Tricks for building apps - an overview of the various IDEs available for development">
