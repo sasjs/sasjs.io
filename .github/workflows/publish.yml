@@ -46,6 +46,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Generate SASgf 20201 slides
+        run: npx @marp-team/marp-cli ./slides/sgf2021.md -o ./slides/sgf2021.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Commit and push slides
         uses: EndBug/add-and-commit@v5
         with:
