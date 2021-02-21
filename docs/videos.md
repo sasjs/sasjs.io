@@ -38,6 +38,16 @@ The CLI tool enables your SAS backend to live alongside your frontend in a GIT r
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
 
+
+### Use "sasjs doc" to generate HTML documentation from source programs
+With a single command you can auto-generate documentation directly from your SAS Jobs and Services.  Recent updates include a homepage, and a Data Lineage diagram (jobs link back to docs, tables link directly to [Data Controller](https://datacontroller.io) if configured).
+
+<iframe width="560" height="315"
+    src="https://www.youtube.com/embed/ESNdCtXKRrw"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+    
 ## Other Videos
 
 ### Scaffolding a SAS Project in VSCode with SASjs
