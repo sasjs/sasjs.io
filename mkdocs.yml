@@ -29,7 +29,7 @@ nav:
       - guide-sas9.md
       - guide-viya.md
       - releasing.md
-      - ide.md
+      - vscode.md
   - Training:
       - Online Resources: resources.md
       - Videos: videos.md
