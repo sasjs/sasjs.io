@@ -64,6 +64,8 @@ This extension lets you build diagrams directly in VS Code!  You can save as PNG
 
 [https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 
+![](https://i.imgur.com/uBXho4J.png)
+
 
 ### SAS-Syntax
 A syntax highligher for SAS code
