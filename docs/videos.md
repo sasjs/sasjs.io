@@ -47,7 +47,18 @@ With a single command you can auto-generate documentation directly from your SAS
     frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-    
+
+### Using gitpod with SASjs
+
+We configured our jobs template repository so that it can be launched with gitpod in a single click! [https://gitpod.io/#github.com/sasjs/template_jobs](https://gitpod.io/#github.com/sasjs/template_jobs)
+
+<iframe width="560" height="315"
+    src="https://www.youtube.com/embed/DpjR3tv2aek"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+
 ## Other Videos
 
 ### Scaffolding a SAS Project in VSCode with SASjs
