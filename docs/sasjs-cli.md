@@ -1,3 +1,10 @@
+---
+layout: article
+title: SASjs CLI
+description: SASjs CLI tips and documentation for building SAS Applications on SAS 9 and Viya
+og_image: https://i.imgur.com/3y2w5aQ.png
+---
+
 SASJS-CLI
 ====================
 
@@ -18,4 +25,3 @@ SASjs was presented to the SAS User Group UK & Ireland in March 2020 as an appro
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZhYWBm6zjek?start=73" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<meta name="description" content="SASjs CLI tips and documentation for building SAS Applications on SAS 9 and Viya ">
