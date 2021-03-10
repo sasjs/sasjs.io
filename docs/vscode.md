@@ -66,6 +66,13 @@ This extension lets you build diagrams directly in VS Code!  You can save as PNG
 
 ![](https://i.imgur.com/uBXho4J.png)
 
+### Journal
+
+This is actually two extensions.  The first lets you use VS Code as a task manager and work diary.  The second adds a calendar icon to the left hand side of your IDE so you can easily browse!
+
+* [Journal](https://marketplace.visualstudio.com/items?itemName=Pajoma.vscode-journal)
+* [Viewer](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.vscode-journal-view)
+
 
 ### SAS-Syntax
 A syntax highligher for SAS code
