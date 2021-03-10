@@ -13,9 +13,9 @@ Full documentation for the CLI is available at [https://cli.sasjs.io](https://cl
 Demo
 ---------------------
 
-A 2 minute video demonstrating how an app can be built and a deployment script created is shown below.
+SASjs was presented to the SAS User Group UK & Ireland in March 2020 as an approach for deploying, executing & scheduling viya jobs.  The video is available below.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hUpBqExNec4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhYWBm6zjek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 <meta name="description" content="SASjs CLI tips and documentation for building SAS Applications on SAS 9 and Viya ">
