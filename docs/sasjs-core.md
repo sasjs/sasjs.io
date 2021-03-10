@@ -1,3 +1,10 @@
+---
+layout: article
+title: SASjs CORE
+description: The Macro Core library empowers SAS Application Developers with a range of macro functions, procedures, macros for metadata and macros for Viya
+og_image: https://core.sasjs.io/Macro_core_website_1.png
+---
+
 MacroCore Library
 ====================
 
@@ -82,6 +89,3 @@ When calling SAS Viya from SAS 9, the `oauth_bearer=sas_services` option is not 
 !!! Warning
     Saving security tokens in project repositories, especially if they are committed to source control, is a security risk - as anyone with access can use them to make modifications on the Viya platform.  Be sure to use a secure mechanism such as the `%inc` from a secure directory, or another approved mechanism for securing these kinds of variables.  Avoid writing Access Tokens to log files.
 
-
-
-<meta name="description" content="The Macro Core library empowers SAS Application Developers with a range of macro functions, procedures, macros for metadata and macros for Viya">
