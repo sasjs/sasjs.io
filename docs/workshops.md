@@ -1,3 +1,10 @@
+---
+layout: article
+title: SASjs Training
+og_title: SASjs Training
+description: Build the capability to deploy fresh and inspiring new interfaces into the SAS Platform with a live training package.
+---
+
 Workshops
 ====================
 
@@ -33,7 +40,7 @@ To save time on the day it will help to ensure that you have the above prerequis
 
 ### SAS Access
 
-You will need an instance of SAS in order to build the backend! 
+You will need an instance of SAS in order to build the backend!
 
 #### Viya
 
@@ -57,14 +64,14 @@ You also need the ability to create Job Execution services somewhere in the fold
 You need the ability to create stored processes somewhere in the folder tree. You can check this using SAS Management Console, or DI Studio, or Enterprise Guide (if enabled).  You can also try by creating programmatically using SAS Studio.
 
 ### Local Tools
-Whilst you could develop on the server, typically builds and changes are made _locally_ and then deployed to a server. 
+Whilst you could develop on the server, typically builds and changes are made _locally_ and then deployed to a server.
 
 So on your laptop or desktop you will need the following items of software:
 
 #### GIT
 This is used mainly to clone the seed apps. Install from here: [https://git-scm.com/](https://git-scm.com/). If you do not have admin rights, try this [guide](/windows#git).
 
-#### NPM  
+#### NPM
 Node Package Manager (NPM) is a JavaScript framework for managing project dependencies. It also handles installations and a lot of other functionality. It can be downloaded here: [https://nodejs.org/en/download](https://nodejs.org/en/download). If you do not have admin rights, try this [guide](/windows#npm).
 
 #### VSCode
@@ -81,6 +88,3 @@ node -v
 ```
 
 If you get a version number for each of the above, and the version for `node` is above 10.3, you're good to go!
-
-
-<meta name="description" content="Build the capability to deploy fresh and inspiring new interfaces into the SAS Platform with a live training package.">
