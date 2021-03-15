@@ -9,31 +9,6 @@ VS Code - for SAS
 
 VS Code is the worlds best IDE!  At least, that's our opinion. It's a great IDE and very usable for both SAS and Web development.  When it comes to the download, we actually recommend VSCodium - which is simply VSCode without the telemetry.  The downside of using VS
 
-## Tips & Tricks
-
-### Keyboard shortcuts
-
-10x your productivity by committing the following to memory:
-
-Shortcut | Result
----|---
-CTRL+ALT + up or down arrow| Multiline select with the cursor
-CTRL+SHIFT+P| Bring up the command pane
-
-### Gitpod
-
-Instant workspace in the cloud!  Just add "gitpod.io/#" prior to the url, like this:  "gitpod.io/#github.com/sasjs/core".
-
-### Github Viewer
-
-Are you trying to read code on github, but find it cumbersome to navigate each page?
-
-Just add "1s" in the url between "github" and ".com" - like this: "github1s.com/sasjs/core"
-
-And get instant VS Code in the browser!
-
-![sas vscode](img/vscode.png)
-
 ## Extensions
 
 VS Code has many marketplace extensions - these are our favourites:
@@ -44,6 +19,9 @@ Obviously! This is our favourite.  It's still in early development phase, howeve
 
 * Visual Studio Code Marketplace (suitable for VS Code):  https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode
 * Open VSX (Suitable for VSCodium and Theia): https://open-vsx.org/extension/sasjs/sasjs-for-vscode
+
+![snippet](https://user-images.githubusercontent.com/4420615/111216128-4c9f4780-85d4-11eb-8284-189b7efa12b0.gif)
+
 
 ### Remove Tabs on Save
 
@@ -78,7 +56,30 @@ This is actually two extensions.  The first lets you use VS Code as a task manag
 * [Journal](https://marketplace.visualstudio.com/items?itemName=Pajoma.vscode-journal)
 * [Viewer](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.vscode-journal-view)
 
+## Tips & Tricks
 
+### Keyboard shortcuts
+
+10x your productivity by committing the following to memory:
+
+Shortcut | Result
+---|---
+CTRL+ALT + up or down arrow| Multiline select with the cursor
+CTRL+SHIFT+P| Bring up the command pane
+
+### Gitpod
+
+Instant workspace in the cloud!  Just add "gitpod.io/#" prior to the url, like this:  "gitpod.io/#github.com/sasjs/core".
+
+### Github Viewer
+
+Are you trying to read code on github, but find it cumbersome to navigate each page?
+
+Just add "1s" in the url between "github" and ".com" - like this: "github1s.com/sasjs/core"
+
+And get instant VS Code in the browser!
+
+![sas vscode](img/vscode.png)
 
 ## Applications
 
