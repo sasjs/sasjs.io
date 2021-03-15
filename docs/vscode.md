@@ -20,6 +20,10 @@ Shortcut | Result
 CTRL+ALT + up or down arrow| Multiline select with the cursor
 CTRL+SHIFT+P| Bring up the command pane
 
+### Gitpod
+
+Instant workspace in the cloud!  Just add "gitpod.io/#" prior to the url, like this:  "gitpod.io/#github.com/sasjs/core".
+
 ### Github Viewer
 
 Are you trying to read code on github, but find it cumbersome to navigate each page?
@@ -38,7 +42,8 @@ VS Code has many marketplace extensions - these are our favourites:
 
 Obviously! This is our favourite.  It's still in early development phase, however it's already possible to submit code to Viya and return the log.  This uses the regular global sasjsconfig file, so the tokens generated can be interechanged between VS Code and the [CLI](https://cli.sasjs.io).
 
-[https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode)
+* Visual Studio Code Marketplace (suitable for VS Code):  https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode
+* Open VSX (Suitable for VSCodium and Theia): https://open-vsx.org/extension/sasjs/sasjs-for-vscode
 
 ### Remove Tabs on Save
 
@@ -73,9 +78,6 @@ This is actually two extensions.  The first lets you use VS Code as a task manag
 * [Journal](https://marketplace.visualstudio.com/items?itemName=Pajoma.vscode-journal)
 * [Viewer](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.vscode-journal-view)
 
-
-### SAS-Syntax
-A syntax highligher for SAS code
 
 
 ## Applications
