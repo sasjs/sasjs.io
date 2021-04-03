@@ -15,10 +15,13 @@ VS Code has many marketplace extensions - these are our favourites:
 
 ### SASjs
 
-Obviously! This is our favourite.  It's still in early development phase, however it's already possible to submit code to Viya and return the log.  This uses the regular global sasjsconfig file, so the tokens generated can be interechanged between VS Code and the [CLI](https://cli.sasjs.io).
+Using the SASjs extension in the marketplaces you can:
 
-* Visual Studio Code Marketplace (suitable for VS Code):  https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode
-* Open VSX (Suitable for VSCodium and Theia): https://open-vsx.org/extension/sasjs/sasjs-for-vscode
+* submit code to Viya and return the log.  This uses the regular global sasjsconfig file, so the tokens generated can be interechanged between VS Code and the [CLI](https://cli.sasjs.io).
+* Lint your SAS code (open view/problems to see the results)
+* Enjoy syntax highlighting
+
+The extension is available both on the [VS Code market place](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode) and also [open VSX](https://open-vsx.org/extension/sasjs/sasjs-for-vscode) (suitable for VSCodium and Theia).
 
 ![snippet](https://user-images.githubusercontent.com/4420615/111216128-4c9f4780-85d4-11eb-8284-189b7efa12b0.gif)
 
