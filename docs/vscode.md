@@ -7,7 +7,7 @@ og_image: img/vscode.png
 VS Code - for SAS
 ====================
 
-VS Code is the worlds best IDE!  At least, that's our opinion. It's a great IDE and very usable for both SAS and Web development.  When it comes to the download, we actually recommend VSCodium - which is simply VSCode without the telemetry.  The downside of using VS
+VS Code is the worlds best IDE!  At least, that's our opinion. It's a great IDE and very usable for both SAS and Web development.  When it comes to the download, we actually recommend VSCodium - which is simply VSCode without the telemetry.  
 
 ## Extensions
 
@@ -15,32 +15,22 @@ VS Code has many marketplace extensions - these are our favourites:
 
 ### SASjs
 
-Using the SASjs extension in the marketplaces you can:
+Using the SASjs extension in the VS Code marketplace you can:
 
 * submit code to Viya and return the log.  This uses the regular global sasjsconfig file, so the tokens generated can be interechanged between VS Code and the [CLI](https://cli.sasjs.io).
-* Lint your SAS code (open view/problems to see the results)
+* Lint your SAS code (open view/problems to see the results, or CTRL+M)
 * Enjoy syntax highlighting
 
 The extension is available both on the [VS Code market place](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode) and also [open VSX](https://open-vsx.org/extension/sasjs/sasjs-for-vscode) (suitable for VSCodium and Theia).
 
 ![snippet](https://user-images.githubusercontent.com/4420615/111216128-4c9f4780-85d4-11eb-8284-189b7efa12b0.gif)
 
-
-### Remove Tabs on Save
-
-The in built functionality does not apply to all tabs, eg if you are sent a file that contains tabs in a comment block.  This extension will ensure that all those nasty tabs are zapped whenever you hit SAVE!
-
-[https://marketplace.visualstudio.com/items?itemName=redlin.remove-tabs-on-save](https://marketplace.visualstudio.com/items?itemName=redlin.remove-tabs-on-save)
-
-### EditorConfig for VS Code
-Whilst we love VS Code we also recognise that other developers may have their own IDE preferences.  For this reason we recommend that - where possible - configuration is made using the universal '.editorconfig' file .
-
-The VS Code plugin is here: [https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+We are currently working on a formatter, to auto-format SAS code when hitting save (eg to remove tabs, zap gremlins/hidden inivisibles, add the macro name to the `%mend` statement, etc etc).
 
 
 ### Gremlins Tracker
 
-When using SASjs and sharing the deploy script from one environment (eg UTF8) to another (eg WLATIN1) you can end up with code that will not run in EG due to the existence of hidden special characters.
+When sharing code from one environment (eg UTF8) to another (eg WLATIN1) you can end up with code that will not run in EG due to the existence of hidden special characters.
 
 This plugin will highlight all the rows containing such 'gremlins'.  A real time saver / problem avoider!
 
@@ -73,6 +63,8 @@ CTRL+SHIFT+P| Bring up the command pane
 ### Gitpod
 
 Instant workspace in the cloud!  Just add "gitpod.io/#" prior to the url, like this:  "gitpod.io/#github.com/sasjs/core".
+
+A great demo of the SASjs CLI is available here: [https://gitpid.io/#github.com/sasjs/template_jobs](https://gitpid.io/#github.com/sasjs/template_jobs).
 
 ### Github Viewer
 
