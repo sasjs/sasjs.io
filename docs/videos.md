@@ -29,16 +29,6 @@ This process will work the same on both SAS 9 and Viya - create the SAS Web Serv
 
 ## SASjs CLI
 
-### Use the SASJS-CLI to create a backend repository
-The CLI tool enables your SAS backend to live alongside your frontend in a GIT repository - and for your SAS services to be compiled, built and deployed in a single command.
-
-<iframe width="560" height="315"
-    src="https://www.youtube.com/embed/hUpBqExNec4"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-
-
 ### Use "sasjs doc" to generate HTML documentation from source programs
 With a single command you can auto-generate documentation directly from your SAS Jobs and Services.  Recent updates include a homepage, and a Data Lineage diagram (jobs link back to docs, tables link directly to [Data Controller](https://datacontroller.io) if configured).
 
