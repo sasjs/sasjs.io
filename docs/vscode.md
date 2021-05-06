@@ -25,8 +25,9 @@ The extension is available both on the [VS Code market place](https://marketplac
 
 ![snippet](https://user-images.githubusercontent.com/4420615/111216128-4c9f4780-85d4-11eb-8284-189b7efa12b0.gif)
 
-We are currently working on a formatter, to auto-format SAS code when hitting save (eg to remove tabs, zap gremlins/hidden inivisibles, add the macro name to the `%mend` statement, etc etc).
+You can also auto-format your SAS code by right-clicking and selecting 'format':
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y_81mOz-bC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Gremlins Tracker
 
