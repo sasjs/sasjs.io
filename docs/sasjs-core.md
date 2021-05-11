@@ -38,7 +38,7 @@ options insert=(sasautos="/your/path/macrocore/base"));
 options insert=(sasautos="/your/path/macrocore/meta"));
 ```
 
-The finaly deployment option, if you are building web apps, is Node Package Manager - simply run `npm install macrocore` in your project repository.  Using [sasjs-cli](/sasjs-cli) you can compile these macros into your web services at build time, and lock them to a particular release.
+The final deployment option, if you are building web apps, is Node Package Manager - simply run `npm install @sasjs/core` in your project repository.  Using [sasjs-cli](/sasjs-cli) you can compile these macros into your web services at build time, and lock them to a particular release.
 
 ## Useful Features
 
@@ -83,7 +83,7 @@ run;
 
 ### Calling SAS Viya from SAS 9
 
-When calling SAS Viya from SAS 9, the `oauth_bearer=sas_services` option is not available.  However it is still possible to call the APIs using `proc http` in the [core](https://core.sasjs.io) library by putting the ACCESS_TOKEN in a macro variable and referring to that variable in the `access_token_var=` keyword parameter of each viya macro (starting `mv_`).
+When calling SAS Viya from SAS 9, the `oauth_bearer=sas_services` option is not available.  However it is still possible to call the APIs in SAS 9 with `proc http` in the [core](https://core.sasjs.io) library by putting the ACCESS_TOKEN in a macro variable and referring to that variable in the `access_token_var=` keyword parameter of each viya macro (starting `mv_`).
 
 
 !!! Warning
