@@ -51,26 +51,7 @@ Be sure to hit OK twice for the change to be saved!  You can now open a **new** 
 
 ### rsync
 
-It's very handy to be able to rsync your local web content to the SAS web server.  The git bash shell does not come with rsync by default.  A guide to installing it (using git bash) is available [here](https://gist.github.com/hisplan/ee54e48f17b92c6609ac16f83073dde6#gistcomment-3462247) (reproduced below):
-
-```
-#Make a temporary directory
-tempDir=$(mktemp -d)
-#go into that dir
-pushd "$tempDir"
-#download the file using its original name
-curl -O http://www2.futureware.at/~nickoe/msys2-mirror/msys/x86_64/rsync-3.1.2-2-x86_64.pkg.tar.xz
-#cd to Git Bash root directory (which is your Git directory, so you don't need to look it up or assume it's in %programfiles%)
-cd /
-#extract the files to their proper places (all of them, not just rsync.exe)
-tar -xf "${tempDir}/rsync-3.1.2-2-x86_64.pkg.tar.xz"
-#get back to your original directory
-popd
-#clean up that temp directory and the downloaded .tar.xz file
-rm -rf "$tempDir"
-#see that rsync is in the path now
-which rsync
-```
+It's very handy to be able to rsync your local web content to the SAS web server.  The git bash shell does not come with rsync by default.  A guide to installing it (using git bash) is available [here](https://gist.github.com/hisplan/ee54e48f17b92c6609ac16f83073dde6#gistcomment-3462247)
 
 CMDer
 ---------------------
