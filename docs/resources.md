@@ -17,15 +17,17 @@ SASjs is MIT open source and free for commercial use.  If you like our code, fee
 Websites created as technical / user documentation:
 
 * Adapter Technical [documentation](https://adapter.sasjs.io)
+* CLI [documentation](https://cli.sasjs.io)
 * Macro Core [documentation](https://core.sasjs.io)
 * Data Controller [documentation](https://docs.datacontroller.io/)
 
 
 ## Other Useful Websites
 
+* [SGF 2021 - Building & Deploying Web Apps with SASjs CLI](https://communities.sas.com/t5/SAS-Global-Forum-Proceedings/Building-and-Deploying-Web-Apps-With-SASjs-CLI/ta-p/733564)
+* [SGF 2021 - Scaffolding SAS Projects with NPM and SASjs](https://communities.sas.com/t5/SAS-Global-Forum-Proceedings/Scaffolding-SAS-Projects-With-NPM-and-SASjs/ta-p/726347)
 * [Guide](https://medium.com/@mihajlo.medjedovic/build-an-angular-web-app-on-sas-397419756981) to building and extending an Angular Web App on Viya
 * Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
-* [SGF 2021 - Building & Deploying Web Apps with SASjs CLI](https://communities.sas.com/t5/SAS-Global-Forum-Proceedings/Building-and-Deploying-Web-Apps-With-SASjs-CLI/ta-p/733564)
 * [Sasensei SAS App Quiz](https://sasensei.com/questions/filter?tags_any=[13])
 * Viya REST API [documentation](https://developer.sas.com/apis/rest/)
 
