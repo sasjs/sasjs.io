@@ -137,7 +137,7 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 ---
 # sasjs doc
 
-![bg right:72% ](https://i.imgur.com/mIlgZqh.png)
+![bg right:79% ](https://i.imgur.com/mIlgZqh.png)
 
 ---
 # Data Lineage
@@ -147,7 +147,7 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 ---
 # Doxygen Headers
 
-![bg right:72% ](https://sasjs.io/img/sasjs-cli-doc.png)
+![bg right:73% ](https://sasjs.io/img/sasjs-cli-doc.png)
 
 ---
 
