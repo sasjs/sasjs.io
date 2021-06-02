@@ -51,6 +51,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Generate SUGUKI DevOps slides
+        run: npx @marp-team/marp-cli ./slides/suguki_devops.md -o ./slides/suguki_devops.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Commit and push slides
         uses: EndBug/add-and-commit@v5
         with:

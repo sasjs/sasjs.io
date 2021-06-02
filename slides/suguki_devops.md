@@ -218,11 +218,23 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 - Add as git pre-commit hook
 - Use in VS Code extension
 
-![bg right:40% height:700px](https://sasjs.io/img/sasjs-cli-lint.png)
+![bg right:40% height:600px](https://sasjs.io/img/sasjs-cli-lint.png)
 
 ---
 <!-- header: ![h:3em](https://sasjs.io/img/js-logo700x389.png)-->
+# Sample DevOps Workflow
 
+- `git clone` / `git checkout -b branchname`
+- make changes
+- `sasjs cbd -t myPersonalTarget`
+- `sasjs test`
+- `git add` / `git commit` - `sasjs lint` runs automatically
+- `git push` - backend pipeline builds & runs tests
+- PR is reviewed & merged. Backend pipeline deploys and generates docs.
+  - `sasjs cbd -t sharedTarget && sasjs doc`
+
+---
+<!-- header: ![h:6em](https://sasjs.io/img/js-logo700x389.png)-->
 # Other commands
 
 | Command |Description|
@@ -234,13 +246,17 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 ---
 # Coming Soon
 
-- CLI support on SAS 9
-  - sasjs run
-  - sasjs deploy
-  - sasjs job execute
-  - sasjs request
-  - sasjs test
+- CLI support for remote commands on SAS 9
+  - sasjs run / deploy / job execute / request / test
 - Desktop (Base) SAS Support for web apps
+- Streaming App improvements
+
+---
+# Products & Services
+
+- Data Controller for SAS
+- Bespoke App Development
+- SASjs Framework Support & Extensions
 
 ---
 <!-- header: ![h:6em](https://sasjs.io/img/js-logo700x389.png)-->
