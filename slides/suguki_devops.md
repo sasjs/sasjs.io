@@ -194,7 +194,7 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 # `sasjs deploy`
 
 - Loads JSON if `deployServicePack:true` and `serverType:"SASVIYA`
-- Executes `tgtDeployScripts`:
+- Executes `deployScripts`:
     - SAS Programs remotely
     - Everything else, locally
 - Compile, build & deploy in one step:  `sasjs cbd`
