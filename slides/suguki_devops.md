@@ -79,10 +79,6 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 - DevOps
 - `npm install --global @sasjs/cli`
 
-
-
-
-
 ---
 # `sasjs create`
 
@@ -117,13 +113,34 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 ![bg right:60% height:450](https://sasjs.io/img/sasjsrun1.png)
 
 ---
+# sasjs doc
+
+![bg right:72% ](https://i.imgur.com/mIlgZqh.png)
+
+---
+# Data Lineage
+
+![bg right:72% ](https://sasjs.io/img/sasjs-cli-lineage.png)
+
+---
+# Doxygen Headers
+
+![bg right:72% ](https://sasjs.io/img/sasjs-cli-doc.png)
+
+---
 
 # sasjsconfig.json
 
 - Project configuration
+  - docConfig
+  - testConfig
+  - jobConfig
+  - deployConfig
+  - macroFolders
+  - ...
 - root / target level
 
-![bg right:60% height:450](https://sasjs.io/img/sasjsrun1.png)
+![bg right:60% height:450](https://sasjs.io/img/sasjsconfig.png)
 
 ---
 # `sasjs compile`
@@ -134,49 +151,10 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 
 ![bg right:50% height:650px](https://cli.sasjs.io/img/sasjscompile.png?_=1)
 
-
-<!--
-After we've added some backend SAS services to our app, we run sasjs compile - this will create a temporary folder called sasjsbuild and create one file for each service to be deployed.  This contains all the relevant precode, including macros and any initialisation and termination code.
-
-At this point you're probably wondering how the CLI knows which macros need to be included.  For that, we take a look at the program headers.
--->
-
----
-# Doxygen Docs
-
-![bg right:72% ](https://i.imgur.com/mIlgZqh.png)
-
-<!--
-The headers are primarily used to generate HTML documentation using doxygen.  It's also used within the core library, as you see here, and it's also used within SAS for some risk products.
-
--->
-
-
----
-# Doxygen Headers
-
-![bg right:72% ](https://i.imgur.com/8ZYFtLl.png)
-
-<!--
-The source code looks like this.  You can provide brief and detailed descriptions, and use markdown for code formatting.  Each macro parameter can also be documented.
-
-The CLI scans the headers, and finds the macros listed underneath the dependencies tag.
-
-The source code is then extracted from the directories specified within the sasjsconfig file.
--->
-
 ---
 # sasjsbuild directory
 
 ![bg right:40% height:700px](https://i.imgur.com/r73fl9W.png)
-
-<!--
-To summarise then, the compile step creates one file per service, each of which contains all the dependent macros.  And the big benefit of this approach is that every service is self contained.  There's no filesystem dependency, and each service can be tested fully in isolation.
-
-For apps with dependencies on freeform SAS programs, such as those with datalines, or LUA programs, we've got you covered and will be releasing this feature in the coming weeks.
-
-There's still the problem of deployment though.  An app can have many services, how do we get these into SAS?
--->
 
 ---
 # `sasjs build`
@@ -189,14 +167,6 @@ There's still the problem of deployment though.  An app can have many services, 
 
 ![bg right:40% height:700px](https://cli.sasjs.io/img/sasjsbuild.png)
 
-
-<!--
-first we need a build pack, and that's what sasjs build gives us. There are two possible outputs - the first is a SAS program, that can run in either SAS 9 or Viya, that creates all of the SAS folders and web services.
-It also contains any build initialisation logic, such as database or environment setup, and termination logic, such as exporting an SPK or running test scripts.
-
-The second possibility is a JSON file, that can be used to create the services directly using the Viya REST API.
-
--->
 
 ---
 # `sasjs deploy`
