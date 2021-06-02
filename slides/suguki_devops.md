@@ -212,13 +212,26 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 |[test](https://cli.sasjs.io/test)|Execute SAS unit tests and collect results in json/csv formats together with logs|
 
 ---
+# `sasjs test`
+
+- filename.test[.integer].sas
+- Coverage shown on sasjs compile
+- Execute all with `sasjs test`
+- Execute some with `sasjs test someFilterString`
+- Assertion macros in @sasjs/core
+- Click URL to re-run a single test
+- JUnit XML support, coming soon
+
+![bg right:50% height:700px](https://user-images.githubusercontent.com/4420615/119498704-92178800-bd6e-11eb-8533-00d96c1642b6.png)
+
+---
 # `sasjs lint`
 
 - Catch common coding issues
 - Add as git pre-commit hook
 - Use in VS Code extension
 
-![bg right:40% height:600px](https://sasjs.io/img/sasjs-cli-lint.png)
+![bg right:54% height:600px](https://sasjs.io/img/sasjs-cli-lint.png)
 
 ---
 <!-- header: ![h:3em](https://sasjs.io/img/js-logo700x389.png)-->
