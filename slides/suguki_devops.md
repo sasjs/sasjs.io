@@ -2,6 +2,7 @@
 marp: true
 theme: default
 paginate: true
+
 <!--
 npx @marp-team/marp-cli slides.md ./theme/slides.html
 -->
@@ -201,28 +202,45 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 ![bg right:50% height:700px](https://sasjs.io/img/sasjs-cli-deploy.png)
 
 ---
+# Execution
+
+| Command |Description|
+|:-------:|:----|
+|[job](https://cli.sasjs.io/job)|Manage & Execute SAS Jobs|
+|[flow](https://cli.sasjs.io/flow)|SAS job scheduler that takes a JSON file as input, and submit all the jobs sequentially, logging the results to an output CSV file|
+|[request](https://cli.sasjs.io/request)|Execute SASjs web services from the commandline|
+|[test](https://cli.sasjs.io/test)|Execute SAS unit tests and collect results in json/csv formats together with logs|
+
+---
+# `sasjs lint`
+
+- Catch common coding issues
+- Add as git pre-commit hook
+- Use in VS Code extension
+
+![bg right:40% height:700px](https://sasjs.io/img/sasjs-cli-lint.png)
+
+---
 <!-- header: ![h:3em](https://sasjs.io/img/js-logo700x389.png)-->
 
+# Other commands
 
 | Command |Description|
 |:-------:|:----:|
-|   [add](https://cli.sasjs.io/add)   | Provides a series of prompts used to define a SAS  [target](https://sasjs.io/glossary#target ) along with the relevant connection details (if SAS Viya) |
-|[build](https://cli.sasjs.io/build)  |takes all of the input jobs and services and creates a build pack|
-|[compile](https://cli.sasjs.io/compile)|Extracts all the dependencies and input programs for each service / job and includes them in a single file ready for deployment|
 |[context](https://cli.sasjs.io/context)|List, export, create, edit, and delete SAS Compute contexts|
-|[create](https://cli.sasjs.io/create)| Initialise a SASjs repository, either in plain form or using a range of templates|
-|[deploy](https://cli.sasjs.io/deploy)|Perform the actual deployment of a SASjs project into SAS 9 or Viya|
-|[folder](https://cli.sasjs.io/folder)|Management of logical Viya folders|
-|[job](https://cli.sasjs.io/job)|Manage & Execute SAS Jobs|
-|[run](https://cli.sasjs.io/run)|Run arbitrary SAS code in a Viya Compute Session, directly from the terminal (or commandline session)|
+|[folder](https://cli.sasjs.io/folder)|Management of logical SAS folders|
 |[servicepack](/servicepack)|The SASjs Service Pack is a collection of services and folder objects.  The servicepack command lets you deploy them easily|
 
-<!-- TRANSCRIPT
-As you've seen there are quite a few commands, and we're still in the process of documenting them all.
-If there are any more commands that you know would be helpful, that you'd like to see, just head over to the repo and raise an issue.  If there's community support, we'd be happy to build it in.
+---
+# Coming Soon
 
-visit github, sasjs.io, cli.sasjs.io, core.sasjs.io, adapter.sasjs.io
--->
+- CLI support on SAS 9
+  - sasjs run
+  - sasjs deploy
+  - sasjs job execute
+  - sasjs request
+  - sasjs test
+- Desktop (Base) SAS Support for web apps
 
 ---
 <!-- header: ![h:6em](https://sasjs.io/img/js-logo700x389.png)-->
@@ -233,10 +251,4 @@ visit github, sasjs.io, cli.sasjs.io, core.sasjs.io, adapter.sasjs.io
 - https://www.linkedin.com/in/allanbowe/
 - allan.bowe@analytium.co.uk
 - https://github.com/sasjs
-
-<!--
-My contact details and the github link are right here, feel free to reach out if you'd like to know more, we'd be happy to arrange a 1 hour workshop or a longer training session for you and your team.
-
-Do widzenia!
--->
 
