@@ -79,35 +79,7 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 - DevOps
 - `npm install --global @sasjs/cli`
 
----
-# `sasjs add`
 
-- Define a Target
-- Client / Secret
-- App Location (`appLoc`)
-
-![bg right:68% width:870 ](https://i.imgur.com/SaNVk0N.png)
-
-
----
-
-# `sasjs run`
-
-- `sasjs run code.sas`
-
-![bg right:60% height:450](https://sasjs.io/img/sasjsrun1.png)
-
-
----
-# `sasjs context`
-
-- `list`
-- `export`
-- `create`
-- `edit`
-- `delete`
-
-![bg right:73% height:350](https://i.imgur.com/HSFhOt8.png)
 
 
 
@@ -125,21 +97,40 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 ---
 # Project Structure
 
-![bg right:71% height:700](https://i.imgur.com/kpRTA1E.png)
+![bg right:71% height:700](https://sasjs.io/img/sasjs-cli-create.png)
 
-<!--
-Here we see the project structure for a sasonly template, and there are a few things to note.
-The Package JSON files provide details of the third party dependencies, which are physically downloaded and stored in the node_modules folder.  This is standard for NPM web apps.
-The SASJS folder contains the sasjsconfig file and folders for build scripts, database files, macros, and web services.  Everything SAS related sits in here, which means it fits nicely within the root of pretty much any standard web project.
-It's worth noting again that this is configurable - sasjsconfig works on relative paths, so you can store the SASjs subdirectories elsewhere if needed.  You just need to run the compile, build & deploy steps, which we'll cover next, from either the sasjs folder or it's immediate parent in order for the configuration to be picked up.
--->
+---
+# `sasjs add`
+
+- Define a Target
+- Client / Secret
+- App Location (`appLoc`)
+
+![bg right:68% width:870 ](https://i.imgur.com/SaNVk0N.png)
+
+---
+
+# `sasjs run`
+
+- `sasjs run code.sas`
+
+![bg right:60% height:450](https://sasjs.io/img/sasjsrun1.png)
+
+---
+
+# sasjsconfig.json
+
+- Project configuration
+- root / target level
+
+![bg right:60% height:450](https://sasjs.io/img/sasjsrun1.png)
 
 ---
 # `sasjs compile`
 
-- One file per web service
-- Service Init + Term
-- Relevant macros included
+- One file per Job / Service / Test
+- Init + Term programs
+- Macro Variables
 
 ![bg right:50% height:650px](https://cli.sasjs.io/img/sasjscompile.png?_=1)
 
