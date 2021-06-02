@@ -80,6 +80,27 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
 - `npm install --global @sasjs/cli`
 
 ---
+# SASjs SAS Files
+
+- Primary (deployed)
+  - Jobs
+  - Services
+  - Tests
+- Supporting (compiled into Primary)
+  - Macros
+  - Includes
+
+---
+# SASjs Lingo
+
+- AppLoc
+  - "App Location"
+  - Root folder in SAS Drive or Metadata
+- Target
+  - "The place you deploy your app"
+  - encompasses ALL attributes, eg serverUrl, appLoc, serverType
+
+---
 # `sasjs create`
 
 - Prepare a SAS project with an opinionated structure
@@ -140,7 +161,7 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
   - ...
 - root / target level
 
-![bg right:60% height:450](https://sasjs.io/img/sasjsconfig.png)
+![bg right:60% height:800](https://sasjs.io/img/sasjsconfig.png)
 
 ---
 # `sasjs compile`
@@ -177,16 +198,7 @@ Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of yea
     - Everything else, locally
 - Compile, build & deploy in one step:  `sasjs cbd`
 
-![bg right:50% height:700px](https://i.imgur.com/uZ8avwk.png)
-
-
-<!--
-Deploy then, will first deploy the folders and services using the REST APIs if the target is Viya and `deployServicePack` is true.
- After that it executes everything within the `tgtDeployScripts` array- on the server if it's a SAS file, or locally if anything else.  This is where you can add logic for building & deploying your frontend, such as npm run build, and rsync.
-
-On the right is an example of a target configuration which shows how you can set this up.
-
--->
+![bg right:50% height:700px](https://sasjs.io/img/sasjs-cli-deploy.png)
 
 ---
 <!-- header: ![h:3em](https://sasjs.io/img/js-logo700x389.png)-->
