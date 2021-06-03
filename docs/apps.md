@@ -42,6 +42,12 @@ source: [https://github.com/allanbowe/sasrap](https://github.com/allanbowe/sasra
 
 ## Tools
 
+### Folder Navigator
+
+View & Edit Stored Processes (or Viya Jobs) with this folder navigator
+
+source: [https://github.com/sasjs/folder-navigator](https://github.com/sasjs/folder-navigator)
+
 ### Viya Client Token Generator
 
 The following code (Viya only) will create an app for generating a Client ID + Secret with various configuration options.  For this to work, the `sysuserid` must have the admin rights for reading the consul token.
