@@ -18,7 +18,7 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 ---
 # The SASjs approach
 
-![bg right:50% height:700](https://sasjs.io/img/git2deploy.png)
+![bg right:70% height:500 ](https://sasjs.io/img/git2deploy.png)
 
 ---
 
