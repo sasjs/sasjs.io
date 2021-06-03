@@ -268,6 +268,8 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 # Products & Services
 
 - Data Controller for SAS
+- SAS 9 Health
+- Zabbix Performance Monitoring
 - Bespoke App Development
 - SASjs Framework Support & Extensions
 
