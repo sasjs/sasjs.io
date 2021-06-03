@@ -15,10 +15,10 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 
 ![bg right:33% height:250 ](https://datacontroller.io/wp-content/uploads/2020/10/abow.png)
 
-<!-- TRANSCRIPT
-Hello, my name's Allan Bowe, I've been a SAS App developer for.. a number of years, and in this session we're going to do a bit of a deep dive into automated deployments using the SASjs CLI.
--->
+---
+# The SASjs approach
 
+![bg right:50% height:700](https://sasjs.io/img/git2deploy.png)
 
 ---
 
