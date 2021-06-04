@@ -29,6 +29,12 @@ This process will work the same on both SAS 9 and Viya - create the SAS Web Serv
 
 ## SASjs CLI
 
+
+### DevOps with SASjs
+An overview of the SASjs framework and how it can enable local (git native) SAS development whilst deploying and running programs on a remote SAS server.  Recorded in June 2021 for the [SAS User Group UK & Ireland](https://meetup.com/SUGUKI).   The slides are [here](https://sasjs.io/slides/suguki_devops.html).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oDcGMShVqj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Use "sasjs doc" to generate HTML documentation from source programs
 With a single command you can auto-generate documentation directly from your SAS Jobs and Services.  Recent updates include a homepage, and a Data Lineage diagram (jobs link back to docs, tables link directly to [Data Controller](https://datacontroller.io) if configured).
 
