@@ -3,7 +3,7 @@ Testing
 
 Our favourite tool for testing is Cypress - it's what we use for SASjs and it's user friendly and fully featured.  If you have chrome it will even launch with [CORS](/cors/) disabled for seamless API testing.
 
-To see it in action, clone the SASjs site, add your SAS details in the [cypress.json(https://github.com/macropeople/sasjs/blob/development/cypress.json) file, `npm install` and `npm run cypress`.
+For SAS testing (macros, jobs & services) you can also use [sasjs test](https://cli.sasjs.io/test).
 
 
 Browsers
