@@ -7,7 +7,7 @@ og_image: https://sasjs.io/img/log-parser.png?_=1
 
 # Log parser
 
-You can use this tool to parse SAS Viya logs from JSON to plain text format.
+You can use this tool to parse SAS Viya logs from JSON to plain text format.  Everything is parsed locally (in the browser) however if you'd like to be super safe you can deploy a version in your own environment [here](https://github.com/sasjs/viya-log-parser).
 
 <style>
   button {
