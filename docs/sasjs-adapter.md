@@ -11,7 +11,7 @@ There are three parts to consider:
 
 ## JS Request / Response
 
-To install the library you can simply run `npm install sasjs` or include a `<script>` tag with a reference to our [CDN](https://www.jsdelivr.com/package/npm/sasjs).
+To install the library you can simply run `npm install @sasjs/adapter` or include a `<script>` tag with a reference to our [CDN](https://www.jsdelivr.com/package/npm/@sasjs/adapter).
 
 Full technical documentation is available [here](https://adapter.sasjs.io).  The main parts are:
 
