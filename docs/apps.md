@@ -3,7 +3,7 @@ layout: article
 title: A collection of SAS Apps and tools built using the SASjs framework
 og_title: SAS Apps, seed apps, and other tools built using the SASjs framework
 description: A collection of SASjs powered apps and tools that can be deployed on either / both SAS 9 and SAS Viya platforms
-og_image: img/file_upload.png
+og_image: /img/file_upload.png
 ---
 
 Apps
