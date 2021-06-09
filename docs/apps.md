@@ -1,6 +1,9 @@
 ---
+layout: article
 title: A collection of SAS Apps and tools built using the SASjs framework
+og_title: SAS Apps, seed apps, and other tools built using the SASjs framework
 description: A collection of SASjs powered apps and tools that can be deployed on either / both SAS 9 and SAS Viya platforms
+og_image: https://cdn.imgbin.com/14/4/8/imgbin-sonic-mania-sonic-the-hedgehog-2-video-games-fat-sonic-the-hedgehog-j7sBjEqHYftbmXZKfN5bvkV0A.jpg
 ---
 
 Apps
@@ -13,7 +16,14 @@ Below are a collection of Apps and Tools that can be deployed on either / both S
 ### Sonic the Hedgehog on SAS
 A SASjs wrapper for this remake of the sega classic!  Works on SAS 9 only (due to default CSP settings on Viya).
 
+<iframe width="560" height="315"
+    src="https://www.youtube.com/embed/2HGbHw459yY"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+    
 Source: [https://github.com/allanbowe/sonic](https://github.com/allanbowe/sonic)
+
 
 Deployment:
 
@@ -84,6 +94,8 @@ source: [https://github.com/sasjs/fileuploader](https://github.com/sasjs/fileupl
 ### Viya Log Parser
 
 If you are fetching logs in JSON format, here is a handy tool to convert them to regular log format.  There is an online version [here](https://sasjs.io/log-parser/) or you can build it yourself from the repo below.
+
+![](img/log-parser.png)
 
 Source: [https://github.com/sasjs/viya-log-parser](https://github.com/sasjs/viya-log-parser)
 
