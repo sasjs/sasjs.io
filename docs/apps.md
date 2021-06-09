@@ -80,3 +80,19 @@ Run the above, then open YOURSERVER/SASJobExecution?_PROGRAM=/Public/app/fileupl
 source: [https://github.com/sasjs/fileuploader](https://github.com/sasjs/fileuploader)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ERLWmf4vXtk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Viya Log Parser
+
+If you are fetching logs in JSON format, here is a handy tool to convert them to regular log format.  There is an online version [here](https://sasjs.io/log-parser/) or you can build it yourself from the repo below.
+
+Source: [https://github.com/sasjs/viya-log-parser](https://github.com/sasjs/viya-log-parser)
+
+## Seed Apps
+
+The following [template repos](https://github.com/topics/sasjs-seed-app) provide a starting point for building a SAS Web App:
+
+* [https://github.com/sasjs/angular-seed-app](https://github.com/sasjs/angular-seed-app) - Angular
+* [https://github.com/sasjs/react-seed-app](https://github.com/sasjs/react-seed-app) - React
+* [https://github.com/sasjs/minimal-seed-app](https://github.com/sasjs/minimal-seed-app) - Vanilla JS
+
+There is also a seed app containing Jobs only (no Services) that is useful as a quick start for building SAS Data Engineering and Data Science projects:  [https://github.com/sasjs/template_jobs](https://github.com/sasjs/template_jobs)
