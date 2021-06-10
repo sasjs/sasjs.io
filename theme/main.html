@@ -13,16 +13,24 @@
   {% set og_image = '/img/appin1min.jpg' %}
 {% endif %}
 <meta name="image" property="og:image" content="{{og_image}}">
+<meta property="twitter:image" content="{{og_image}}">
 <meta property='og:image:alt' content='SASjs Logo'/>
 <meta property='og:image:title' content='SASjs Logo'/>
 {% if page and page.meta and page.meta.description %}
   {% set og_desc = page.meta.description %}
 {% elif page %}
-  {% set og_desc = "Build Your Own SAS 9 and SAS Viya Web Apps" %}
+  {% set og_desc = "Build Apps on SAS 9 and Viya with the SASjs framework - comprised of a Javascript Adapter, SAS Macro Library, and CLI tool for automated build and deployment." %}
 {% endif %}
 <meta name="description" property="og:description" content="{{og_desc}}">
+<meta property='name:description' content="{{og_desc}}"/>
+<meta property="twitter:description" content="{{og_desc}}">
 
-<meta property="og:title" content="The SASjs Framework">
+{% if page and page.meta and page.meta.og_title %}
+  {% set og_title = page.meta.og_title %}
+{% elif page %}
+  {% set og_title = 'The SASjs Framework' %}
+{% endif %}
+<meta property="og:title" content="{{og_title}}">
 <meta property="og:author" content="https://www.linkedin.com/company/19117949">
 
 {% if page and page.meta and page.meta.description %}
@@ -35,15 +43,13 @@
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="The SASjs Framework">
-<meta property="twitter:description" content="Build Your Own SAS 9 and SAS Viya Web Apps">
-<meta property="twitter:image" content='/img/logo/favicon/32.svg'>
+<meta property="twitter:title" content="{{og_title}}">
 <meta property="twitter:image:alt" content="SASjs logo">
 <meta property='twitter:image:title' content='SASjs Logo'/>
 <meta property="twitter:site" content='https://sasjs.io'>
 <!-- meta name="twitter:creator" content="@_sasensei_" -->
 
-<meta property='name:description' content='Build Your Own HTML5 Web Apps on SAS 9 and SAS Viya with the SASjs framework - comprised of a Javascript Adapter, SAS Macro Library, and CLI tool for automated build and deployment.'/>
+
 <meta property="article:author" content="https://www.linkedin.com/company/19117949" />
 <meta property="article:publisher" content="https://www.linkedin.com/company/19117949" />
 {% endblock %}
