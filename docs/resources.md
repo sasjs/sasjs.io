@@ -27,6 +27,9 @@ Websites created as technical / user documentation:
 * [SGF 2021 - Building & Deploying Web Apps with SASjs CLI](https://communities.sas.com/t5/SAS-Global-Forum-Proceedings/Building-and-Deploying-Web-Apps-With-SASjs-CLI/ta-p/733564)
 * [SGF 2021 - Scaffolding SAS Projects with NPM and SASjs](https://communities.sas.com/t5/SAS-Global-Forum-Proceedings/Scaffolding-SAS-Projects-With-NPM-and-SASjs/ta-p/726347)
 * [Guide](https://medium.com/@mihajlo.medjedovic/build-an-angular-web-app-on-sas-397419756981) to building and extending an Angular Web App on Viya
+* [Guide](https://medium.com/swlh/building-an-html5-javascript-css-app-with-sasjs-4cdbdb7c466f) to building a Vanilla Javascript App on SAS 9 or Viya
+* [Building apps rapidly with SASjs](https://medium.com/@krishna.acondy/building-sas-apps-rapidly-with-sasjs-60ba2be0c4d4)
+* [SESUG 2020](https://www.lexjansen.com/sesug/2020/SESUG2020_Paper_167_Final_PDF.pdf) - Building SAS-Powered Web Apps with SASjs
 * Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
 * [Sasensei SAS App Quiz](https://sasensei.com/questions/filter?tags_any=[13])
 * Viya REST API [documentation](https://developer.sas.com/apis/rest/)
