@@ -45,9 +45,9 @@ It's a good idea to keep all your source code in one repository, then you can bu
 
 The above structure is managed automatically when using `sasjs-cli`.  Simply run the following command to install:
 ```Bash
-npm i -g sasjs-cli
+npm i -g @sasjs/cli
 ```
-This will make the `sasjs` command available.  You can now run `sasjs create APPNAME` to create a project with sample folder structure like above.
+This will make the `sasjs` command available.  You can now run `sasjs create APPNAME ` to create a project with sample folder structure like above.
 
 ## Code Injection
 
