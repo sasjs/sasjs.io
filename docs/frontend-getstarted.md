@@ -1,30 +1,40 @@
-Frontend Web
-====================
+---
+layout: article
+title: Frontend Web
+og_title: Get started with a SAS-Powered Frontend
+description: To launch a web site, you need access to a server! With SAS there are a number of approaches you can take.
+og_image: /img/html_css_js.jpeg
+---
 
-## Hosting
-To launch a web site, you need access to a server!  Your options are:
+Adding a frontend to your analytics project provides limitless potential for creating bespoke user experiences for decision support.
 
-1 - localhost (launch on your own PC)
+There are many ways to create HTML interfaces with SAS, and we support all of them EXCEPT ONE.
 
-2 - SAS Server
+The approach we **don't** support is one that the vast majority of SAS app developers will be familiar with - and that is, to *write SAS code to stream web outputs*.
 
-3 - third party server
+The two most common techniques for achieving this are:
+
+* Data step put statements (an apostrophe catastrophe)
+* Proc stream (&it will test your resolve)
+
+Both of these are BAD options for creating user interfaces.  Whilst you (as the original developer) might find yourself making good progress initially, embedding JS logic with SAS logic, as soon as your app starts to get more complex - you will spend more and more time debugging minor changes.  It will cost more to add new features, and it will be very difficult for anyone else to maintain (even you, after a short break).
+
+Far, far better is to maintain a _complete separation_ of frontend (web) and backend (SAS) code.  This approach also means that you can have your frontend built/maintained by a frontend developer (easy to find) and the backend maintained by a regular SAS dev (easy to find).
+
+We call SAS developers with frontend skills UNICORNS
+
+They don't really exist!  Either a frontend developer has adopted some basic SAS skills, or a SAS developer has learned some javascript.  Very few developers are truly proficient in both.
+
+So do yourself, your project, and your colleagues a favour - enforce *complete seperation* between the frontend and backend.
 
 ### Working Locally
 
-Working locally (`localhost`) means that you will be starting up a server on your own machine, and using that to connect to SAS.  This is convenient, but will require bypassing some security settings by enabling [cors](/cors/) in your browser.
+It's common for web developers to build & test the frontend _locally_, on a desktop.  This means spinning up a server on your own machine (`localhost`) and using that to connect to SAS. This is convenient, but will typically require bypassing some security settings by enabling [cors](/cors/) in your browser.
 
-The `sasjsConfig` will also need to be updated with the `serverUrl` so that SASjs knows where the SAS server is located.
+If you are using the [SASjs Adapter](https://github.com/sasjs/adapter) with this approach, you will also need to supply the `serverUrl` property - as will not be possible to determine the location of the SAS server from the URL.
 
-### SAS Server
-
-See [deployment](/frontend-deployment).
-
-Another option is webdav: https://www.re.be/webdav_sync/index.xhtml
+Note that this may not be possible if there is whitelisting on the SAS Server - for that you will need to either ask your admin to change the setting, or make use of one of the [deployment](/frontend-deployment) options.
 
 
-### Third Party Server
 
-To work on a third party server, if on a different domain, it will normally need to be whitelisted from SAS.
 
-<meta name="description" content="To launch a web site, you need access to a server! With SAS there are a number of approaches you can take.">

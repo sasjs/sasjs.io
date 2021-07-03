@@ -262,7 +262,7 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 - CLI support for remote commands on SAS 9
   - sasjs run / deploy / job execute / request / test
 - Desktop (Base) SAS Support for web apps
-- Streaming App improvements
+- Streaming App improvements for
 
 ---
 # Products & Services
