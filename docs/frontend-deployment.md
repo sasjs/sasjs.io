@@ -63,7 +63,7 @@ The benefits are:
 * Can be done by ANY SAS user (as last resort, can deploy to home directory)
 * Ability to secure the _frontend_ using folder permissions (not available to other methods)
 
-The downsides are:
+The downsides:
 
 * Performance.  The app will be much less responsive (ie, slower) than if you deploy to the web server.  This is due to the cost of the first request, however the second / subsequent requests are typically cached by the browser so are much faster.
 * Efficiency.  Linked to the above, but storage and throughput wise it's not an efficient way to deploy a web app
