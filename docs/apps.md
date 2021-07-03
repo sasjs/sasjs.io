@@ -13,6 +13,12 @@ Below are a collection of Apps and Tools that can be deployed on either / both S
 
 ## Fun and Games
 
+### Super Mario on SAS
+
+A SAS streamed version of a Nintendo classic.
+
+Source: [https://github.com/sasjs/mario](https://github.com/sasjs/mario)
+
 ### Sonic the Hedgehog on SAS
 A SASjs wrapper for this remake of the sega classic!  Works on SAS 9 only (due to default CSP settings on Viya).
 
