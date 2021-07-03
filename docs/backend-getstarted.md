@@ -57,7 +57,7 @@ To minimise the risk it is best to avoid url params entirely and deal purely wit
 
 ## Data Storage
 
-SAS Datasets (.sas7bdat files) are suitable when your data is READONLY, or being used for for single user storage (eg in WORK or SASUSER directories).  Unless you have a SPDE server, or your datasets are created in batch and READONLY, they should not be used as the 'data layer' for your app.  If your app needs to write data, it is best to use a database that supports real-time concurrent access.
+SAS datasets (.sas7bdat files) are suitable when your data is READONLY, or being used for for single user storage (eg in WORK or SASUSER directories).  Unless you have a SPDE server, or your datasets are created in batch and READONLY, they should not be used as the 'data layer' for your app.  If your app needs to write data, it is best to use a database that supports real-time concurrent access.
 
 
 <meta name="description" content="When building on SAS you will be interfacing with either SAS 9 or SAS Viya.  The good news is, the deployment is pretty similar.">
