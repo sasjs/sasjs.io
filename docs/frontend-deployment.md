@@ -66,7 +66,7 @@ The benefits are:
 The downsides:
 
 * Performance.  The app will be much less responsive (ie, slower) than if you deploy to the web server.  This is due to the cost of the first request, however the second / subsequent requests are typically cached by the browser so are much faster.
-* Efficiency.  Linked to the above, but storage and throughput wise it's not an efficient way to deploy a web app
+* Efficiency.  Linked to the above, storage and throughput wise it's not an efficient way to deploy nor serve a web app.
 * Limited functionality.  The vast majority of apps will work fine, but there are some edge cases that are not yet handled.
 
 ### Streaming App Configuration
