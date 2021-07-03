@@ -53,11 +53,15 @@ This approach typically requires administrator support, as your domain will need
 
 ## Streaming Apps
 
-This approach is particularly interesting for regular SAS developers who are NOT administrators, or SAS App Developers who would like to package apps for use / easy installation by other teams or SAS customers.
+Streaming apps are served directly from the SAS logical folder tree - ie Metadata in SAS 9 or SAS Drive in Viya.
 
-The idea here is that the frontend is actually saved in the SAS logical folder tree - ie metadata in SAS 9 or SAS Drive in Viya.
+The benefits are:
 
-The great thing about this is that there is no need for whitelisting, there is no web server to consider, no need for a client/secret, and it's available to anyone with a SAS Login.  You can also secure the frontend by setting SAS folder permissions, which is not so easy to achieve with other methods.
+* No need for a web server
+* No client/secret needed
+* Nothing to whitelist
+* Can be done by ANY SAS user (as last resort, can deploy to home directory)
+* Ability to secure the _frontend_ using folder permissions (not available to other methods)
 
 The downsides are:
 
