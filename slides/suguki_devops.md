@@ -220,7 +220,7 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 - Execute some with `sasjs test someFilterString`
 - Assertion macros in @sasjs/core
 - Click URL to re-run a single test
-- JUnit XML support, coming soon
+- Supported output formats:  CSV, JSON, XML
 
 ![bg right:50% height:700px](https://user-images.githubusercontent.com/4420615/119498704-92178800-bd6e-11eb-8533-00d96c1642b6.png)
 
@@ -261,8 +261,7 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 
 - CLI support for remote commands on SAS 9
   - sasjs run / deploy / job execute / request / test
-- Desktop (Base) SAS Support for web apps
-- Streaming App improvements for
+- Desktop (Base) SAS support for web apps
 
 ---
 # Products & Services
