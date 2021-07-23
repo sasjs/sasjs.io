@@ -15,7 +15,13 @@ Below are a collection of Apps and Tools that can be deployed on either / both S
 
 ### Super Mario on SAS
 
-A SAS streamed version of a Nintendo classic.
+A SAS streamed version of a Nintendo classic.  Works on both SAS 9 and Viya.  Full instructions to deploy (on either platform) are available [here](https://sasapps.io/sas-streamed-apps).
+
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/y03eACD-XhU" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
 
 Source: [https://github.com/sasjs/mario](https://github.com/sasjs/mario)
 
