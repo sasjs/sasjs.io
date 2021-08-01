@@ -5,18 +5,18 @@ backgroundColor: white
 theme: default
 
 ---
-<!-- header: ![h:6em align:right](https://sasjs.io/img/js-logo700x389.png) -->
+<!-- header: ![h:6em align:right](https://sasjs.io/img/sas-apps.png) -->
 
 
-# Modernising SAS Apps
+
+# Modernising SAS Apps<!--fit-->
 ## Allan Bowe
 
 
-![bg right:33% height:100  ](https://imgur.com/mA2yrD4.png)
-![bg right:33% height:100](/img/sas-apps.png)
+![bg right:40% height:200](https://sasjs.io/img/js-logo700x389.png)
 
 ---
-<!-- header: ![h:4em](https://sasjs.io/img/js-logo700x389.png)-->
+<!-- header: ![h:4em](https://sasjs.io/img/sas-apps.png)-->
 
 
 # Traditional SAS Apps
@@ -61,8 +61,8 @@ Plus a selection of [Seed App projects](https://github.com/topics/sasjs-app) and
 
 ---
 
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SASjs - a GIT-Native Workflow
-![height:550 ](https://i.imgur.com/gIYp5OG.png)
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SASjs - a GIT-Native Workflow <!--fit-->
+![height:520 ](https://i.imgur.com/gIYp5OG.png)
 
 ---
 
@@ -89,4 +89,7 @@ Online Docs:  https://cli.sasjs.io
 ---
 # Further Resouces
 
+- https://sasapps.io
+- https://sasjs.io/resources
+- https://slides.com/allanbowe/sasaf
 
