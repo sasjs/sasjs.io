@@ -55,6 +55,17 @@ We configured our jobs template repository so that it can be launched with gitpo
     allowfullscreen></iframe>
 
 
+### Running Tests with SASjs
+
+If you'd like to check your test coverage, and execute isolated tests in a flow, for SAS Jobs, Macros and Web Services, then this video will be interesting!  Full docs available [here](https://cli.sasjs.io/test).
+
+<iframe width="560" height="315"
+    src="https://www.youtube.com/embed/OF6yhbKJyJs"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+
 ## Other Videos
 
 ### Scaffolding a SAS Project in VSCode with SASjs

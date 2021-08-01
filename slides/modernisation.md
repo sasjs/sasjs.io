@@ -76,12 +76,17 @@ Online Docs:  https://cli.sasjs.io
 
 ---
 
-## Overall Business Benefits
+## Why Partner with the SAS Apps Team
 
-- De-risk
+- Extensive experience building & migrating SAS Apps
+  - Both Front and Backend
+- Maintainers of the SASjs framework
+  - We can make official adaptations to fit client needs
+- Project accelerators
+  - AF/SCL Transcoding Kit
+  - Portfolio of existing SAS Apps
 
 ---
+# Further Resouces
 
-
-# demo <!-- fit -->
 
