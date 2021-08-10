@@ -5,23 +5,42 @@ backgroundColor: white
 theme: default
 
 ---
-<!-- header: ![h:6em align:right](https://sasjs.io/img/sas-apps.png) -->
+<style >
+section {
+  padding: 50px;
+}
+header{
+  position: absolute;
+  right: 50px;
+  font-size: 60px;
+  text-align: right;
+  font-weight: bold;
+  color: navy
+}
+header img{
+  position: absolute;
+  padding-top: 10px;
+  left: 0px;
+  height: 80px;
+}
+</style>
 
+<!-- header: ![](https://sasjs.io/img/sas-apps.png)-->
 
 
 # Modernising SAS AF<!--fit-->
 ## Allan Bowe
 
 
-![bg right:40% height:200](https://sasjs.io/img/af1.png)
+![bg right:40% height:400](https://sasjs.io/img/af1.png)
 
 ---
-<!-- header: ![h:4em](https://sasjs.io/img/sas-apps.png)-->
+<!-- header: ![](https://sasjs.io/img/sas-apps.png)-->
 
 
 # AF/SCL - Benefits
 
-![bg right:50% height:550](https://sasjs.io/img/af1.png)
+![bg right:50% height:550](https://sasjs.io/img/af2.png)
 
 - Fast
 - Flexible
@@ -34,40 +53,46 @@ Robust vendor support, has lasted decades
 -->
 
 ---
-# AF/SCL - Challenges
-
-![bg left:50% height:550](https://sasjs.io/img/af2.png)
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) AF/SCL Architecture -->
 
 - ❌ Security
 - ❌ Scalability
 - ❌ Support
+
+![bg height:530](https://sasjs.io/img/af_desktop.png)
 
 <!-- TRANSCRIPT
 Everything under end user credentials
 Desktop deployments
 software itself going out of support, hard to find devs
 -->
----
-# AF/SCL Architecture
-
-![bg right:60% height:550](https://sasjs.io/img/af_desktop.png)
 
 ---
-# Web Architecture
+<!--
+header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
+-->
 
-![bg right:58% height:350](https://sasjs.io/img/af_cloud.png)
+<img src="https://sasjs.io/img/af_cloud_trans.png"
+  style="position: absolute;right:0px;top:200px;width:70%">
+</img>
 
 - ✅ Security
   - SASLogon
 - ✅ Scalability
-  - Zero deployment footprint
+  - Zero deployment
+  footprint
 - ✅ Support
-  - Modern development approach
+  - Modern development
+  approach
+
+
 
 ---
-# Web Architecture
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) Frontend vs Backend -->
 
-![bg height:350](https://sasjs.io/img/af_split.png)
+![bg height:500](https://sasjs.io/img/af_split.png)
+
+
 
 
 ---
