@@ -19,7 +19,9 @@ theme: default
 <!-- header: ![h:4em](https://sasjs.io/img/sas-apps.png)-->
 
 
-# SAS AF Benefits
+# AF/SCL - Benefits
+
+![bg right:50% height:550](https://sasjs.io/img/af1.png)
 
 - Fast
 - Flexible
@@ -32,14 +34,23 @@ Robust vendor support, has lasted decades
 -->
 
 ---
-# SAS AF
+# AF/SCL - Challenges
 
-- SECURITY
-  - Especially password management
-- SCALABILITY
-  - Updates deployed to each machine
-- SUPPORT
-  - Access to appropriately skilled resource
+![bg left:50% height:550](https://sasjs.io/img/af2.png)
+
+- ❌ Security
+- ❌ Scalability
+- ❌ Support
+
+<!-- TRANSCRIPT
+Everything under end user credentials
+Desktop deployments
+software itself going out of support, hard to find devs
+-->
+---
+# AF/SCL Architecture
+
+![bg right:50% height:550](https://sasjs.io/img/af_desktop.png)
 
 ---
 
