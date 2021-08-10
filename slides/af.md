@@ -50,18 +50,25 @@ software itself going out of support, hard to find devs
 ---
 # AF/SCL Architecture
 
-![bg right:50% height:550](https://sasjs.io/img/af_desktop.png)
+![bg right:60% height:550](https://sasjs.io/img/af_desktop.png)
 
 ---
+# Web Architecture
 
-# Traditional Approach
+![bg right:58% height:350](https://sasjs.io/img/af_cloud.png)
 
-- Write SAS code to generate JS/HTML
-  - ❌ (Very) high cost of maintenance
-- Tied to a specific "flavour" of SAS
-  - ❌ Difficult to migrate
-- Coding Style inherited from original developer
-  - ❌ On-boarding costs
+- ✅ Security
+  - SASLogon
+- ✅ Scalability
+  - Zero deployment footprint
+- ✅ Support
+  - Modern development approach
+
+---
+# Web Architecture
+
+![bg height:350](https://sasjs.io/img/af_split.png)
+
 
 ---
 
