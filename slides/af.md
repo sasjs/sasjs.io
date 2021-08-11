@@ -21,7 +21,7 @@ header img{
   position: absolute;
   padding-top: 10px;
   left: 0px;
-  height: 80px;
+  height: 70px;
 }
 </style>
 
@@ -59,7 +59,7 @@ Robust vendor support, has lasted decades
 - ❌ Scalability
 - ❌ Support
 
-![bg height:520](https://sasjs.io/img/af_desktop.png)
+![bg height:500](https://sasjs.io/img/af_desktop.png)
 
 <!-- TRANSCRIPT
 Everything under end user credentials
