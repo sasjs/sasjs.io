@@ -59,7 +59,7 @@ Robust vendor support, has lasted decades
 - ❌ Scalability
 - ❌ Support
 
-![bg height:530](https://sasjs.io/img/af_desktop.png)
+![bg height:520](https://sasjs.io/img/af_desktop.png)
 
 <!-- TRANSCRIPT
 Everything under end user credentials
