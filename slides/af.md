@@ -85,7 +85,44 @@ header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
   - Modern development
   approach
 
+---
+<!--
+header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
+-->
 
+# Conversion
+
+<table>
+<tr><td>Frontend</td><td>Backend</td></tr>
+<tr><td><ul><li>Frame Elimination
+  <ul><li>Fresh UI based on existing app</li></ul> </li>
+<li>Use of Open Source Frameworks
+  <ul><li>React </li><li>Angular</li></ul>
+</li>
+<li> Decoupled from SAS Backend </li>
+</ul>
+</td><td>
+<ul>
+  <li>SCL elimination
+    <ul><li>SAS Web Services (STP / JES)</li>
+    <li>SCL Transcoding</li>
+    </ul>
+  </li>
+  <li>Catalog elimination
+    <ul><li>SLISTs -> Database</li>
+    <li>Code -> Source Control</li>
+    </ul>
+  </li>
+  <li>Filesystem elimination
+  </li>
+</ul>
+</td></tr></table>
+
+<!-- TRANSCRIPT
+Fresh UI - existing frames discarded
+Open Source = lower maintenance
+SCL elimination -
+-->
 
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png) Frontend vs Backend -->
@@ -97,7 +134,7 @@ header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
 
 ---
 
-# SASjs Approach
+# Benefits
 
 - Clean separation of Frontend from Backend
   - ✅ SAS manages data requests only
@@ -108,8 +145,10 @@ header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
 
 
 ---
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs -->
 
-## What is SASjs?
+# What is SASjs?
+
 An open-source DevOps Framework for SAS App Development.  Key components:
 
 - [@sasjs/core](https://github.com/sasjs/core) - Macro library
@@ -119,13 +158,12 @@ An open-source DevOps Framework for SAS App Development.  Key components:
 Plus a selection of [Seed App projects](https://github.com/topics/sasjs-app) and Integration tooling (such as a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode)) to enhance and improve the Developer Experience.
 
 ---
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs - GIT-Native Workflows -->
 
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SASjs - a GIT-Native Workflow <!--fit-->
-![height:520 ](https://i.imgur.com/gIYp5OG.png)
+![bg center height:450 ](https://i.imgur.com/gIYp5OG.png)
 
 ---
-
-## Additional Technical Benefits
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) Other Technical Benefits -->
 
 - `sasjs test` -> Execute self contained tests for Web Services & Macros
 - `sasjs doc` -> Generate developer documentation from program headers
@@ -134,6 +172,9 @@ Plus a selection of [Seed App projects](https://github.com/topics/sasjs-app) and
 Online Docs:  https://cli.sasjs.io
 
 ---
+
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) SAS Apps Team -->
+
 
 ## Why Partner with the SAS Apps Team
 
