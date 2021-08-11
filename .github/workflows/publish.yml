@@ -56,8 +56,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Generate SASjs Modernisation Slides
-        run: npx @marp-team/marp-cli ./slides/modernisation.md -o ./slides/modernisation.html
+      - name: Generate AF Slides
+        run: npx @marp-team/marp-cli ./slides/af.md -o ./slides/af.html
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
