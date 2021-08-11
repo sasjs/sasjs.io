@@ -77,22 +77,16 @@ header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
 </img>
 
 - ✅ Security
-  - SASLogon
 - ✅ Scalability
-  - Zero deployment
-  footprint
 - ✅ Support
-  - Modern development
-  approach
 
 ---
 <!--
 header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
 -->
 
-# Conversion
 
-<table>
+<table style="padding:50px">
 <tr style="text-align:center; font-weight:bold">
   <td>Frontend</td><td>Backend</td>
 </tr>
