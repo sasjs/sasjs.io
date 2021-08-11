@@ -93,7 +93,9 @@ header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
 # Conversion
 
 <table>
-<tr><td>Frontend</td><td>Backend</td></tr>
+<tr style="text-align:center; font-weight:bold">
+  <td>Frontend</td><td>Backend</td>
+</tr>
 <tr><td><ul><li>Frame Elimination
   <ul><li>Fresh UI based on existing app</li></ul> </li>
 <li>Use of Open Source Frameworks
@@ -158,12 +160,17 @@ An open-source DevOps Framework for SAS App Development.  Key components:
 Plus a selection of [Seed App projects](https://github.com/topics/sasjs-app) and Integration tooling (such as a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode)) to enhance and improve the Developer Experience.
 
 ---
-<!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs - GIT-Native Workflows -->
 
-![bg center height:450 ](https://i.imgur.com/gIYp5OG.png)
+<div >
+ <h1>GIT-Native<h1>
+<img src="https://i.imgur.com/gIYp5OG.png"
+  style="position: absolute; right:150px;bottom: 100px; width:63%">
+</img>
+</div>
+
 
 ---
-<!-- header: ![](https://sasjs.io/img/sas-apps.png) Other Technical Benefits -->
+# 20+ CLI Commands
 
 - `sasjs test` -> Execute self contained tests for Web Services & Macros
 - `sasjs doc` -> Generate developer documentation from program headers
@@ -181,7 +188,6 @@ Online Docs:  https://cli.sasjs.io
 - Extensive experience building & migrating SAS Apps
   - Both Front and Backend
 - Maintainers of the SASjs framework
-  - We can make official adaptations to fit client needs
 - Project accelerators
   - AF/SCL Transcoding Kit
   - Portfolio of existing SAS Apps
@@ -189,7 +195,8 @@ Online Docs:  https://cli.sasjs.io
 ---
 # Further Resouces
 
-- https://sasapps.io
-- https://sasjs.io/resources
-- https://slides.com/allanbowe/sasaf
+ - SAS Apps [blog post](https://sasapps.io/modernising-legacy-sas-scl-af-applications)
+ - Easy AF [article](https://www.linkedin.com/pulse/easy-af-scl-modernisation-html5-sas-allan-bowe/)
+ - UK Forum SCL [presentation](https://drive.google.com/file/d/1RMLxFccaXYh35IGnbcFjISFmZUIdetUO/view)
+
 
