@@ -57,7 +57,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Generate AF Slides
-        run: npx @marp-team/marp-cli ./slides/af.md -o ./slides/af.html
+        run: npx @marp-team/marp-cli ./slides/af.md -o ./slides/af.html --html
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
