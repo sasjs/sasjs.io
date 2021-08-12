@@ -1,4 +1,11 @@
 ---
+title: AF Modernisation
+description: Modernising legacy SAS AF Applications using the SCL transcoding kit and SASjs
+author: Allan Bowe
+keywords: sas, viya, af, scl, sasjs
+url: https://sasjs.io/slides/af.html
+image: https://sasjs.io/img/af_desktop.png
+
 marp: true
 paginate: true
 backgroundColor: white
