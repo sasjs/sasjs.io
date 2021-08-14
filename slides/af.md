@@ -87,6 +87,19 @@ software itself going out of support, hard to find devs
 
 ---
 <!--
+header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
+-->
+
+<img src="https://sasjs.io/img/af_cloud_trans.png"
+  style="position: absolute;right:0px;top:200px;width:70%">
+</img>
+
+- ✅ Security
+- ✅ Scalability
+- ✅ Support
+
+---
+<!--
 header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
 -->
 
@@ -125,18 +138,7 @@ Open Source = lower maintenance
 SCL elimination -
 -->
 
----
-<!--
-header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
--->
 
-<img src="https://sasjs.io/img/af_cloud_trans.png"
-  style="position: absolute;right:0px;top:200px;width:70%">
-</img>
-
-- ✅ Security
-- ✅ Scalability
-- ✅ Support
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png) Frontend vs Backend -->
 
