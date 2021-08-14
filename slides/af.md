@@ -104,6 +104,29 @@ header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
 -->
 
 
+<table style="padding:50px; width: 100%;">
+<tr style="text-align:center; font-weight:bold">
+  <td>R, Python, Java, Node JS, Ruby </td><td>SAS </td>
+</tr>
+<tr><td><ul>
+  <li>Significant migration cost </li>
+  <li>Additional Environment</li>
+  <li>Additional Language</li>
+</ul>
+</td><td>
+<ul>
+  <li>Rapid migration </li>
+  <li>Existing SAS Environment</li>
+  <li>Existing SAS team</li>
+</ul>
+</td></tr></table>
+
+---
+<!--
+header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
+-->
+
+
 <table style="padding:50px">
 <tr style="text-align:center; font-weight:bold">
   <td>Frontend</td><td>Backend</td>
@@ -127,8 +150,8 @@ header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
     <li>Code -> Source Control</li>
     </ul>
   </li>
-  <li>Filesystem elimination
-  </li>
+  <li>Filesystem elimination</li>
+  <ul><li>SASjs approach</li><ul>
 </ul>
 </td></tr></table>
 
@@ -140,17 +163,18 @@ SCL elimination -
 
 
 ---
-<!-- header: ![](https://sasjs.io/img/sas-apps.png) Frontend vs Backend -->
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs Approach -->
 
 # Benefits
 
 - Clean separation of Frontend from Backend
   - ✅ SAS manages data requests only
 - Platform Agnostic
-  - ✅ Can be deployed seamlessly to Viya, SAS 9 or Foundation SAS
+  - ✅ Deploy seamlessly to Viya, SAS 9 or Foundation SAS
 - Framework-Centric
-  - ✅ Industry-standard approach to project setup
+  - ✅ Opinionated approach to project setup
 
+<img style="position: absolute; right:50px; top:150px; width:22%" src="https://sasjs.io/img/buildapps240x400.png" />
 
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs -->
