@@ -103,20 +103,42 @@ header: ![](https://sasjs.io/img/sas-apps.png) Web Architecture
 header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
 -->
 
+<style>
+table{
+  padding:50px;
+  width: 100%;
+  max-width:100%;
+  margin: 40px;
+}
+table td{
+  margin: 10px;
+  padding: 5px 40px 0 0;
+}
+</style>
 
-<table style="padding:50px; width: 100%;">
+<table>
 <tr style="text-align:center; font-weight:bold">
   <td>R, Python, Java, Node JS, Ruby </td><td>SAS </td>
 </tr>
 <tr><td><ul>
   <li>Significant migration cost </li>
   <li>Additional Environment</li>
-  <li>Additional Language</li>
+    <ul>
+    <li> Firewall</li>
+    <li> Authentication</li>
+    <li> Authorisation </li>
+  </ul>
+  <li>Additional Language to support</li>
 </ul>
 </td><td>
 <ul>
-  <li>Rapid migration </li>
+  <li>Rapid migration</li>
   <li>Existing SAS Environment</li>
+  <ul>
+    <li> SAS Logon</li>
+    <li> SAS Web Server</li>
+    <li> SAS App Server</li>
+  </ul>
   <li>Existing SAS team</li>
 </ul>
 </td></tr></table>
@@ -127,7 +149,7 @@ header: ![](https://sasjs.io/img/sas-apps.png) Modernisation Process
 -->
 
 
-<table style="padding:50px">
+<table>
 <tr style="text-align:center; font-weight:bold">
   <td>Frontend</td><td>Backend</td>
 </tr>
@@ -161,6 +183,18 @@ Open Source = lower maintenance
 SCL elimination -
 -->
 
+---
+
+<!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs -->
+# What is SASjs?
+
+An open-source DevOps Framework for SAS App Development.  Key components:
+
+- [@sasjs/core](https://github.com/sasjs/core) - Macro library
+- [@sasjs/adapter](https://github.com/sasjs/adapter) - SAS Server Connectivity
+- [@sasjs/cli](https://github.com/sasjs/cli) - CI/CD and DevOps
+
+Plus a selection of [Seed App projects](https://github.com/topics/sasjs-app) and Integration tooling (such as a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode)) to enhance and improve the Developer Experience.
 
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs Approach -->
@@ -175,19 +209,6 @@ SCL elimination -
   - ✅ Opinionated approach to project setup
 
 <img style="position: absolute; right:50px; top:150px; width:22%" src="https://sasjs.io/img/buildapps240x400.png" />
-
----
-<!-- header: ![](https://sasjs.io/img/sas-apps.png) SASjs -->
-
-# What is SASjs?
-
-An open-source DevOps Framework for SAS App Development.  Key components:
-
-- [@sasjs/core](https://github.com/sasjs/core) - Macro library
-- [@sasjs/adapter](https://github.com/sasjs/adapter) - SAS Server Connectivity
-- [@sasjs/cli](https://github.com/sasjs/cli) - CI/CD and DevOps
-
-Plus a selection of [Seed App projects](https://github.com/topics/sasjs-app) and Integration tooling (such as a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode)) to enhance and improve the Developer Experience.
 
 ---
 
@@ -223,6 +244,7 @@ Online Docs:  https://cli.sasjs.io
   - Portfolio of existing SAS Apps
 
 ---
+
 # Further Resouces
 
  - SAS Apps [blog post](https://sasapps.io/modernising-legacy-sas-scl-af-applications)
