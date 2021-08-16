@@ -45,7 +45,8 @@ header img{
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png) Desktop -->
 
-![](https://sasjs.io/img/af_before.png)
+<img src="https://sasjs.io/img/af_before.png"
+  style="width:85%" />
 
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png) Cloud -->
