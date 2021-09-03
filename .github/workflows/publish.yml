@@ -61,6 +61,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Generate Cloud Migration Slides
+        run: npx @marp-team/marp-cli ./slides/cloud_migration.md -o ./slides/cloud_migration.html --html
+        env:
+          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Commit and push slides
         uses: EndBug/add-and-commit@v5
         with:
