@@ -57,9 +57,9 @@ header img{
 
 # WLATIN1 to UTF-8
 
-* Datasets
-* Program encoding
-* Code Compatibility
+- Datasets
+- Program encoding
+- Code Compatibility
 
 <!-- TRANSCRIPT
 wlatin1 default in sas9
