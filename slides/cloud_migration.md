@@ -95,7 +95,7 @@ td {
 | left | <b>k</b>left |
 
 ---
-<!-- header: ![](https://sasjs.io/img/sas-apps.png)  Data -->
+<!-- header: ![](https://sasjs.io/img/sas-apps.png)  -->
 
 
 # Data Storage
@@ -109,6 +109,8 @@ Storage - parquet / BLOB storage
 SSD / different speeds
 RBAC - role based access controls
 -->
+
+![bg right:60% height:400](https://media.itpro.co.uk/image/upload/v1570816432/itpro/2018/12/storage_shutterstock_97546352.jpg)
 
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png)  IDE -->
@@ -152,7 +154,7 @@ whilst there is effort in migration, you end up with a better situation
 
 ---
 <!-- header: ![](https://sasjs.io/img/sas-apps.png) Wrapup -->
-# Further Resouces
+# Further Resources
 
  - [Accelerate your SAS migration](https://mysasteam.co.uk/accelerating-your-sas-migration/)
  - [Pitfalls of Cloudification](https://mysasteam.co.uk/pitfalls-of-cloudification-and-what-they-dont-tell-you-about-sas-cloud-migration/)
