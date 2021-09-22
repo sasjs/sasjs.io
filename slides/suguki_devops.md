@@ -60,8 +60,8 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 ---
 # SASjs Core
 
-- ~150 macros geared towards Application Development
-- Functions, Procedures, Metadata, Viya
+- ~170 macros geared towards Application Development
+- Functions, Procedures, Metadata, Viya, Lua, FCMP
 - `npm install @sasjs/core`
 
 ![bg right:50% height:700](https://i.imgur.com/K43rKHb.png)
@@ -77,7 +77,7 @@ npx @marp-team/marp-cli slides.md ./theme/slides.html
 # SASjs CLI
 
 - Opinionated Project Setup
-- DevOps
+- DevOps, Documentation & Testing
 - `npm install --global @sasjs/cli`
 
 ---
