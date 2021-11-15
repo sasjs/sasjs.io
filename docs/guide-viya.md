@@ -12,6 +12,7 @@ Log onto the box as an admin and execute the following commands:
 
 ```Bash
 sudo /etc/init.d/sas-viya-all-services stop
+# open top or htop and kill any redundant / remaining SAS processes
 sudo /etc/init.d/sas-viya-all-services start
 ```
 
