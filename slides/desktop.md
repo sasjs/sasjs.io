@@ -125,9 +125,9 @@ https://github.com/sasjs/viyatoken
 ---
 # SASjs [server](https://github.com/sasjs/server)
 
-- Syntax Highlighting
-- Error Checking
-- To install: search 'SASjs' in Extensions
+- API for Base SAS
+- Available in "Desktop" and "Server" mode
+- Compatible with sasjs/adapter, sasjs/core and sasjs/cli
 
 ---
 <!-- header: ![h:6em](https://sasjs.io/img/js-logo700x389.png)-->
