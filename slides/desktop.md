@@ -10,7 +10,7 @@ npx @marp-team/marp-cli desktop.md -o ./theme/slides/dektop.html
 ---
 <!-- header: ![h:6em](https://sasjs.io/img/js-logo700x389.png)-->
 
-# SASjs for Base SAS
+# SASjs - DevOps & AppDev on Desktop SAS
 ## Allan Bowe
 
 ![bg right:33% height:250 ](https://datacontroller.io/wp-content/uploads/2020/10/abow.png)
