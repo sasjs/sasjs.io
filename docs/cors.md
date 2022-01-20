@@ -16,4 +16,6 @@ You will know if you are successful if you see a `You are using an unsupported c
 
 Note - even with CORS enabled you still may not be able to connect to SAS (9 or Viya) if whitelisting is enabled.  For this you will need to speak to your administrator.
 
+A comprehensive article on CORS and CSRF management on SAS Viya is available [here](https://communities.sas.com/t5/SAS-Communities-Library/All-about-CORS-and-CSRF-for-developing-web-applications-with-the/ta-p/791124).
+
 <meta name="description" content="Cross Origin Resource Sharing (CORS) is a feature that is disabled by default in most browsers to present cross site scripting attacks.">
