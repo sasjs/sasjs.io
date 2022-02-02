@@ -16,9 +16,9 @@ Below is a demo of building and deploying a HTML5 App on SAS Viya in just one mi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WwGptgvSqSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-What is SAS JS?
+What is SASjs?
 ---------------------
-SAS JS is a framework - a collection of independent tools which, taken together, provide a serious accelerator to SAS web development projects.
+SASjs is a framework - a collection of independent tools which, taken together, provide a serious accelerator to SAS web development projects.
 
 It consists of three parts:
 
