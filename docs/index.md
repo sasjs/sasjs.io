@@ -18,15 +18,15 @@ Below is a demo of building and deploying a HTML5 App on SAS Viya in just one mi
 
 What is SASjs?
 ---------------------
-SASjs is a framework - a collection of independent tools which, taken together, provide a serious accelerator to SAS web development projects.
+SASjs is a framework - a collection of independent tools which, taken together, provide a serious accelerator to SAS Data Engineering DevOps and web development projects.
 
 It consists of three parts:
 
-1. Macro library ([macrocore](https://github.com/sasjs/core)).  A collection of macro based tools for SAS application development.  See [documentation](https://core.sasjs.io).
+1. [Macro library](https://github.com/sasjs/core).  A collection of macro based tools for SAS application development.  See [documentation](https://core.sasjs.io).
 
-2. CLI tool ([sasjs-cli](https://github.com/sasjs/cli)).  An NPM command line utility for automating the compilation, build and deployment of your SAS Project.  See [documentation](https://cli.sasjs.io).
+2. [CLI tool](https://github.com/sasjs/cli).  An NPM command line utility for automating the compilation, build and deployment of your SAS Project.  See [documentation](https://cli.sasjs.io).
 
-3. Data Adapter ([sasjs](https://github.com/sasjs/adapter)). A JavaScript library to handle the communication between your HTML5 or client application and the SAS 9 or Viya backend.  See [documentation](https://adapter.sasjs.io).
+3. Data [Adapter](https://github.com/sasjs/adapter). A JavaScript library to handle the communication between your HTML5 or client application and the SAS 9 or Viya backend.  See [documentation](https://adapter.sasjs.io).
 
 
 <meta name="description" content="Build awesome HTML5 web applications on SAS9 and Viya with the SASjs framework">

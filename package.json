@@ -1,7 +1,7 @@
 {
   "name": "devdocs",
   "version": "1.1.1",
-  "description": "How to Build Web Applications using SAS®",
+  "description": "Build Web Applications using SAS®",
   "main": "index.js",
   "directories": {
     "doc": "docs"

@@ -1,4 +1,4 @@
-site_name: Building Web Applications using SAS®
+site_name: Build Web Applications using SAS®
 site_url: https://sasjs.io
 nav:
   - Home: index.md
@@ -86,6 +86,6 @@ theme:
       - icon: fontawesome/brands/linkedin
         link: https://linkedin.com/company/sasjs
         name: SASjs on LinkedIn
-copyright: All rights reserved &copy;2020 Macro People Ltd.
+copyright: All rights reserved &copy;2022 4GL Ltd.
 
 google_analytics: ['UA-109713029-8', 'sasjs.io']
