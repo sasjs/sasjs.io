@@ -5,7 +5,7 @@ SASjs is "batteries included" when it comes to building, linting, deploying, tes
 
 Our tools can be used individually, for specific needs, or together as part of an opinionated framework.
 
-The SASjs framework aims to improve the scalability and velocity of SAS projects.  
+The SASjs framework improves the scalability, velocity, and quality of SAS projects.  
 
 It consists of the following main components:
 
