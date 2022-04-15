@@ -3,7 +3,9 @@ DevOps for SAS Solutions
 
 SASjs is "batteries included" when it comes to building, linting, deploying, testing, and documenting SAS Solutions.
 
-Our tools can be used individually, for specific needs, or together - as part of an opinionated framework to improve the scalability and velocity of SAS projects.
+Our tools can be used individually, for specific needs, or together as part of an opinionated framework.
+
+The SASjs framework aims to improve the scalability and velocity of SAS projects.  
 
 It consists of the following main components:
 
@@ -13,7 +15,7 @@ It consists of the following main components:
 
 3. [VS Code Extension](https://github.com/sasjs/vscode-extension). Linting, Syntax Highlighting and Code Execution on Viya, SAS 9 BI, or SASjs Server
 
-4. [lint](https://github.com/sasjs/lint). A SAS Code Quality Checking tool.  Rules are configurable.  
+4. [Lint](https://github.com/sasjs/lint). A SAS Code Quality Checking tool.  Rules are configurable.  
 
 5. [SASjs Server](https://github.com/sasjs/server).  An open source Web Server on Foundation SAS.
 
