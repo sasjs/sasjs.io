@@ -17,9 +17,9 @@ It consists of the following main components:
 
 4. [Lint](https://github.com/sasjs/lint). A SAS Code Quality Checking tool.  Rules are configurable.  
 
-5. [SASjs Server](https://github.com/sasjs/server).  An open source Web Server on Foundation SAS.
+5. [Server](https://github.com/sasjs/server).  An open source Web Server on Foundation SAS.
 
-6. Data [Adapter](https://github.com/sasjs/adapter). A JavaScript library to handle the communication between your HTML5 or client application and the SAS 9 or Viya backend.  See [documentation](https://adapter.sasjs.io).
+6. [Adapter](https://github.com/sasjs/adapter). Connects client JS to server SAS.  See [documentation](https://adapter.sasjs.io).
 
 
 Beyond regular Data Science projects, SASjs is also (naturally) a rocket boost for the development of Web Applications on SAS.  Did you know you can deploy a HTML5 App on SAS 9 in just 2 lines of code:
