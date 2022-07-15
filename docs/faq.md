@@ -41,7 +41,13 @@ With the right polyfills your SASjs app can support a very wide range of browser
 
 For guidance you might consider following SAS Institute's browser [support policy](https://support.sas.com/en/documentation/third-party-software-reference/9-4/support-for-9-4-web-browsers.html#:~:text=Microsoft%20Internet%20Explorer%20and%20Microsoft%20Edge&text=For%20most%20SAS%209.4%20applications,do%20not%20support%20Microsoft%20Edge).  Note the diminishing support for IE.
 
+I want to help, but I’m not a developer. Are there any ways for non-coders to contribute?
+---------------------
 
+1. Shill it to everyone and create awareness
+2. Answer questions from new users in the community channels
+3. Make tutorial videos
+4. Write instruction manuals or commit to the docs
 
 <script type="application/ld+json">
     {

@@ -26,6 +26,12 @@ Suitable for small projects, all four guides could be added to a single README f
     markdown "$MYPROJECT/README.md" > "$BUILDLOC/deploy/README.html"
 ```
 
+### Docsify
+
+We love this tool so much it is now our primary documentation mechanism, and you will find it in all our seed apps.  The template documentation site is also on github pages and you can see it here:  https://sasjs.github.io/docs
+
+The docsify project documentation is here:  https://docsify.js.org/#/
+
 ### MkDocs
 
 This is a great tool for generating a static HTML site where each page can be easily written using MarkDown.  This page you are reading was built with MkDocs, as well as the documentation site for [Data Controller](https://docs.datacontroller.io). 
