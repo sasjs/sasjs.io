@@ -8,44 +8,45 @@
 <meta property="og:locale" content="en_UK" />
 <meta property="og:type" content="website">
 {% if page and page.meta and page.meta.og_image %}
-  {% set og_image = page.meta.og_image %}
+{% set og_image = page.meta.og_image %}
 {% elif page %}
-  {% set og_image = '/img/appin1min.jpg' %}
+{% set og_image = '/img/appin1min.jpg' %}
 {% endif %}
 <meta name="image" property="og:image" content="{{og_image}}">
 <meta property="twitter:image" content="{{og_image}}">
-<meta property='og:image:alt' content='SASjs Logo'/>
-<meta property='og:image:title' content='SASjs Logo'/>
+<meta property='og:image:alt' content='SASjs Logo' />
+<meta property='og:image:title' content='SASjs Logo' />
 {% if page and page.meta and page.meta.description %}
-  {% set og_desc = page.meta.description %}
+{% set og_desc = page.meta.description %}
 {% elif page %}
-  {% set og_desc = "Build Apps on SAS 9 and Viya with the SASjs framework - comprised of a Javascript Adapter, SAS Macro Library, and CLI tool for automated build and deployment." %}
+{% set og_desc = "Build Apps on SAS 9 and Viya with the SASjs framework - comprised of a Javascript Adapter, SAS Macro
+Library, and CLI tool for automated build and deployment." %}
 {% endif %}
 <meta name="description" property="og:description" content="{{og_desc}}">
-<meta property='name:description' content="{{og_desc}}"/>
+<meta property='name:description' content="{{og_desc}}" />
 <meta property="twitter:description" content="{{og_desc}}">
 
 {% if page and page.meta and page.meta.og_title %}
-  {% set og_title = page.meta.og_title %}
+{% set og_title = page.meta.og_title %}
 {% elif page %}
-  {% set og_title = 'The SASjs Framework' %}
+{% set og_title = 'The SASjs Framework' %}
 {% endif %}
 <meta property="og:title" content="{{og_title}}">
 <meta property="og:author" content="https://www.linkedin.com/company/19117949">
 
 {% if page and page.meta and page.meta.description %}
-  <meta property="og:url" content="{{page.canonical_url}}">
-  <meta property="twitter:url" content="{{page.canonical_url}}">
+<meta property="og:url" content="{{page.canonical_url}}">
+<meta property="twitter:url" content="{{page.canonical_url}}">
 {% elif page %}
-  <meta property="og:url" content="https://sasjs.io">
-  <meta property="twitter:url" content="https://sasjs.io">
+<meta property="og:url" content="https://sasjs.io">
+<meta property="twitter:url" content="https://sasjs.io">
 {% endif %}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:title" content="{{og_title}}">
 <meta property="twitter:image:alt" content="SASjs logo">
-<meta property='twitter:image:title' content='SASjs Logo'/>
+<meta property='twitter:image:title' content='SASjs Logo' />
 <meta property="twitter:site" content='https://sasjs.io'>
 <!-- meta name="twitter:creator" content="@_sasensei_" -->
 
@@ -55,16 +56,21 @@
 {% endblock %}
 
 {% block scripts %}
-<!-- Hotjar Tracking Code for https://sasjs.io -->
+<!-- Matomo -->
 <script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:1913972,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function () {
+    var u = "https://analytics.4gl.io/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+  })();
 </script>
+<!-- End Matomo Code -->
+
 
 {% endblock %}
