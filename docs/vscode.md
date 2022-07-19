@@ -17,8 +17,8 @@ VS Code has many marketplace extensions - these are our favourites:
 
 Using the SASjs extension in the VS Code marketplace you can:
 
-* submit code to Viya and return the log.  This uses the regular global sasjsconfig file, so the tokens generated can be interechanged between VS Code and the [CLI](https://cli.sasjs.io).
-* Lint your SAS code (open view/problems to see the results, or CTRL+M)
+* submit code to SAS (Viya, EBI or Base SAS) and return the log.  This uses the regular global sasjsconfig file, so the tokens generated can be reused between VS Code and the SASjs [CLI](https://cli.sasjs.io).
+* [Lint](https://github.com/sasjs/lint) your SAS code (open view/problems to see the results, or CTRL+M)
 * Enjoy syntax highlighting
 
 The extension is available both on the [VS Code market place](https://marketplace.visualstudio.com/items?itemName=SASjs.sasjs-for-vscode) and also [open VSX](https://open-vsx.org/extension/sasjs/sasjs-for-vscode) (suitable for VSCodium and Theia).
@@ -28,6 +28,8 @@ The extension is available both on the [VS Code market place](https://marketplac
 You can also auto-format your SAS code by right-clicking and selecting 'format':
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y_81mOz-bC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The SASjs VS Code extension is MIT Open Source and free for commercial use.
 
 ### Gremlins Tracker
 
@@ -77,10 +79,4 @@ And get instant VS Code in the browser!
 
 ![sas vscode](img/vscode.png)
 
-## Applications
 
-### Server
-
-It is now easier than ever to set up your own cloud instance of VSCodium and access it from any browser (even on ipad!).  This means you can run your builds in a powerful (or throwaway) cloud server instance without running down your battery, or being dependent on a single device.
-
-A guide to setting up an instance on digital ocean is available [here](https://github.com/cdr/code-server/blob/v3.8.0/doc/guide.md).
