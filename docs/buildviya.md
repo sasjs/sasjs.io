@@ -3,11 +3,11 @@ SAS Viya Build
 
 ## Services
 
-There are three main ways to create services in Viya:
+There are three main ways to create Services (jobs) in Viya:
 
-1) Manually through the `/SASJobExecution` interface
-2) As part of a build process using [sasjs-cli](/sasjs-cli)
-3) Using code in SAS Studio.  
+1. Manually through the `/SASJobExecution` interface
+2. As part of a build process using [sasjs-cli](/sasjs-cli)
+3. Using code in SAS Studio.  
 
 
 ## SAS Studio
