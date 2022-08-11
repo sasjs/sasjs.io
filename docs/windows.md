@@ -32,7 +32,7 @@ Node Package Manager is an essential piece of kit, as it allows the dependencies
 3. Append the path (eg `C:\Tools;`) to the PATH variable in Environment Variables.  You can access the Environment Variables dialog, by right clicking on the Computer > Properties > Advanced system settings > Advanced tab > Environment Variables.
 If you don’t have permission to access Environment Variables dialog, you can try the following command in the Run dialog:  `rundll32 sysdm.cpl,EditEnvironmentVariables`.
 
-An alternative (perhaps more straightforward) approach is described here: [https://github.com/crazy-max/nodejs-portable](https://github.com/crazy-max/nodejs-portable)
+
 
 GIT
 ---------------------
