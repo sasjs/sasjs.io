@@ -22,7 +22,7 @@ For Single Page Web Apps you are highly recommended to upload them to the static
 
 ### SAS9 Deploy
 
-The standard location of the static content area on the SAS9 web server is `!SASCONFIG/LevX/Web/WebServer/htdocs`.  For larger customers, your web server may be on a different server to the application server.
+The standard location of the static content area on the SAS9 web server is `!SASCONFIG/LevX/Web/WebServer/htdocs`.  For larger customers, your web server may be on a different server to the application server.  The app should go into a subfolder (eg `htdocs/YOURAPP`).  It will then be visible ad YOURSERVER.COM/YOURAPP.
 
 To find the server name, you can run the following code:
 
