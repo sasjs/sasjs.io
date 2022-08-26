@@ -8,11 +8,11 @@ If you're looking for the following capabilities, then SASjs is for you:
 * Build SAS projects locally (without SAS), using standard GIT workflows, in your preferred IDE
 * Write (isolated) TESTs for your SAS Jobs / Macros / Services & view your test coverage
 * Create SAS projects that are agnostic to the "flavour" of SAS (Viya, EBI, Base)
-* Create apps that can be ported / deployed in seconds to any SAS environment
 * Generate project HTML documentation site from your SAS program headers
 * Eliminate the SAS server filesystem (SASAUTOS) from your dependencies
 * Deploy PIPELINES so that your SAS projects can be auto-deployed
 * Quality check (lint) your SAS _before_ it hits your GIT repo
+* Create apps that deploy in seconds to any SAS environment
 * Build apps with SAS, Python, or R (coming) at the backend
 
 
