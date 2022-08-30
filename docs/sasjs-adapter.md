@@ -92,8 +92,8 @@ run;
 %webout(OBJ,some) /* `some` table is sent in object format */
 %webout(ARR,sas) /* `sas` table is sent in array format, smaller filesize */
 %webout(OBJ,tables,fmt=N) /* unformatted (raw) data */
-%webout(OBJ,tables,label=newtable) /* rename tables on export */
-%webout(OBJ,tables,label=truncated, maxobs=10) /* send back max 10 rows */
+%webout(OBJ,tables,dslabel=newtable) /* rename tables on export */
+%webout(OBJ,tables,dslabel=truncated, maxobs=10) /* send back max 10 rows */
 %webout(CLOSE) /* close the JSON and send some extra useful variables too */
 
 ```
