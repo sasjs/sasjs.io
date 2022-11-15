@@ -29,7 +29,7 @@ If the `request()` method is used _with_ a leading slash, the `appLoc` is ignore
 
 _Relevant to: CLI, VSCE_
 
-SAS Includes (coming from the `programFolders` array) can be inserted into any Primary Artefact (Job or Service or Test).  They are essentially 'arbitrary code blocks'.  More information available [here](https://cli.sasjs.io/artefacts/#sas-includes)
+SAS Includes (coming from the `programFolders` array) can be inserted into any [Primary Artefact](https://cli.sasjs.io/artefacts/#primary-artefacts) (Job or Service or Test).  They are essentially 'arbitrary code blocks'.  More information available [here](https://cli.sasjs.io/artefacts/#sas-includes)
 
 ## Macros
 
@@ -45,7 +45,7 @@ See [includes](https://sasjs.io/glossary/#includes).
 
 _Relevant to: CLI, VSCE_
 
-A "Job" in SASjs relates to a batch program, which has one or more Data Inputs and (ideally) one Data Output.  It is one of the three Primary Artefacts.  Additional programs and macros may be compiled as precode.
+A "Job" in SASjs relates to a batch program, which has one or more Data Inputs and (ideally) one Data Output.  It is one of the three [Primary Artefacts](https://cli.sasjs.io/artefacts/#primary-artefacts).  Additional programs and macros may be compiled as precode.
 
 Jobs may take a long time to execute.  Lineage can be generated for jobs using the `sasjs doc` command (so long as the correct headers are set).
 
