@@ -25,19 +25,19 @@ By defining the appLoc in the SASjs config, the `sasjs.request()` method can use
 
 If the `request()` method is used _with_ a leading slash, the `appLoc` is ignored.  If `request()` is used _without_ a leading slash, the `appLoc` **must** be provided in the sasjs config object.
 
-### Includes
+## Includes
 
 _Relevant to: CLI, VSCE_
 
 SAS Includes (coming from the `programFolders` array) can be inserted into any Primary Artefact (Job or Service or Test).  They are essentially 'arbitrary code blocks'.  More information available [here](https://cli.sasjs.io/artefacts/#sas-includes)
 
-### Macros
+## Macros
 
 _Relevant to: CLI, VSCE_
 
 SAS Macros should be in a file with the same name as the macro itself.  Each macro file should contain just one macro.  Macros can be compiled into multiple artefacts.  More information [here](https://cli.sasjs.io/artefacts/#sas-macros).
 
-### Programs
+## Programs
 
 See [includes](https://sasjs.io/glossary/#includes).
 
