@@ -35,7 +35,7 @@ SAS Includes (coming from the `programFolders` array) can be inserted into any [
 
 _Relevant to: CLI, VSCE_
 
-SAS Macros should be in a file with the same name as the macro itself.  Each macro file should contain just one macro.  Macros can be compiled into multiple artefacts.  More information [here](https://cli.sasjs.io/artefacts/#sas-macros).
+SAS Macros (coming from the `macroFolders` array) should be in a file with the same name as the macro itself.  Each macro file should contain just one macro.  Macros can be compiled into multiple artefacts.  More information [here](https://cli.sasjs.io/artefacts/#sas-macros).
 
 ## Programs
 
@@ -45,7 +45,7 @@ See [includes](https://sasjs.io/glossary/#includes).
 
 _Relevant to: CLI, VSCE_
 
-A "Job" in SASjs relates to a batch program, which has one or more Data Inputs and (ideally) one Data Output.  It is one of the three [Primary Artefacts](https://cli.sasjs.io/artefacts/#primary-artefacts).  Additional programs and macros may be compiled as precode.
+A "Job" in SASjs (coming from the `jobFolders` array) relates to a batch program, which has one or more Data Inputs and (ideally) one Data Output.  It is one of the three [Primary Artefacts](https://cli.sasjs.io/artefacts/#primary-artefacts).  Additional programs and macros may be compiled as precode.
 
 Jobs may take a long time to execute.  Lineage can be generated for jobs using the `sasjs doc` command (so long as the correct headers are set).
 
@@ -53,7 +53,7 @@ Jobs may take a long time to execute.  Lineage can be generated for jobs using t
 
 _Relevant to: Adapter, CLI, VSCE_
 
-A "Service" in SASjs relates to an 'on demand' process with zero or more Service Inputs and one or more Service Outputs.  Those inputs/outputs can be anything, but are typically JSON. Services should be designed to run as fast as possible, and never longer than 5 minutes (a common timeout threshold)
+A "Service" in SASjs (coming from the `serviceFolders` array) relates to an 'on demand' process with zero or more Service Inputs and one or more Service Outputs.  Those inputs/outputs can be anything, but are typically JSON. Services should be designed to run as fast as possible, and never longer than 5 minutes (a common timeout threshold)
 
 When services are compiled, additional precode is added to enable the `%webout()` macro.  This macro converts adapter inputs to WORK tables, and allows further WORK tables to be sent back in a specific JSON format.  Depending on the `serverType`, the underlying webout macro is either:
 
