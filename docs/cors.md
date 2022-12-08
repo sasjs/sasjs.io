@@ -1,12 +1,13 @@
 CORS
 ====================
 
-Cross Origin Resource Sharing (CORS) is a feature that is disabled by default in most browsers to present cross site scripting attacks.  In our case, as we are working locally, we need to enable it (disable the security policy that prevents it) in order to connect to SAS on a different domain.
+Cross Origin Resource Sharing (CORS) or "same-origin" policy is a feature that is disabled by default in most browsers to present cross site scripting attacks.  In our case, as we are working locally, we need to enable it (disable the security policy that prevents it) in order to connect to SAS on a different domain.
 
 
 | OS    | Browser | Launch Command|
 |:---:|:---:|:--:|
 | Mac   | Chrome  | `open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/chrome` |
+| Mac   | Brave   | `open -n -a /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser -n --args --incognito --disable-web-security  --user-data-dir="/tmp/brave"` |
 | Linux | Chrome  | `google-chrome --disable-web-security --user-data-dir="/tmp/chrome"`|
 |Windows|Chrome|`"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=C:\Temp`|
 
