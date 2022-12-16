@@ -30,7 +30,7 @@ You will know if you are successful if you see a `You are using an unsupported c
 
 Note - even with CORS enabled you still may be unable to connect to SAS (9 or Viya) if whitelisting is enabled. Also, if you are pushing your web app to a server outside of SAS, you will still have the CORS issue. 
 
-To resovle this you will need to ask your administrator, and perhaps offer them the guidance below.
+To resolve this you will need to ask your administrator, and perhaps offer them the guidance below.
 
 ## SAS 9 EBI
 
