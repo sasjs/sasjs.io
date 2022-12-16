@@ -43,8 +43,9 @@ Some points to note about this list of urls:
 * They are comma separated
 * The domain should include the trailing slash/ 
 * The domain can include a partial path for further security, eg https://mydomain.com/usethispart/
+* After modifying the property, the SAS Web Application Server must be restarted.
 
-After modifying the property, the SAS Web Application Server must be restarted.
+For more information, see the [SAS Middle Tier Admin Guide](https://documentation.sas.com/doc/en/bicdc/9.4/bimtag/p1xtsni38p58t3n1ljd2fy4c3joz.htm).
 
 ## SAS Viya
 
