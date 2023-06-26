@@ -19,10 +19,11 @@ As this is a browser setting, for development purposes the issue can be side-ste
 
 | OS    | Browser | Launch Command|
 |:---:|:---:|:--:|
-| Mac   | Chrome  | `open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/chrome` |
+| Mac   | Google Chrome  | `open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/chrome` |
 | Mac   | Brave   | `open -n -a /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser -n --args --incognito --disable-web-security  --user-data-dir="/tmp/brave"` |
-| Linux | Chrome  | `google-chrome --disable-web-security --user-data-dir="/tmp/chrome"`|
-|Windows|Chrome|`"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=C:\Temp`|
+| Linux | Chromium  | `chromium --disable-web-security --user-data-dir="/tmp/chrome"`|
+| Linux | Google Chrome  | `google-chrome --disable-web-security --user-data-dir="/tmp/chrome"`|
+|Windows|Google Chrome|`"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=C:\Temp`|
 
 It does not seem to be possible to enable CORS in modern Firefox browsers.
 
