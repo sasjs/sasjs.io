@@ -100,10 +100,4 @@ Whilst it is often impossible to implement maximally secure settings, the config
 
 Note that the "default-src" provides a fallback where particular urls (eg font-src) are not specified.
 
-It's also possible to go a step further and set the CSP policy in the HTML (rather than the headers from the web server).  You may consider this for sensitive applications.  An example:
-
-```
-<meta http-equiv="Content-Security-Policy" content="default-src https://cdn.example.net; child-src 'none'; object-src 'none'">
-```
-
 <meta name="description" content="Security Considerations when building HTML5 Web Apps on SAS 9 or SAS Viya">
