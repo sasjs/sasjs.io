@@ -16,10 +16,12 @@ SASjs is MIT open source and free for commercial use.  If you like our code, fee
 ## Documentation sites
 Websites created as technical / user documentation:
 
-* Adapter Technical [documentation](https://adapter.sasjs.io)
-* CLI [documentation](https://cli.sasjs.io)
-* Macro Core [documentation](https://core.sasjs.io)
+* sasjs/adapter [documentation](https://adapter.sasjs.io)
+* sasjs/cli [documentation](https://cli.sasjs.io)
+* sasjs/core [documentation](https://core.sasjs.io)
+* sasjs/server [documentation](https://server.sasjs.io)
 * Data Controller [documentation](https://docs.datacontroller.io/)
+* Data Controller [code documentation](https://code.datacontroller.io/)
 
 
 ## Other Useful Websites
