@@ -1,0 +1,122 @@
+/* compile macros */
+filename mc url "https://raw.githubusercontent.com/sasjs/core/main/all.sas";
+%inc mc;
+
+/* create index.html */
+filename ft15f001 temp;
+parmcards4;
+options noquotelenmax;
+data _null_;
+file _webout lrecl=32767;
+put '<!DOCTYPE html><html><head><title>Space Invaders</title>';
+put '<link rel="stylesheet" type="text/css" href="https://sasjs.io/space/core.css">';
+put '<link rel="stylesheet" type="text/css" href="https://sasjs.io/space/typeography.css">';
+put '<style>';
+put '/* Styling needed for a fullscreen canvas and no scrollbars. */
+    body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+';
+put '#starfield {
+        width:100%;
+        height:100%;
+        z-index: -1;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }';
+put '#gamecontainer {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #gamecanvas {
+        width: 800px;
+        height: 600px;
+    }
+    #info {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>';
+put ' </head><body><div id="starfield"></div>';
+put '<div id="gamecontainer"><canvas id="gameCanvas"></canvas></div>';
+put '<div id="info">';
+put '<p>Move with arrow keys or swipe, fire with the space bar or touch. The invaders get faster and drop
+        more bombs as you complete each level!</p>';
+put '<p><a id="muteLink" href="#" onclick="toggleMute()">mute</a> |
+        <a href="https://github.com/dwmkerr/spaceinvaders">spaceinvaders on github</a> |
+        <a href="https://github.com/dwmkerr">more projects</a> | <a href="https://www.dwmkerr.com">dwmkerr.com</a></p>
+</div>';
+put '<script src="https://sasjs.io/space/starfield.js"></script>';
+put '<script src="https://sasjs.io/space/spaceinvaders.js"></script>';
+put '<script>';
+put 'var container = document.getElementById("starfield");';
+put 'var starfield = new Starfield();
+  starfield.initialise(container);
+  starfield.start();';
+put 'var canvas = document.getElementById("gameCanvas");
+  canvas.width = 800;
+  canvas.height = 600;
+  var game = new Game();
+  game.initialise(canvas);';
+put 'game.start();';
+put 'window.addEventListener("keydown", function keydown(e) {';
+put ' var keycode = e.which || window.event.keycode;';
+put ' if(keycode == 37 || keycode == 39 || keycode == 32) {';
+put '     e.preventDefault();';
+put ' }';
+put ' game.keyDown(keycode);';
+put ' })';
+put 'window.addEventListener("keyup", function keydown(e) {';
+put ' var keycode = e.which || window.event.keycode;';
+put ' game.keyUp(keycode);';
+put '});';
+put 'window.addEventListener("touchstart", function (e) {';
+put ' game.touchstart(e);';
+put ' }, false);';
+put 'window.addEventListener("touchend", function(e){';
+put ' game.touchend(e);';
+put ' }, false);';
+put 'window.addEventListener("touchmove", function(e){';
+put ' game.touchmove(e);';
+put ' }, false);';
+put 'function toggleMute() {';
+put ' game.mute();';
+put ' document.getElementById("muteLink").innerText = game.sounds.mute ? "unmute" : "mute";';
+put '}';
+put '</script>';
+put '</body>';
+put '</html>';
+run;
+;;;;
+/* create web service */
+%macro outyougo();
+  %if %substr(%mf_getplatform()XXX,4,1)=V %then %do;
+    filename _game temp;
+    data _null_;
+      file _game;
+      put 'filename _webout filesrvc parenturi="&SYS_JES_JOB_URI" ';
+      put '  name="_webout.html" lrecl=999999;';
+    run;
+    %mv_createwebservice(path=/Users/&sysuserid/My Folder
+      , name=spaceinvaders
+      , code=_game ft15f001
+      ,replace=YES
+    )
+  %end;
+  %else %do;
+    %mm_createwebservice(path=/User Folders/&sysuserid/My Folder
+      , name=spaceinvaders
+      , code=ft15f001
+      ,replace=YES
+    )
+  %end;
+%mend;
+
+%outyougo()
