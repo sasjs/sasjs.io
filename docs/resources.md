@@ -33,7 +33,6 @@ Websites created as technical / user documentation:
 * [Building apps rapidly with SASjs](https://medium.com/@krishna.acondy/building-sas-apps-rapidly-with-sasjs-60ba2be0c4d4)
 * [SESUG 2020](https://www.lexjansen.com/sesug/2020/SESUG2020_Paper_167_Final_PDF.pdf) - Building SAS-Powered Web Apps with SASjs
 * Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
-* [Sasensei SAS App Quiz](https://sasensei.com/questions/filter?tags_any=[13])
 * Viya REST API [documentation](https://developer.sas.com/apis/rest/)
 
 ## Videos
