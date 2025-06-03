@@ -34,6 +34,7 @@ Websites created as technical / user documentation:
 * [SESUG 2020](https://www.lexjansen.com/sesug/2020/SESUG2020_Paper_167_Final_PDF.pdf) - Building SAS-Powered Web Apps with SASjs
 * Slides to [Build A HTML5 App Using SAS](https://slides.com/allanbowe/sgf2020)
 * Viya REST API [documentation](https://developer.sas.com/apis/rest/)
+* Overview of SASjs lint on [SAS Blogs](https://blogs.sas.com/content/subconsciousmusings/2025/05/30/automatic-linting-of-sas-code-with-sasjs/)
 
 ## Videos
 
