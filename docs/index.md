@@ -1,54 +1,126 @@
-DevOps for SAS Solutions
-====================
+---
+title: DevOps for SAS
+hide:
+  - navigation
+  - toc
+description: SASjs is an open-source framework for building, testing, documenting and deploying SAS applications - on Viya, SAS 9 and desktop SAS - from git and your own IDE.
+---
 
-## SASjs Powers
+<div class="sasjs-hero" markdown>
 
-If you're looking for the following capabilities, then SASjs is for you:
+# DevOps for SAS
 
-* Build locally, using standard GIT workflows, in your preferred IDE
-* Create SAS projects that are agnostic to the "flavour" of SAS 
-* Cover your code with isolated TESTs and measure test coverage
-* Quality check (lint) your SAS before hitting your GIT repo
-* Create apps that deploy in seconds to any SAS environment
-* Generate HTML documentation from your SAS program headers
-* Eliminate dependency on the server filesystem (SASAUTOS) 
-* Make use of PIPELINES to auto-deploy your SAS projects 
-* Build apps with SAS, Python, or JS at the backend
+Build, test, document and deploy SAS applications on Viya, SAS 9 and desktop SAS - from git, in the IDE you already use.
 
-## SASjs Components
+[Get started](services.md){ .md-button .md-button--primary }
+[Why SASjs](why.md){ .md-button }
 
-SASjs is "batteries included" when it comes to building, linting, deploying, testing, and documenting SAS Solutions.
-
-Our tools can be used individually, for specific needs, or together as part of an opinionated framework.
-
-The SASjs framework improves the scalability, velocity, and quality of SAS projects.  
-
-It consists of the following main components:
-
-1. [Macro library](https://github.com/sasjs/core).  A collection of macro based tools for SAS application development.  See [documentation](https://core.sasjs.io).
-
-2. [CLI tool](https://github.com/sasjs/cli).  A command line utility for automating the compilation, build and deployment of your SAS Project.  See [documentation](https://cli.sasjs.io).
-
-3. [VS Code Extension](https://github.com/sasjs/vscode-extension). Linting, Syntax Highlighting and Code Execution on Viya, SAS 9 BI, or SASjs Server
-
-4. [Lint](https://github.com/sasjs/lint). A SAS Code Quality Checking tool.  Rules are configurable.  
-
-5. [Server](https://github.com/sasjs/server).  An open source Web Server on Foundation SAS.
-
-6. [Adapter](https://github.com/sasjs/adapter). Connects client JS to server SAS.  See [documentation](https://adapter.sasjs.io).
-
-
-Beyond regular Data Science projects, SASjs is also (naturally) a rocket boost for the development of Web Applications on SAS.  Did you know you can deploy a HTML5 App on SAS 9 in just 2 lines of code:
-
-```sas
-filename playme url "https://sasjs.io/game";
-%inc playme;
+```bash
+npm i -g @sasjs/cli
 ```
 
-Below is a demo of building and deploying a HTML5 App on SAS Viya in just one minute:
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WwGptgvSqSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## The short version
 
+SAS code usually lives outside the tooling everything else lives in: no repository, no tests, no build, no deploy, and a copy-paste into a stored process or a Viya job when it is ready. SASjs gives a SAS project the same shape as any other software project.
 
+- **One project, any SAS.** Compile and deploy the same services to Viya, to SAS 9 (EBI or Foundation), and to SASjs Server - the platform is a target, not a rewrite.
+- **Git is the source of truth.** Your code lives in a repository, not in `SASAUTOS` on a server whose filesystem nobody can see.
+- **Test before you ship.** Services are called from a test harness that runs anywhere, including CI, and coverage is measured.
+- **Deploy in seconds.** `sasjs cbd` compiles the project, builds the deployable artefact, and loads it into the target environment.
+- **Documentation comes out of the code.** Doxygen headers on your macros and services become a browsable site.
+- **Apps, not just programs.** The adapter and the CLI build and deploy HTML5 applications on SAS, with a SAS (or JS, or Python) backend.
 
-<meta name="description" content="SASjs provides DevOps for SAS Solutions across Viya, SAS EBI, and Desktop SAS">
+## Components
+
+Six pieces, usable on their own or together. [What each one does](components.md).
+
+<div class="grid cards" markdown>
+
+-   **CLI**
+
+    ---
+
+    Compile, build, deploy, test and document a SAS project from the terminal or a pipeline.
+
+    [`@sasjs/cli`](https://cli.sasjs.io)
+
+-   **Macro Core**
+
+    ---
+
+    A library of SAS macros for application development - the runtime half of the framework.
+
+    [`@sasjs/core`](https://core.sasjs.io)
+
+-   **Adapter**
+
+    ---
+
+    The JavaScript library that connects a browser or Node app to SAS, on Viya, SAS 9 or server.
+
+    [`@sasjs/adapter`](https://adapter.sasjs.io)
+
+-   **Server**
+
+    ---
+
+    An open-source web server on Foundation SAS: a REST API, a drive, and an app portal.
+
+    [`@sasjs/server`](https://server.sasjs.io)
+
+-   **Lint**
+
+    ---
+
+    Configurable SAS code-quality rules, so a style argument is settled once, in a config file.
+
+    [`@sasjs/lint`](https://github.com/sasjs/lint)
+
+-   **VS Code**
+
+    ---
+
+    Syntax highlighting, linting, execution and compile/build/deploy inside the editor.
+
+    [SASjs for VS Code](https://github.com/sasjs/vscode-extension)
+
+</div>
+
+## Where it runs
+
+SASjs does not need a particular SAS product to exist - it needs a place to deploy to.
+
+| Platform | What deployment means |
+| --- | --- |
+| **SAS Viya** | Services become job definitions in a folder, or a web app in the file system, in a context you choose. |
+| **SAS 9 (EBI or Foundation)** | Services become stored processes and files under a metadata folder, deployed over the SASjs web service (`ms_server`). |
+| **SASjs Server** | Services become files on the server's drive, run on SAS, JS, Python or R, with a REST API in front. |
+| **Desktop SAS** | The same project runs against a local SAS session, which is how most development and testing is done. |
+
+The same `sasjs cbd` deploys to any of them - the target in your config decides which.
+
+## Built on it
+
+[Data Controller for SAS](https://datacontroller.io) - a governed, audited interface for business users to load and edit data in SAS tables - is built entirely on this framework: SAS services compiled and deployed by the CLI, a browser front end on the adapter, and the macro library underneath.
+
+The framework itself is MIT licensed and developed in the open: [github.com/sasjs](https://github.com/sasjs).
+
+## Three commands
+
+```bash
+sasjs create myapp -t minimal   # a project with a service, a macro and tests
+cd myapp && npm install
+sasjs cbd -t mytarget           # compile, build, deploy
+```
+
+`cbd` is `compile`, `build` and `deploy` in one - and `sasjs test` runs the project's tests before you get that far.
+
+## Learn more
+
+- [Why SASjs](why.md) - the problem it solves, and what it deliberately does not do.
+- [Services quickstart](services.md) - a service, called from the browser, in one sitting.
+- [Knowledge base](design.md) - how the framework is put together, and why.
+- [FAQ](faq.md) and [Glossary](glossary.md).
+- Reference documentation for each component: [CLI](https://cli.sasjs.io), [Core](https://core.sasjs.io), [Adapter](https://adapter.sasjs.io), [Server](https://server.sasjs.io).
