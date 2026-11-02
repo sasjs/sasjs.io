@@ -1,91 +1,52 @@
+{# Social and search metadata.
+
+   LinkedIn's post inspector, Slack, X and Google all want the same things: an
+   absolute og:image at least 1200x627, an absolute og:url, and a title and
+   description that say what the page is. Everything below is derived from the
+   page and mkdocs.yml, so a page only needs to override `description` (and,
+   rarely, `og_image`) in its front matter.
+
+   The card is 2400x1260 - twice the 1200x630 that LinkedIn, Slack and X crop
+   to - and is rendered from docs/img/og-card.svg. The file name carries the
+   size so that a change to the artwork is a new URL, which is what makes the
+   crawlers refetch instead of serving their cached copy. #}
 {% extends "base.html" %}
+
 {% block extrahead %}
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="author" content="Allan Bowe">
+{% set meta = page.meta if page and page.meta else {} %}
+{% set site = config.site_name %}
+{% set page_title = page.title if page and page.title else site %}
+{% set og_title = meta.og_title if meta.og_title else (site if page_title == site else page_title ~ " - " ~ site) %}
+{% set og_desc = meta.description if meta.description else config.site_description %}
+{% set og_image = meta.og_image if meta.og_image else 'img/og-card-2400.png' %}
+{% if not og_image.startswith('http') %}
+{% set og_image = config.site_url ~ og_image.lstrip('/') %}
+{% endif %}
+{% set canonical = page.canonical_url if page and page.canonical_url else config.site_url %}
 
-<!-- Open Graph / Facebook -->
-<meta property="og:locale" content="en_UK" />
+<!-- The description and canonical link are emitted by Material itself, from the
+     page's front matter and `site_url`. Emitting them here as well duplicates
+     both tags. -->
+
+<!-- Open Graph: LinkedIn, Slack, Discord, Facebook -->
 <meta property="og:type" content="website">
-{% if page and page.meta and page.meta.og_image %}
-{% set og_image = page.meta.og_image %}
-{% elif page %}
-{% set og_image = '/img/appin1min.jpg' %}
+<meta property="og:site_name" content="{{ site }}">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_desc }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:type" content="image/png">
+{% if not meta.og_image %}
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
 {% endif %}
-<meta name="image" property="og:image" content="{{og_image}}">
-<meta property="twitter:image" content="{{og_image}}">
-<meta property='og:image:alt' content='SASjs Logo' />
-<meta property='og:image:title' content='SASjs Logo' />
-{% if page and page.meta and page.meta.description %}
-{% set og_desc = page.meta.description %}
-{% elif page %}
-{% set og_desc = "Build Apps on SAS 9 and Viya with the SASjs framework - comprised of a Javascript Adapter, SAS Macro
-Library, and CLI tool for automated build and deployment." %}
-{% endif %}
-<meta name="description" property="og:description" content="{{og_desc}}">
-<meta property='name:description' content="{{og_desc}}" />
-<meta property="twitter:description" content="{{og_desc}}">
+<meta property="og:image:alt" content="{{ site }} - DevOps for SAS">
 
-{% if page and page.meta and page.meta.og_title %}
-{% set og_title = page.meta.og_title %}
-{% elif page %}
-{% set og_title = 'The SASjs Framework' %}
-{% endif %}
-<meta property="og:title" content="{{og_title}}">
-<meta property="og:author" content="https://www.linkedin.com/company/19117949">
-
-{% if page and page.meta and page.meta.description %}
-<meta property="og:url" content="{{page.canonical_url}}">
-<meta property="twitter:url" content="{{page.canonical_url}}">
-{% elif page %}
-<meta property="og:url" content="https://sasjs.io">
-<meta property="twitter:url" content="https://sasjs.io">
-{% endif %}
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="{{og_title}}">
-<meta property="twitter:image:alt" content="SASjs logo">
-<meta property='twitter:image:title' content='SASjs Logo' />
-<meta property="twitter:site" content='https://sasjs.io'>
-
-
-<meta property="article:author" content="https://www.linkedin.com/company/19117949" />
-<meta property="article:publisher" content="https://www.linkedin.com/company/19117949" />
-{% endblock %}
-
-{% block scripts %}
-<!-- Matomo -->
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function () {
-    var u = "https://analytics.4gl.io/";
-    _paq.push(['setTrackerUrl', u + 'matomo.php']);
-    _paq.push(['setSiteId', '2']);
-    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
-  })();
-</script>
-<noscript>
-  <p><img src="https://analytics.4gl.io/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p>
-</noscript>
-<!-- End Matomo Code -->
-<noscript>
-  <p><img src="https://analytics.4gl.io/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p>
-</noscript>
-<!-- End Matomo Code -->
-<noscript>
-  <!-- Matomo Image Tracker-->
-  <img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.4gl.io/matomo.php?idsite=1&amp;rec=1"
-    style="border:0" alt="" />
-  <!-- End Matomo -->
-</noscript>
-<!-- End Matomo Code -->
-
-
+<!-- X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title }}">
+<meta name="twitter:description" content="{{ og_desc }}">
+<meta name="twitter:image" content="{{ og_image }}">
+<meta name="twitter:image:alt" content="{{ site }} - DevOps for SAS">
 {% endblock %}

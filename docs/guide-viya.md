@@ -1,5 +1,10 @@
-Viya
-====================
+---
+title: Viya platform notes
+description: Compute context, server reuse and the REST APIs - the Viya settings an application depends on and the CLI does not manage.
+---
+
+# Viya platform notes
+
 
 SAS Viya is the new kid on the block and the future for the SAS platform. It has a blazingly fast in-memory, scalable architecture and is built with developers in mind.
 

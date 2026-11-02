@@ -51,16 +51,6 @@ Source: [https://github.com/sasjs/rockroller](https://github.com/sasjs/rockrolle
 
 
 
-### SAS Streamed SAS Rap
-Run the code below (SAS9 or Viya), and open the link in a browser to hear a SAS streamed [SAS Rap](https://www.youtube.com/watch?v=FtTAoYV9HS8&feature=youtu.be) by [Thiago De Souza](https://www.linkedin.com/in/thiago-de-souza/)
-
-```SAS
-filename playme url "https://sasjs.io/rap.sas";
-%inc playme;
-```
-
-source: [https://github.com/allanbowe/sasrap](https://github.com/allanbowe/sasrap)
-
 
 ## Tools
 
@@ -69,22 +59,6 @@ source: [https://github.com/allanbowe/sasrap](https://github.com/allanbowe/sasra
 View & Edit Stored Processes (or Viya Jobs) with this folder navigator
 
 source: [https://github.com/sasjs/folder-navigator](https://github.com/sasjs/folder-navigator)
-
-### Viya Client Token Generator
-
-The following code (Viya only) will create an app for generating a Client ID + Secret with various configuration options.  For this to work, the `sysuserid` must have the admin rights for reading the consul token.
-
-
-```sas
-filename vt url  "https://raw.githubusercontent.com/sasjs/viyatoken/master/runme.sas";
-%inc vt;
-```
-
-Run the above, then open YOURSERVER/SASJobExecution?_PROGRAM=/Public/app/viyatoken/clickme
-
-Source: [https://github.com/sasjs/viyatoken](https://github.com/sasjs/viyatoken)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L_ZtRSjTs_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Viya File Uploader
 

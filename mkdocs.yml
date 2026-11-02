@@ -1,91 +1,147 @@
-site_name: Build Web Applications using SAS®
+site_name: SASjs
 site_url: https://sasjs.io
+site_description: DevOps for SAS - build, test, document and deploy SAS applications on Viya, SAS 9 and desktop SAS, from git and your own IDE.
+
 nav:
   - Home: index.md
-  - Quickstart:
+  - Why SASjs: why.md
+  - Components: components.md
+  - Get started:
       - Services: services.md
       - React: react.md
       - Angular: angular.md
-  - Design: design.md
-  - Security: security.md
-  - SASjs:
-      - Adapter: sasjs-adapter.md
-      - CLI: sasjs-cli.md
-      - (Macro) Core: sasjs-core.md
-  - Backend SAS:
-      - Getting Started: backend-getstarted.md
-      - SAS9: buildsas9.md
-      - VIYA: buildviya.md
-  - Frontend Web:
-      - Get Started: frontend-getstarted.md
-      - Deployment: frontend-deployment.md
+      - Backend SAS: backend-getstarted.md
+      - Frontend web: frontend-getstarted.md
+  - Deploy:
+      - SAS 9: deploy-sas9.md
+      - Viya: deploy-viya.md
+      - Frontend deployment: frontend-deployment.md
       - CORS: cors.md
-  - Testing: testing.md
-  - Documentation: documentation.md
-  - Guides:
-      - images.md
-      - state-management.md
-      - windows.md
-      - guide-sas9.md
-      - guide-viya.md
-      - releasing.md
-      - vscode.md
-  - Training:
-      - Online Resources: resources.md
+  - Knowledge base:
+      - Design: design.md
+      - Security: security.md
+      - Testing: testing.md
+      - Images: images.md
+      - State management: state-management.md
+      - Windows: windows.md
+      - Releasing: releasing.md
+      - Viya log parser: log-parser.md
+      - Glossary: glossary.md
+      - FAQ: faq.md
+      - SAS 9 platform notes: guide-sas9.md
+      - Viya platform notes: guide-viya.md
+      - A service without the CLI: buildsas9.md
+      - A Viya job without the CLI: buildviya.md
+  - Resources:
+      - Documentation: documentation.md
+      - Apps: apps.md
       - Videos: videos.md
       - Workshops: workshops.md
-  - Apps: apps.md
-  - FAQ: faq.md
-  - Glossary: glossary.md
-  - Viya Log Parser: log-parser.md
+      - Online resources: resources.md
+  - About: about.md
 
 markdown_extensions:
   - admonition
-  - pymdownx.superfences
-  - codehilite
+  - attr_list
+  - md_in_html
   - meta
+  - tables
   - toc:
       permalink: true
+      title: On this page
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-extra_css: ["font-awesome.css"]
+hooks:
+  - hooks/html_fixes.py
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
-  - search:
-      prebuild_index: true
+  - search
+  # Old URLs that predate this structure. The pages themselves did not move, so
+  # these cover the links that were published under an earlier layout.
   - redirects:
       redirect_maps:
           'training/resources.md': 'resources.md'
           'training/workshops.md': 'workshops.md'
+          'quickstart/services.md': 'services.md'
           'sasjs-cli-add.md': 'https://cli.sasjs.io/add/'
           'sasjs-cli-context.md': 'https://cli.sasjs.io/context/'
           'sasjs-cli-run.md': 'https://cli.sasjs.io/run/'
           'sasjs-cli-servicepack.md': 'https://cli.sasjs.io/servicepack/'
-          'quickstart/services.md': 'services.md'
-# Repository
-repo_name: "sasjs-docs"
-repo_url: "https://github.com/sasjs/sasjs.io"
+
+# No repo_url: Material fetches api.github.com for the star count on every page,
+# unauthenticated, which rate-limits and logs a console error. The repository is
+# linked from the header (hooks/html_fixes.py), the footer and the pages.
 
 theme:
   name: material
-  logo: "img/logo/favicon/32.svg"
-  palette:
-    primary: "White"
-    accent: "Amber"
-  font:
-    text: "Open Sans"
-    code: "Ubuntu Mono"
-  favicon: img/logo/favicon/32.ico
   custom_dir: "theme"
-  highlightjs: true
-  hljs_languages:
-      - SAS
-      - JavaScript
-      - Bash
-  extra:
-    social:
-      - icon: fontawesome/brands/linkedin
-        link: https://linkedin.com/company/sasjs
-        name: SASjs on LinkedIn
-copyright: All rights reserved &copy;2022 4GL Ltd.
+  language: en
+  logo: img/logo/favicon/32.svg
+  favicon: img/logo/favicon/32.ico
+  # Fonts are self-hosted - see docs/stylesheets/extra.css and docs/assets/fonts.
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+    - toc.follow
 
-google_analytics: ['UA-109713029-8', 'sasjs.io']
+# Social links are top level: `extra.social`, not `theme.extra.social`. Nested
+# under theme they are silently ignored and the footer icons never render.
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sasjs
+      name: SASjs on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/sasjs
+      name: SASjs on LinkedIn
+
+copyright: All rights reserved &copy;2026 Macro People Ltd.
+
+# A page link or an anchor that does not resolve is reported as a warning, and
+# `mkdocs build --strict` in CI turns a warning into a failure - so a dead link
+# stops the build instead of shipping. Absolute links (the `/services` form these
+# pages use) are informational: they resolve on the live domain.
+validation:
+  links:
+    not_found: warn
+    absolute_links: info
+    unrecognized_links: info
+  anchors: warn

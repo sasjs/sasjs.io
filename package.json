@@ -1,12 +1,14 @@
 {
   "name": "devdocs",
   "version": "1.1.1",
-  "description": "Build Web Applications using SAS®",
+  "description": "Build Web Applications using SAS\u00ae",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
-  "scripts": {},
+  "scripts": {
+    "build:slides": "bash scripts/build-slides.sh"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sasjs/sasjs.io.git"
@@ -22,5 +24,7 @@
     "url": "https://github.com/sasjs/sasjs.io/issues"
   },
   "homepage": "https://sasjs.io",
-  "devDependencies": {}
+  "devDependencies": {
+    "@marp-team/marp-cli": "3.4.0"
+  }
 }

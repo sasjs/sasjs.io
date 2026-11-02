@@ -1,5 +1,10 @@
-SAS Viya Build
-====================
+---
+title: A Viya job without the CLI
+description: Creating a job by hand on Viya with the macro library - the route for an environment where the SASjs CLI cannot reach the Viya APIs.
+---
+
+# A Viya job without the CLI
+
 
 ## Services
 

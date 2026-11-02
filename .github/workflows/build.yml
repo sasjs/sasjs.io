@@ -1,0 +1,52 @@
+name: Build docs
+
+on:
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build the site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install the docs toolchain
+        run: pip install -r requirements.txt
+
+      - name: Build the site
+        # Same command as the deploy, so a pull request cannot be green and the
+        # push to master fail. --strict fails on a broken page link or anchor.
+        run: mkdocs build --strict
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install the deck builder
+        run: npm ci --no-audit --no-fund
+
+      - name: Build the slide decks
+        # The deploy runs this too. Rendering the decks here is what catches a
+        # broken deck - or a marp-cli regression - in the pull request rather
+        # than on the push to master.
+        run: ./scripts/build-slides.sh site

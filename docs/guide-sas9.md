@@ -1,5 +1,10 @@
-SAS9
-====================
+---
+title: SAS 9 platform notes
+description: Finding the server, reading its properties, and the load balancer setting that catches applications out on SAS 9.
+---
+
+# SAS 9 platform notes
+
 
 ## Where is my Server?
 If you're on a new site, you don't always know where your SAS Server is!

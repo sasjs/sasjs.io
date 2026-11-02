@@ -1,0 +1,6 @@
+# Toolchain for the sasjs.io build, pinned so a deploy is reproducible.
+# Install locally with:  pip install -r requirements.txt
+mkdocs==1.6.1
+mkdocs-material==9.8.0
+# Old URLs keep working after the navigation was reorganised.
+mkdocs-redirects==1.2.2

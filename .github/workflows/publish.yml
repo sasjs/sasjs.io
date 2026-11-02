@@ -1,80 +1,94 @@
-name: Publish docs via GitHub Pages
+name: Publish site via GitHub Pages
+
+# Builds the MkDocs site and the slide decks, then publishes the result to the
+# gh-pages branch, which is what GitHub Pages serves for sasjs.io.
+#
+# Build and deploy are separate jobs on purpose: the build installs third-party
+# packages (pip, npm) and holds no write permission, and the deploy job only
+# takes the artefact the build produced and pushes it. A compromised package
+# then has nothing to push with.
+#
+# Both toolchains are pinned - requirements.txt for the site, package.json and
+# package-lock.json for the deck builder - so what renders the site is
+# reviewable in the repository, and npm ci verifies what it installs.
+
 on:
   push:
     branches:
       - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: true
 
 jobs:
   build:
-    name: Deploy docs
+    name: Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout master
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
 
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@1.16
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          CUSTOM_DOMAIN: sasjs.io
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
 
-  slides:
-    name: Generate and push slides
+      - name: Install the docs toolchain
+        run: pip install -r requirements.txt
+
+      - name: Build the site
+        # --strict fails the run on a broken page link or anchor, so a dead link
+        # cannot be deployed.
+        run: mkdocs build --strict
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install the deck builder
+        run: npm ci --no-audit --no-fund
+
+      - name: Build the slide decks
+        # Every deck in slides/, plus redirect pages for the names two of them
+        # were published under before. marp renders through a headless browser,
+        # hence --no-sandbox in the script.
+        run: ./scripts/build-slides.sh site
+
+      - name: Upload the site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site
+          retention-days: 7
+
+  deploy:
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout master
-        uses: actions/checkout@v2
-
-      - name: Generate 6 min slides
-        run: npx @marp-team/marp-cli ./slides/slides6min.md -o ./slides/appdev.html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate 30 min slides
-        run: npx @marp-team/marp-cli ./slides/slides30min.md -o ./slides/rapidapps.html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate slides for geeks
-        run: npx @marp-team/marp-cli ./slides/slidesgeeks.md -o ./slides/geeks.html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate teaser slides for SASGF
-        run: npx @marp-team/marp-cli ./slides/sgf2021teaser.md -o ./slides/sgf2021teaser.html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate SASgf 20201 slides
-        run: npx @marp-team/marp-cli ./slides/sgf2021.md -o ./slides/sgf2021.html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate SUGUKI DevOps slides
-        run: npx @marp-team/marp-cli ./slides/suguki_devops.md -o ./slides/suguki_devops.html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate AF Slides
-        run: npx @marp-team/marp-cli ./slides/af.md -o ./slides/af.html --html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate Cloud Migration Slides
-        run: npx @marp-team/marp-cli ./slides/cloud_migration.md -o ./slides/cloud_migration.html --html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Generate Desktop Slides
-        run: npx @marp-team/marp-cli ./slides/desktop.md -o ./slides/desktop.html --html
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Commit and push slides
-        uses: EndBug/add-and-commit@v5
+      - name: Download the built site
+        uses: actions/download-artifact@v4
         with:
-          branch: gh-pages
-          message: 'Update slides'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          name: site
+          path: site
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          cname: sasjs.io
