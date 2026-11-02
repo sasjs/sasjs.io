@@ -1,5 +1,10 @@
-SAS 9 Build
-====================
+---
+title: A service without the CLI (SAS 9)
+description: Creating a Stored Process by hand on SAS 9, with the macro library - the route for an environment where the SASjs CLI cannot reach the metadata server.
+---
+
+# A service without the CLI
+
 
 ## Services
 

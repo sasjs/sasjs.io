@@ -13,10 +13,8 @@ nav:
       - Backend SAS: backend-getstarted.md
       - Frontend web: frontend-getstarted.md
   - Deploy:
-      - SAS 9 overview: buildsas9.md
-      - Viya overview: buildviya.md
-      - SAS 9 guide: guide-sas9.md
-      - Viya guide: guide-viya.md
+      - SAS 9: deploy-sas9.md
+      - Viya: deploy-viya.md
       - Frontend deployment: frontend-deployment.md
       - CORS: cors.md
   - Knowledge base:
@@ -30,6 +28,10 @@ nav:
       - Viya log parser: log-parser.md
       - Glossary: glossary.md
       - FAQ: faq.md
+      - SAS 9 platform notes: guide-sas9.md
+      - Viya platform notes: guide-viya.md
+      - A service without the CLI: buildsas9.md
+      - A Viya job without the CLI: buildviya.md
   - Resources:
       - Documentation: documentation.md
       - Apps: apps.md
