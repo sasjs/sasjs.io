@@ -5,7 +5,14 @@ site_description: DevOps for SAS - build, test, document and deploy SAS applicat
 nav:
   - Home: index.md
   - Why SASjs: why.md
-  - Components: components.md
+  - Components:
+      - Overview: components/index.md
+      - CLI: components/cli.md
+      - Macro Core: components/core.md
+      - Adapter: components/adapter.md
+      - Server: components/server.md
+      - Lint: components/lint.md
+      - VS Code: components/vscode.md
   - Get started:
       - Services: services.md
       - React: react.md
@@ -34,6 +41,9 @@ nav:
       - A Viya job without the CLI: buildviya.md
   - Resources:
       - Documentation: documentation.md
+      - Case study: case-study.md
+      - Support: support.md
+      - Releases: releases.md
       - Apps: apps.md
       - Videos: videos.md
       - Workshops: workshops.md
