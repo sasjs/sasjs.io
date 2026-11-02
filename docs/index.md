@@ -34,7 +34,7 @@ SAS code usually lives outside the tooling everything else lives in: no reposito
 
 ## Components
 
-Six pieces, usable on their own or together. [What each one does](components.md).
+Six pieces, usable on their own or together. [What each one does](components/index.md).
 
 <div class="grid cards" markdown>
 
