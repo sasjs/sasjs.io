@@ -94,7 +94,7 @@ SASjs does not need a particular SAS product to exist - it needs a place to depl
 
 | Platform | What deployment means |
 | --- | --- |
-| **SAS Viya** | Services become job definitions in a folder, or a web app in the file system, in a context you choose. |
+| **SAS Viya** | Services become job definitions in a folder, or a web app served from a folder, in a context you choose. |
 | **SAS 9 (EBI or Foundation)** | Services become stored processes and files under a metadata folder, deployed over the SASjs web service (`ms_server`). |
 | **SASjs Server** | Services become files on the server's drive, run on SAS, JS, Python or R, with a REST API in front. |
 | **Desktop SAS** | The same project runs against a local SAS session, which is how most development and testing is done. |

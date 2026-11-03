@@ -5,7 +5,7 @@ description: What sasjs deploy does on SAS Viya - the target and its auth, what 
 
 # Deploying to Viya
 
-On Viya a service becomes a **job definition** in a folder in the file system, and the compute server runs it in a compute context. Deployment is the act of creating those folders and jobs through the Viya REST APIs.
+On Viya a service becomes a **job definition** in a folder, and the compute server runs it in a compute context. The folders and jobs are objects in Viya's database, addressed by path and managed through the Viya APIs - there is no directory on the operating system that holds them, so nothing is deployed by copying a file.
 
 ## The target
 
@@ -22,7 +22,7 @@ On Viya a service becomes a **job definition** in a folder in the file system, a
 | Setting | Meaning |
 | --- | --- |
 | `serverUrl` | the Viya environment - the host that answers `/SASLogon/` and the compute APIs |
-| `appLoc` | the folder in the Viya file system the project deploys into; created if it does not exist |
+| `appLoc` | the folder in Viya's content tree (SAS Drive) the project deploys into; created if it does not exist |
 | `contextName` | the compute context the jobs run in - `SAS Job Execution compute context` when you want the job execution service to run them |
 | `serverType` | `SASVIYA` |
 
@@ -90,7 +90,7 @@ Both `run` and `job execute` leave a log in `sasjsresults`, and `sasjs logcheck`
 ## Things that bite on Viya
 
 - **The context decides the identity.** `runServerAs` and `reuseServerProcesses` on the compute context are how a service account is used and how SAS processes are reused between requests. Without `reuseServerProcesses`, every request pays the session start.
-- **`streamWebFolder` is real.** The streaming folder ends up in the file system; if it does not exist, the deploy creates it, but its permissions are what decide who can fetch the app.
+- **`streamWebFolder` is a folder in the content tree**, not an OS directory: the front end's files are objects in Viya, and that folder's permissions are what decide who can fetch the app.
 - **Encoding and locale** come from the compute session, not from the adapter. A context with a different encoding from your development sessions will change what your `proc sql` compares.
 - **The token expires.** `sasjs deploy` fails on an expired token with a 401 or 403; `sasjs auth -t viya` re-authenticates, and `sasjs deploy` alone finishes the job without recompiling.
 

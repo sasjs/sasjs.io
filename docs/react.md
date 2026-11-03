@@ -65,7 +65,7 @@ sasjs web -t myTarget      # the front end, packaged as a streaming app
 sasjs deploy -t myTarget   # both, into the target
 ```
 
-With `streamConfig.streamWeb` set, the front end is packaged as services and served from the SAS folder tree - on Viya from the file system, on SAS 9 from metadata - so there is no separate web server to run and no CORS to configure. Without it, deploy `build/` to whatever serves your static assets and point the adapter at SAS.
+With `streamConfig.streamWeb` set, the front end is packaged as services and served from the SAS folder tree - on Viya from SAS Drive, on SAS 9 from metadata - so there is no separate web server to run and no CORS to configure. Without it, deploy `build/` to whatever serves your static assets and point the adapter at SAS.
 
 The seed app's `sasjsconfig.json` has a target for each - `viya`, `sas9` and `sasjs` - so switching environments is `-t viya` versus `-t sas9`.
 
