@@ -13,7 +13,7 @@ The delivery mechanism differs; the project does not. A service is a compiled pr
 
 | | SAS 9 | Viya |
 | --- | --- | --- |
-| What a service becomes | a Stored Process in a metadata folder | a job definition in a folder in the file system |
+| What a service becomes | a Stored Process in a metadata folder | a job definition in a folder, held in Viya's database and managed through its APIs |
 | What runs it | the Stored Process server (or the workspace server) | the compute server, in a compute context you choose |
 | Identity | client or system identity | client or system identity (3.5 and later) |
 | Metadata | the metadata server | PostgreSQL |
@@ -81,7 +81,7 @@ The templates are `react`, `angular`, `minimal`, `sasonly` and `jobs`; with no `
 }
 ```
 
-`appLoc` is the folder everything is deployed under - a metadata folder path on SAS 9, a file system path on Viya. A target can override any root setting, which is how one project deploys different code to different environments.
+`appLoc` is the folder everything is deployed under - a metadata folder path on SAS 9, a folder path in Viya's content tree (SAS Drive) on Viya. A target can override any root setting, which is how one project deploys different code to different environments.
 
 The full set of keys is documented at [sasjsconfig](https://cli.sasjs.io/sasjsconfig.html), and the JSON schema is at [cli.sasjs.io/sasjsconfig-schema.json](https://cli.sasjs.io/sasjsconfig-schema.json) - point your editor at it and the file autocompletes.
 

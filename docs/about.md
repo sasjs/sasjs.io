@@ -5,7 +5,7 @@ description: Who builds SASjs, how it is licensed, where to get help, and how to
 
 # About
 
-SASjs is built and maintained by Macro People Ltd, the team behind [4GL Apps](https://sasapps.io) and [Data Controller for SAS](https://datacontroller.io). It started as the internal delivery tooling for our own SAS applications and is published because the same gap exists on almost every SAS estate.
+SASjs is built and maintained by the team behind [4GL Apps](https://sasapps.io) and [Data Controller for SAS](https://datacontroller.io). It started as the internal delivery tooling for our own SAS applications and is published because the same gap exists on almost every SAS estate.
 
 ## Licence
 

@@ -5,7 +5,14 @@ site_description: DevOps for SAS - build, test, document and deploy SAS applicat
 nav:
   - Home: index.md
   - Why SASjs: why.md
-  - Components: components.md
+  - Components:
+      - Overview: components/index.md
+      - CLI: components/cli.md
+      - Macro Core: components/core.md
+      - Adapter: components/adapter.md
+      - Server: components/server.md
+      - Lint: components/lint.md
+      - VS Code: components/vscode.md
   - Get started:
       - Services: services.md
       - React: react.md
@@ -34,6 +41,9 @@ nav:
       - A Viya job without the CLI: buildviya.md
   - Resources:
       - Documentation: documentation.md
+      - Case study: case-study.md
+      - Support: support.md
+      - Releases: releases.md
       - Apps: apps.md
       - Videos: videos.md
       - Workshops: workshops.md
@@ -64,6 +74,9 @@ markdown_extensions:
 
 hooks:
   - hooks/html_fixes.py
+  # The decks live at slides.sasjs.io; this keeps every /slides/ URL that was
+  # published here working as a redirect.
+  - hooks/deck_redirects.py
 
 extra_css:
   - stylesheets/extra.css
@@ -133,7 +146,6 @@ extra:
       link: https://linkedin.com/company/sasjs
       name: SASjs on LinkedIn
 
-copyright: All rights reserved &copy;2026 Macro People Ltd.
 
 # A page link or an anchor that does not resolve is reported as a warning, and
 # `mkdocs build --strict` in CI turns a warning into a failure - so a dead link
