@@ -4,13 +4,14 @@ name: Publish site via GitHub Pages
 # gh-pages branch, which is what GitHub Pages serves for sasjs.io.
 #
 # Build and deploy are separate jobs on purpose: the build installs third-party
-# packages (pip, npm) and holds no write permission, and the deploy job only
-# takes the artefact the build produced and pushes it. A compromised package
-# then has nothing to push with.
+# packages and holds no write permission, and the deploy job only takes the
+# artefact the build produced and pushes it. A compromised package then has
+# nothing to push with.
 #
-# Both toolchains are pinned - requirements.txt for the site, package.json and
-# package-lock.json for the deck builder - so what renders the site is
-# reviewable in the repository, and npm ci verifies what it installs.
+# The toolchain is pinned in requirements.txt, so what renders the site is
+# reviewable in the repository. The decks are not built here - they live at
+# slides.sasjs.io - and hooks/deck_redirects.py writes the redirects for the
+# /slides/ URLs this site used to publish.
 
 on:
   push:
@@ -49,22 +50,6 @@ jobs:
         # --strict fails the run on a broken page link or anchor, so a dead link
         # cannot be deployed.
         run: mkdocs build --strict
-
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: "22"
-          cache: npm
-          cache-dependency-path: package-lock.json
-
-      - name: Install the deck builder
-        run: npm ci --no-audit --no-fund
-
-      - name: Build the slide decks
-        # Every deck in slides/, plus redirect pages for the names two of them
-        # were published under before. marp renders through a headless browser,
-        # hence --no-sandbox in the script.
-        run: ./scripts/build-slides.sh site
 
       - name: Upload the site
         uses: actions/upload-artifact@v4

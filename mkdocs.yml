@@ -74,6 +74,9 @@ markdown_extensions:
 
 hooks:
   - hooks/html_fixes.py
+  # The decks live at slides.sasjs.io; this keeps every /slides/ URL that was
+  # published here working as a redirect.
+  - hooks/deck_redirects.py
 
 extra_css:
   - stylesheets/extra.css

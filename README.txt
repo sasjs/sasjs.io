@@ -23,8 +23,9 @@ docs/ and open a pull request.
 - `hooks/html_fixes.py` - post-build markup fixes that Material does not give us
   (labelled search dialog, sized logo, repository link in the header). Each
   patch is counted, so a theme upgrade fails the build rather than regressing.
-- `slides/` - the decks. `slides/slides6min.md` is rendered to
-  `/slides/appdev.html` by the publish workflow with a pinned marp-cli.
+- `hooks/deck_redirects.py` - the decks live at slides.sasjs.io (repository
+  `sasjs/slides.sasjs.io`), which renders them from markdown. This hook writes
+  `/slides/` redirects into the built site for every URL published here before.
 - `diagrams/` - source files for the architecture diagrams.
 
 ## Conventions
