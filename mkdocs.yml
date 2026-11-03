@@ -143,7 +143,6 @@ extra:
       link: https://linkedin.com/company/sasjs
       name: SASjs on LinkedIn
 
-copyright: All rights reserved &copy;2026 Macro People Ltd.
 
 # A page link or an anchor that does not resolve is reported as a warning, and
 # `mkdocs build --strict` in CI turns a warning into a failure - so a dead link
