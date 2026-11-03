@@ -288,17 +288,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../components/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../components/" class="md-tabs__link">
+          
+  
   
   Components
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -495,9 +496,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../components/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -511,7 +528,219 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macro Core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/adapter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adapter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/lint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1555,6 +1784,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../case-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Case study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../apps/" class="md-nav__link">
         
   
@@ -1817,7 +2130,7 @@
 
 
 <h1 id="deploying-to-viya">Deploying to Viya<a class="headerlink" href="#deploying-to-viya" title="Permanent link">&para;</a></h1>
-<p>On Viya a service becomes a <strong>job definition</strong> in a folder in the file system, and the compute server runs it in a compute context. Deployment is the act of creating those folders and jobs through the Viya REST APIs.</p>
+<p>On Viya a service becomes a <strong>job definition</strong> in a folder, and the compute server runs it in a compute context. The folders and jobs are objects in Viya's database, addressed by path and managed through the Viya APIs - there is no directory on the operating system that holds them, so nothing is deployed by copying a file.</p>
 <h2 id="the-target">The target<a class="headerlink" href="#the-target" title="Permanent link">&para;</a></h2>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"viya"</span><span class="p">,</span>
@@ -1841,7 +2154,7 @@
 </tr>
 <tr>
 <td><code>appLoc</code></td>
-<td>the folder in the Viya file system the project deploys into; created if it does not exist</td>
+<td>the folder in Viya's content tree (SAS Drive) the project deploys into; created if it does not exist</td>
 </tr>
 <tr>
 <td><code>contextName</code></td>
@@ -1913,7 +2226,7 @@
 <h2 id="things-that-bite-on-viya">Things that bite on Viya<a class="headerlink" href="#things-that-bite-on-viya" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>The context decides the identity.</strong> <code>runServerAs</code> and <code>reuseServerProcesses</code> on the compute context are how a service account is used and how SAS processes are reused between requests. Without <code>reuseServerProcesses</code>, every request pays the session start.</li>
-<li><strong><code>streamWebFolder</code> is real.</strong> The streaming folder ends up in the file system; if it does not exist, the deploy creates it, but its permissions are what decide who can fetch the app.</li>
+<li><strong><code>streamWebFolder</code> is a folder in the content tree</strong>, not an OS directory: the front end's files are objects in Viya, and that folder's permissions are what decide who can fetch the app.</li>
 <li><strong>Encoding and locale</strong> come from the compute session, not from the adapter. A context with a different encoding from your development sessions will change what your <code>proc sql</code> compares.</li>
 <li><strong>The token expires.</strong> <code>sasjs deploy</code> fails on an expired token with a 401 or 403; <code>sasjs auth -t viya</code> re-authenticates, and <code>sasjs deploy</code> alone finishes the job without recompiling.</li>
 </ul>
@@ -1999,10 +2312,6 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      All rights reserved &copy;2026 Macro People Ltd.
-    </div>
   
   
     Made with

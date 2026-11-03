@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="To launch a web site, you need access to a server! With SAS there are a number of approaches you can take.">
+        <meta name="description" content="How a SASjs frontend is built and served - a static application on the adapter, and the three ways to deliver it from SAS.">
       
       
       
@@ -28,7 +28,7 @@
     
     
       
-        <title>Frontend Web - SASjs</title>
+        <title>Frontend web - SASjs</title>
       
     
     
@@ -75,19 +75,22 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SASjs">
 <meta property="og:locale" content="en_GB">
-<meta property="og:title" content="Get started with a SAS-Powered Frontend">
-<meta property="og:description" content="To launch a web site, you need access to a server! With SAS there are a number of approaches you can take.">
+<meta property="og:title" content="Frontend web - SASjs">
+<meta property="og:description" content="How a SASjs frontend is built and served - a static application on the adapter, and the three ways to deliver it from SAS.">
 <meta property="og:url" content="https://sasjs.io/frontend-getstarted/">
-<meta property="og:image" content="https://sasjs.io/img/html_css_js.jpeg">
+<meta property="og:image" content="https://sasjs.io/img/og-card-2400.png">
 <meta property="og:image:type" content="image/png">
+
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
 
 <meta property="og:image:alt" content="SASjs - DevOps for SAS">
 
 <!-- X / Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Get started with a SAS-Powered Frontend">
-<meta name="twitter:description" content="To launch a web site, you need access to a server! With SAS there are a number of approaches you can take.">
-<meta name="twitter:image" content="https://sasjs.io/img/html_css_js.jpeg">
+<meta name="twitter:title" content="Frontend web - SASjs">
+<meta name="twitter:description" content="How a SASjs frontend is built and served - a static application on the adapter, and the three ways to deliver it from SAS.">
+<meta name="twitter:image" content="https://sasjs.io/img/og-card-2400.png">
 <meta name="twitter:image:alt" content="SASjs - DevOps for SAS">
 
   </head>
@@ -109,7 +112,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-locally" class="md-skip">
+        <a href="#frontend-web" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Frontend Web
+              Frontend web
             
           </span>
         </div>
@@ -285,17 +288,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../components/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../components/" class="md-tabs__link">
+          
+  
   
   Components
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -492,9 +496,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../components/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -508,7 +528,219 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macro Core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/adapter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adapter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/lint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -695,6 +927,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -739,6 +973,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -747,10 +983,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#working-locally" class="md-nav__link">
+  <a href="#what-not-to-do" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Working Locally
+        What not to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-ways-to-serve-the-same-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three ways to serve the same application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamed-from-sas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streamed from SAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developing locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing a framework
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
       
     </span>
   </a>
@@ -1482,6 +1773,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../case-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Case study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../apps/" class="md-nav__link">
         
   
@@ -1640,6 +2015,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1648,10 +2025,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#working-locally" class="md-nav__link">
+  <a href="#what-not-to-do" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Working Locally
+        What not to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-ways-to-serve-the-same-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three ways to serve the same application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamed-from-sas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streamed from SAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developing locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing a framework
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
       
     </span>
   </a>
@@ -1675,25 +2107,68 @@
 
 
 
-  <h1>Frontend web</h1>
-
-<p>Adding a frontend to your analytics project provides limitless potential for creating bespoke user experiences for decision support.</p>
-<p>There are many ways to create HTML interfaces with SAS, and we support all of them EXCEPT ONE.</p>
-<p>The approach we <strong>don't</strong> support is one that the vast majority of SAS app developers will be familiar with - and that is, to <em>write SAS code to stream web outputs</em>.</p>
-<p>The two most common techniques for achieving this are:</p>
+<h1 id="frontend-web">Frontend web<a class="headerlink" href="#frontend-web" title="Permanent link">&para;</a></h1>
+<p>A SASjs front end is an ordinary web application - React, Angular, or plain JavaScript - that talks to SAS services through the <a href="../components/adapter/">adapter</a>. There is no template language in the middle: the browser renders the interface, SAS answers with data.</p>
+<p>That separation is the whole design. The front end can be built, tested and reviewed with the tools web developers already use, by people who do not write SAS; the services can be written and tested by people who do not write JavaScript. Both live in one repository, and the CLI deploys both.</p>
+<h2 id="what-not-to-do">What not to do<a class="headerlink" href="#what-not-to-do" title="Permanent link">&para;</a></h2>
+<p>The traditional SAS approach is to generate the interface from SAS: <code>put</code> statements in a DATA step, or <code>proc stream</code>, writing HTML out of <code>_webout</code>. It works for a form. It stops working at the first feature that needs state, routing or a component library - the markup is now a string literal inside a SAS program, with no build step, no syntax checking and nobody willing to change it.</p>
+<p>SASjs supports streaming content to <code>_webout</code> - that is how a built application is delivered - but the HTML it streamed was written by a front end developer, not by a DATA step.</p>
+<h2 id="three-ways-to-serve-the-same-application">Three ways to serve the same application<a class="headerlink" href="#three-ways-to-serve-the-same-application" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>How</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Streamed from SAS</strong></td>
+<td><code>sasjs web</code> packages the built front end as services; SAS serves the index, the assets and the API</td>
+<td>one deployment target, no separate web server, no CORS - works on SAS 9 and Viya</td>
+</tr>
+<tr>
+<td><strong>Static host, adapter to SAS</strong></td>
+<td><code>build/</code> or <code>dist/</code> goes to any static host or CDN; the adapter calls SAS directly</td>
+<td>a CDN or existing web tier, and the SAS estate can accept cross-origin requests</td>
+</tr>
+<tr>
+<td><strong>SASjs Server app portal</strong></td>
+<td>upload the built app as a zip; the server hosts it, with per-user and per-group permissions</td>
+<td>SAS 9 shops without a web tier, demos, internal tools</td>
+</tr>
+</tbody>
+</table>
+<p>All three run the same application code and the same services. The difference is who serves the files.</p>
+<h2 id="streamed-from-sas">Streamed from SAS<a class="headerlink" href="#streamed-from-sas" title="Permanent link">&para;</a></h2>
+<p>This is the option most SAS estates end up choosing, because it removes the two things that usually block a SAS web application: a web server nobody wants to own, and a CORS policy nobody wants to change.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">"streamConfig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"streamWeb"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"streamWebFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"web"</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"webSourcePath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"build"</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">"streamServiceName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My App"</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>sasjs cbd -t myTarget</code> compiles the services, packages the front end into streaming services, and deploys both. The CLI prints the URL. See <a href="../deploy-viya/">Deploying to Viya</a> and <a href="../deploy-sas9/">SAS 9</a> for what that means on each platform.</p>
+<h2 id="developing-locally">Developing locally<a class="headerlink" href="#developing-locally" title="Permanent link">&para;</a></h2>
+<p>The front end runs on <code>localhost</code> and calls a real SAS environment, which is the fastest loop there is - the alternative is rebuilding and redeploying to see a CSS change.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>start<span class="w">               </span><span class="c1"># the dev server</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sasjs<span class="w"> </span>cbd<span class="w"> </span>-t<span class="w"> </span>myTarget<span class="w">   </span><span class="c1"># deploy the services it calls</span>
+</span></code></pre></div>
+<p>Because the origin differs, the SAS side has to allow it: <code>cors</code> and <code>whitelist</code> settings on Viya, or the equivalent on the web tier. <a href="../cors/">CORS</a> covers the details, including the version that catches everybody out - a browser request that works from <code>curl</code> and fails from the app is a preflight.</p>
+<h2 id="choosing-a-framework">Choosing a framework<a class="headerlink" href="#choosing-a-framework" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Data step put statements (an apostrophe catastrophe)</li>
-<li>Proc stream (&amp;it will test your resolve)</li>
+<li><a href="../react/">React</a> and <a href="../angular/">Angular</a> are the two seed applications: real apps, with login, a request history and a SASjs backend already wired up.</li>
+<li><code>sasjs create my-app -t minimal</code> is a small application in plain JavaScript, which is the fastest way to see the adapter without a framework.</li>
+<li>Anything else works too: the adapter is a library, not a framework, and a Vue or Svelte or htmx front end uses it the same way.</li>
 </ul>
-<p>Both of these are BAD options for creating user interfaces.  Whilst you (as the original developer) might find yourself making good progress initially, embedding JS logic with SAS logic, as soon as your app starts to get more complex - you will spend more and more time debugging minor changes.  It will cost more to add new features, and it will be very difficult for anyone else to maintain (even you, after a short break).</p>
-<p>Far, far better is to maintain a <em>complete separation</em> of frontend (web) and backend (SAS) code.  This approach also means that you can have your frontend built/maintained by a frontend developer (easy to find) and the backend maintained by a regular SAS dev (easy to find).</p>
-<p>We call SAS developers with frontend skills UNICORNS</p>
-<p>They don't really exist!  Either a frontend developer has adopted some basic SAS skills, or a SAS developer has learned some javascript.  Very few developers are truly proficient in both.</p>
-<p>So do yourself, your project, and your colleagues a favour - enforce <em>complete seperation</em> between the frontend and backend.</p>
-<h3 id="working-locally">Working Locally<a class="headerlink" href="#working-locally" title="Permanent link">&para;</a></h3>
-<p>It's common for web developers to build &amp; test the frontend <em>locally</em>, on a desktop.  This means spinning up a server on your own machine (<code>localhost</code>) and using that to connect to SAS. This is convenient, but will typically require bypassing some security settings by enabling <a href="/cors/">cors</a> in your browser.</p>
-<p>If you are using the <a href="https://github.com/sasjs/adapter">SASjs Adapter</a> with this approach, you will also need to supply the <code>serverUrl</code> property - as will not be possible to determine the location of the SAS server from the URL.</p>
-<p>Note that this may not be possible if there is whitelisting on the SAS Server - for that you will need to either ask your admin to change the setting, or make use of one of the <a href="/frontend-deployment">deployment</a> options.</p>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../frontend-deployment/">Frontend deployment</a> - the deployment options in more detail.</li>
+<li><a href="../state-management/">State management</a> - where the application's data lives, and what to fetch again.</li>
+<li><a href="../cors/">CORS</a> - when the app and SAS are on different origins.</li>
+</ul>
 
 
 
@@ -1770,10 +2245,6 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      All rights reserved &copy;2026 Macro People Ltd.
-    </div>
   
   
     Made with
